@@ -1,0 +1,2 @@
+# minimal
+Minimal WordPress Theme
