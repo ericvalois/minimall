@@ -1,0 +1,37 @@
+.widgettitle{ font-weight: 500; }
+
+.calendar_wrap table{ width: 100%; }
+
+.widgets{ font-size: 16px; }
+.widgets ul{
+    //list-style: none;
+    padding-left: 1.5em;
+
+    ul{
+        //padding-left: 20px;
+
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        ul{
+            padding-left: 0;
+        }
+    }
+
+    li{
+        //line-height: 1.5;
+        margin-bottom: 0;
+    }
+}
+
+.widgets li a{
+    font-size: 16px;
+    font-weight: $bold;
+    border: none;
+    color: $black;
+
+    &:hover,
+    &:focus{
+        color: $blue;
+    }
+}

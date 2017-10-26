@@ -1,0 +1,45 @@
+.footer-hero{
+    background: linear-gradient(to bottom, #ffffff 0%,#cce7ff 100%);
+}
+
+.site-footer li{ margin: 0 10px; display: inline-block; }
+.site-footer a{ 
+    color: $black;
+
+    &:hover,
+    &:focus{
+        color: $blue;
+    }
+}
+
+.footer-widgets ul{ 
+    margin: 0 0 1rem 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-widgets{ @extend .sm-text; }
+.footer-widgets li{ 
+    margin-bottom: 10px;
+    @extend .line-height-2;
+}
+.footer-widgets .widget_nav_menu a{ color: $black; }
+.footer-widgets a:hover{ color: $blue; }
+.footer-widgets select{ 
+    line-height: 1.5; 
+    background-color: #fff;
+    border-color: rgb(166, 166, 166);
+    font-size: 14px;
+    padding: 6px 30px 6px 15px;
+    width: auto;
+    background-size: 12px 7px;
+}
+#colophon{ border-top: 1px solid #d8d6d6; }
+
+ul.children{ margin: 1rem; }
+
+.aff-logo{ 
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.aff-logo:hover{ filter: grayscale(0%);}

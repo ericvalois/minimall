@@ -1,0 +1,232 @@
+.entry-meta a{
+    border: none;
+    color: $black;
+}
+
+.pagination li{ margin-right: 5px; }
+.pagination li:before{ display: none; }
+
+.entry-header::after,
+.page-header::after,
+.comments-title::after {
+    border-bottom: 1px solid #000;
+    content: "";
+    display: block;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    width: 2.5%;
+}
+
+.entry-header.center::after,
+.page-header.center::after,
+.comments-title::after  {
+    margin: 0 auto;
+}
+
+.entry-avatar .avatar {
+    background-color: #fff;
+    margin-top: -55px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.newsletter_wrap{
+    box-shadow: 0 0 100px #cce7ff;
+    text-align: center;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+.header-menu{ min-height: 60px;}
+
+
+.hero .lazyload,
+.hero .lazyloading {
+    opacity: 0;
+}
+.hero .lazyloaded {
+    opacity: 0.2;
+    transition: opacity 1s;
+}
+
+.bg-default{
+    opacity: 0.2;
+}
+
+.grayscale{ filter: grayscale(1); }
+
+/*
+* Toc
+*/
+.toc{
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    li{
+        margin-bottom: 10px;
+        line-height: 16px;
+    }
+
+    ul{ margin: 0; padding: 0; }
+
+    ul ul{ padding-left: 15px; margin: 5px 0; }
+
+    a{ 
+        font-size: 13px;
+        color: $black;
+        font-weight: 400;
+
+        &.active{ color: $blue; }
+    }
+
+    a:hover{ color: $blue; }
+
+    li:before {
+        display: none;
+    }
+}
+
+.page-template-pillar .site-content{
+        margin-top: -220px;
+}
+
+@media ( min-width: 1530px ) {
+
+    #toc_wraper{
+        width: 300px;
+        left: 50px;
+        top: 650px;
+        z-index: 100;
+    }
+
+    .toc{
+        border-left: 5px solid $black;
+    }
+
+    .is-position-fixed{
+        width: 300px;
+        position: fixed;
+        display: block !important;
+        top: 180px;
+        opacity: 1;
+    }
+
+    .is-collapsible {
+        max-height: 1000px;
+        overflow: hidden;
+        transition: all 300ms ease-in-out;
+    }
+
+    .is-collapsed {
+        max-height: 0;
+    }
+
+    .toc-active .entry-content h2::before, 
+    .toc-active .entry-content h3::before, 
+    .toc-active .entry-content h4::before, 
+    .toc-active .entry-content h5::before, 
+    .toc-active .entry-content h6::before {
+        display: block;
+        content: " ";
+        height: 108px;
+        margin-top: -108px;
+        visibility: hidden;
+    }
+}
+
+/*
+* Widget With Thumbnails
+*/
+.recent-posts-widget-with-thumbnails ul { list-style: outside none none; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; line-height: 1.5;}
+.widgets.recent-posts-widget-with-thumbnails ul li { overflow: hidden; margin: 0 0 1rem 0; }
+.recent-posts-widget-with-thumbnails ul li:last-child { margin: 0; }
+.recent-posts-widget-with-thumbnails ul li img { display: inline; float: left; margin: .3em .75em .75em 0; }
+.recent-posts-widget-with-thumbnails img { width: 80px; height: 80px; filter: grayscale(1);border-radius: 3px;opacity: 0.6 }
+.rpwwt-post-categories{ font-weight: 300; }
+
+/*
+* Social Share
+*/
+.social-share-btns-container {
+  text-align: center;
+  width: 100%;
+}
+
+
+
+
+.share-btn {
+    padding: 4px 16px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
+    vertical-align: middle;
+    transition: background 0.2s ease-in-out;
+
+    svg {
+        margin-right: 5px;
+        display: inline-block;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+}
+
+.share-btn:hover{
+    color: #fff;
+    svg{ fill: #fff; }
+}
+
+// Colors
+.share-btn {
+  background-color: #95a5a6;
+  &:hover {
+    background-color: darken(#95a5a6, 10%);
+  }
+}
+.share-btn-twitter {
+  background-color: #00aced;
+  &:hover {
+    background-color: darken(#00aced, 10%);
+  }
+}
+.share-btn-facebook {
+  background-color: #3b5998;
+  &:hover {
+    background-color: darken(#3b5998, 10%);
+  }
+}
+.share-btn-linkedin {
+  background-color: #007bb6;
+  &:hover {
+    background-color: darken(#007bb6, 10%);
+  }
+}
+.share-btn-reddit {
+  background-color: #ED001C;
+  &:hover {
+    background-color: darken(#ED001C, 10%);
+  }
+}
+.share-btn-google-plus {
+  background-color: #e93f2e;
+  &:hover {
+    background-color: darken(#e93f2e, 10%);
+  }
+}
+.share-btn-pinterest {
+  background-color: #B81626;
+  &:hover {
+    background-color: darken(#B81626, 10%);
+  }
+}
+.share-btn-mail {
+	background-color: #016ED6;
+	&:hover {
+		background-color: darken(#016ED6, 5%);
+	}
+}

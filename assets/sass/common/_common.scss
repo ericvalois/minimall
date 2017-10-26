@@ -1,0 +1,12 @@
+.entry-content > :first-child{
+    margin-top: 0;
+}
+
+.negative-header{ 
+    position: relative;
+    margin-top: -220px; 
+    z-index: 997;
+    min-height: 220px;
+}
+
+.hero{ height: 450px; }

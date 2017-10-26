@@ -1,0 +1,15 @@
+{
+  "name": "ttfb",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "jshint-stylish": "latest",
+    "grunt-criticalcss": "latest",
+    "grunt-contrib-compress": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-clean": "latest"
+  }
+}

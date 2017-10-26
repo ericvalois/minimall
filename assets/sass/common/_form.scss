@@ -1,0 +1,297 @@
+input, 
+input[type="search"], 
+select, 
+textarea {
+    background-color: #e8ecf1;
+    border: 1px solid #eee;
+    border-radius: 0;
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    padding: 12px 15px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input[type="submit"]{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+
+input:focus, 
+input[type="search"]:focus, 
+textarea:focus {
+    border: 1px solid #999;
+    outline: none;
+}
+
+textarea{ line-height: 1.625; }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #111;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #111;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #111;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #111;
+}
+
+input[type="search"] {
+    appearance: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABSElEQVQ4T51T7VECMRTcrcB3FQgVqB1IBY4VgBWoFUgHYgVqBdoB0AEdQAd5VvCczSQ3ATl0zK/MJbdvv0I0y8wMwBTAjOSljiJiA2AF4MXdd+197Vk/mNk1gA+SAvmxIsIBPLr7W3uYAfQzyWWZuAawcPfPciYmDyTFTIzuWhAW2ltNjoh3d58dY2BmkvVaQMZVjgCE/hwRa3eXjMFlZnOST+0gAWxIXkTEbaU9hGBmI5LbiNi5+zib2HVdaJNS6g39hcWO5Hm9/x+AzLgHaCRcubsyP+WBkUwAvlJKOW55sCB5fyqBpitHTczGHMv4oKXqw7LE3bOtRWozVtNU2yxHzqveJOdliOosADVzr8q5D6c8kHYAZ+V9TASyF52ZiaZ03rRAKpnqXR7VqvRGDCeD2RfqI3fXS+xXqX4FWf2pPIeyKoi+fwMkDMJAfEVdtAAAAABJRU5ErkJggg==');
+}
+
+select{
+    appearance: none;
+    -webkit-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    //background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAwElEQVQ4T62T0Q3CMAxE7ybAo3QDygaMAJOVEdiAsEFHMRMYOWqq0DoVouTb7yU+x8TOw508ZoGICIBeVe9bUhE5A0iqql6XBRP8INmZ2VVVb5FERC4kBzMbAZxcwhouUCQpcFWTJS5IJI/LG2vJEq4kTxd0JBOAQyTJfZJD0NLLzPqSQVPSCDTDqjrWU/hWMsPzFMotW+1MNR/wSjCNtPWSFRwKGpIQbgoWEpTAokA3d8EzccjTbn3v/y3Tr1v5BmAsdqFcyRWiAAAAAElFTkSuQmCC');
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAR5JREFUeNqckrFqwlAUhm9ubhZ9hs7OHUqHDs1QcHDT1ZY+QOnuC5Q+QLOKFhxFKCI6uIlQ+zhtpyTE7y8RgjUaDISce/7/fPfcnOuFYXjhed5VlmULY8yvOe+pw2jC+LIEl865se/7L2fCjGrFEMtC/UiSpGetfUbos64Mklc1qhVDLJcLryS+2eWN16Vp+lAFiPUd2D21TzCiv1xhtwjhB9OA1utxHHf4lnYWBIGO2KbmkfVwp9k94xBDV0YK5mWdScth3SLsHzCHjjC2NTW6FbRWkGvKSZNH3v16W3KkCQUtQkHXhX+mWLCWPAf/65EJzhjOHVOcAlrl6YZyaMvSQZ24FksAt0A/tSa+Jrc5OvkKd20D6GYXn/JvBRgAntGmdjfSUHAAAAAASUVORK5CYII=');
+}
+
+.widget_search input[type="submit"]{
+    @extend .hide;
+}
+
+/*
+* Gravityform styles
+*/
+.gform_wrapper {
+    
+    font-size: 18px;
+
+    .gfield_html{
+        font-size: 16px;
+        padding: 2rem !important;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+
+    .gform_fields{ padding: 0; }
+
+    textarea{
+        border-radius: 0;
+        border-color: #f5f5f5;
+    }
+
+    textarea:focus {
+        border: 1px solid #999;
+    }
+
+    label.gfield_label {
+        display: block;
+        padding: 0 0 5px 0;
+        font-weight: 600;
+    }
+
+    .button{
+        @extend .btn;
+        @extend .btn-big;
+        @extend .btn-black;
+        width: auto;
+    }
+
+    .gfield{ margin-bottom: 20px; }
+    .gfield:before{ display: none; }
+
+    .ginput_complex > span{ 
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    @media #{$breakpoint-md} {
+        .ginput_complex{ 
+            display: flex;
+            justify-content: space-between;
+
+            &> span{
+                width: calc(50% - 15px);
+                margin-bottom: 0;
+            }
+
+            .gf_clear_complex{ display: none; }
+
+            label{ font-size: 13px;}
+        }
+    }
+    
+
+    .gfield_description{
+        font-size: 13px;
+        padding: 5px 0 0 0;
+    }
+
+    .gform_fileupload_multifile{
+        padding: 2rem;
+        background-color: #e8ecf1;
+        border: 1px solid #eee;
+    }
+
+    .gform_drop_instructions{
+        display: block;
+        text-align: center;
+    }
+
+    .gform_button_select_files{
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        padding: 10px 15px !important;
+        margin-top: 10px !important;
+        opacity: 0.8;
+    }
+
+    .validation_message{
+        color: red;
+    }
+
+    .validation_error{
+        @extend .alert;
+        @extend .alert_danger;
+        margin-bottom: 1.5rem;
+    }
+
+    .ginput_preview .gform_delete{
+        float: left;
+        margin: 7px 10px 0 0;
+    }
+
+    .gfield_radio,
+    .gfield_checkbox{
+        padding: 0;
+        
+        li{ 
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        input{
+            width: auto;
+            margin-right: 1rem;
+        }
+
+        li:before{ display: none; }
+    }
+}
+
+.gform_confirmation_message{
+    @extend .alert;
+    @extend .alert_success;
+}
+
+/*
+* EDD Style
+*/
+
+.edd-label{ font-weight: 600; }
+
+.edd-submit,
+.edd_sl_form .button,
+.button{
+    @extend .btn;
+    @extend .btn-big;
+    @extend .btn-primary;
+}
+
+.edd-description {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.edd-alert{ margin: 2rem 0; }
+.edd_success,
+.mc4wp-success,
+.entry-content form.envato-for-edd-form .notice{
+    @extend .alert;
+    @extend .alert_success;
+    margin: 1rem 0;
+
+    p{margin: 0;}
+}
+
+.edd_error,
+.mc4wp-notice,
+.entry-content form.envato-for-edd-form .error{
+    @extend .alert;
+    @extend .alert_danger;
+    margin: 1rem 0;
+
+    p{margin: 0;}
+ }
+
+.edd-checkout legend{
+    /*font-weight: 600;
+    font-size: 26px;
+    padding: 0;
+    line-height: 1;*/
+    display: none;
+}
+
+.edd_form legend{ font-weight: bold; }
+
+.edd-checkout fieldset{
+    border: none;
+    padding: 0;
+}
+
+.edd_sl_form input{ margin-bottom: 10px; }
+
+#edd_mailchimp p,
+.edd-login-remember label{ 
+    display: flex; 
+    align-items: center;
+    margin: 0;
+}
+
+#edd_mailchimp_signup,
+.edd-login-remember #rememberme{ width: 15px; height: 15px; margin-right: 10px;}
+
+.edd_cart_header_row th{ 
+    background-color: #f7f7f7;
+}
+
+.edd_cart_item_name,
+.edd_cart_item_price{ 
+    text-align: left;
+}
+
+.edd_cart_actions,
+.edd_cart_total,
+.edd_cart_actions{ 
+    text-align: right;
+}
+
+.edd_cart_remove_item_btn{ 
+    color: red;
+    font-weight: 300;
+}
+
+.edd_form p{ margin: 1.5rem 0; }
+#edd-license-key-container-wrap{ margin: 0; }
+
+#edd_sl_renewal_form{
+    fieldset{ border: none; }
+    margin-bottom: 30px; 
+    #edd_sl_show_renewal_form_wrap,
+    .edd-sl-renewal-actions{ margin-top: 0;}
+    .edd-submit{ margin-bottom: 1rem; }
+}
+
+#edd_purchase_submit{
+    .edd-submit{ margin: 1rem 0; }
+}
+
+#edd-cancel-license-renewal{ font-size: 16px; }

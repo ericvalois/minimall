@@ -1,0 +1,237 @@
+.xxs-text{ font-size: 12px; }
+.xs-text{ font-size: 14px; }
+.sm-text{ font-size: 16px; }
+.xsm-text{ font-size: 14px; }
+.xxsm-text{ font-size: 12px; }
+.lg-text{ font-size: 110%; }
+.xl-text{ font-size: 120%; }
+.xxl-text{ font-size: 130%; }
+
+.weight1{ font-weight: 100; }
+.weight100{ font-weight: 100; }
+.weight500{ font-weight: 500; }
+.weight600{ font-weight: 600; }
+.weight700{ font-weight: 700; }
+
+.text-color{ color: $text-color; }
+
+.display-no { display: none }
+
+.h00 { font-size: 4em }
+.h0 { font-size: 3em }
+.h1 { font-size: 2em }
+.h2 { font-size: 1.5em }
+.h3 { font-size: 1.25em }
+.h4 { font-size: 1em }
+.h5 { font-size: .875em }
+.h6 { font-size: .75em }
+
+h1 { font-size: 2.3em;  }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.3em; }
+h5 { 
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+h6 { 
+    font-size: .85em; 
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+p{ 
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -.001em;
+}
+
+button{ outline: none; }
+.btn{ transition: all 0.3s ease;}
+
+a{
+    text-decoration: none;
+    transition: all .2s ease-out;
+
+    &:hover,
+    &:focus{ 
+        color: $black;
+        border-color: $black;
+    }
+}
+
+
+//a.black.active{ color: $blue; }
+
+ul li,
+ol li{ 
+    margin: 0.4em 0;
+}
+
+ul,
+ol{
+    padding-left: 3rem;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+    margin: 0;
+}
+
+strong{ font-weight: 600; }
+
+pre{
+    background-color: $black;
+    border-radius: 3px;
+    color: #fff;
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+blockquote {
+    border-left: 3px solid rgba(0,0,0,0.8);
+    padding: 0 2rem;
+    font-style: italic;
+    position: relative;
+
+    p{ margin-top: 0; font-style: italic;}
+    footer{ line-height: 1.2;}
+}
+
+.pull-right, .pull-left, .pull-excerpt {
+    font-size: 110%;
+    line-height: 1.5;
+    background: #eef0f4;
+}
+
+@media #{$breakpoint-lg} {
+    .pull-right, .pull-left, .pull-excerpt { padding: 2rem; }
+
+    .pull-right {
+        float: right;
+        margin: 0 0 2% 5%;
+        text-align: left;
+        width: 32%;
+    }
+
+    .pull-left {
+        float: left;
+        margin: 0 5% 2% 0;
+        text-align: left;
+        width: 32%;
+    }
+}
+
+//.blog .entry-content p{ font-size: 20px; }
+
+main table{
+    width: 100%;
+    border-top: 1px solid #d2d2d2;
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    font-size: 16px;
+}
+
+main table td,
+main table th{
+    @extend .px2;
+    @extend .py1;
+    //text-align: center;
+    border-bottom: 1px solid #d2d2d2;
+    vertical-align: middle;
+}
+
+main table tr:nth-child(2n) td{
+    background-color: #efefee;
+}
+
+main table th{ font-weight: 600; }
+
+
+.message{
+    padding: $space1 $space2;
+    font-size: 16px;
+    //background-color: $black;
+    border-left-width: 3px;
+    border-left-style: solid;
+}
+
+.message.orange{ border-left-color: #f39c12; }
+.message.default{ border-left-color: $blue; color: $blue; }
+.message.red{ border-left-color: #e74c3c; }
+.message.green{ border-left-color: #2ecc71; }
+
+figcaption{
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/*
+* Gutenberg Editor
+*/
+#tinymce *,
+.content-full *{
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tinymce img,
+.content-full img{
+    max-width: 100%;
+}
+
+
+.alignfull,
+.alignfull img{ max-width: 100% !important; }
+
+.wp-block-image{
+    &.aligncenter img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+.wp-block-button{
+    background-color: transparent;
+    padding: 0;
+    display: block;
+}
+
+.wp-block-button.aligncenter{
+    display: flex;
+    justify-content: center;
+}
+
+
+.wp-block-button a,
+.wp-block-button p a{
+    @extend .btn;
+    @extend .btn-big;
+    @extend .btn-black;
+}
+
+.wp-block-button.primary a,
+.wp-block-button.primary p a{
+    @extend .btn-primary;
+}
+
+@media #{$breakpoint-sm} {}
+
+@media #{$breakpoint-lg} {
+    h1 { font-size: 3.5em;  }
+    h2 { font-size: 2.5em; }
+}
+
+@media (min-width: 75rem) {
+    .alignwide,
+    .alignwide img{ max-width: 75rem !important; }
+}

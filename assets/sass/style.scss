@@ -1,0 +1,76 @@
+/*!
+Theme Name: Minimal
+Theme URI: https://ttfb.io/themes/minimal/
+Author: Eric Valois
+Author URI: https://ttfb.io/
+Description: Minimal WordPress theme
+Version: 1.0.0
+Text Domain: minimal
+*/
+@import "common/variables";
+html{ font-size: 16px; }
+body{
+    //font-size: 16px;
+    font-weight: 400;
+    //color: $black;
+    letter-spacing: 0.01rem;
+    font-size: 100%;
+    line-height: 1.8;
+    color: #3A4145;
+    //padding-top: 80px;
+    margin: 0;
+    background-color: #fff;
+}
+
+@import "accessibility";
+
+@import "alignments";
+
+@import "media/media";
+
+@import "common/header";
+
+@import "common/footer";
+
+@import "common/form";
+
+@import "common/widgets";
+
+@import "common/typography";
+
+@import "common/icons-sprite";
+
+@import "common/animate";
+
+@import "common/common";
+
+@import "common/alerts";
+
+@import "common/admin-bar";
+
+@import "blog";
+
+@import "component-layout/component-layout";
+
+//@import "tinymce";
+
+@import "basscss";
+
+
+.site-content {
+    clear: both;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    max-width: 1200px;
+    position: relative;
+    word-wrap: break-word;
+    z-index: 99;
+}
+
+@media #{$breakpoint-sm} {
+    body.typo{ font-size: 110%; }
+}
+
+@media #{$breakpoint-lg} {
+    body.typo{ font-size: 115%; }
+}
