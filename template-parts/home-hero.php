@@ -1,7 +1,4 @@
-<?php 
-/*echo '<pre>';
-print_r( $theme_options );
-echo '</pre>';*/
+<?php
 $image = minimall_get_image_id($theme_options['hero_image_'.$key]);
 $title = $theme_options['hero_title_'.$key];
 $description = $theme_options['hero_description_'.$key];

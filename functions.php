@@ -260,19 +260,12 @@ function minimall_page_options(){
 /**
  * Temp
  */
-function minimall_theme_options(){
-    $theme_options = get_option( 'theme_mods_minimall', array() );
+function minimall_theme_options( ){
+    $my_theme = wp_get_theme();
+    $theme_options = get_option( 'theme_mods_'.$my_theme->get( 'TextDomain' ), array() );
+
 
     return $theme_options;
-}
-
-function minimall_theme_get_option( $setting, $default ) {
-    $options = get_option( 'option_name', array() );
-    $value = $default;
-    if ( isset( $options[ $setting ] ) ) {
-        $value = $options[ $setting ];
-    }
-    return $value;
 }
 
 // pass variable

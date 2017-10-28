@@ -125,22 +125,22 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/js\/minimal-init.js": {
+	"\/assets\/js\/minimall-init.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/minimal-init-min.js",
+		"oAP": "\/assets\/js\/minimall-init.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"\/assets\/js\/minimal-init.min.js": {
+	"\/assets\/js\/minimall-init.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/minimal-init.min-min.js",
+		"oAP": "\/assets\/js\/minimall-init.min.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -523,7 +523,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/Gruntfile-min.js",
+		"oAP": "\/Gruntfile.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -569,7 +569,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/includes\/admin\/customizer\/customizer-min.js",
+		"oAP": "\/includes\/admin\/customizer\/customizer.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -579,7 +579,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/includes\/admin\/customizer\/customizer.min-min.js",
+		"oAP": "\/includes\/admin\/customizer\/customizer.min.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -2710,7 +2710,7 @@
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*-min.js",
+		"autoOutputPathFilenamePattern": "*.min.js",
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
