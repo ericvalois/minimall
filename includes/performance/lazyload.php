@@ -5,41 +5,41 @@
  * @package perfthemes
  * @since 1.0
  */
-$page_options = minimal_page_options();
-$perf_options = minimal_perf_options();
+$page_options = minimall_page_options();
+$perf_options = minimall_perf_options();
 
 if ( isset( $perf_options['active_img_lazy'] ) && $perf_options['active_img_lazy'] == 1 && !is_admin() ) {
 
-	add_filter( 'get_avatar'			, 'minimal_lazy_load_image', PHP_INT_MAX );
-	add_filter( 'the_content'			, 'minimal_lazy_load_image', PHP_INT_MAX );
-	add_filter( 'widget_text'			, 'minimal_lazy_load_image', PHP_INT_MAX );
-	add_filter( 'get_image_tag'			, 'minimal_lazy_load_image', PHP_INT_MAX );
-	add_filter( 'post_thumbnail_html'	, 'minimal_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'get_avatar'			, 'minimall_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'the_content'			, 'minimall_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'widget_text'			, 'minimall_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'get_image_tag'			, 'minimall_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'post_thumbnail_html'	, 'minimall_lazy_load_image', PHP_INT_MAX );
 
 }
 
 if ( isset( $perf_options['active_iframe_lazy'] ) && $perf_options['active_iframe_lazy'] == 1 && !is_admin() ) {
-	add_filter( 'the_content', 'minimal_lazyload_iframes', PHP_INT_MAX );
-	add_filter( 'widget_text', 'minimal_lazyload_iframes', PHP_INT_MAX );
+	add_filter( 'the_content', 'minimall_lazyload_iframes', PHP_INT_MAX );
+	add_filter( 'widget_text', 'minimall_lazyload_iframes', PHP_INT_MAX );
 }
 
-function minimal_lazy_load_image( $content ){
+function minimall_lazy_load_image( $content ){
 
-    $page_options = minimal_page_options();
+    $page_options = minimall_page_options();
 
 	if( !is_search() && !$page_options['disable_lazyload'] ){
-		$minimal_content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-	    $minimal_document = new DOMDocument();
+		$minimall_content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+	    $minimall_document = new DOMDocument();
 
 	    libxml_use_internal_errors(true);
-	    if( !empty($minimal_content) ){
-	    	$minimal_document->loadHTML(utf8_decode($minimal_content));
+	    if( !empty($minimall_content) ){
+	    	$minimall_document->loadHTML(utf8_decode($minimall_content));
 	    }else{
 	    	return;
 	    }
 
 
-	    $imgs = $minimal_document->getElementsByTagName('img');
+	    $imgs = $minimall_document->getElementsByTagName('img');
 	    foreach ($imgs as $img) {
             
 	    	// add data-sizes
@@ -77,11 +77,11 @@ function minimal_lazy_load_image( $content ){
 
 
 			// noscript
-			$noscript = $minimal_document->createElement('noscript');
+			$noscript = $minimall_document->createElement('noscript');
 			$img->parentNode->insertBefore($noscript);
 
-			$image = $minimal_document->createElement('image');
-			$imageAttribute = $minimal_document->createAttribute('src');
+			$image = $minimall_document->createElement('image');
+			$imageAttribute = $minimall_document->createAttribute('src');
 			$imageAttribute->value = $existing_src;
 			$image->appendChild($imageAttribute);
 
@@ -89,7 +89,7 @@ function minimal_lazy_load_image( $content ){
 
 	    }
 
-	    $html_fragment = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $minimal_document->saveHTML()));
+	    $html_fragment = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $minimall_document->saveHTML()));
 	    return $html_fragment;
 	}else{
 		return $content;
@@ -99,27 +99,27 @@ function minimal_lazy_load_image( $content ){
 /**
  * Replace iframes by LazyLoad
  */
-function minimal_lazyload_iframes( $html ) {
+function minimall_lazyload_iframes( $html ) {
 
-	$page_options = minimal_page_options();
+	$page_options = minimall_page_options();
 
 	if( !is_search() && !$page_options['disable_lazyload'] ){
 
-		$minimal_matches = array();
-		preg_match_all( '/<iframe\s+.*?>/', $html, $minimal_matches );
+		$minimall_matches = array();
+		preg_match_all( '/<iframe\s+.*?>/', $html, $minimall_matches );
 
-		foreach ( $minimal_matches[0] as $k=>$minimal_iframe ) {
+		foreach ( $minimall_matches[0] as $k=>$minimall_iframe ) {
 
 			// Don't mess with the Gravity Forms ajax iframe
-			if ( strpos( $minimal_iframe, 'gform_ajax_frame' ) ) {
+			if ( strpos( $minimall_iframe, 'gform_ajax_frame' ) ) {
 				continue;
 			}
 
-			$minimal_placeholder = 'data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=';
+			$minimall_placeholder = 'data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=';
 
-			$minimal_iframe = preg_replace( '/<iframe(.*?)src=/is', '<iframe$1src="' . $minimal_placeholder . '" class="lazyload blur-up" data-src=', $minimal_iframe );
+			$minimall_iframe = preg_replace( '/<iframe(.*?)src=/is', '<iframe$1src="' . $minimall_placeholder . '" class="lazyload blur-up" data-src=', $minimall_iframe );
 
-			$html = str_replace( $minimal_matches[0][ $k ], $minimal_iframe, $html );
+			$html = str_replace( $minimall_matches[0][ $k ], $minimall_iframe, $html );
 
 		}
 	}
@@ -127,14 +127,14 @@ function minimal_lazyload_iframes( $html ) {
 	return $html;
 }
 
-add_action("wp_head","minimal_img_picturefill");
-function minimal_img_picturefill(){
+add_action("wp_head","minimall_img_picturefill");
+function minimall_img_picturefill(){
 ?>
 <script>
     // Lazyload picturefill
-    function minimal_loadJS(u){var r=document.getElementsByTagName("script")[ 0 ],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
+    function minimall_loadJS(u){var r=document.getElementsByTagName("script")[ 0 ],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
     if (!window.HTMLPictureElement || document.msElementsFromPoint) {
-        minimal_loadJS('<?php echo plugins_url( "/vendors/lazysizes/plugins/respimg/ls.respimg.min.js" , __FILE__ ); ?>');
+        minimall_loadJS('<?php echo plugins_url( "/vendors/lazysizes/plugins/respimg/ls.respimg.min.js" , __FILE__ ); ?>');
     }
 </script>
 <?php

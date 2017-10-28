@@ -2,16 +2,17 @@
 /**
  * Add the Font Awesome section
  */
-Minimal_Kirki::add_section( 'fontawesome', array(
-	'title'      => esc_attr__( 'Font Awesome Icons', 'minimal' ),
-	'priority'   => 80,
+Minimall_Kirki::add_section( 'fontawesome', array(
+	'title'      => esc_attr__( 'Font Awesome Icons', 'minimall' ),
+    'priority'   => 80,
+    'panel'		 => 'minimall_options',
 	'capability' => 'edit_theme_options',
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'checkbox',
 	'settings'    => 'fontawesome',
-	'label'       => __( 'Activate Font Awesome Icons', 'minimal' ),
+	'label'       => __( 'Activate Font Awesome Icons', 'minimall' ),
 	'section'     => 'fontawesome',
 	'default'     => '0',
 	'priority'    => 10,
@@ -19,10 +20,10 @@ Minimal_Kirki::add_field( 'minimal', array(
 
 
 
-Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'radio-buttonset',
 	'settings'    => 'fontawesome_type',
-	'label'       => esc_html__( 'Icons Type', 'minimal' ),
+	'label'       => esc_html__( 'Icons Type', 'minimall' ),
 	'section'     => 'fontawesome',
 	'default'     => 'Light',
     'priority'    => 20,
@@ -34,8 +35,9 @@ Kirki::add_field( 'minimal', array(
         ),
     ),
 	'choices'     => array(
-		'solid'   => esc_attr__( 'Solid', 'minimal' ),
-		'regular' => esc_attr__( 'Regular', 'minimal' ),
-		'light'  => esc_attr__( 'Light', 'minimal' ),
+		'solid'   => esc_attr__( 'Solid', 'minimall' ),
+		'regular' => esc_attr__( 'Regular', 'minimall' ),
+		'light'  => esc_attr__( 'Light', 'minimall' ),
 	),
 ) );
+

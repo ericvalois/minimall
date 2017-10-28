@@ -2,16 +2,16 @@
 /**
  * Adds custom widget.
  */
-class minimal_author_widget extends WP_Widget {
+class minimall_author_widget extends WP_Widget {
 
   /**
    * Register widget with WordPress.
    */
   function __construct() {
     parent::__construct(
-      'minimal_author_widget', // Base ID
-      __('TTFB Author box', 'minimal'), // Name
-      array( 'description' => __( 'Author box widget for TTFB', 'minimal' ), ) // Args
+      'minimall_author_widget', // Base ID
+      __('TTFB Author box', 'minimall'), // Name
+      array( 'description' => __( 'Author box widget for TTFB', 'minimall' ), ) // Args
     );
   }
 
@@ -67,15 +67,15 @@ class minimal_author_widget extends WP_Widget {
    */
   public function form( $instance ) {
     if ( isset($instance['title']) ) {
-      $lminimal_title = $instance['title'];
+      $lminimall_title = $instance['title'];
     }
     else {
-      $lminimal_title = __( 'New title', 'minimal' );
+      $lminimall_title = __( 'New title', 'minimall' );
     }
     ?>
     <p>
-      <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e(  'Title:','minimal' ); ?></label>
-      <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $lminimal_title ); ?>">
+      <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e(  'Title:','minimall' ); ?></label>
+      <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $lminimall_title ); ?>">
     </p>
     <?php
   }
@@ -91,15 +91,15 @@ class minimal_author_widget extends WP_Widget {
    * @return array Updated safe values to be saved.
    */
   public function update( $new_instance, $old_instance ) {
-    $lminimal_instance = array();
-    $lminimal_instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    $lminimall_instance = array();
+    $lminimall_instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 
-    return $lminimal_instance;
+    return $lminimall_instance;
   }
 
-} // class minimal_author_widget
+} // class minimall_author_widget
 
-// register minimal_author_widget widget
+// register minimall_author_widget widget
 add_action( 'widgets_init', function(){
-  register_widget( 'minimal_author_widget' );
+  register_widget( 'minimall_author_widget' );
 });

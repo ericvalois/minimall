@@ -16,7 +16,7 @@ get_header(); ?>
 
 			<section class="error-404 not-found max-width-3 ml-auto mr-auto">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'minimal' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'minimall' ); ?></h1>
 				</header>
 
 				<div class="page-content">

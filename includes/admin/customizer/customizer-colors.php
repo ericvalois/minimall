@@ -1,8 +1,15 @@
 <?php
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_section( 'colors', array(
+	'title'      => esc_attr__( 'Colors', 'minimall' ),
+    'priority'   => 80,
+    'panel'		 => 'minimall_options',
+	'capability' => 'edit_theme_options',
+) );
+
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'color',
 	'settings'    => 'primary_color',
-	'label'       => __( 'Primary Color', 'minimal' ),
+	'label'       => __( 'Primary Color', 'minimall' ),
 	'section'     => 'colors',
 	'default'     => '#1078ff',
 	'priority'    => 1,
@@ -24,3 +31,11 @@ Minimal_Kirki::add_field( 'minimal', array(
 		),
 	),
 ) );
+/*
+Minimall_Kirki::add_field( 'minimall', array(
+	'type'        => 'tpfw_link',
+	'settings'    => 'super_link',
+	'label'       => __( 'Link', 'minimall' ),
+	'section'     => 'colors',
+	'priority'    => 20,
+) );*/

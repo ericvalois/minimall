@@ -26,7 +26,7 @@
         
         <?php if ( 'post' === get_post_type() ) : ?>
             <div class="entry-meta sm-text">
-                <?php minimal_posted_on(); ?>
+                <?php minimall_posted_on(); ?>
             </div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -45,7 +45,7 @@
 			
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'minimal' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'minimall' ),
 				'after'  => '</div>',
 			) );
 		?>

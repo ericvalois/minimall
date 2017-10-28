@@ -8,11 +8,11 @@
 /*
 * Show or hide content animation
 */
-function minimal_content_animation(){
+function minimall_content_animation(){
 
     return;
 
-    if( minimal_get_field("perf_show_fade","option") == 1 ){
+    if( minimall_get_field("perf_show_fade","option") == 1 ){
         return 'animated fadeIn opacity-zero';
     }else{
         return;
@@ -22,7 +22,7 @@ function minimal_content_animation(){
 /**
  * Custom comment markup
  */
-function minimal_custom_comments($comment, $args, $depth) {
+function minimall_custom_comments($comment, $args, $depth) {
     global $post;
    
     $post_author = get_userdata($post->post_author);
@@ -33,7 +33,7 @@ function minimal_custom_comments($comment, $args, $depth) {
             
         <div class="comment-intro clearfix">
             <div class="left mr1 mb1 "><?php echo get_avatar( $comment->comment_author_email, 57, "", "", array("class" => "rounded") ); ?></div> 
-            <span class="small-p bold upper"><?php printf(__('%s','minimal'), get_comment_author_link()) ?> </span>
+            <span class="small-p bold upper"><?php printf(__('%s','minimall'), get_comment_author_link()) ?> </span>
             <strong><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></strong>
             <?php 
                 if( $comment->comment_author_email == $post_author->user_email ){
@@ -41,11 +41,11 @@ function minimal_custom_comments($comment, $args, $depth) {
                 }
             ?>
             <br>
-            <span class="comment_date upper small-p"><?php printf(__('%1$s','minimal'), get_comment_date(), get_comment_time()) ?></span>
+            <span class="comment_date upper small-p"><?php printf(__('%1$s','minimall'), get_comment_date(), get_comment_time()) ?></span>
         </div>
         
         <?php if ($comment->comment_approved == '0') : ?>
-            <em><php _e('Your comment is awaiting moderation.','minimal'); ?></em><br />
+            <em><php _e('Your comment is awaiting moderation.','minimall'); ?></em><br />
         <?php endif; ?>
 
         <div class="sm-text">
@@ -61,7 +61,7 @@ function minimal_custom_comments($comment, $args, $depth) {
  * @params  $minify  String to minify
  * @returns String minified
  */
-function minimal_compress( $minify ){
+function minimall_compress( $minify ){
     // Remove space after colons
     $minify = str_replace(': ', ':', $minify);
     // Remove whitespace
@@ -74,7 +74,7 @@ function minimal_compress( $minify ){
 /**
  * Custom WordPress Menu Markup
  */
-function minimal_custom_menu( $theme_location ) {
+function minimall_custom_menu( $theme_location ) {
     if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) {
         $menu = get_term( $locations[$theme_location], 'nav_menu' );
         $menu_items = wp_get_nav_menu_items($menu->term_id);
@@ -154,7 +154,7 @@ function minimal_custom_menu( $theme_location ) {
 /**
  * Custom Pagination Markup
  */
-function minimal_pagination($pages = '', $range = 2){  
+function minimall_pagination($pages = '', $range = 2){  
     $showitems = ($range * 2)+1;  
 
     global $paged;
@@ -195,18 +195,18 @@ function minimal_pagination($pages = '', $range = 2){
 /*
 * Hero image selection
 */
-function minimal_select_hero_image(){
+function minimall_select_hero_image(){
 
-    /*$page_options = minimal_page_options();
-    $theme_options = minimal_theme_options();
+    /*$page_options = minimall_page_options();
+    $theme_options = minimall_theme_options();
 
     if( !empty( $page_options['hero_img'] ) ){
-        $minimal_hero = $page_options['hero_img'];
+        $minimall_hero = $page_options['hero_img'];
     }else{
         if( !empty( $theme_options['hero_img'] ) ){
-            $minimal_hero = $theme_options['hero_img'];
+            $minimall_hero = $theme_options['hero_img'];
         }else{
-            $minimal_hero = false;
+            $minimall_hero = false;
         }
         
     }*/
@@ -224,7 +224,7 @@ function minimal_select_hero_image(){
  * @params  $url  The URL of the feed to retrieve.
  * @returns The response from the URL; null if empty.
  */
-function minimal_get_response( $url ) {
+function minimall_get_response( $url ) {
     $response = null;
 
     // First, we try to use wp_remote_get
@@ -242,7 +242,7 @@ function minimal_get_response( $url ) {
 /**
  * Return external attribute if needed
  */
-function minimal_external_link( $target = false, $nofollow = false ){
+function minimall_external_link( $target = false, $nofollow = false ){
     $attributes = '';
     if( $target && $nofollow ){
         $attributes .= 'target="_blank" rel="noopener noreferrer nofollow" ';
@@ -259,8 +259,8 @@ function minimal_external_link( $target = false, $nofollow = false ){
  * Font Awesome markup helper.
  * @string $icon_name
  */
-function minimal_get_fa( $icon_name = '' ) {
-    $theme_options = minimal_theme_options();
+function minimall_get_fa( $icon_name = '' ) {
+    $theme_options = minimall_theme_options();
 
     if ( $theme_options['fontawesome'] != 1 ) {
         return;
@@ -278,7 +278,7 @@ function minimal_get_fa( $icon_name = '' ) {
 }
 
 // retrieves the attachment ID from the file URL
-function minimal_get_image_id($image_url) {
+function minimall_get_image_id($image_url) {
     global $wpdb;
     $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
         return $attachment[0]; 

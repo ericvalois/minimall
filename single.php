@@ -21,7 +21,7 @@ get_header(); ?>
 
                     echo '<div class="max-width-3 ml-auto mr-auto px2 lg-px0">';
 
-                        minimal_entry_footer();
+                        minimall_entry_footer();
 
                         if ( is_active_sidebar( 'blog-footer-sidebar' ) && is_singular('post') ) {
                         ?>

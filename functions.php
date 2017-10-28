@@ -6,7 +6,7 @@
  *
  * @package minimal
  */
-if ( ! function_exists( 'minimal_setup' ) ) :
+if ( ! function_exists( 'minimall_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -14,14 +14,14 @@ if ( ! function_exists( 'minimal_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function minimal_setup() {
+function minimall_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on minimal, use a find and replace
-	 * to change 'minimal' to the name of your theme in all the template files.
+	 * to change 'minimall' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'minimal', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'minimall', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -43,16 +43,16 @@ function minimal_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'minimal-hero-lg', 950, 612, true );
-	add_image_size( 'minimal-hero-md', 767, 494, true );
-	add_image_size( 'minimal-hero-sm', 595, 383, true );
+	add_image_size( 'minimall-hero-lg', 950, 612, true );
+	add_image_size( 'minimall-hero-md', 767, 494, true );
+	add_image_size( 'minimall-hero-sm', 595, 383, true );
 
-	add_image_size( 'minimal-hero-placeholder', 50, 32, true );
+	add_image_size( 'minimall-hero-placeholder', 50, 32, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'minimal' ),
-		'sub-footer' => esc_html__( 'Sub-footer', 'minimal' ),
+		'primary' => esc_html__( 'Primary Menu', 'minimall' ),
+		'sub-footer' => esc_html__( 'Sub-footer', 'minimall' ),
 	) );
 
 	/*
@@ -68,7 +68,7 @@ function minimal_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'minimal_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'minimall_custom_background_args', array(
 		'default-color' => 'ffffff',
     ) ) );
 
@@ -89,8 +89,8 @@ function minimal_setup() {
 
 
 }
-endif; // minimal_setup
-add_action( 'after_setup_theme', 'minimal_setup' );
+endif; // minimall_setup
+add_action( 'after_setup_theme', 'minimall_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -99,10 +99,10 @@ add_action( 'after_setup_theme', 'minimal_setup' );
  *
  * @global int $content_width
  */
-function minimal_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'minimal_content_width', 800 );
+function minimall_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'minimall_content_width', 800 );
 }
-add_action( 'after_setup_theme', 'minimal_content_width', 0 );
+add_action( 'after_setup_theme', 'minimall_content_width', 0 );
 
 
 /**
@@ -110,10 +110,10 @@ add_action( 'after_setup_theme', 'minimal_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function minimal_widgets_init() {
+function minimall_widgets_init() {
 
     register_sidebar( array(
-		'name'          => esc_html__( 'Footer Copyright', 'minimal' ),
+		'name'          => esc_html__( 'Footer Copyright', 'minimall' ),
 		'id'            => 'footer-copy',
 		'description'   => esc_html__("Sub Footer Widgets Sidebar","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
@@ -123,7 +123,7 @@ function minimal_widgets_init() {
     ) );
     
     register_sidebar( array(
-		'name'          => esc_html__( 'Footer 1', 'minimal' ),
+		'name'          => esc_html__( 'Footer 1', 'minimall' ),
 		'id'            => 'footer-1',
 		'description'   => esc_html__("First footer column location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
@@ -133,7 +133,7 @@ function minimal_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer 2', 'minimal' ),
+		'name'          => esc_html__( 'Footer 2', 'minimall' ),
 		'id'            => 'footer-2',
 		'description'   => esc_html__("Second footer column location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
@@ -143,7 +143,7 @@ function minimal_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer 3', 'minimal' ),
+		'name'          => esc_html__( 'Footer 3', 'minimall' ),
 		'id'            => 'footer-3',
 		'description'   => esc_html__("Third footer column location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
@@ -153,7 +153,7 @@ function minimal_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer 4', 'minimal' ),
+		'name'          => esc_html__( 'Footer 4', 'minimall' ),
 		'id'            => 'footer-4',
 		'description'   => esc_html__("Fourth footer column location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
@@ -163,7 +163,7 @@ function minimal_widgets_init() {
     ) );
     
     register_sidebar( array(
-		'name'          => esc_html__( '404 Full Width Sidebar', 'minimal' ),
+		'name'          => esc_html__( '404 Full Width Sidebar', 'minimall' ),
 		'id'            => '404-full-sidebar',
 		'description'   => __("404 page top location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
@@ -174,7 +174,7 @@ function minimal_widgets_init() {
 	) );
 
     register_sidebar( array(
-		'name'          => esc_html__( '404 Left Sidebar', 'minimal' ),
+		'name'          => esc_html__( '404 Left Sidebar', 'minimall' ),
 		'id'            => '404-left-sidebar',
 		'description'   => __("404 page left location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
@@ -185,7 +185,7 @@ function minimal_widgets_init() {
 	) );
 
     register_sidebar( array(
-		'name'          => esc_html__( '404 Right Sidebar', 'minimal' ),
+		'name'          => esc_html__( '404 Right Sidebar', 'minimall' ),
 		'id'            => '404-right-sidebar',
 		'description'   => __("404 page right location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
@@ -196,7 +196,7 @@ function minimal_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Blog Sidebar', 'minimal' ),
+		'name'          => esc_html__( 'Blog Sidebar', 'minimall' ),
 		'id'            => 'blog-sidebar',
 		'description'   => __("Blog and archive sidebar location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
@@ -207,7 +207,7 @@ function minimal_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Posts Footer Sidebar', 'minimal' ),
+		'name'          => esc_html__( 'Posts Footer Sidebar', 'minimall' ),
 		'id'            => 'blog-footer-sidebar',
 		'description'   => __("Sidebar display after the post content","minimal"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt4 mb4">',
@@ -217,7 +217,7 @@ function minimal_widgets_init() {
     ) );
     
     register_sidebar( array(
-		'name'          => esc_html__( 'Home page sidebar', 'minimal' ),
+		'name'          => esc_html__( 'Home page sidebar', 'minimall' ),
 		'id'            => 'home-template',
 		'description'   => __("Sidebar display after the post content","minimal"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt4 mb4">',
@@ -226,7 +226,7 @@ function minimal_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 }
-add_action( 'widgets_init', 'minimal_widgets_init' );
+add_action( 'widgets_init', 'minimall_widgets_init' );
 
 /**
  * Helper functions
@@ -241,7 +241,7 @@ require get_template_directory() . '/includes/admin/customizer/include-kirki.php
 /**
  * Customizer kirky Fallback
  */
-require( get_template_directory() . '/includes/admin/customizer/minimal-kirki.php' );
+require( get_template_directory() . '/includes/admin/customizer/minimall-kirki.php' );
 
 /**
  * Customizer Options
@@ -253,20 +253,20 @@ require( get_template_directory() . '/includes/admin/customizer/customizer.php' 
 /**
  * Temp
  */
-function minimal_page_options(){
+function minimall_page_options(){
     return;
 }
 
 /**
  * Temp
  */
-function minimal_theme_options(){
-    $theme_options = get_option( 'theme_mods_minimal', array() );
+function minimall_theme_options(){
+    $theme_options = get_option( 'theme_mods_minimall', array() );
 
     return $theme_options;
 }
 
-function minimal_theme_get_option( $setting, $default ) {
+function minimall_theme_get_option( $setting, $default ) {
     $options = get_option( 'option_name', array() );
     $value = $default;
     if ( isset( $options[ $setting ] ) ) {
@@ -281,29 +281,29 @@ function minimal_theme_get_option( $setting, $default ) {
 /**
  * Enqueue scripts and styles.
  */
-function minimal_scripts() {
+function minimall_scripts() {
     global $post;
 
-    $page_options = minimal_page_options();
-    $theme_options = minimal_theme_options();
+    $page_options = minimall_page_options();
+    $theme_options = minimall_theme_options();
 
 	/* If using a child theme, auto-load the parent theme style. */
     if ( is_child_theme() ) {
-        wp_enqueue_style( 'minimal-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
-        wp_enqueue_style( 'minimal-stylesheet', get_stylesheet_uri()  );
+        wp_enqueue_style( 'minimall-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+        wp_enqueue_style( 'minimall-stylesheet', get_stylesheet_uri()  );
     }else{
-    	wp_enqueue_style( 'minimal-stylesheet', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+    	wp_enqueue_style( 'minimall-stylesheet', trailingslashit( get_template_directory_uri() ) . 'style.css' );
     }
 
-    wp_enqueue_script( 'minimal-lazysizes', get_template_directory_uri() . '/includes/vendors/lazysizes/lazysizes-all.min.js', '', '', true );
+    wp_enqueue_script( 'minimall-lazysizes', get_template_directory_uri() . '/includes/vendors/lazysizes/lazysizes-all.min.js', '', '', true );
 
-    wp_enqueue_script( 'minimal-init', get_template_directory_uri() . '/assets/js/minimal-init.min.js', array(), '', true );
+    wp_enqueue_script( 'minimall-init', get_template_directory_uri() . '/assets/js/minimall-init.min.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'minimal_scripts' );
+add_action( 'wp_enqueue_scripts', 'minimall_scripts' );
 
 /**
  * Load TGM class
@@ -318,7 +318,7 @@ require get_template_directory() . '/includes/template-tags.php';
 /**
  * minimal functions
  */
-require get_template_directory() . '/includes/minimal.php';
+require get_template_directory() . '/includes/minimall.php';
 
 /**
  * Load Jetpack compatibility file.

@@ -2,16 +2,16 @@
 /**
  * Adds custom widget.
  */
-class minimal_social_profiles extends WP_Widget {
+class minimall_social_profiles extends WP_Widget {
 
   /**
    * Register widget with WordPress.
    */
   function __construct() {
     parent::__construct(
-      'minimal_social_profiles', // Base ID
-      __('TTFB Social Profiles', 'minimal'), // Name
-      array( 'description' => __( 'Social Profiles Widget for TTFB', 'minimal' ), ) // Args
+      'minimall_social_profiles', // Base ID
+      __('TTFB Social Profiles', 'minimall'), // Name
+      array( 'description' => __( 'Social Profiles Widget for TTFB', 'minimall' ), ) // Args
     );
   }
 
@@ -30,9 +30,9 @@ class minimal_social_profiles extends WP_Widget {
     }
     
 
-    $minimal_icons = minimal_get_field('icons_social', 'widget_' . $args['widget_id']);
-    if( !empty($minimal_icons) ){
-        foreach( $minimal_icons as $icon ){
+    $minimall_icons = minimall_get_field('icons_social', 'widget_' . $args['widget_id']);
+    if( !empty($minimall_icons) ){
+        foreach( $minimall_icons as $icon ){
             ?>
                 <a target="_blank" rel='noopener noreferrer' href="<?php echo esc_url( $icon['link'] ); ?>" class="left mr2 icons_social"><svg class="fa <?php echo esc_attr( $icon['icon_name'] ); ?>"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?php echo esc_attr( $icon['icon_name'] ); ?>"></use></svg></a>
             <?php
@@ -51,15 +51,15 @@ class minimal_social_profiles extends WP_Widget {
    */
   public function form( $instance ) {
     if ( isset($instance['title']) ) {
-      $minimal_title = $instance['title'];
+      $minimall_title = $instance['title'];
     }
     else {
-      $minimal_title = __( 'New title', 'minimal' );
+      $minimall_title = __( 'New title', 'minimall' );
     }
     ?>
     <p>
-      <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e(  'Title:','minimal' ); ?></label>
-      <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $minimal_title ); ?>">
+      <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e(  'Title:','minimall' ); ?></label>
+      <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $minimall_title ); ?>">
     </p>
     <?php
   }
@@ -75,15 +75,15 @@ class minimal_social_profiles extends WP_Widget {
    * @return array Updated safe values to be saved.
    */
   public function update( $new_instance, $old_instance ) {
-    $minimal_instance = array();
-    $minimal_instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    $minimall_instance = array();
+    $minimall_instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 
-    return $minimal_instance;
+    return $minimall_instance;
   }
 
-} // class minimal_social_profiles
+} // class minimall_social_profiles
 
-// register minimal_social_profiles widget
+// register minimall_social_profiles widget
 add_action( 'widgets_init', function(){
-  register_widget( 'minimal_social_profiles' );
+  register_widget( 'minimall_social_profiles' );
 });

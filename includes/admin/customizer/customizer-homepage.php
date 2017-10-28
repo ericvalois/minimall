@@ -1,12 +1,12 @@
 <?php
-Minimal_Kirki::add_panel( 'homepage', array(
-    'priority'	 => 10,
-    'title'		 => __( 'Homepage Settings', 'minimal' ),
-  'description'	 => __( 'Homepage options for Eleganto theme', 'minimal' ),
+Minimall_Kirki::add_panel( 'homepage', array(
+    'priority'	 => 290,
+    'title'		 => __( 'Homepage Editor', 'minimall' ),
+    'description'	 => __( 'Homepage section options', 'minimall' ),
 ) );
 
-Minimal_Kirki::add_section( 'homepage_layout', array(
-    'title'		 => __( 'Homepage Layout', 'minimal' ),
+Minimall_Kirki::add_section( 'homepage_layout', array(
+    'title'		 => __( 'Homepage Layout', 'minimall' ),
     'panel'		 => 'homepage',
     'priority'	 => 10,
 ) );
@@ -14,28 +14,37 @@ Minimal_Kirki::add_section( 'homepage_layout', array(
 /**
  * Homepage Layout Builder
  */
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
     'type'		 => 'repeater',
-    'label'		 => __( 'Home Page Sections', 'minimal' ),
-    'description' => __( 'If you edit above sections, you would have to refresh the page to display your changes.', 'minimal'),
+    'label'		 => __( 'Home Page Sections', 'minimall' ),
+    'description' => __( 'If you edit above sections, you would have to refresh the page to display your changes.', 'minimall'),
     'section'	 => 'homepage_layout',
     'priority'	 => 10,
     'settings'	 => 'homepage_section',
-    'tooltip'    =>  __( 'If you edit above sections, you would have to refresh the page to display your changes.', 'minimal'),
-    'default'	 => array(),
+    'tooltip'    =>  __( 'If you edit above sections, you would have to refresh the page to display your changes.', 'minimall'),
+    /*'default'     => array(
+		array(
+			'sections_name' => esc_attr__( 'My section name 1', 'minimall' ),
+			'sections_type'  => 'hero',
+        ),
+        array(
+			'sections_name' => esc_attr__( 'My section name 2', 'minimall' ),
+			'sections_type'  => 'hero',
+		),
+	),*/
     'fields'	 => array(
         'sections_name' => array(
             'type'		 => 'text',
-            'label'		 => __( 'Section Name', 'minimal' ),
+            'label'		 => __( 'Section Name', 'minimall' ),
             'default'	 => '',
         ),
         'sections_type' => array(
             'type'		 => 'select',
-            'label'		 => __( 'Section Type', 'minimal' ),
-            'default'	 => 'content',
+            'label'		 => __( 'Section Type', 'minimall' ),
+            'default'	 => 'services',
             'choices'     => array(
-                'hero' => esc_attr__( 'Hero Section', 'minimal' ),
-                'content' => esc_attr__( 'Simple Content', 'minimal' ),
+                'hero' => esc_attr__( 'Hero', 'minimall' ),
+                'services' => esc_attr__( 'Services', 'minimall' ),
             ),
         ),
     ),
@@ -48,9 +57,10 @@ Minimal_Kirki::add_field( 'minimal', array(
 /**
  * Build Home page panels from the homepage builder
  */
-$theme_options = minimal_theme_options();
-$home_sections = $theme_options['homepage_section'];
-if( !empty( $home_sections ) ){
+$theme_options = minimall_theme_options();
+if( isset( $theme_options['homepage_section'] ) ){ $home_sections = $theme_options['homepage_section']; }
+
+if( !empty( $home_sections ) && is_array($home_sections) ){
     foreach ($home_sections as $key => $section) {
         $args = array(
             'panel'		 => 'homepage',
@@ -60,19 +70,21 @@ if( !empty( $home_sections ) ){
         if( !empty( $section['sections_name'] ) ){
             $args['title'] = $section['sections_name'];
         }else{
-            $args['title'] = __( 'Section '.$key, 'minimal' );
+            $args['title'] = __( 'Section '.$key, 'minimall' );
         }
+
+        $unique_id = uniqid();
 
         $section_name = 'homepage_content_'.$key;
 
         // Create The Panel Section
-        Minimal_Kirki::add_section( $section_name, $args );
+        Minimall_Kirki::add_section( $section_name, $args );
 
         // Add fields to the panel
-        if( 'hero' === $section['sections_type'] ){
-            minimal_home_hero_section( $section_name, $key );
+        if( 'hero' == $section['sections_type'] ){
+            minimall_home_hero_section( $section_name, $unique_id );
         }else{
-            minimal_home_content_section( $section_name, $key );
+            minimall_home_content_section( $section_name, $unique_id );
         }
         
     }
@@ -81,11 +93,11 @@ if( !empty( $home_sections ) ){
 /*
 * Hero Controls
 */
-function minimal_home_hero_section( $section_name, $key ){
-    Minimal_Kirki::add_field( 'minimal', array(
+function minimall_home_hero_section( $section_name, $key ){
+    Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'textarea',
-        'settings' => 'hero_title_'.$key,
-        'label'    => __( 'Hero Title', 'minimal' ),
+        'settings' => 'hero_title_'.$unique_id,
+        'label'    => __( 'Hero Title', 'minimall' ),
         'section'  => $section_name,
         'priority' => 10,
         'transport'   => 'postMessage',
@@ -97,10 +109,10 @@ function minimal_home_hero_section( $section_name, $key ){
         ),
     ) );
 
-    Minimal_Kirki::add_field( 'minimal', array(
+    Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'textarea',
-        'settings' => 'hero_description_'.$key,
-        'label'    => __( 'Hero Description', 'minimal' ),
+        'settings' => 'hero_description_'.$unique_id,
+        'label'    => __( 'Hero Description', 'minimall' ),
         'section'  => $section_name,
         'priority' => 20,
         'transport'   => 'postMessage',
@@ -112,45 +124,45 @@ function minimal_home_hero_section( $section_name, $key ){
         ),
     ) );
 
-    Kirki::add_field( 'minimal', array(
+    Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'image',
-        'settings'    => 'hero_image_'.$key,
-        'label'       => __( 'Image', 'minimal' ),
-        'description' => __( 'background image', 'minimal' ),
+        'settings'    => 'hero_image_'.$unique_id,
+        'label'       => __( 'Image', 'minimall' ),
+        'description' => __( 'Background image', 'minimall' ),
         'section'     => $section_name,
         'priority'    => 30,
     ) );
 
-    Minimal_Kirki::add_field( 'minimal', array(
+    Minimall_Kirki::add_field( 'minimall', array(
         'type'		 => 'repeater',
-        'label'		 => __( 'Links', 'minimal' ),
-        'settings'	 => 'hero_links_'.$key,
+        'label'		 => __( 'Links', 'minimall' ),
+        'settings'	 => 'hero_links_'.$unique_id,
         'priority'	 => 40,
         'section'	 => $section_name,
         'default'	 => array(),
         'fields'	 => array(
             'link_url' => array(
                 'type'		 => 'url',
-                'label'		 => __( 'Link URL', 'minimal' ),
+                'label'		 => __( 'Link URL', 'minimall' ),
                 'default'	 => '',
             ),
             'link_label' => array(
                 'type'		 => 'text',
-                'label'		 => __( 'Link Label', 'minimal' ),
+                'label'		 => __( 'Link Label', 'minimall' ),
                 'default'	 => '',
             ),
             'link_class' => array(
                 'type'		 => 'text',
-                'label'		 => __( 'Link Class', 'minimal' ),
+                'label'		 => __( 'Link Class', 'minimall' ),
                 'default'	 => '',
             ),
             'link_target' => array(
                 'type'		 => 'checkbox',
-                'label'		 => __( 'External Link', 'minimal' ),
+                'label'		 => __( 'External Link', 'minimall' ),
             ),
             'link_nofollow' => array(
                 'type'		 => 'checkbox',
-                'label'		 => __( 'Nofollow Link', 'minimal' ),
+                'label'		 => __( 'Nofollow Link', 'minimall' ),
             ),
             
         ),
@@ -160,25 +172,25 @@ function minimal_home_hero_section( $section_name, $key ){
 /*
 * Content Controls
 */
-function minimal_home_content_section( $section_name, $key ){
-    Minimal_Kirki::add_field( 'minimal', array(
+function minimall_home_content_section( $section_name, $unique_id ){
+    Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'toggle',
-        'settings' => 'section_header_'.$key,
-        'label'    => __( 'Section Header', 'minimal' ),
-        'section'  => 'homepage_content_'.$key,
+        'settings' => 'section_header_'.$unique_id,
+        'label'    => __( 'Section Header', 'minimall' ),
+        'section'  => $section_name,
         'default'  => 1,
         'priority' => 10,
     ) );
 
-    Minimal_Kirki::add_field( 'minimal', array(
+    Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'textarea',
-        'settings' => 'section_title_'.$key,
-        'label'    => __( 'Section Title', 'minimal' ),
+        'settings' => 'section_title_'.$unique_id,
+        'label'    => __( 'Section Title', 'minimall' ),
         'section'  => $section_name,
         'priority' => 20,
         'active_callback'    => array(
             array(
-                'setting'  => 'section_header_'.$key,
+                'setting'  => 'section_header_'.$unique_id,
                 'operator' => '==',
                 'value'    => true,
             ),
@@ -186,21 +198,21 @@ function minimal_home_content_section( $section_name, $key ){
         'transport'   => 'postMessage',
         'js_vars'     => array(
             array(
-                'element'   => '#section_'.$key.' .title',
+                'element'   => '#section_'.$unique_id.' .title',
                 'function'  => 'html',
                 ),  
         ),
     ) );
 
-    Minimal_Kirki::add_field( 'minimal', array(
+    Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'textarea',
-        'settings' => 'section_description_'.$key,
-        'label'    => __( 'Section Description', 'minimal' ),
+        'settings' => 'section_description_'.$unique_id,
+        'label'    => __( 'Section Description', 'minimall' ),
         'section'  => $section_name,
         'priority' => 30,
         'active_callback'    => array(
             array(
-                'setting'  => 'section_header_'.$key,
+                'setting'  => 'section_header_'.$unique_id,
                 'operator' => '==',
                 'value'    => true,
             ),
@@ -208,7 +220,7 @@ function minimal_home_content_section( $section_name, $key ){
         'transport'   => 'postMessage',
         'js_vars'     => array(
             array(
-                'element'   => '#section_'.$key.' .content',
+                'element'   => '#section_'.$unique_id.' .content',
                 'function'  => 'html',
                 ),  
         ),
@@ -216,11 +228,11 @@ function minimal_home_content_section( $section_name, $key ){
 
 
 
-    Minimal_Kirki::add_field( 'minimal', array(
+    Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'color',
-        'settings'    => 'background_'.$key,
-        'label'       => __( 'Background Color', 'minimal' ),
-        'section'     => 'homepage_content_'.$key,
+        'settings'    => 'background_'.$unique_id,
+        'label'       => __( 'Background Color', 'minimall' ),
+        'section'     => $section_name,
         'default'     => '#ffffff',
         'priority'    => 40,
         'choices'     => array(

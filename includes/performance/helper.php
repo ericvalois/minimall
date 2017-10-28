@@ -4,7 +4,7 @@
 *
 * @return array(_WP_Dependency) A list of enqueued dependencies
 */
-function minimal_get_enqueued_scripts() {
+function minimall_get_enqueued_scripts() {
     global $wp_scripts;
     foreach ( $wp_scripts->queue as $handle ) {
         $enqueued_scripts[] = $wp_scripts->registered[ $handle ];
@@ -18,7 +18,7 @@ function minimal_get_enqueued_scripts() {
 * @param string $handle The handle
 * @return _WP_Dependency associated with input handle
 */
-function minimal_get_dep_for_handle( $handle ) {
+function minimall_get_dep_for_handle( $handle ) {
     global $wp_scripts;
     return $wp_scripts->registered[ $handle ];
 }
@@ -29,7 +29,7 @@ function minimal_get_dep_for_handle( $handle ) {
 * @param string $handle The handle
 * @return URL associated with handle, or empty string
 */
-function minimal_get_src_for_handle( $handle ) {
+function minimall_get_src_for_handle( $handle ) {
     $dep = get_dep_for_handle( $handle );
     $suffix = ( $dep->src && $dep->ver )
         ? "?ver={$dep->ver}"
@@ -42,7 +42,7 @@ function minimal_get_src_for_handle( $handle ) {
 *
 * @param string $handle The handle
 */
-function minimal_get_deps_for_handle( $handle ) {
+function minimall_get_deps_for_handle( $handle ) {
     $dep = get_dep_for_handle( $handle );
     return $dep->deps;
 }

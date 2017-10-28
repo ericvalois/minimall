@@ -2,13 +2,14 @@
 /**
  * Add the typography section
  */
-Minimal_Kirki::add_section( 'footer', array(
-	'title'      => esc_attr__( 'Footer', 'minimal' ),
-	'priority'   => 40,
+Minimall_Kirki::add_section( 'footer', array(
+	'title'      => esc_attr__( 'Footer', 'minimall' ),
+    'priority'   => 40,
+    'panel'		 => 'minimall_options',
 	'capability' => 'edit_theme_options',
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'custom',
 	'settings'    => 'footer_separator_1',
 	'section'     => 'footer',
@@ -16,19 +17,19 @@ Minimal_Kirki::add_field( 'minimal', array(
 	'priority'    => 9,
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'toggle',
 	'settings'    => 'footer_hero',
-	'label'       => __( 'Activate Footer Hero', 'minimal' ),
+	'label'       => __( 'Activate Footer Hero', 'minimall' ),
 	'section'     => 'footer',
 	'default'     => '0',
 	'priority'    => 10,
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'     => 'text',
 	'settings' => 'footer_hero_label',
-	'label'    => __( 'Top Label', 'minimal' ),
+	'label'    => __( 'Top Label', 'minimall' ),
 	'section'  => 'footer',
     'priority' => 20,
     'active_callback'    => array(
@@ -40,10 +41,10 @@ Minimal_Kirki::add_field( 'minimal', array(
     ),
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'     => 'textarea',
 	'settings' => 'footer_hero_title',
-	'label'    => __( 'Main Title', 'minimal' ),
+	'label'    => __( 'Main Title', 'minimall' ),
 	'section'  => 'footer',
     'priority' => 20,
     'active_callback'    => array(
@@ -55,13 +56,13 @@ Minimal_Kirki::add_field( 'minimal', array(
     ),
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'     => 'text',
 	'settings' => 'footer_cta_url',
-	'label'    => __( 'Call to action link', 'minimal' ),
+	'label'    => __( 'Call to action link', 'minimall' ),
 	'section'  => 'footer',
     'priority' => 30,
-    'default'  => esc_attr__( 'http://', 'minimal' ),
+    'default'  => esc_attr__( 'http://', 'minimall' ),
     'active_callback'    => array(
         array(
             'setting'  => 'footer_hero',
@@ -71,13 +72,13 @@ Minimal_Kirki::add_field( 'minimal', array(
     ),
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'     => 'text',
 	'settings' => 'footer_cta_label',
-	'label'    => __( 'Call to action label', 'minimal' ),
+	'label'    => __( 'Call to action label', 'minimall' ),
 	'section'  => 'footer',
     'priority' => 40,
-    'default'  => esc_attr__( 'Read more', 'minimal' ),
+    'default'  => esc_attr__( 'Read more', 'minimall' ),
     'transport' => 'postMessage',
     'js_vars'   => array(
 		array(
@@ -94,10 +95,10 @@ Minimal_Kirki::add_field( 'minimal', array(
     ),
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'     => 'fontawesome',
 	'settings' => 'footer_cta_icon',
-	'label'    => __( 'Call to action icon', 'minimal' ),
+	'label'    => __( 'Call to action icon', 'minimall' ),
 	'section'  => 'footer',
     'priority' => 45,
     'active_callback'    => array(
@@ -114,10 +115,10 @@ Minimal_Kirki::add_field( 'minimal', array(
     ),
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'multicheck',
 	'settings'    => 'footer_cta_options',
-	'label'       => __( 'Call to action options', 'minimal' ),
+	'label'       => __( 'Call to action options', 'minimall' ),
 	'section'     => 'footer',
     'priority'    => 50,
     'active_callback'    => array(
@@ -128,12 +129,12 @@ Minimal_Kirki::add_field( 'minimal', array(
         ),
     ),
     'choices'     => array(
-		'blank' => esc_attr__( 'New window', 'minimal' ),
-		'nofollow' => esc_attr__( 'Nofollow', 'minimal' ),
+		'blank' => esc_attr__( 'New window', 'minimall' ),
+		'nofollow' => esc_attr__( 'Nofollow', 'minimall' ),
 	),
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'custom',
 	'settings'    => 'footer_separator_2',
 	'section'     => 'footer',
@@ -141,10 +142,10 @@ Minimal_Kirki::add_field( 'minimal', array(
 	'priority'    => 60,
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'radio-image',
 	'settings'    => 'footer_widget_layout',
-	'label'       => esc_html__( 'Layout', 'minimal' ),
+	'label'       => esc_html__( 'Layout', 'minimall' ),
 	'section'     => 'footer',
 	'default'     => '3',
 	'priority'    => 69,
@@ -156,34 +157,34 @@ Minimal_Kirki::add_field( 'minimal', array(
 	),
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'radio-buttonset',
 	'settings'    => 'footer_widget_spacing',
-    'label'       => __( 'Columns spacings', 'minimal' ),
-    'description'       => __( 'Space between each columns', 'minimal' ),
+    'label'       => __( 'Columns spacings', 'minimall' ),
+    'description'       => __( 'Space between each columns', 'minimall' ),
 	'section'     => 'footer',
 	'default'     => 'px3',
 	'priority'    => 70,
 	'choices'     => array(
-		'px1'   => esc_attr__( 'Small', 'minimal' ),
-		'px2' => esc_attr__( 'Medium', 'minimal' ),
-        'px3'  => esc_attr__( 'Large', 'minimal' ),
-        'px4'  => esc_attr__( 'XLarge', 'minimal' ),
+		'px1'   => esc_attr__( 'Small', 'minimall' ),
+		'px2' => esc_attr__( 'Medium', 'minimall' ),
+        'px3'  => esc_attr__( 'Large', 'minimall' ),
+        'px4'  => esc_attr__( 'XLarge', 'minimall' ),
 	),
 ) );
 
-Minimal_Kirki::add_field( 'minimal', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'radio-buttonset',
 	'settings'    => 'footer_widget_breakpoints',
-    'label'       => __( 'Columns Breakpoints', 'minimal' ),
-    'description'       => __( 'Mobile (≈640px) | Tablet (≈832px) | Desktop (≈1024px) | Large Desktop (≈1650px)', 'minimal' ),
+    'label'       => __( 'Columns Breakpoints', 'minimall' ),
+    'description'       => __( 'Mobile (≈640px) | Tablet (≈832px) | Desktop (≈1024px) | Large Desktop (≈1650px)', 'minimall' ),
 	'section'     => 'footer',
 	'default'     => 'lg',
 	'priority'    => 80,
 	'choices'     => array(
-		'sm'   => esc_attr__( 'Mobile', 'minimal' ),
-		'md' => esc_attr__( 'Tablet', 'minimal' ),
-        'lg'  => esc_attr__( 'Desktop', 'minimal' ),
-        'xlg'  => esc_attr__( 'Large Desktop', 'minimal' ),
+		'sm'   => esc_attr__( 'Mobile', 'minimall' ),
+		'md' => esc_attr__( 'Tablet', 'minimall' ),
+        'lg'  => esc_attr__( 'Desktop', 'minimall' ),
+        'xlg'  => esc_attr__( 'Large Desktop', 'minimall' ),
 	),
 ) );

@@ -1,4 +1,4 @@
-<?php $theme_options = minimal_theme_options(); ?>
+<?php $theme_options = minimall_theme_options(); ?>
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
     <section class="footer-widgets clearfix hide-print break-word max-width-5 ml-auto mr-auto line-height-4">
 

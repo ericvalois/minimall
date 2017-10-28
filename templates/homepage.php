@@ -7,7 +7,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
             <?php
-                $theme_options = minimal_theme_options();
+                $theme_options = minimall_theme_options();
                 $home_sections = $theme_options['homepage_section'];
                 if( !empty( $home_sections ) ){
                     foreach ($home_sections as $key => $section) {

@@ -17,10 +17,10 @@ require 'clean.php';
 /*
 * Critical CSS
 */
-add_action('minimal_mobile_styles','minimal_critical_css', 5);
-function minimal_critical_css() {
-    $page_options = minimal_page_options();
-    $perf_options = minimal_perf_options();
+add_action('minimall_mobile_styles','minimall_critical_css', 5);
+function minimall_critical_css() {
+    $page_options = minimall_page_options();
+    $perf_options = minimall_perf_options();
 
     if( !$page_options['disable_css'] && $perf_options['activate_css'] && !is_admin() ){
 
@@ -58,16 +58,16 @@ function minimal_critical_css() {
  /*
  * Defer scripts when it's possible
  */
- add_action( 'wp_print_scripts', 'minimal_defer_scripts' );
- add_action( 'wp_footer', 'minimal_defer_scripts' );
+ add_action( 'wp_print_scripts', 'minimall_defer_scripts' );
+ add_action( 'wp_footer', 'minimall_defer_scripts' );
  
- function minimal_defer_scripts() {
+ function minimall_defer_scripts() {
 
-    $page_options = minimal_page_options();
-    $minimal_options = minimal_perf_options();
+    $page_options = minimall_page_options();
+    $minimall_options = minimall_perf_options();
 
-    if( !$page_options['disable_js'] && !empty( $minimal_options['activate_js'] ) && !is_admin() ){
-        $enqueued_scripts = minimal_get_enqueued_scripts();
+    if( !$page_options['disable_js'] && !empty( $minimall_options['activate_js'] ) && !is_admin() ){
+        $enqueued_scripts = minimall_get_enqueued_scripts();
         $to_defer = array();
 
         if( !empty( $enqueued_scripts ) ){
@@ -102,11 +102,11 @@ function minimal_critical_css() {
     global $wp_scripts, $wp_styles;
     $exluded_styles = array("admin-bar");
     $queued_styles  = $wp_styles->queue;
-    $page_options = minimal_page_options();
-    $minimal_options = minimal_perf_options();
+    $page_options = minimall_page_options();
+    $minimall_options = minimall_perf_options();
 
     // Styles
-    if( !empty( $queued_styles ) && !$page_options['disable_css'] && !empty( $minimal_options['activate_css'] ) && !is_admin() ){
+    if( !empty( $queued_styles ) && !$page_options['disable_css'] && !empty( $minimall_options['activate_css'] ) && !is_admin() ){
         foreach ($wp_styles->queue as $key => $element) {
             if ( !in_array( $element, $exluded_styles ) ) {
                 unset( $wp_styles->queue[$key] );
@@ -114,12 +114,12 @@ function minimal_critical_css() {
         }
     }
  
-    add_action( 'wp_footer', function() use( $queued_styles, $exluded_styles, $page_options, $minimal_options ) {
+    add_action( 'wp_footer', function() use( $queued_styles, $exluded_styles, $page_options, $minimall_options ) {
        
         global $wp_styles;
         
         // Styles
-        if( !empty( $queued_styles ) && !$page_options['disable_css'] && !empty( $minimal_options['activate_css'] ) && !is_admin() ){
+        if( !empty( $queued_styles ) && !$page_options['disable_css'] && !empty( $minimall_options['activate_css'] ) && !is_admin() ){
         ?>
             <script>
                 /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
@@ -143,22 +143,22 @@ function minimal_critical_css() {
 /*
 * Preload
 */
-add_action( 'minimal_head_open', 'minimal_preload' );
-function minimal_preload() {
+add_action( 'minimall_head_open', 'minimall_preload' );
+function minimall_preload() {
     
-    $perf_options = minimal_perf_options();
+    $perf_options = minimall_perf_options();
 
     if( $perf_options['active_preload'] ){
-        $minimal_image_id = minimal_select_hero_image();
-        $minimal_image_src_sm = wp_get_attachment_image_src( $minimal_image_id, 'minimal-hero-sm' );
-        $minimal_image_src_md = wp_get_attachment_image_src( $minimal_image_id, 'minimal-hero-md' );
-        $minimal_image_src_lg = wp_get_attachment_image_src( $minimal_image_id, 'minimal-hero-lg' );
+        $minimall_image_id = minimall_select_hero_image();
+        $minimall_image_src_sm = wp_get_attachment_image_src( $minimall_image_id, 'minimall-hero-sm' );
+        $minimall_image_src_md = wp_get_attachment_image_src( $minimall_image_id, 'minimall-hero-md' );
+        $minimall_image_src_lg = wp_get_attachment_image_src( $minimall_image_id, 'minimall-hero-lg' );
 
-        if( $minimal_image_id && $perf_options['active_preload'] ){
+        if( $minimall_image_id && $perf_options['active_preload'] ){
         ?>
-            <link rel="preload" as="image" href="<?php echo $minimal_image_src_sm[0]; ?>" media="(max-width: 52em)">
-            <link rel="preload" as="image" href="<?php echo $minimal_image_src_md[0]; ?>" media="(min-width: 52em) and (max-width: 64em)">
-            <link rel="preload" as="image" href="<?php echo $minimal_image_src_lg[0]; ?>" media="(min-width: 64em)">
+            <link rel="preload" as="image" href="<?php echo $minimall_image_src_sm[0]; ?>" media="(max-width: 52em)">
+            <link rel="preload" as="image" href="<?php echo $minimall_image_src_md[0]; ?>" media="(min-width: 52em) and (max-width: 64em)">
+            <link rel="preload" as="image" href="<?php echo $minimall_image_src_lg[0]; ?>" media="(min-width: 64em)">
         <?php
         }
 
@@ -171,8 +171,8 @@ function minimal_preload() {
 /*
 * Remove all CSS and JS from contact form 7
 */
-add_action('init', 'minimal_clean_contact_form_7');
-function minimal_clean_contact_form_7(){
+add_action('init', 'minimall_clean_contact_form_7');
+function minimall_clean_contact_form_7(){
     add_filter( 'wpcf7_load_js', '__return_false' );
     add_filter( 'wpcf7_load_css', '__return_false' );
 }

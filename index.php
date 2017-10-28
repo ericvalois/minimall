@@ -22,7 +22,7 @@ get_header(); ?>
                 $title = esc_html( get_the_title( get_option('page_for_posts', true) ) ); 
                 $description = esc_html( get_bloginfo( "description" ) ); 
             }elseif( is_search() ){
-                $title = esc_html__( 'Search Results for: ', 'minimal' ) . '<span>' . get_search_query() . '</span>';
+                $title = esc_html__( 'Search Results for: ', 'minimall' ) . '<span>' . get_search_query() . '</span>';
             
             }else{
                 $title = get_the_archive_title();
@@ -47,7 +47,7 @@ get_header(); ?>
 
                 endwhile;
 
-                minimal_pagination();
+                minimall_pagination();
 
             else :
 

@@ -2,10 +2,10 @@
 /*
 * Remove everything emoji related
 */
-add_action( 'init', 'minimal_disable_emojis' );
-function minimal_disable_emojis() {
+add_action( 'init', 'minimall_disable_emojis' );
+function minimall_disable_emojis() {
 
-    $perf_options = minimal_perf_options();
+    $perf_options = minimall_perf_options();
 
     if( $perf_options['activate_emojis'] && !is_admin() ){
         remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -15,8 +15,8 @@ function minimal_disable_emojis() {
         remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
         remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
         remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-        add_filter( 'tiny_mce_plugins', 'minimal_disable_emojis_tinymce' );
-        add_filter( 'wp_resource_hints', 'minimal_disable_emojis_remove_dns_prefetch', 10, 2 );
+        add_filter( 'tiny_mce_plugins', 'minimall_disable_emojis_tinymce' );
+        add_filter( 'wp_resource_hints', 'minimall_disable_emojis_remove_dns_prefetch', 10, 2 );
     }
 }
 
@@ -26,7 +26,7 @@ function minimal_disable_emojis() {
  * @param    array  $plugins  
  * @return   array             Difference betwen the two arrays
  */
-function minimal_disable_emojis_tinymce( $plugins ) {
+function minimall_disable_emojis_tinymce( $plugins ) {
 	if ( is_array( $plugins ) ) {
 		return array_diff( $plugins, array( 'wpemoji' ) );
 	} else {
@@ -41,7 +41,7 @@ function minimal_disable_emojis_tinymce( $plugins ) {
  * @param  string $relation_type The relation type the URLs are printed for.
  * @return array                 Difference betwen the two arrays.
  */
-function minimal_disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
+function minimall_disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	if ( 'dns-prefetch' == $relation_type ) {
 		/** This filter is documented in wp-includes/formatting.php */
 		$emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2.2.1/svg/' );
@@ -55,11 +55,11 @@ function minimal_disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 /**
  * Remove query string
  */
-add_filter( 'style_loader_src', 'minimal_remove_wp_ver_css_js', 15, 1 ); 
-add_filter( 'script_loader_src', 'minimal_remove_wp_ver_css_js', 15, 1 );
-function minimal_remove_wp_ver_css_js( $src ) {
+add_filter( 'style_loader_src', 'minimall_remove_wp_ver_css_js', 15, 1 ); 
+add_filter( 'script_loader_src', 'minimall_remove_wp_ver_css_js', 15, 1 );
+function minimall_remove_wp_ver_css_js( $src ) {
 
-    $perf_options = minimal_perf_options();
+    $perf_options = minimall_perf_options();
 
     if( $perf_options['activate_query_strings'] && !is_admin() ){
         $rqs = explode( '?ver', $src );

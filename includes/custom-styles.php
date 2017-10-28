@@ -6,12 +6,12 @@
 /*
 * Inline styles
 */
-add_action( 'minimal_head_open', 'minimal_inline_styles', 10 );
-function minimal_inline_styles() {
+add_action( 'minimall_head_open', 'minimall_inline_styles', 10 );
+function minimall_inline_styles() {
 
     echo '<style>';
         /* Theme OPtions */ 
-        do_action( 'minimal_mobile_styles' );
+        do_action( 'minimall_mobile_styles' );
 
     echo '</style>';
 }
@@ -19,23 +19,23 @@ function minimal_inline_styles() {
 /**
  * Print custom inline CSS in the head
  */
-add_action('minimal_mobile_styles','minimal_e_custom_styles', 5);
-function minimal_e_custom_styles(){
-    $custom_styles = minimal_custom_styles();
-    echo minimal_compress( $custom_styles );
+add_action('minimall_mobile_styles','minimall_e_custom_styles', 5);
+function minimall_e_custom_styles(){
+    $custom_styles = minimall_custom_styles();
+    echo minimall_compress( $custom_styles );
 }
 
 /**
  * Define Custom CSS
  */
-function minimal_custom_styles(){
+function minimall_custom_styles(){
     
-    $theme_options = minimal_theme_options();
+    $theme_options = minimall_theme_options();
 
     $system_font_sans = 'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica,  sans-serif;';
     $system_font_serif = 'font-family: Georgia,Cambria,"Times New Roman",Times,serif;';
 
-    $minimal_custom_css = '
+    $minimall_custom_css = '
         a,
         a.black:hover{ color: '. $theme_options['primary_color'] .';}
         .btn-primary,
@@ -58,7 +58,7 @@ function minimal_custom_styles(){
         }else{
             $default_font = $system_font_serif;
         }
-        $minimal_custom_css .= '
+        $minimall_custom_css .= '
             body{ '. $default_font .' }
         ';
     }
@@ -73,7 +73,7 @@ function minimal_custom_styles(){
             $headers_font = $system_font_serif;
         }
 
-        $minimal_custom_css .= '
+        $minimall_custom_css .= '
             h1,h2,h3,h4,h5,h6{ '. $headers_font .' }
         ';
     }
@@ -88,11 +88,11 @@ function minimal_custom_styles(){
             $text_font = $system_font_serif;
         }
 
-        $minimal_custom_css .= '
+        $minimall_custom_css .= '
             p{ '. $text_font .' }
         ';
     }
     
     
-    return $minimal_custom_css;
+    return $minimall_custom_css;
 }

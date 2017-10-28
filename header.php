@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'minimal' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'minimall' ); ?></a>
 
 	<header id="masthead" class="site-header line-height-3 flex items-center flex-wrap col-12 bg-white" role="banner">
         
@@ -39,11 +39,11 @@
         <nav id="site-navigation" class="main-navigation lg-block col-12 lg-col-9" role="navigation">
             <?php
                 if ( has_nav_menu( 'primary' ) ) {
-                    minimal_custom_menu('primary');
+                    minimall_custom_menu('primary');
                 }
             ?>
         </nav><!-- .main-navigation -->
 
     </header>
 
-    <?php do_action("minimal_after_header"); ?>
+    <?php do_action("minimall_after_header"); ?>
