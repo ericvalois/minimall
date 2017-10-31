@@ -22,7 +22,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'minimall' ); ?></a>
 
-	<header id="masthead" class="site-header line-height-3 flex items-center flex-wrap col-12 bg-white" role="banner">
+	<header id="masthead" class="site-header line-height-3 flex items-center flex-wrap col-12 bg-white py1 px2" role="banner">
         
         <div class="flex justify-between items-center lg-flex col-12 lg-col-3 line-height-1 header-menu">
             <div class="site-branding flex-auto col-6 lg-col-2 flex items-center">

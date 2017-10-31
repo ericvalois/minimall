@@ -32,22 +32,32 @@ function minimall_custom_styles(){
     
     $theme_options = minimall_theme_options();
 
+    if( isset( $theme_options['primary_color'] ) ){
+        $main_color = $theme_options['primary_color'];
+    }else{
+        $main_color = '#1078ff';
+    }
+    
+
     $system_font_sans = 'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica,  sans-serif;';
     $system_font_serif = 'font-family: Georgia,Cambria,"Times New Roman",Times,serif;';
 
     $minimall_custom_css = '
         a,
-        a.black:hover{ color: '. $theme_options['primary_color'] .';}
+        a.black:hover{ color: '. $main_color .';}
         .btn-primary,
         .btn-black:hover,
         .btn-black:active,
-        .btn-black:focus{
-            background-color: '. $theme_options['primary_color'] .';
+        .btn-black:focus
+        {
+            background-color: '. $main_color .';
         }
         .btn-outline:hover,
-        .btn-outline:active {
-            border-color: '. $theme_options['primary_color'] .';
-            color: '. $theme_options['primary_color'] .';
+        .btn-outline:active,
+        .btn-white:hover,
+        .btn-white:focus {
+            border-color: '. $main_color .';
+            color: '. $main_color .' !important;
         }
     ';
 

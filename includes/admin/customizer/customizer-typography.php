@@ -32,11 +32,11 @@ Minimall_Kirki::add_field( 'minimall', array(
 	'default'     => array(
 		'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
 		'variant'        => '400',
-		'font-size'      => '',
-		'line-height'    => '',
-		'letter-spacing' => '',
-        'color'          => '',
-        //'subsets'        => array( 'latin' ),
+		'font-size'      => '100%',
+		'line-height'    => '1.8',
+		'letter-spacing' => '0.01rem',
+        'color'          => '#3A4145',
+        'subsets'        => array( 'latin' ),
 	),
 	'output' => array(
 		array(
@@ -45,14 +45,14 @@ Minimall_Kirki::add_field( 'minimall', array(
 	),
 ) );
 
-Minimall_Kirki::add_field( 'minimall', array(
+/*Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'switch',
 	'settings'    => 'text_font',
 	'label'       => __( 'Paragraph Typography', 'minimall' ),
 	'section'     => 'typography',
 	'default'     => '0',
 	'priority'    => 40,
-) );
+) );*/
 
 /**
  * Add the text-typography control
@@ -65,21 +65,21 @@ Minimall_Kirki::add_field( 'minimall', array(
 	'help'        => esc_attr__( 'The typography options you set here will override the Body Typography options for all headers on your site (post titles, widget titles etc).', 'minimall' ),
 	'section'     => 'typography',
     'priority'    => 50,
-    'active_callback'    => array(
+    /*'active_callback'    => array(
         array(
             'setting'  => 'text_font',
             'operator' => '==',
             'value'    => true,
         ),
-    ),
+    ),*/
 	'default'     => array(
 		'font-family'    => 'Georgia,Times,"Times New Roman",serif',
-		//'variant'        => '400',
+		'variant'        => '400',
 		'font-size'      => '105%',
-		//'line-height'    => '',
-		//'letter-spacing' => '',
-        //'color'          => '',
-        //'subsets'        => array(),
+		'line-height'    => '1.8',
+		'letter-spacing' => '0.01rem',
+        'color'          => '#3A4145',
+        'subsets'        => array( 'latin' ),
 	),
 	'output' => array(
 		array(

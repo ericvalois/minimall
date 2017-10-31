@@ -71,6 +71,8 @@ function minimall_customize_preview_js() {
     //wp_enqueue_script( 'minimall-tpl1', get_template_directory_uri() . '/includes/admin/customizer/tpl1/admin_fields.min.js', array( 'customize-preview' ), '20151215', true );
     //wp_enqueue_script( 'minimall-tpl2', get_template_directory_uri() . '/includes/admin/customizer/tpl1/dependency.min.js', array( 'customize-preview' ), '20151215', true );
     //wp_enqueue_script( 'minimall-tpl4', get_template_directory_uri() . '/includes/admin/customizer/tpl1/customize-fields.min.js', array( 'customize-preview' ), '20151215', true );
+
+    
     
 }
 add_action( 'customize_preview_init', 'minimall_customize_preview_js' );
@@ -82,6 +84,7 @@ Minimall_Kirki::add_config( 'minimall', array(
 	'capability'    => 'edit_theme_options',
     //'option_type'   => 'option',
     'option_type'   => 'theme_mod',
+    'disable_output'=> false,
 ) );
 
 /**
@@ -117,6 +120,15 @@ Minimall_Kirki::add_panel( 'minimall_options', array(
     'title'		 => __( 'Theme Options', 'minimall' ),
 ) );
 
+function minimal_get_hero_link_partial( $link ){
+    $theme_options = minimall_theme_options();
+
+    $link_data = minimall_get_link_data( $theme_options[$link] );
+
+    return $link_data['title'];
+}
+
+
 /**
  * Home page
  */
@@ -142,6 +154,8 @@ include( get_template_directory() . '/includes/admin/customizer/customizer-foote
  */
 include( get_template_directory() . '/includes/admin/customizer/customizer-icons.php' );
 
+/**
+ * New Link Control
+ */
+include( get_template_directory() . '/includes/admin/customizer/minimall-link/minimall-link.php' );
 
-
-//include( get_template_directory() . '/includes/admin/customizer/sample/sample.php' );

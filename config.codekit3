@@ -197,6 +197,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/assets\/sass\/_homepage.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/assets\/sass\/_tinymce.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -301,19 +314,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/sass\/common\/_icons-sprite.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/style.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/assets\/sass\/common\/_typography.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -341,19 +341,6 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/common\/_widgets.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/style.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/assets\/sass\/component-layout\/component-layout.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -600,6 +587,148 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/admin\/customizer\/minimall-kirki.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/class-tpfw-customizer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/class-tpfw-customizer.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/css\/_field-widget.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/css\/_field-widget-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/css\/admin.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/css\/admin-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/field_default.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/field_default.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/field_link 2.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/field_link 2.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/field_link.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/field_link.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/js\/admin_fields.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/js\/admin_fields.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/js\/admin_fields.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/js\/admin_fields.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/js\/customize-fields.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/js\/customize-fields.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/js\/customize-fields.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/js\/customize-fields.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/js\/dependency.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/js\/dependency.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/js\/dependency.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/js\/dependency.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/js\/libs.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/js\/libs.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/js\/libs.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/js\/libs.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/minimall-link.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/minimall-link.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/tpfw-helpers-functions.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/tpfw-helpers-functions.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/minimall-link\/tpfw-sanitize-functions.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/tpfw-sanitize-functions.php",
 		"oF": 0
 		},
 	"\/includes\/admin\/images": {
@@ -877,22 +1006,28 @@
 		"oAP": "\/template-parts\/footer-widgets.php",
 		"oF": 0
 		},
-	"\/template-parts\/home-content.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/template-parts\/home-content.php",
-		"oF": 0
-		},
 	"\/template-parts\/home-hero.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/home-hero.php",
 		"oF": 0
 		},
+	"\/template-parts\/home-services1.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/home-services1.php",
+		"oF": 0
+		},
 	"\/templates\/blank.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/blank.php",
+		"oF": 0
+		},
+	"\/templates\/debug.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/debug.php",
 		"oF": 0
 		},
 	"\/templates\/homepage.php": {

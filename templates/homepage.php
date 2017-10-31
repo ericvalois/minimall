@@ -8,19 +8,14 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
             <?php
                 $theme_options = minimall_theme_options();
+                
+                include( get_template_directory() . '/template-parts/home-hero.php' );
 
-                echo '<pre>';
-                print_r( $theme_options );
-                echo '</pre>';
-                /*if( !empty( $home_sections ) ){
-                    foreach ($home_sections as $key => $section) {
-                        if( 'hero' === $section['sections_type'] ){
-                            include( get_template_directory() . '/template-parts/home-hero.php' );
-                        }else{
-                            include( get_template_directory() . '/template-parts/home-content.php' );
-                        }
+                if( !empty( $theme_options['homepage_layout'] ) ){
+                    foreach ($theme_options['homepage_layout'] as $key => $section) {
+                        include( get_template_directory() . '/template-parts/home-'. $section .'.php' );
                     }
-                }*/
+                }
             ?>
 		</main><!-- #main -->
         

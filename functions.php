@@ -321,7 +321,7 @@ require get_template_directory() . '/includes/jetpack.php';
 /**
  * Load custom style
  */
-//require get_template_directory() . '/includes/custom-styles.php';
+require get_template_directory() . '/includes/custom-styles.php';
 
 /**
  * Social Widget

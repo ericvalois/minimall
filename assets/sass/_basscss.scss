@@ -214,7 +214,6 @@ hr {
   padding: .6rem 1.3rem;
   margin: 0;
   height: auto;
-  border: 1px solid transparent;
   vertical-align: middle;
   -webkit-appearance: none;
   color: inherit;
@@ -273,6 +272,14 @@ hr {
   box-shadow: 0 10px 20px rgba(0,0,0,0.100);
 }
 
+.btn-white {
+    border-radius: 3px;
+    background-color: #fff;
+    border: none;
+    color: $black;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.100);
+}
+
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus{
@@ -293,14 +300,14 @@ hr {
 }
 
 /* Basscss Btn Outline */
-
-.btn-outline:hover {
-  border-color: currentcolor;
-}
-
 .btn-outline {
   border-radius: 3px;
   border-color: $black;
+  border: 1px solid transparent;
+}
+
+.btn-outline:hover {
+    border-color: currentcolor;
 }
 
 .btn-outline:disabled,
@@ -370,11 +377,13 @@ hr {
 
 .text-decoration-none { text-decoration: none }
 
-.light    { font-weight: lighter; }
+.lighter    { font-weight: lighter; }
+
+.regular { font-weight: normal }
 
 .bold    { font-weight: bold; }
 
-.regular { font-weight: normal }
+.bolder    { font-weight: bolder; }
 
 .italic  { font-style: italic }
 

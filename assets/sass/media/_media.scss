@@ -8,6 +8,10 @@
     transition: opacity 350ms;
 }
 
+#home-hero .lazyloaded{
+    opacity: 0.2;
+}
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {

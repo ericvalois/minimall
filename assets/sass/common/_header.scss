@@ -1,7 +1,5 @@
 .site-header {
-    //border-bottom: 1px solid transparent;
     min-height: 80px;
-    padding: 10px 40px;
     //z-index: 998;
     //box-shadow: 0 0 10px rgba(33,33,33,0.25);
 }
@@ -50,14 +48,6 @@
     transform: rotate(180deg);
 }
 
-.btn{
-
-    svg{ width: 25px; height: 25px;  }
-}
-//.main-navigation,
-//.sub-menu{ display: none; }
-
-
 
 .sub-menu{
     max-height: 0px;
@@ -71,10 +61,6 @@
         overflow-y: scroll;
         transition: max-height 0.5s ease-in;
     }
-}
-
-#site-navigation{
-    
 }
 
 @media #{$breakpoint-lg} {
