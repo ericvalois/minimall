@@ -1,11 +1,14 @@
 <?php
-    $image = minimall_get_image_id($theme_options['home_hero_img']);
-    $title = $theme_options['home_hero_title'];
-    $description = $theme_options['home_hero_desc'];
-    if( !empty($theme_options['home_hero_main_link']) ){ $main_link = minimall_get_link_data($theme_options['home_hero_main_link']); }else{ $main_link = ''; }
-    $link_icon = $theme_options['home_hero_main_link_icon'];
+    $image = minimall_get_option($theme_options, 'home_hero_img');
+    if( $image ){
+        $image = minimall_get_image_id( $image );
+    }
+
+    $title = minimal_get_home_hero_title( $theme_options );
+    
+    $description = minimall_get_option($theme_options, 'home_hero_desc');
 ?>
-<?php if( !empty( $image ) ): ?>
+<?php if( $image ): ?>
     <?php
         // Get image placeholder
         $path = wp_get_attachment_image_src( $image, 'minimall-hero-placeholder' );
@@ -34,28 +37,14 @@
     <?php endif; ?>
     <div class="py4 relative z4">
 
-        <div class="max-width-5 ml-auto mr-auto white px2 lg-px0">
-            <?php if( !empty( $title ) ): ?>
-                <h1 class="hero_title title white mt0 mb2 line-height-2 caps"><?php echo nl2br($title); ?></h1>
+        <div class="max-width-5 ml-auto mr-auto white px2 ">
+            <?php if( $title ): ?>
+                <h1 class="hero_title title white mt0 mb2 line-height-2 caps"><?php echo nl2br( $title ); ?></h1>
             <?php endif; ?>
 
-            <?php if( !empty( $description ) ): ?>
-                <div class="hero_desc content lighter xl-text mb2"><?php echo nl2br($description); ?></div>
+            <?php if( $description ): ?>
+                <div class="hero_desc content lighter xl-text mb2"><?php echo nl2br( $description ); ?></div>
             <?php endif; ?>
-            
-            <?php if ( !empty( $main_link ) ) : ?>
-                <div class="links py1">
-                    <?php if( !empty( $main_link ) && isset( $main_link['url'] ) && isset( $main_link['title'] ) ): ?>
-                        <a <?php echo minimall_external_link($main_link['target'], $main_link['rel']); ?> class="hero_link main_link line-height-2 lg-text btn btn-white bolder" href="<?php echo esc_url($main_link['url']); ?>">
-                            <span class="mr1"><?php echo esc_html($main_link['title']); ?></span>
-                            <?php if( !empty( $link_icon ) ): ?>
-                                <?php echo minimall_get_fa( $link_icon ); ?>
-                            <?php endif; ?>
-                        </a>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
-
         </div>
     </div>
 </div>

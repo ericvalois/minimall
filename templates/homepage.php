@@ -9,11 +9,11 @@ get_header(); ?>
             <?php
                 $theme_options = minimall_theme_options();
                 
-                include( get_template_directory() . '/template-parts/home-hero.php' );
+                include( locate_template('/template-parts/home-hero.php' ) );
 
                 if( !empty( $theme_options['homepage_layout'] ) ){
                     foreach ($theme_options['homepage_layout'] as $key => $section) {
-                        include( get_template_directory() . '/template-parts/home-'. $section .'.php' );
+                        include( locate_template('/template-parts/home-section.php') );  
                     }
                 }
             ?>

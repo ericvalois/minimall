@@ -521,34 +521,10 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
-	"\/includes\/admin\/customizer\/customizer-colors.php": {
+	"\/includes\/admin\/customizer\/customizer-partials.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/admin\/customizer\/customizer-colors.php",
-		"oF": 0
-		},
-	"\/includes\/admin\/customizer\/customizer-footer.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/admin\/customizer\/customizer-footer.php",
-		"oF": 0
-		},
-	"\/includes\/admin\/customizer\/customizer-homepage.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/admin\/customizer\/customizer-homepage.php",
-		"oF": 0
-		},
-	"\/includes\/admin\/customizer\/customizer-icons.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/admin\/customizer\/customizer-icons.php",
-		"oF": 0
-		},
-	"\/includes\/admin\/customizer\/customizer-typography.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/admin\/customizer\/customizer-typography.php",
+		"oAP": "\/includes\/admin\/customizer\/customizer-partials.php",
 		"oF": 0
 		},
 	"\/includes\/admin\/customizer\/customizer.js": {
@@ -729,6 +705,42 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/admin\/customizer\/minimall-link\/tpfw-sanitize-functions.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/modules\/customizer-colors.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-colors.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/modules\/customizer-footer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-footer.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/modules\/customizer-homepage.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-homepage.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/modules\/customizer-icons.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-icons.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/modules\/customizer-typography.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-typography.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/modules\/homepage-section-helper.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/homepage-section-helper.php",
 		"oF": 0
 		},
 	"\/includes\/admin\/images": {
@@ -1012,10 +1024,28 @@
 		"oAP": "\/template-parts\/home-hero.php",
 		"oF": 0
 		},
-	"\/template-parts\/home-services1.php": {
+	"\/template-parts\/home-section-blog.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/home-services1.php",
+		"oAP": "\/template-parts\/home-section-blog.php",
+		"oF": 0
+		},
+	"\/template-parts\/home-section-brands-list.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/home-section-brands-list.php",
+		"oF": 0
+		},
+	"\/template-parts\/home-section-content-list.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/home-section-content-list.php",
+		"oF": 0
+		},
+	"\/template-parts\/home-section.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/home-section.php",
 		"oF": 0
 		},
 	"\/templates\/blank.php": {

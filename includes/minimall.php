@@ -246,14 +246,16 @@ function minimall_default_hero() {
 add_action( 'wp_enqueue_scripts', 'minimall_font_awesome_scripts' );
 function minimall_font_awesome_scripts() {
     $theme_options = minimall_theme_options();
+    $font = minimall_get_option($theme_options, 'fontawesome');
 
 	/* If using a child theme, auto-load the parent theme style. */
-    if ( $theme_options['fontawesome'] == 1 ) {
-        if( $theme_options['fontawesome_type'] == 'solid' ){
+    if ( $font == 1 ) {
+        $font_type = minimall_get_option($theme_options, 'fontawesome_type', 'solid');
+        if( $font_type == 'solid' ){
             wp_enqueue_script( 'fontawesome-light', get_template_directory_uri() . '/includes/vendors/fontawesome/packs/solid.min.js', array(), '', true );
-        }elseif( $theme_options['fontawesome_type'] == 'regular' ){
+        }elseif( $font_type == 'regular' ){
             wp_enqueue_script( 'fontawesome-light', get_template_directory_uri() . '/includes/vendors/fontawesome/packs/regular.min.js', array(), '', true );
-        }elseif( $theme_options['fontawesome_type'] == 'light'){
+        }elseif( $font_type == 'light'){
             wp_enqueue_script( 'fontawesome-light', get_template_directory_uri() . '/includes/vendors/fontawesome/packs/light.min.js', array(), '', true );
         }
         wp_enqueue_script( 'fontawesome-v4-shim', get_template_directory_uri() . '/includes/vendors/fontawesome/v4-shims.min.js', array(), '', true );

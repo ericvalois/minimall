@@ -28,6 +28,16 @@ function minimall_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'minimall_customize_register' );
 
+/**
+ * Add the theme configuration
+ */
+Minimall_Kirki::add_config( 'minimall', array(
+	'capability'    => 'edit_theme_options',
+    //'option_type'   => 'option',
+    'option_type'   => 'theme_mod',
+    'disable_output'=> false,
+) );
+
 /*
 * Remove Customizer Default Options
 */
@@ -64,28 +74,37 @@ function minimall_customize_partial_blogdescription() {
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function minimall_customize_preview_js() {
-    wp_enqueue_script( 'minimall-customizer', get_template_directory_uri() . '/includes/admin/customizer/customizer.min.js', array( 'customize-preview' ), '20151215', true );
-    
-    //wp_enqueue_script( 'minimall-tpl3', get_template_directory_uri() . '/includes/admin/customizer/tpl1/libs.min.js', array( 'customize-preview' ), '20151215', true );
-    //wp_enqueue_script( 'minimall-tpl1', get_template_directory_uri() . '/includes/admin/customizer/tpl1/admin_fields.min.js', array( 'customize-preview' ), '20151215', true );
-    //wp_enqueue_script( 'minimall-tpl2', get_template_directory_uri() . '/includes/admin/customizer/tpl1/dependency.min.js', array( 'customize-preview' ), '20151215', true );
-    //wp_enqueue_script( 'minimall-tpl4', get_template_directory_uri() . '/includes/admin/customizer/tpl1/customize-fields.min.js', array( 'customize-preview' ), '20151215', true );
-
-    
-    
-}
 add_action( 'customize_preview_init', 'minimall_customize_preview_js' );
+function minimall_customize_preview_js() {
+    wp_enqueue_script( 'minimall-customizer', get_template_directory_uri() . '/includes/admin/customizer/customizer.min.js', array( 'customize-preview' ), '20151215', true );  
+}
 
 /**
- * Add the theme configuration
+ * Create new notice control
  */
-Minimall_Kirki::add_config( 'minimall', array(
-	'capability'    => 'edit_theme_options',
-    //'option_type'   => 'option',
-    'option_type'   => 'theme_mod',
-    'disable_output'=> false,
-) );
+add_action( 'customize_register', function( $wp_customize ) {
+    
+    class Kirki_Controls_Minimall_Notice_Control extends WP_Customize_Control {
+        public $type = 'minimall_notice';
+        public function render_content() { 
+        ?>
+            <h2 style="margin-bottom: 5px; font-size: 20px;"><?php echo esc_html( $this->label ); ?></h2>
+            <?php if( !empty( $this->description ) ): ?>
+                <span><?php echo esc_html( $this->description ); ?></span>
+            <?php endif; ?>
+            <hr>
+        <?php
+        }
+    }
+    
+    add_filter( 'kirki/control_types', function( $controls ) {
+        $controls['minimall_notice'] = 'Kirki_Controls_Minimall_Notice_Control';
+        return $controls;
+    } );
+
+} );
+
+
 
 /**
  * Minimall Customizer Styles
@@ -93,20 +112,26 @@ Minimall_Kirki::add_config( 'minimall', array(
 add_action( 'customize_controls_print_styles', 'minimall_customizer_styles', 999 );
 function minimall_customizer_styles() { ?>
 	<style>
-		.customize-control-kirki-radio-image img {
-            width: 100px;
-            padding: 0.5em;
-            border: 2px dashed #ccc;
-            margin: 0 10px 10px 0;
+        .customize-control-kirki-radio-image img {
+            width: auto;
             display: block;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .customize-control-kirki-radio-image .image label {
+            padding: 5px;
+            border: 2px dashed #ccc;
+            margin: 0 5px 5px 0;
             transition: all 0.2s ease-in-out;
         }
         
-        .customize-control-kirki-radio-image input:checked + label img{
+        .customize-control-kirki-radio-image input:checked + label{
             border: 2px dashed #666;
             background-color: #f7f7f7;
-            box-shadow: 0 0 3px rgba(0,0,0,0.1);
         }
+
+        .customize-control-kirki-radio-image .image{ display: flex; }
 	</style>
 	<?php
 
@@ -132,30 +157,29 @@ function minimal_get_hero_link_partial( $link ){
 /**
  * Home page
  */
-include( get_template_directory() . '/includes/admin/customizer/customizer-homepage.php' );
+include( get_template_directory() . '/includes/admin/customizer/modules/customizer-homepage.php' );
 
 /**
  * Typography Controls
  */
-include( get_template_directory() . '/includes/admin/customizer/customizer-typography.php' );
+include( get_template_directory() . '/includes/admin/customizer/modules/customizer-typography.php' );
 
 /**
  * Colors controls
  */
-include( get_template_directory() . '/includes/admin/customizer/customizer-colors.php' );
+include( get_template_directory() . '/includes/admin/customizer/modules/customizer-colors.php' );
 
 /**
  * Footer controls
  */
-include( get_template_directory() . '/includes/admin/customizer/customizer-footer.php' );
+include( get_template_directory() . '/includes/admin/customizer/modules/customizer-footer.php' );
 
 /**
  * Fontawesome Icons
  */
-include( get_template_directory() . '/includes/admin/customizer/customizer-icons.php' );
+include( get_template_directory() . '/includes/admin/customizer/modules/customizer-icons.php' );
 
 /**
  * New Link Control
  */
 include( get_template_directory() . '/includes/admin/customizer/minimall-link/minimall-link.php' );
-

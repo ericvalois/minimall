@@ -234,6 +234,11 @@ add_action( 'widgets_init', 'minimall_widgets_init' );
 require get_template_directory() . '/includes/helper.php';
 
 /**
+* Customizer partials
+*/
+require( get_template_directory() . '/includes/admin/customizer/customizer-partials.php' );
+
+/**
  * Recommend the Kirki plugin
  */
 require get_template_directory() . '/includes/admin/customizer/include-kirki.php';
@@ -247,6 +252,8 @@ require( get_template_directory() . '/includes/admin/customizer/minimall-kirki.p
  * Customizer Options
  */
 require( get_template_directory() . '/includes/admin/customizer/customizer.php' );
+
+
 
 
 
@@ -264,8 +271,19 @@ function minimall_theme_options( ){
     $my_theme = wp_get_theme();
     $theme_options = get_option( 'theme_mods_'.$my_theme->get( 'TextDomain' ), array() );
 
-
     return $theme_options;
+}
+
+function minimall_get_option( $all_option = array(), $key = '', $default = false ){
+    if( array_key_exists($key, $all_option) ){
+        return $all_option[$key];
+    }else{
+        if( isset( $default ) ){
+            return $default;
+        }else{
+            return false;
+        }
+    }
 }
 
 // pass variable
