@@ -56,15 +56,11 @@ Minimall_Kirki::add_field( 'minimall', array(
     'section'  => 'homepage_hero',
     'priority' => 10,
     'partial_refresh' => array(
-		'header_site_title' => array(
+		'home_hero_title' => array(
 			'selector'        => '.hero_title',
-			'render_callback' => minimal_get_home_hero_title(),
+            'render_callback' => 'minimal_partial_get_hero_title', 
 		),
-		'document_title' => array(
-			'selector'        => 'head > title',
-			'render_callback' => 'wp_get_document_title',
-		),
-	),
+    ),
     
 ) );
 
@@ -74,12 +70,11 @@ Minimall_Kirki::add_field( 'minimall', array(
     'label'    => __( 'Hero Description', 'minimall' ),
     'section'  => 'homepage_hero',
     'priority' => 20,
-    'transport'   => 'postMessage',
-    'js_vars'     => array(
-        array(
-            'element'   => '#home-hero .content',
-            'function'  => 'html',
-            ),  
+    'partial_refresh' => array(
+		'home_hero_desc' => array(
+			'selector'        => '.hero_desc',
+            'render_callback' => 'minimal_partial_get_hero_desc', 
+		),
     ),
     
 ) );
@@ -91,8 +86,15 @@ Minimall_Kirki::add_field( 'minimall', array(
     'description' => __( 'Background image', 'minimall' ),
     'section'     => 'homepage_hero',
     'priority'    => 30,
-    'output' => array(),
-    'transport' => 'auto',
+    'transport' => 'postMessage',
+	'js_vars'   => array(
+		array(
+			'element'  => '#home-hero .main_image',
+			'function' => 'css',
+            'property' => 'background-image',
+            'suffix'   => '!important',
+		),
+	)
     
 ) );
 

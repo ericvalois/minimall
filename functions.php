@@ -286,6 +286,16 @@ function minimall_get_option( $all_option = array(), $key = '', $default = false
     }
 }
 
+function minimall_get_option2( $setting, $default ){
+    $my_theme = wp_get_theme();
+    $options = get_option( 'theme_mods_'.$my_theme->get( 'TextDomain' ), array() );
+    $value = $default;
+    if ( isset( $options[ $setting ] ) ) {
+        $value = $options[ $setting ];
+    }
+    return $value;
+}
+
 // pass variable
 //include(locate_template('your-template-name.php'));
 

@@ -52,25 +52,6 @@ function minimall_remove_customizer_default_options( $wp_customize ) {
 
 }
 
-
-/**
- * Render the site title for the selective refresh partial.
- *
- * @return void
- */
-function minimall_customize_partial_blogname() {
-	bloginfo( 'name' );
-}
-
-/**
- * Render the site tagline for the selective refresh partial.
- *
- * @return void
- */
-function minimall_customize_partial_blogdescription() {
-	bloginfo( 'description' );
-}
-
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */

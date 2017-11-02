@@ -31,6 +31,7 @@ function minimall_homepage_create_section( $args ){
             'section'     => 'homepage_'.$args['slug'],
             'default'     => '0',
             'priority'    => 10,
+            
         ) );
         
         Minimall_Kirki::add_field( 'minimall', array(
@@ -83,6 +84,15 @@ function minimall_homepage_create_section( $args ){
         'description'       => __( 'Section background image', 'minimall' ),
         'section'     => 'homepage_'.$args['slug'],
         'priority'    => 80,
+        'transport' => 'postMessage',
+        'js_vars'   => array(
+            array(
+                'element'  => '#home-section-'.$args['slug']. ' .bg-section',
+                'function' => 'css',
+                'property' => 'background-image',
+                'suffix'   => '!important',
+            ),
+        )
     ) );
 
     $args['content_type']( $args );
