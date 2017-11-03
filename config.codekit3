@@ -773,6 +773,46 @@
 		"oAP": "\/includes\/admin\/customizer\/modules\/homepage-section-helper.php",
 		"oF": 0
 		},
+	"\/includes\/admin\/getting-started\/club.jpg": {
+		"ft": 16384,
+		"iS": 60667,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/getting-started\/club.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/includes\/admin\/getting-started\/getting-started.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/getting-started\/getting-started-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/admin\/getting-started\/getting-started.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/getting-started\/getting-started.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/admin\/getting-started\/getting-started.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/getting-started\/getting-started.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/includes\/admin\/images": {
 		"ft": 65536,
 		"oA": 1,
@@ -785,11 +825,39 @@
 		"oAP": "\/build\/includes\/admin\/tgm",
 		"oF": 0
 		},
+	"\/includes\/admin\/updater\/theme-updater-admin.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/updater\/theme-updater-admin.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/updater\/theme-updater-class.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/updater\/theme-updater-class.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/updater\/theme-updater.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/updater\/theme-updater.php",
+		"oF": 0
+		},
 	"\/includes\/custom-styles.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/custom-styles.php",
+		"oF": 0
+		},
+	"\/includes\/extra.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/extra.php",
 		"oF": 0
 		},
 	"\/includes\/helper.php": {
@@ -804,20 +872,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/jetpack.php",
-		"oF": 0
-		},
-	"\/includes\/minimal.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/minimal.php",
-		"oF": 0
-		},
-	"\/includes\/minimall.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/minimall.php",
 		"oF": 0
 		},
 	"\/includes\/performance\/clean.php": {

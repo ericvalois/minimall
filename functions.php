@@ -87,6 +87,13 @@ function minimall_setup() {
     );
     add_theme_support( 'custom-header', $args );
 
+    /* 
+    * Admin page
+    */
+	if ( is_admin() ) {
+		require_once( get_template_directory() . '/includes/admin/updater/theme-updater.php' );
+	}
+
 
 }
 endif; // minimall_setup
@@ -329,7 +336,7 @@ add_action( 'wp_enqueue_scripts', 'minimall_scripts' );
 /**
  * Load TGM class
  */
-require get_template_directory() . '/includes/admin/tgm/tgm.php';
+//require get_template_directory() . '/includes/admin/tgm/tgm.php';
 
 /**
  * Custom template tags for this theme.
@@ -339,7 +346,7 @@ require get_template_directory() . '/includes/template-tags.php';
 /**
  * minimal functions
  */
-require get_template_directory() . '/includes/minimall.php';
+require get_template_directory() . '/includes/extra.php';
 
 /**
  * Load Jetpack compatibility file.

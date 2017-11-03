@@ -260,17 +260,16 @@ function minimall_external_link( $target = false, $nofollow = false ){
  * @string $icon_name
  */
 function minimall_get_fa( $icon_name = '' ) {
-    $theme_options = minimall_theme_options();
 
-    if ( $theme_options['fontawesome'] != 1 ) {
+    if ( !get_theme_mod('fontawesome') ) {
         return;
     }
 
-    if( $theme_options['fontawesome_type'] == 'solid' ){
+    if( get_theme_mod('fontawesome_type') == 'solid' ){
         $prefix = 's';
-    }elseif( $theme_options['fontawesome_type'] == 'regular' ){
+    }elseif( get_theme_mod('fontawesome_type') == 'regular' ){
         $prefix = 'r';
-    }elseif( $theme_options['fontawesome_type'] == 'light'){
+    }elseif( get_theme_mod('fontawesome_type') == 'light'){
         $prefix = 'l';
     }
 
