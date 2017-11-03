@@ -91,7 +91,7 @@ function minimall_setup() {
     * Admin page
     */
 	if ( is_admin() ) {
-		require_once( get_template_directory() . '/includes/admin/updater/theme-updater.php' );
+        require_once( get_template_directory() . '/includes/admin/updater/theme-updater.php' );
 	}
 
 
@@ -302,9 +302,6 @@ function minimall_get_option2( $setting, $default ){
     }
     return $value;
 }
-
-// pass variable
-//include(locate_template('your-template-name.php'));
 
 /**
  * Enqueue scripts and styles.

@@ -2,61 +2,79 @@
 /**
  * Theme updater admin page and functions.
  *
- * @package Light & BOld
+ * @package Minimall
  */
 
 /**
  * Redirect to Getting Started page on theme activation
  */
-add_action( 'admin_init', 'light_bold_redirect_on_activation' );
-function light_bold_redirect_on_activation() {
+add_action( 'admin_init', 'minimall_redirect_on_activation' );
+function minimall_redirect_on_activation() {
 	global $pagenow;
 
-	if ( is_admin() && 'admin.php' == $pagenow && isset( $_GET['activated'] ) ) {
+	if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
 
-		wp_redirect( admin_url( "admin.php?page=light-bold-license" ) );
+		wp_redirect( admin_url( "themes.php?page=minimall-license" ) );
 
 	}
 }
 
-/**
- * Redirect specific main options page
- */
-add_action('current_screen', 'light_bold_redirect_admin_page');
-function light_bold_redirect_admin_page() {
-    $screen = get_current_screen();
-    if (isset($screen->base) && $screen->base == 'toplevel_page_light-bold-main-page') {
-        wp_redirect( admin_url( 'admin.php?page=light-bold-license' ) );
-        exit();
+if ( ! function_exists( 'minimall_reset_customizer_settings' ) ) :
+    /**
+     * Reset customizer settings
+     */
+    add_action( 'admin_init', 'minimall_reset_customizer_settings' );
+    function minimall_reset_customizer_settings() {
+    
+        if( empty( $_POST['minimall_reset_customizer'] ) || 'minimall_reset_customizer_settings' !== $_POST['minimall_reset_customizer'] )
+            return;
+    
+        if( ! wp_verify_nonce( sanitize_key( $_POST['minimall_reset_customizer_nonce'] ), 'minimall_reset_customizer_nonce' ) )
+            return;
+    
+        if( ! current_user_can( 'manage_options' ) )
+            return;
+    
+        //delete_option('minimall_settings');
+        //remove_theme_mod( 'font_body_variants' );
+        //remove_theme_mod( 'font_body_category' );
+        
+        wp_safe_redirect( admin_url( 'themes.php?page=minimall-license&status=reset' ) ); exit;
+    
     }
-}
+endif;
 
-/**
- * Hide first option page
- */
-add_action('admin_head', 'light_bold_custom_fonts');
-function light_bold_custom_fonts() {
-  echo '<style>
-    #toplevel_page_light-bold-main-page .wp-first-item{
-        display: none;
+if ( ! function_exists( 'minimalladmin_errors' ) ) :
+    /**
+     * Add our admin notices
+     */
+    add_action( 'admin_notices', 'minimalladmin_errors' );
+    function minimalladmin_errors() 
+    {
+        $screen = get_current_screen();
+        if ( 'appearance_page_minimall-license' !== $screen->base )
+            return;
+            
+        if ( isset( $_GET['settings-updated'] ) && 'true' == $_GET['settings-updated'] ) {
+             add_settings_error( 'minimall-notices', 'true', __( 'Settings saved.', 'minimall' ), 'updated' );
+        }
+        
+        if ( isset( $_GET['status'] ) && 'reset' == $_GET['status'] ) {
+             add_settings_error( 'minimall-notices', 'reset', __( 'Settings removed.', 'minimall' ), 'updated' );
+        }
+    
+        settings_errors( 'minimall-notices' );
     }
-  </style>';
-}
-
-
-
-
+endif;
 
 /**
  * Load Getting Started styles in the admin
  *
  * since 1.0.0
  */
-add_action( 'admin_enqueue_scripts', 'light_bold_start_load_admin_scripts' );
-function light_bold_start_load_admin_scripts() {
+add_action( 'admin_enqueue_scripts', 'minimall_start_load_admin_scripts' );
+function minimall_start_load_admin_scripts() {
 
-	// Load styles only on our page
-    //global $menu;
     $screen = get_current_screen();
 
     /*
@@ -65,21 +83,15 @@ function light_bold_start_load_admin_scripts() {
     echo '</pre>';
     */
 
-	if( 'theme-options_page_light-bold-license' != $screen->base )
+	if( 'appearance_page_minimall-license' != $screen->base )
 		return;
 
-	/**
-	 * Getting Started scripts and styles
-	 *
-	 * @since 1.0
-	 */
-
 	// Getting Started javascript
-	wp_enqueue_script( 'light-bold-getting-started', get_template_directory_uri() . '/includes/admin/getting-started/getting-started.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'minimall-getting-started', get_template_directory_uri() . '/includes/admin/getting-started/getting-started.js', array( 'jquery' ), '1.0.0', true );
 
 	// Getting Started styles
-	wp_register_style( 'light-bold-getting-started', get_template_directory_uri() . '/includes/admin/getting-started/getting-started.css', false, '1.0.0' );
-	wp_enqueue_style( 'light-bold-getting-started' );
+	wp_register_style( 'minimall-getting-started', get_template_directory_uri() . '/includes/admin/getting-started/getting-started.css', false, '1.0.0' );
+	wp_enqueue_style( 'minimall-getting-started' );
 
 	// Thickbox
 	add_thickbox();
@@ -146,7 +158,7 @@ class Minimall_Theme_Updater_Admin {
         add_action( 'admin_init', array( $this, 'license_action' ) );
         
         // main option page
-        add_action( 'admin_menu', array( $this, 'main_option_menu' ) );
+        //add_action( 'admin_menu', array( $this, 'main_option_menu' ) );
 
         add_action( 'admin_menu', array( $this, 'license_menu' ) );
 		add_action( 'update_option_' . $this->theme_slug . '_license_key', array( $this, 'activate_license' ), 10, 2 );
@@ -187,46 +199,17 @@ class Minimall_Theme_Updater_Admin {
 		);
 	}
 
-     
-    function main_option_menu() {
-        $page_title = '';
-        $menu_title = 'Theme Options';
-        $capability = 'edit_posts';
-        $menu_slug = $this->theme_slug . '-main-page';
-        $function = array( $this, 'main_page_redirect' );
-        $icon_url = '';
-        $position = 99;
-    
-        add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position ); 
-    }
-
-    function main_page_redirect(){
-        
-    }
-
-
 	function license_menu() {
 
 		$strings = $this->strings;
 
-		/*add_theme_page(
+		add_theme_page(
 			$strings['theme-license'],
 			$strings['theme-license'],
 			'manage_options',
 			$this->theme_slug . '-license',
 			array( $this, 'license_page' )
-        );*/
-        
-        $parent_page = $this->theme_slug . '-main-page';
-        $page_title = 'Getting started';
-        $menu_title = 'Getting started';
-        $capability = 'edit_posts';
-        $menu_slug = $this->theme_slug . '-license';
-        $function = array( $this, 'license_page' );
-        $icon_url = '';
-        $position = 99;
-    
-        add_submenu_page( $parent_page, $page_title, $menu_title, $capability, $menu_slug, $function );
+        );
         
 	}
 
@@ -264,8 +247,8 @@ class Minimall_Theme_Updater_Admin {
 				<div class="intro-wrap">
 					<div class="intro">
 						<h3>
-                            <?php echo esc_html__( 'Getting Started with', 'minimall' ); ?><br>
-                            <?php echo esc_html($theme['Name']); ?>
+                            <?php echo esc_html__( 'Getting Started with', 'minimall' ); ?>
+                            <strong><?php echo esc_html($theme['Name']); ?></strong>
                         </h3>
 
 						<h4><?php printf( esc_html__( 'You will find everything you need to get started with Minimall below.', 'minimall' ), $theme['Name'] ); ?></h4>
@@ -274,7 +257,7 @@ class Minimall_Theme_Updater_Admin {
 
 				<div class="panels">
 					<ul class="inline-list">
-						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Help File', 'minimall' ); ?></a></li>
+						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Getting Started', 'minimall' ); ?></a></li>
 						<li><a id="updates-tab" href="#"><?php esc_html_e( 'What’s New', 'minimall' ); ?></a></li>
 					</ul>
 
@@ -283,25 +266,81 @@ class Minimall_Theme_Updater_Admin {
 						<!-- Help file panel -->
 						<div id="help-panel" class="panel-left visible">
 
-							
-                            <!-- Grab feed of help file -->
-                        
+                            <h2>Required plugins</h2>
 
-                            <?php
-                                $getting_post = wp_remote_get('http://ttfb.io/wp-json/wp/v2/docs-api/44');
+                            <div class="lg-flex flex-wrap lg-mxn2">
+                                <div class="lg-col-6 px2">
+                                    <!-- Kirki Toolkit -->
+                                    <h4><?php esc_html_e( 'Kirki Toolkit', 'minimall' ); ?></h4>
+                                    <p><?php esc_html_e( 'This theme uses Kirki toolkit plugin to customize theme. This plugin adds advanced features to the WordPress customizer. Install the plugin before you go to the customizer.', 'minimall' ); ?></p>
+                                    <?php if ( is_plugin_active( 'kirki/kirki.php' ) || is_plugin_active( 'kirki-develop/kirki.php' ) ) { ?>
+                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
+                                    <?php }	else { ?>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=kirki' ), 'install-plugin_kirki' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Kirki Toolkit', 'minimall' ); ?></a></p>
+                                    <?php }	?> 
+                                </div>
 
-                                // Make sure the response came back okay.
-                                if( is_wp_error( $getting_post ) ) {
-                                    return false; // Bail early
-                                }
+                                <div class="lg-col-6 px2">
+                                    <!-- TTFB Performance Module -->
+                                    <h4><?php esc_html_e( 'TTFB Performance Module', 'minimall' ); ?></h4>
+                                    <p><?php esc_html_e( 'Lorem ipsum dolor sit amet sit ipsum sit. Lorem ipsum dolor sit amet sit ipsum sit.', 'minimall' ); ?></p>
+                                    <?php if ( is_plugin_active( 'performance-module/performance-module.php' ) ) { ?>
+                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
+                                    <?php }	else { ?>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=performance-module' ), 'install-plugin_performance_module' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Performance Module', 'minimall' ); ?></a></p>
+                                    <?php }	?> 
+                                </div>
+                            </div>
+                            
+                            <hr>
 
-                                $body = wp_remote_retrieve_body( $getting_post );
-                                $data = json_decode( $body );
+                            <h2>Recommended plugins</h2>
+                            <p>Thoses plugins are not required to ...</p>
+                            <div class="lg-flex flex-wrap lg-mxn2">
+                                <div class="lg-col-6 px2">
+                                    <!-- Contact Form 7 -->
+                                    <h4><?php esc_html_e( 'Contact Form 7', 'minimall' ); ?></h4>
+                                    <p><?php esc_html_e( 'This plugin allows you to add a contact form to your site.', 'minimall' ); ?></p>
+                                    <?php if ( is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) ) { ?>
+                                        <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
+                                    <?php } else { ?>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=contact-form-7' ), 'install-plugin_contact-form-7' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Contact Form 7', 'minimall' ); ?></a></p>
+                                    <?php } ?>
+                                </div>
 
-                                if( ! empty( $data ) ) {
-                                    echo $data->content->rendered;
-                                }
-                            ?>
+                                <div class="lg-col-6 px2">
+                                    <!-- Cache Enabler - WordPress Cache -->
+                                    <h4><?php esc_html_e( 'Cache Enabler - WordPress Cache', 'minimall' ); ?></h4>
+                                    <p><?php esc_html_e( 'This WordPress cache engine will improve the performance of your website.', 'minimall' ); ?></p>
+                                    <?php if ( is_plugin_active( 'cache-enabler/cache-enabler.php' ) ) { ?>
+                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
+                                    <?php }	else { ?>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=cache-enabler' ), 'install-plugin_cache_enabler' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Cache Enabler - WordPress Cache', 'minimall' ); ?></a></p>
+                                    <?php }	?> 
+                                </div>
+
+                                <div class="lg-col-6 px2">
+                                    <!-- Compress JPEG & PNG images -->
+                                    <h4><?php esc_html_e( 'Compress JPEG & PNG images', 'minimall' ); ?></h4>
+                                    <p><?php esc_html_e( 'Make your website faster by optimizing your JPEG and PNG images.', 'minimall' ); ?></p>
+                                    <?php if ( is_plugin_active( 'tiny-compress-images/tiny-compress-images.php' ) ) { ?>
+                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
+                                    <?php }	else { ?>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=tiny-compress-images' ), 'install-plugin_tiny-compress_images' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Compress JPEG & PNG images', 'minimall' ); ?></a></p>
+                                    <?php }	?> 
+                                </div>
+
+                                <div class="lg-col-6 px2">
+                                    <!-- Cloudflare -->
+                                    <h4><?php esc_html_e( 'Cloudflare WordPress Plugin', 'minimall' ); ?></h4>
+                                    <p><?php esc_html_e( 'The easiest way to setup Cloudflare for your WordPress site.', 'minimall' ); ?></p>
+                                    <?php if ( is_plugin_active( 'cloudflare/cloudflare.php' ) ) { ?>
+                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
+                                    <?php }	else { ?>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=cloudflare' ), 'install-plugin_cloudflare' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Cloudflare plugin', 'minimall' ); ?></a></p>
+                                    <?php }	?> 
+                                </div>
+                            </div>
 
 						</div>
 
@@ -321,8 +360,14 @@ class Minimall_Theme_Updater_Admin {
 
 						<div class="panel-right">
 
+                            <?php // Customize Button ?>
+                            <div class="bg-gray py3 px3 mb3">
+                                <a href="<?php echo wp_customize_url(); ?>" class="button button-primary master-button customize-button"><?php esc_html_e( 'Customize Minimall', 'minmall' ); ?></a>
+                            </div>
+
                             <!-- Activate license -->
-							<div class="panel-aside">
+							<div class="bg-gray py3 px3 mb3">
+                                
 								<?php if ( 'valid' == $status ) { ?>
 
 								<h4><?php esc_html_e( 'Sweet, your license is active!', 'minimall' ); ?></h4>
@@ -376,7 +421,7 @@ class Minimall_Theme_Updater_Admin {
                                     <?php endif; ?>
 
                                     <p class="">
-                                        <input type="submit" name="submit" id="submit" class="button button-primary club-button" value="Save Changes">
+                                        <input type="submit" name="submit" id="submit" class="button button-primary master-button" value="Save Changes">
                                     </p>
                                 </form>
 
@@ -388,29 +433,28 @@ class Minimall_Theme_Updater_Admin {
                                     <p><?php esc_html_e("It seems that PHP7 is not enabled. PHP7 could dramatically speed-up your site! We suggest that you contact your web hosting provider to activate it."); ?></p>
                                 </div>
                             <?php endif; ?>
+                            
 
-							<div class="panel-aside panel-club">
+							<div class="border border-gray px2 py2 muted muted-box">
 								
 								<div class="panel-club-inside">
-									<h3><?php esc_html_e( 'Page Speed Recommendations', 'minimall' ); ?></h3>
-
-                                    <p><strong>Fast WordPress Hosting</strong></p>
-									<p><?php esc_html_e( 'TTFB sites are hosted on Siteground with the GOGEEK plan. Siteground is a cheap WordPress hosting with FREE SSDs, FREE SSL, HTTP/2, PHP7, Domain, and Backups.', 'minimall' ); ?></p>
-
-									<a class="" href="https://www.siteground.com/go/speed-wordpress" target="_blank"><?php esc_html_e( 'Fast WordPress Hosting', 'minimall' ); ?> &rarr;</a>
-
-                                    <hr>
-
-                                    <p><strong>WordPress Caching Plugins</strong></p>
-									<p><?php esc_html_e( 'TTFB trust Cache Enabler has WordPress caching plugin. It requires minimal setup time and allows you to quickly activate caching. Most of all, the plugin is free!', 'minimall' ); ?></p>
-
-									<a class="" target="_blank" href="https://wordpress.org/plugins/cache-enabler/"><?php esc_html_e( 'Get Cache Enabler', 'minimall' ); ?> &rarr;</a>
-
-                                    <hr>
-                                    <p><strong>CDN and Security</strong></p>
-									<p><?php esc_html_e( 'TTFB sites are accelerated by Cloudflare. Performance is not just about moving static files closer to visitors, it is also about ensuring that every page renders as fast and efficiently as possible from whatever device a visitor is surfing from.', 'minimall' ); ?></p>
-
-									<a class="" target="_blank" href="https://www.cloudflare.com/"><?php esc_html_e( 'Activate Cloudflare', 'minimall' ); ?> &rarr;</a>
+                                    <h3 class=""><?php esc_html_e( 'Delete Minimall Options', 'minimall' ); ?></h3>
+                                    
+                                    <p><?php printf( __( '<strong>Warning:</strong> Deleting your <a href="%1$s">Customizer</a> settings can not be undone.','minimall' ), admin_url('customize.php') ); ?></p>
+									<p><?php _e( 'Consider creating a backup of your settings before deleting them.','minimall');?></p>
+									<form method="post">
+										<p><input type="hidden" name="minimall_reset_customizer" value="minimall_reset_customizer_settings" /></p>
+										<p>
+											<?php 
+											$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','minimall' ) . '")';
+											wp_nonce_field( 'minimall_reset_customizer_nonce', 'minimall_reset_customizer_nonce' );
+											submit_button( __( 'Delete Default Settings', 'minimall' ), 'button red', 'submit', false, array( 'onclick' => esc_js( $warning ) ) ); 
+											?>
+										</p>
+											
+									</form>
+									<?php do_action('minimall_delete_settings_form');?>
+                                    
 								</div>
 							</div>
 
@@ -563,7 +607,7 @@ class Minimall_Theme_Updater_Admin {
 				}
 
 				if ( ! empty( $message ) ) {
-					$base_url = admin_url( 'admin.php?page=' . $this->theme_slug . '-license' );
+					$base_url = admin_url( 'themes.php?page=' . $this->theme_slug . '-license' );
 					$redirect = add_query_arg( array( 'sl_theme_activation' => 'false', 'message' => urlencode( $message ) ), $base_url );
 
 					wp_redirect( $redirect );
@@ -580,7 +624,7 @@ class Minimall_Theme_Updater_Admin {
 			delete_transient( $this->theme_slug . '_license_message' );
 		}
 
-		wp_redirect( admin_url( 'admin.php?page=' . $this->theme_slug . '-license' ) );
+		wp_redirect( admin_url( 'themes.php?page=' . $this->theme_slug . '-license' ) );
 		exit();
 
 	}
@@ -627,14 +671,14 @@ class Minimall_Theme_Updater_Admin {
 		}
 
 		if ( ! empty( $message ) ) {
-			$base_url = admin_url( 'admin.php?page=' . $this->theme_slug . '-license' );
+			$base_url = admin_url( 'themes.php?page=' . $this->theme_slug . '-license' );
 			$redirect = add_query_arg( array( 'sl_theme_activation' => 'false', 'message' => urlencode( $message ) ), $base_url );
 
 			wp_redirect( $redirect );
 			exit();
 		}
 
-		wp_redirect( admin_url( 'admin.php?page=' . $this->theme_slug . '-license' ) );
+		wp_redirect( admin_url( 'themes.php?page=' . $this->theme_slug . '-license' ) );
 		exit();
 
 	}

@@ -773,15 +773,15 @@
 		"oAP": "\/includes\/admin\/customizer\/modules\/homepage-section-helper.php",
 		"oF": 0
 		},
-	"\/includes\/admin\/getting-started\/club.jpg": {
-		"ft": 16384,
-		"iS": 60667,
+	"\/includes\/admin\/getting-started\/getting-started-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/includes\/admin\/getting-started\/club.jpg",
+		"oAP": "\/includes\/admin\/getting-started\/getting-started-min-min.css",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"oS": 3
 		},
 	"\/includes\/admin\/getting-started\/getting-started.css": {
 		"aP": 1,

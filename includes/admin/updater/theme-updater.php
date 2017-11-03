@@ -30,7 +30,7 @@ $updater = new Minimall_Theme_Updater_Admin(
 
 	// Strings
 	$strings = array(
-		'theme-license'             => __( 'Getting Started', 'minimall' ),
+		'theme-license'             => __( 'Minimall', 'minimall' ),
 		'enter-key'                 => __( 'Enter your theme license key.', 'minimall' ),
 		'license-key'               => __( 'Enter your license key', 'minimall' ),
 		'license-action'            => __( 'License action:', 'minimall' ),

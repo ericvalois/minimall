@@ -113,6 +113,24 @@ function minimall_customizer_styles() { ?>
         }
 
         .customize-control-kirki-radio-image .image{ display: flex; }
+
+        li#accordion-panel-minimall_options > h3.accordion-section-title:before {
+            content: "\f108";
+            font-family: dashicons;
+            padding: 3px;
+            vertical-align: middle;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        li#accordion-panel-homepage > h3.accordion-section-title:before {
+            content: "\f102";
+            font-family: dashicons;
+            padding: 3px;
+            vertical-align: middle;
+            font-size: 20px;
+            line-height: 1;
+        }
 	</style>
 	<?php
 
