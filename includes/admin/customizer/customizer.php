@@ -117,18 +117,18 @@ function minimall_customizer_styles() { ?>
         li#accordion-panel-minimall_options > h3.accordion-section-title:before {
             content: "\f108";
             font-family: dashicons;
-            padding: 3px;
+            padding: 0 3px 0 0;
             vertical-align: middle;
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1;
         }
 
         li#accordion-panel-homepage > h3.accordion-section-title:before {
             content: "\f102";
             font-family: dashicons;
-            padding: 3px;
+            padding: 0 3px 0 0;
             vertical-align: middle;
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1;
         }
 	</style>
