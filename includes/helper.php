@@ -197,25 +197,14 @@ function minimall_pagination($pages = '', $range = 2){
 */
 function minimall_select_hero_image(){
 
-    /*$page_options = minimall_page_options();
-    $theme_options = minimall_theme_options();
 
-    if( !empty( $page_options['hero_img'] ) ){
-        $minimall_hero = $page_options['hero_img'];
+    $header_img = get_theme_mod('default_hero_img','');
+
+    if( $header_img ){
+        return minimall_get_image_id( $header_img );
     }else{
-        if( !empty( $theme_options['hero_img'] ) ){
-            $minimall_hero = $theme_options['hero_img'];
-        }else{
-            $minimall_hero = false;
-        }
-        
-    }*/
-
-    $header_img = get_custom_header();
-
-
-
-    return $header_img->attachment_id;
+        return false;
+    }
 }
 
 /**
@@ -273,7 +262,7 @@ function minimall_get_fa( $icon_name = '' ) {
         $prefix = 'l';
     }
 
-    return '<i class="fa'.$prefix.' fa-'.$icon_name.'"></i>';
+    return '<i class="fa '.$prefix.' fa-'.$icon_name.'"></i>';
 }
 
 // retrieves the attachment ID from the file URL
@@ -281,4 +270,37 @@ function minimall_get_image_id($image_url) {
     global $wpdb;
     $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
         return $attachment[0]; 
+}
+
+// Get link from custom link controls
+function minimall_get_link_helper( $string = '' ){
+    if( empty( $string ) )
+        return false;
+
+    $output = array();
+    foreach(explode("|", urldecode($string)) as $pair){
+        $stuff  = explode(":", $pair, 2); 
+        if( count($stuff) > 1 ){
+            $output[$stuff[0]] = $stuff[1];
+        }
+    }
+
+    if ( !array_key_exists("url", $output) ){
+        $output['url'] = '';
+    }
+
+    if ( !array_key_exists("title", $output) ){
+        $output['title'] = '';
+    }
+
+    if ( !array_key_exists("target", $output) ){
+        $output['target'] = '';
+    }
+
+    if ( !array_key_exists("rel", $output) ){
+        $output['rel'] = '';
+    }
+
+    return $output;
+    
 }

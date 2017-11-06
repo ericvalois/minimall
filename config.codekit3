@@ -356,6 +356,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/assets\/sass\/common\/gutenberg.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/assets\/sass\/media\/_captions.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -421,7 +434,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/svg\/sprite\/Style-min.css",
+		"oAP": "\/assets\/svg\/sprite\/Style.min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -534,13 +547,6 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
-	"\/includes\/admin\/customizer\/customizer-partials.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/admin\/customizer\/customizer-partials.php",
-		"oF": 0
-		},
 	"\/includes\/admin\/customizer\/customizer.js": {
 		"ft": 64,
 		"ma": 0,
@@ -595,7 +601,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/includes\/admin\/customizer\/minimall-link\/css\/_field-widget-min.css",
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/css\/_field-widget.min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -605,7 +611,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/includes\/admin\/customizer\/minimall-link\/css\/admin-min.css",
+		"oAP": "\/includes\/admin\/customizer\/minimall-link\/css\/admin.min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -745,6 +751,13 @@
 		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-footer.php",
 		"oF": 0
 		},
+	"\/includes\/admin\/customizer\/modules\/customizer-general.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-general.php",
+		"oF": 0
+		},
 	"\/includes\/admin\/customizer\/modules\/customizer-homepage.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -757,6 +770,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-icons.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/customizer\/modules\/customizer-posts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-posts.php",
 		"oF": 0
 		},
 	"\/includes\/admin\/customizer\/modules\/customizer-typography.php": {
@@ -779,7 +799,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/includes\/admin\/getting-started\/getting-started-min-min.css",
+		"oAP": "\/includes\/admin\/getting-started\/getting-started-min.min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -789,7 +809,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/includes\/admin\/getting-started\/getting-started-min.css",
+		"oAP": "\/includes\/admin\/getting-started\/getting-started.min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -872,6 +892,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/jetpack.php",
+		"oF": 0
+		},
+	"\/includes\/partials.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/partials.php",
 		"oF": 0
 		},
 	"\/includes\/performance\/clean.php": {
@@ -1039,7 +1066,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/style-min.css",
+		"oAP": "\/style.min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -1113,60 +1140,60 @@
 		"oAP": "\/template-parts\/download-grid.php",
 		"oF": 0
 		},
-	"\/template-parts\/footer-copyright.php": {
+	"\/template-parts\/footer\/copyright.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/footer-copyright.php",
+		"oAP": "\/template-parts\/footer\/copyright.php",
 		"oF": 0
 		},
-	"\/template-parts\/footer-hero.php": {
+	"\/template-parts\/footer\/hero.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/footer-hero.php",
+		"oAP": "\/template-parts\/footer\/hero.php",
 		"oF": 0
 		},
-	"\/template-parts\/footer-widgets.php": {
+	"\/template-parts\/footer\/widgets.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/footer-widgets.php",
+		"oAP": "\/template-parts\/footer\/widgets.php",
 		"oF": 0
 		},
-	"\/template-parts\/home-hero.php": {
+	"\/template-parts\/homepage\/hero.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/home-hero.php",
+		"oAP": "\/template-parts\/homepage\/hero.php",
 		"oF": 0
 		},
-	"\/template-parts\/home-section-blog.php": {
+	"\/template-parts\/homepage\/section-blog.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/home-section-blog.php",
+		"oAP": "\/template-parts\/homepage\/section-blog.php",
 		"oF": 0
 		},
-	"\/template-parts\/home-section-brands-list.php": {
+	"\/template-parts\/homepage\/section-brands-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/home-section-brands-list.php",
+		"oAP": "\/template-parts\/homepage\/section-brands-list.php",
 		"oF": 0
 		},
-	"\/template-parts\/home-section-content-list.php": {
+	"\/template-parts\/homepage\/section-content-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/home-section-content-list.php",
+		"oAP": "\/template-parts\/homepage\/section-content-list.php",
 		"oF": 0
 		},
-	"\/template-parts\/home-section.php": {
+	"\/template-parts\/homepage\/section.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/home-section.php",
+		"oAP": "\/template-parts\/homepage\/section.php",
 		"oF": 0
 		},
 	"\/templates\/blank.php": {
@@ -1192,6 +1219,15 @@
 		}
 	},
 "hooks": [
+	{
+		"enabled": 1,
+		"name": "Hook #1",
+		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGYmNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1VZXV9VJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RnVsbFBhdGjSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEFhtaW5pbWFsbNIrLE1OXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNNLzDUC1BRUlNJKFRaTlNNb2RpZmllcldOU0ZsYWdzXk5TT3BlcmF0b3JUeXBlgBIQY9IrLFZXXxAVTlNJblByZWRpY2F0ZU9wZXJhdG9yo1ZYMF8QE05TUHJlZGljYXRlT3BlcmF0b3LSKyxaW18QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNaXDBbTlNQcmVkaWNhdGXSKyxBXqJBMNIrLGBhXxATTlNDb21wb3VuZFByZWRpY2F0ZaNgXDBfEA9OU0tleWVkQXJjaGl2ZXLRZGVUcm9vdIABAAgAEQAaACMALQAyADcAUABWAF0AdwCJAJAAkgCUAJYAmwCmAKgAqgCsALUAyQDcAPIA9AD2APgA+gEFAQ8BHgExAT0BPwFBAUMBRQFHAVQBWQFbAV0BYgFtAXYBiQGNAZoBowGoAaoBrAGuAbUBvwHBAcMBxQHTAdgB9wH7AgACDwITAhsCIAI2AjsCUgJZAmsCbQJvAnECegJ\/ApsCnwKoArMCuwLKAswCzgLTAusC7wMFAwoDIgMmAzIDNwM6Az8DVQNZA2sDbgNzAAAAAAAAAgEAAAAAAAAAZgAAAAAAAAAAAAAAAAAAA3U=",
+		"runOrder": 0,
+		"scriptSourceString": "",
+		"scriptType": 1,
+		"uuidString": "2B6712CC-23BF-4087-AEE5-26F694BAA1FD"
+		}
 	],
 "manualImportLinks": {
 	},
@@ -2956,7 +2992,7 @@
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*-min.css",
+		"autoOutputPathFilenamePattern": "*.min.css",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",

@@ -57,35 +57,12 @@ Minimall_Kirki::add_field( 'minimall', array(
 ) );
 
 Minimall_Kirki::add_field( 'minimall', array(
-	'type'     => 'text',
-	'settings' => 'footer_cta_url',
-	'label'    => __( 'Call to action link', 'minimall' ),
+	'type'     => 'tpfw_link',
+	'settings' => 'footer_cta',
+	'label'    => __( 'Button', 'minimall' ),
 	'section'  => 'footer',
     'priority' => 30,
     'default'  => esc_attr__( 'http://', 'minimall' ),
-    'active_callback'    => array(
-        array(
-            'setting'  => 'footer_hero',
-            'operator' => '==',
-            'value'    => true,
-        ),
-    ),
-) );
-
-Minimall_Kirki::add_field( 'minimall', array(
-	'type'     => 'text',
-	'settings' => 'footer_cta_label',
-	'label'    => __( 'Call to action label', 'minimall' ),
-	'section'  => 'footer',
-    'priority' => 40,
-    'default'  => esc_attr__( 'Read more', 'minimall' ),
-    'transport' => 'postMessage',
-    'js_vars'   => array(
-		array(
-			'element'  => '.footer_cta_label',
-			'function' => 'html',
-		),
-    ),
     'active_callback'    => array(
         array(
             'setting'  => 'footer_hero',
@@ -113,25 +90,6 @@ Minimall_Kirki::add_field( 'minimall', array(
             'value'    => true,
         ),
     ),
-) );
-
-Minimall_Kirki::add_field( 'minimall', array(
-	'type'        => 'multicheck',
-	'settings'    => 'footer_cta_options',
-	'label'       => __( 'Call to action options', 'minimall' ),
-	'section'     => 'footer',
-    'priority'    => 50,
-    'active_callback'    => array(
-        array(
-            'setting'  => 'footer_hero',
-            'operator' => '==',
-            'value'    => true,
-        ),
-    ),
-    'choices'     => array(
-		'blank' => esc_attr__( 'New window', 'minimall' ),
-		'nofollow' => esc_attr__( 'Nofollow', 'minimall' ),
-	),
 ) );
 
 Minimall_Kirki::add_field( 'minimall', array(

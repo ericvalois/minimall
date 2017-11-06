@@ -55,12 +55,12 @@ Minimall_Kirki::add_field( 'minimall', array(
     'label'    => __( 'Hero Title', 'minimall' ),
     'section'  => 'homepage_hero',
     'priority' => 10,
-    'partial_refresh' => array(
+    /*'partial_refresh' => array(
 		'home_hero_title' => array(
 			'selector'        => '.hero_title',
-            'render_callback' => 'minimal_partial_get_hero_title', 
+            'render_callback' => 'minimal_get_homepage_hero_title', 
 		),
-    ),
+    ),*/
     
 ) );
 
@@ -70,12 +70,12 @@ Minimall_Kirki::add_field( 'minimall', array(
     'label'    => __( 'Hero Description', 'minimall' ),
     'section'  => 'homepage_hero',
     'priority' => 20,
-    'partial_refresh' => array(
+    /*'partial_refresh' => array(
 		'home_hero_desc' => array(
 			'selector'        => '.hero_desc',
-            'render_callback' => 'minimal_partial_get_hero_desc', 
+            'render_callback' => 'minimal_get_homepage_hero_title', 
 		),
-    ),
+    ),*/
     
 ) );
 

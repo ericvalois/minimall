@@ -1,5 +1,5 @@
 <?php
-    $image = minimal_partial_get_hero_image();
+    $image = get_theme_mod('home_hero_img');
     if( $image ){
         $image = minimall_get_image_id( $image );
     }
@@ -38,8 +38,8 @@
     <div class="py4 relative z4">
 
         <div class="max-width-5 ml-auto mr-auto white px2 home_hero_content">
-            <h1 class="hero_title title white mt0 mb2 line-height-2 caps"><?php echo wp_kses_post( minimal_partial_get_hero_title() ); ?></h1>
-            <div class="hero_desc content lighter xl-text mb2"><?php echo wp_kses_post( minimal_partial_get_hero_desc() ); ?></div>
+            <h1 class="hero_title title white mt0 mb2 line-height-2 caps"><?php echo wp_kses_post( nl2br( get_theme_mod('home_hero_title') ) ); ?></h1>
+            <div class="hero_desc content lighter xl-text mb2"><?php echo wp_kses_post( nl2br( get_theme_mod('home_hero_desc') ) ); ?></div>
         </div>
     </div>
 </div>

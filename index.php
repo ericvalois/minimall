@@ -14,52 +14,52 @@
 
 get_header(); ?>
 
-    <div class="ml-auto mr-auto px2 site-content">
+    <div id="site-content" <?php minimall_site_content_class(); ?>>
 
-    <header class="mb4">
-        <?php 
-            if( is_home() ){
-                $title = esc_html( get_the_title( get_option('page_for_posts', true) ) ); 
-                $description = esc_html( get_bloginfo( "description" ) ); 
-            }elseif( is_search() ){
-                $title = esc_html__( 'Search Results for: ', 'minimall' ) . '<span>' . get_search_query() . '</span>';
-            
-            }else{
-                $title = get_the_archive_title();
-                $description = get_the_archive_description();
-            }
-        ?>
-        <h1 class="page-title h3 caps mb1"><?php echo $title; ?></h1>
-        <?php if( isset( $description ) ): ?>
-            <h5 class="mt0 mb0 regular lower"><?php echo $description; ?></h5>
-        <?php endif; ?>
-    </header>
-    
-	<div id="primary" class="content-area lg-flex justify-center">
-		<main id="main" class="site-main lg-col-8 <?php if( is_active_sidebar( 'blog-sidebar' ) ){ echo 'lg-pr4'; } ?>" role="main">
+        <header class="mb4">
+            <?php 
+                if( is_home() ){
+                    $title = esc_html( get_the_title( get_option('page_for_posts', true) ) ); 
+                    $description = esc_html( get_bloginfo( "description" ) ); 
+                }elseif( is_search() ){
+                    $title = esc_html__( 'Search Results for: ', 'minimall' ) . '<span>' . get_search_query() . '</span>';
+                
+                }else{
+                    $title = get_the_archive_title();
+                    $description = get_the_archive_description();
+                }
+            ?>
+            <h1 class="page-title h3 caps mb1"><?php echo $title; ?></h1>
+            <?php if( isset( $description ) ): ?>
+                <h5 class="mt0 mb0 regular lower"><?php echo $description; ?></h5>
+            <?php endif; ?>
+        </header>
         
-            <?php
-            if ( have_posts() ) :
+        <div id="primary" class="content-area lg-flex justify-center">
+            <main id="main" class="site-main lg-col-8 <?php if( is_active_sidebar( 'blog-sidebar' ) ){ echo 'lg-pr4'; } ?>" role="main">
+            
+                <?php
+                if ( have_posts() ) :
 
-                while ( have_posts() ) : the_post();
+                    while ( have_posts() ) : the_post();
 
-                    get_template_part( 'template-parts/content', get_post_format() );
+                        get_template_part( 'template-parts/content', get_post_format() );
 
-                endwhile;
+                    endwhile;
 
-                minimall_pagination();
+                    minimall_pagination();
 
-            else :
+                else :
 
-                get_template_part( 'template-parts/content', 'none' );
+                    get_template_part( 'template-parts/content', 'none' );
 
-            endif; ?>
+                endif; ?>
 
-		</main><!-- #main -->
+            </main><!-- #main -->
 
-        <?php get_sidebar(); ?>
+            <?php get_sidebar(); ?>
 
-	</div><!-- #primary -->
-</div>
+        </div><!-- #primary -->
+    </div>
 <?php
 get_footer();

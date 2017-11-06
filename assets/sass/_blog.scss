@@ -8,19 +8,18 @@
 
 .entry-header::after,
 .page-header::after,
-.comments-title::after {
+.separator::after {
     border-bottom: 1px solid #000;
     content: "";
     display: block;
     margin-bottom: 40px;
     padding-bottom: 40px;
-    width: 2.5%;
+    width: 40px;
+    margin: 0 auto;
 }
 
-.entry-header.center::after,
-.page-header.center::after,
-.comments-title::after  {
-    margin: 0 auto;
+.page-template-homepage .entry-header::after {
+    margin: 0;
 }
 
 .entry-avatar .avatar {

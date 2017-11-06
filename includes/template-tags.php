@@ -86,7 +86,7 @@ if ( ! function_exists( 'minimall_entry_footer' ) ) :
 function minimall_entry_footer() {
     echo '<section class="mt3 mb3 sm-text black-link">';
 	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
+	if ( 'post' === get_post_type() && !get_theme_mod('hide_post_cat') ) {
 		
 		$categories = get_the_category();
         $separator = ', ';
@@ -99,7 +99,7 @@ function minimall_entry_footer() {
 
 		if ( ! empty( $categories ) && minimall_categorized_blog() ) {
             echo '<div class="col-12 flex items-center">';
-            echo '<svg class="nc-align-to-text mr1"><use href="#nc-folder-15"/></svg>';
+            echo minimall_get_fa('folder');
 			echo '<span class="ml1">';
             echo trim( $output, $separator );
             echo '</span>';
@@ -116,13 +116,13 @@ function minimall_entry_footer() {
 
 		if ( $tags_list ) {
 			echo '<div class="col-12 flex items-center">';
-            echo '<svg class="nc-align-to-text mr1"><use href="#nc-tag"/></svg>';
+            echo minimall_get_fa('tag');
 			echo '<span class="ml1">' . trim( $output, $separator ) . '</span>';
             echo '</div>';
 		}
 	}
 
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) && !get_theme_mod('hide_post_cat') ) {
 		echo '<span class="comments-link">';
 		comments_popup_link( esc_html__( 'Leave a comment', 'minimall' ), esc_html__( '1 Comment', 'minimall' ), esc_html__( '% Comments', 'minimall' ) );
 		echo '</span>';

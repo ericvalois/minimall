@@ -10,12 +10,30 @@ Minimall_Kirki::add_section( 'fontawesome', array(
 ) );
 
 Minimall_Kirki::add_field( 'minimall', array(
-	'type'        => 'checkbox',
+	'type'        => 'toggle',
 	'settings'    => 'fontawesome',
 	'label'       => __( 'Activate Font Awesome Icons', 'minimall' ),
-	'section'     => 'fontawesome',
+    'section'     => 'fontawesome',
+    'description'       => __( 'More than 600 icons', 'minimall' ),
 	'default'     => '0',
 	'priority'    => 10,
+) );
+
+Minimall_Kirki::add_field( 'minimall', array(
+	'type'        => 'checkbox',
+	'settings'    => 'fontawesome_brands',
+    'label'       => __( 'Include Font Awesome Brands Icons', 'minimall' ),
+    'description'       => __( 'Activate only if brands icons are necessary. (Facebook, Twitter, Dropbox)', 'minimall' ),
+	'section'     => 'fontawesome',
+	'default'     => '0',
+    'priority'    => 20,
+    'active_callback'    => array(
+        array(
+            'setting'  => 'fontawesome',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
 ) );
 
 
@@ -26,7 +44,7 @@ Minimall_Kirki::add_field( 'minimall', array(
 	'label'       => esc_html__( 'Icons Type', 'minimall' ),
 	'section'     => 'fontawesome',
 	'default'     => 'Light',
-    'priority'    => 20,
+    'priority'    => 30,
     'active_callback'    => array(
         array(
             'setting'  => 'fontawesome',

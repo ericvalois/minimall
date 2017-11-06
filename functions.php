@@ -85,7 +85,20 @@ function minimall_setup() {
         'flex-width'         => true,
         'flex-height'        => true,
     );
-    add_theme_support( 'custom-header', $args );
+    //add_theme_support( 'custom-header', $args );
+
+    /* 
+    * Gutenberg Support
+    */
+    add_theme_support( 'gutenberg', array(
+        'wide-images' => true,
+        'colors' => array(
+            get_theme_mod('primary_color','#1078ff'),
+            '#333',
+            '#3a4145',
+        ),
+    ) );
+    
 
     /* 
     * Admin page
@@ -243,7 +256,7 @@ require get_template_directory() . '/includes/helper.php';
 /**
 * Customizer partials
 */
-require( get_template_directory() . '/includes/admin/customizer/customizer-partials.php' );
+require( get_template_directory() . '/includes/partials.php' );
 
 /**
  * Recommend the Kirki plugin
@@ -320,6 +333,10 @@ function minimall_scripts() {
     	wp_enqueue_style( 'minimall-stylesheet', trailingslashit( get_template_directory_uri() ) . 'style.css' );
     }
 
+    /*if( is_plugin_active('gutenberg/gutenberg.php') ){
+        wp_enqueue_style( 'minimall-blocks', trailingslashit( get_template_directory_uri() ) . 'blocks.min.css' );
+    }*/
+
     wp_enqueue_script( 'minimall-lazysizes', get_template_directory_uri() . '/includes/vendors/lazysizes/lazysizes-all.min.js', '', '', true );
 
     wp_enqueue_script( 'minimall-init', get_template_directory_uri() . '/assets/js/minimall-init.min.js', array(), '', true );
@@ -329,6 +346,20 @@ function minimall_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'minimall_scripts' );
+
+/**
+ * Enqueue scripts and styles for Gutenberg editor
+ */
+add_action( 'enqueue_block_editor_assets', 'minimall_editor_styles' );
+function minimall_editor_styles() {
+    if ( is_child_theme() ) {
+        wp_enqueue_style( 'minimall-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+        wp_enqueue_style( 'minimall-stylesheet', get_stylesheet_uri()  );
+    }else{
+    	wp_enqueue_style( 'minimall-stylesheet', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+    }
+}
+
 
 /**
  * Load TGM class

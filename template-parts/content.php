@@ -10,7 +10,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<header class="entry-header col-12 <?php if( is_single() ){ echo 'center negative-header max-width-5 ml-auto mr-auto bg-white px2 py2 lg-px4'; } ?>">
-        <?php if( is_singular("post") ): ?>
+        <?php if( is_singular("post") && !get_theme_mod('hide_post_avatar') ): ?>
             <div class="entry-avatar">
                 <?php echo get_avatar( get_the_author_meta( 'ID' ), 100, '', '', array('class' => 'ml-auto mr-auto') ); ?> 
             </div>
@@ -24,7 +24,7 @@
             endif;
         ?>
         
-        <?php if ( 'post' === get_post_type() ) : ?>
+        <?php if ( 'post' === get_post_type() && !get_theme_mod('hide_post_metas') ) : ?>
             <div class="entry-meta sm-text">
                 <?php minimall_posted_on(); ?>
             </div><!-- .entry-meta -->

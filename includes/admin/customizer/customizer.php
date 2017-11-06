@@ -169,9 +169,19 @@ include( get_template_directory() . '/includes/admin/customizer/modules/customiz
 include( get_template_directory() . '/includes/admin/customizer/modules/customizer-colors.php' );
 
 /**
+ * General controls
+ */
+include( get_template_directory() . '/includes/admin/customizer/modules/customizer-general.php' );
+
+/**
  * Footer controls
  */
 include( get_template_directory() . '/includes/admin/customizer/modules/customizer-footer.php' );
+
+/**
+ * Blog posts controls
+ */
+include( get_template_directory() . '/includes/admin/customizer/modules/customizer-posts.php' );
 
 /**
  * Fontawesome Icons

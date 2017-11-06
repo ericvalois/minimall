@@ -9,13 +9,11 @@
  * @package minimal
  */
 ?>
-    <?php get_template_part( 'template-parts/footer', 'hero' ); ?>
+    <?php get_template_part( 'template-parts/footer/hero' ); ?>
     
-    <?php get_template_part( 'template-parts/footer', 'widgets' ); ?>
+    <?php get_template_part( 'template-parts/footer/widgets' ); ?>
 
-    <?php get_template_part( 'template-parts/footer', 'copyright' ); ?>
-
-</div><?php //#page  ?>
+    <?php get_template_part( 'template-parts/footer/copyright' ); ?>
 
 <?php wp_footer(); ?>
 

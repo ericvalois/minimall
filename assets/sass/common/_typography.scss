@@ -176,6 +176,7 @@ figcaption{
 /*
 * Gutenberg Editor
 */
+/*
 #tinymce *,
 .content-full *{
     max-width: 48rem;
@@ -223,7 +224,7 @@ figcaption{
 .wp-block-button.primary p a{
     @extend .btn-primary;
 }
-
+*/
 @media #{$breakpoint-sm} {}
 
 @media #{$breakpoint-lg} {
@@ -232,6 +233,6 @@ figcaption{
 }
 
 @media (min-width: 75rem) {
-    .alignwide,
-    .alignwide img{ max-width: 75rem !important; }
+    //.alignwide,
+    //.alignwide img{ max-width: 75rem !important; }
 }
