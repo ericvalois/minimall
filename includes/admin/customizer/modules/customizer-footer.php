@@ -59,33 +59,14 @@ Minimall_Kirki::add_field( 'minimall', array(
 Minimall_Kirki::add_field( 'minimall', array(
 	'type'     => 'tpfw_link',
 	'settings' => 'footer_cta',
-	'label'    => __( 'Button', 'minimall' ),
+    'label'    => __( 'Button', 'minimall' ),
+    'description' => esc_html__( 'Shortcodes are accepted', 'minimall' ),
 	'section'  => 'footer',
     'priority' => 30,
     'default'  => esc_attr__( 'http://', 'minimall' ),
     'active_callback'    => array(
         array(
             'setting'  => 'footer_hero',
-            'operator' => '==',
-            'value'    => true,
-        ),
-    ),
-) );
-
-Minimall_Kirki::add_field( 'minimall', array(
-	'type'     => 'fontawesome',
-	'settings' => 'footer_cta_icon',
-	'label'    => __( 'Call to action icon', 'minimall' ),
-	'section'  => 'footer',
-    'priority' => 45,
-    'active_callback'    => array(
-        array(
-            'setting'  => 'footer_hero',
-            'operator' => '==',
-            'value'    => true,
-        ),
-        array(
-            'setting'  => 'fontawesome',
             'operator' => '==',
             'value'    => true,
         ),

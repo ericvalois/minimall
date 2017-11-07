@@ -244,26 +244,6 @@ function minimall_external_link( $target = false, $nofollow = false ){
     return $attributes;
 }
 
-/**
- * Font Awesome markup helper.
- * @string $icon_name
- */
-function minimall_get_fa( $icon_name = '' ) {
-
-    if ( !get_theme_mod('fontawesome') ) {
-        return;
-    }
-
-    if( get_theme_mod('fontawesome_type') == 'solid' ){
-        $prefix = 's';
-    }elseif( get_theme_mod('fontawesome_type') == 'regular' ){
-        $prefix = 'r';
-    }elseif( get_theme_mod('fontawesome_type') == 'light'){
-        $prefix = 'l';
-    }
-
-    return '<i class="fa '.$prefix.' fa-'.$icon_name.'"></i>';
-}
 
 // retrieves the attachment ID from the file URL
 function minimall_get_image_id($image_url) {

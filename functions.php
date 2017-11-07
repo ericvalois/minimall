@@ -333,10 +333,6 @@ function minimall_scripts() {
     	wp_enqueue_style( 'minimall-stylesheet', trailingslashit( get_template_directory_uri() ) . 'style.css' );
     }
 
-    /*if( is_plugin_active('gutenberg/gutenberg.php') ){
-        wp_enqueue_style( 'minimall-blocks', trailingslashit( get_template_directory_uri() ) . 'blocks.min.css' );
-    }*/
-
     wp_enqueue_script( 'minimall-lazysizes', get_template_directory_uri() . '/includes/vendors/lazysizes/lazysizes-all.min.js', '', '', true );
 
     wp_enqueue_script( 'minimall-init', get_template_directory_uri() . '/assets/js/minimall-init.min.js', array(), '', true );

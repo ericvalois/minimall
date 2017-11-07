@@ -13,8 +13,7 @@
                 <div class="flex justify-center ">
                     <?php $link = minimall_get_link_helper( get_theme_mod('footer_cta') ); ?>
                     <a <?php echo minimall_external_link( $link['target'], $link['rel'] ); ?> href="<?php echo esc_url( $link['url'] ); ?>" class="btn btn-primary btn-big flex items-center xl-text">
-                        <span class="mr1 footer_cta_label"><?php echo esc_html( $link['title'] ); ?></span>
-                        <?php echo minimall_get_fa( get_theme_mod('footer_cta_icon') ); ?>
+                        <span class="mr1 footer_cta_label"><?php echo do_shortcode( wp_kses_post( $link['title'] ) ); ?></span>
                     </a>
                 </div>
             <?php endif; ?>

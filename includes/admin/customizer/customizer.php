@@ -186,7 +186,7 @@ include( get_template_directory() . '/includes/admin/customizer/modules/customiz
 /**
  * Fontawesome Icons
  */
-include( get_template_directory() . '/includes/admin/customizer/modules/customizer-icons.php' );
+//include( get_template_directory() . '/includes/admin/customizer/modules/customizer-icons.php' );
 
 /**
  * New Link Control
