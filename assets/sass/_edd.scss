@@ -1,0 +1,56 @@
+.edd_downloads_list .edd_download_title{
+    margin: 1rem 0;
+    font-size: 1.3em;
+}
+
+.edd_downloads_list .edd_download_excerpt p{
+    margin: 1rem 0;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.edd_download_buy_button{ margin: 1rem 0; }
+
+.edd-submit{ 
+    @extend .btn;
+    @extend .btn-big;
+    @extend .btn-black;
+    font-size: 14px;
+}
+
+.edd_downloads_list{ margin: 0 -1.5rem; }
+
+.edd_price_options{ font-size: 16px; }
+.edd_price_options input{
+    width: 15px;
+    height: 15px;
+}
+.edd_download_buy_button .edd_price_options p{ margin: 1rem 0; }
+
+@media #{$breakpoint-sm} {
+    .edd_downloads_list{ 
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.smartphoto{ background-color: #fff !important; }
+.smartphoto-arrows,
+.smartphoto-nav ul{
+   max-width: 100%;
+}
+
+.smartphoto .smartphoto-arrow-right,
+.smartphoto .smartphoto-arrow-left{
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center center;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.edd-gallery{ transition: opacity 0.2s ease; }
+.edd-gallery:hover{ opacity: 0.8; }

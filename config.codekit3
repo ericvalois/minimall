@@ -23,11 +23,18 @@
 		"oAP": "\/404.php",
 		"oF": 0
 		},
-	"\/archive-download.php": {
+	"\/_archive-download.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/archive-download.php",
+		"oAP": "\/_archive-download.php",
+		"oF": 0
+		},
+	"\/_taxonomy-download_tag.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_taxonomy-download_tag.php",
 		"oF": 0
 		},
 	"\/assets\/images\/default-hero.jpg": {
@@ -196,6 +203,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/sass\/_edd.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/style.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -481,18 +501,53 @@
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
-	"\/edd_templates\/checkout_recommendations.php": {
+	"\/edd_templates\/_checkout_recommendations.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/edd_templates\/checkout_recommendations.php",
+		"oAP": "\/edd_templates\/_checkout_recommendations.php",
 		"oF": 0
 		},
-	"\/edd_templates\/shortcode-content-price.php": {
+	"\/edd_templates\/_shortcode-content-price.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/edd_templates\/shortcode-content-price.php",
+		"oAP": "\/edd_templates\/_shortcode-content-price.php",
+		"oF": 0
+		},
+	"\/edd_templates\/_single_recommendations.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/_single_recommendations.php",
+		"oF": 0
+		},
+	"\/edd_templates\/_widget-cart-item.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/_widget-cart-item.php",
+		"oF": 0
+		},
+	"\/edd_templates\/shortcode-content-cart-button.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/shortcode-content-cart-button.php",
+		"oF": 0
+		},
+	"\/edd_templates\/shortcode-content-image.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/shortcode-content-image.php",
+		"oF": 0
+		},
+	"\/edd_templates\/shortcode-content-title.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/shortcode-content-title.php",
 		"oF": 0
 		},
 	"\/edd_templates\/shortcode-download.php": {
@@ -500,20 +555,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/edd_templates\/shortcode-download.php",
-		"oF": 0
-		},
-	"\/edd_templates\/single_recommendations.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/edd_templates\/single_recommendations.php",
-		"oF": 0
-		},
-	"\/edd_templates\/widget-cart-item.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/edd_templates\/widget-cart-item.php",
 		"oF": 0
 		},
 	"\/footer.php": {
@@ -779,6 +820,13 @@
 		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-typography.php",
 		"oF": 0
 		},
+	"\/includes\/admin\/customizer\/modules\/edd.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/edd.php",
+		"oF": 0
+		},
 	"\/includes\/admin\/customizer\/modules\/homepage-section-helper.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -864,6 +912,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/custom-styles.php",
+		"oF": 0
+		},
+	"\/includes\/edd.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/edd.php",
 		"oF": 0
 		},
 	"\/includes\/extra.php": {
@@ -1018,13 +1073,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/sidebar-download.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/sidebar-download.php",
-		"oF": 0
-		},
 	"\/sidebar-page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1063,25 +1111,18 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/taxonomy-download_category.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/taxonomy-download_category.php",
-		"oF": 0
-		},
-	"\/taxonomy-download_tag.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/taxonomy-download_tag.php",
-		"oF": 0
-		},
 	"\/template-parts\/content-blank.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/content-blank.php",
+		"oF": 0
+		},
+	"\/template-parts\/content-download.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-download.php",
 		"oF": 0
 		},
 	"\/template-parts\/content-hero.php": {

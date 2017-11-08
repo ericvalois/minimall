@@ -18,6 +18,12 @@
     margin: 0 auto;
 }
 
+.left-separator::after,
+.left-separator::after,
+.left-separator::after {
+    margin: 0;
+}
+
 .page-template-homepage .entry-header::after {
     margin: 0;
 }

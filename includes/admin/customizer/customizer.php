@@ -184,9 +184,9 @@ include( get_template_directory() . '/includes/admin/customizer/modules/customiz
 include( get_template_directory() . '/includes/admin/customizer/modules/customizer-posts.php' );
 
 /**
- * Fontawesome Icons
+ * Easy Digital Download Controls
  */
-//include( get_template_directory() . '/includes/admin/customizer/modules/customizer-icons.php' );
+include( get_template_directory() . '/includes/admin/customizer/modules/edd.php' );
 
 /**
  * New Link Control

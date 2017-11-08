@@ -47,7 +47,9 @@ function minimall_setup() {
 	add_image_size( 'minimall-hero-md', 767, 494, true );
 	add_image_size( 'minimall-hero-sm', 595, 383, true );
 
-	add_image_size( 'minimall-hero-placeholder', 50, 32, true );
+    add_image_size( 'minimall-hero-placeholder', 50, 32, true );
+    
+    add_image_size( 'minimall-edd-thumb', 160, 160, false );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -393,18 +395,8 @@ require get_template_directory() . '/includes/widgets/widget-social.php';
 require get_template_directory() . '/includes/widgets/widget-author.php';
 
 /**
- *  Customizer Content Layout Control 
+ * EDD customization
  */
-//require get_template_directory() . '/includes/admin/customizer/content-layout-control/content-layout-control.php';
-
-/**
- * Add custom buttons and formating to Tinymce
- */
-//require get_template_directory() . '/includes/extend-tinymce.php';
-
-/**
- *  Performance features
- */
-//require get_template_directory() . '/includes/performance/performance-init.php';
+require get_template_directory() . '/includes/edd.php';
 
 

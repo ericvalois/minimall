@@ -99,7 +99,7 @@ function minimall_entry_footer() {
 
 		if ( ! empty( $categories ) && minimall_categorized_blog() ) {
             echo '<div class="col-12 flex items-center">';
-            echo minimall_get_fa('folder');
+            echo '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve" width="16" height="16"><g class="" fill="#3a4145"><path fill="#3a4145" d="M15,3H8.4L5.7,0.3C5.5,0.1,5.3,0,5,0H1C0.4,0,0,0.4,0,1v14c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1V4 C16,3.4,15.6,3,15,3z"></path></g></svg>';
 			echo '<span class="ml1">';
             echo trim( $output, $separator );
             echo '</span>';
@@ -116,7 +116,7 @@ function minimall_entry_footer() {
 
 		if ( $tags_list ) {
 			echo '<div class="col-12 flex items-center">';
-            echo minimall_get_fa('tag');
+            echo '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve" width="16" height="16"><g class="" fill="#3a4145"><path fill="#3a4145" d="M15.7,8.3l-8-8C7.5,0.1,7.3,0,7,0H1C0.4,0,0,0.4,0,1v6c0,0.3,0.1,0.5,0.3,0.7l8,8C8.5,15.9,8.7,16,9,16 s0.5-0.1,0.7-0.3l6-6C16.1,9.3,16.1,8.7,15.7,8.3z M4,5C3.4,5,3,4.6,3,4s0.4-1,1-1c0.6,0,1,0.4,1,1S4.6,5,4,5z"></path></g></svg>';
 			echo '<span class="ml1">' . trim( $output, $separator ) . '</span>';
             echo '</div>';
 		}

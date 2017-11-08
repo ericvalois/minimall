@@ -246,10 +246,23 @@ function minimall_external_link( $target = false, $nofollow = false ){
 
 
 // retrieves the attachment ID from the file URL
-function minimall_get_image_id($image_url) {
-    global $wpdb;
-    $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
-        return $attachment[0]; 
+function minimall_get_image_id( $image_url ) {
+    $post_id = attachment_url_to_postid( $image_url );
+    
+    if ( ! $post_id ){
+        $dir = wp_upload_dir();
+        $path = $image_url;
+        if ( 0 === strpos( $path, $dir['baseurl'] . '/' ) ) {
+            $path = substr( $path, strlen( $dir['baseurl'] . '/' ) );
+        }
+
+        if ( preg_match( '/^(.*)(\-\d*x\d*)(\.\w{1,})/i', $path, $matches ) ){
+            $url = $dir['baseurl'] . '/' . $matches[1] . $matches[3];
+            $post_id = attachment_url_to_postid( $image_url );
+        }
+    }
+
+    return (int) $post_id;
 }
 
 // Get link from custom link controls
