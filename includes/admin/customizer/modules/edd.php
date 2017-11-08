@@ -112,6 +112,22 @@ if( function_exists('is_plugin_active') && is_plugin_active('easy-digital-downlo
     /*
     * Create EDD Single Controls
     */
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'radio-image',
+        'settings'    => 'edd_single_layout',
+        'label'       => esc_html__( 'Layout', 'minimall' ),
+        'section'     => 'edd_single',
+        'default'     => '6',
+        'priority'    => 10,
+        'choices'     => array(
+            '12' => get_template_directory_uri() . '/includes/admin/images/one-column.png',
+            '6' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
+            '4'   => get_template_directory_uri() . '/includes/admin/images/sidebar-left.png',
+            '8'  => get_template_directory_uri() . '/includes/admin/images/sidebar-right.png',
+        ),
+    ) );
+
     Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'checkbox',
         'settings'    => 'edd_hide_single_title',
@@ -119,21 +135,22 @@ if( function_exists('is_plugin_active') && is_plugin_active('easy-digital-downlo
         'description' => __( 'Hide product title on products list', 'minimall' ),
         'section'     => 'edd_single',
         'default'     => '0',
-        'priority'    => 10,
+        'priority'    => 20,
     ) );
 
     Minimall_Kirki::add_field( 'minimall', array(
-        'type'        => 'radio-image',
-        'settings'    => 'edd_single_layout',
-        'label'       => esc_html__( 'Layout', 'minimall' ),
+        'type'        => 'slider',
+        'settings'    => 'edd_single_thumb',
+        'label'       => esc_attr__( 'Images per row', 'minimall' ),
+        'description' => __( 'Lorem ipsum dolor sit amet sum.', 'minimall' ),
         'section'     => 'edd_single',
-        'default'     => '2',
-        'priority'    => 2,
+        'default'     => 4,
         'choices'     => array(
-            '1' => get_template_directory_uri() . '/includes/admin/images/one-column.png',
-            '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
-            '3'   => get_template_directory_uri() . '/includes/admin/images/sidebar-left.png',
-            '4'  => get_template_directory_uri() . '/includes/admin/images/sidebar-right.png',
+            'min'  => '1',
+            'max'  => '5',
+            'step' => '1',
         ),
+        'priority'    => 30,
     ) );
+
 endif;

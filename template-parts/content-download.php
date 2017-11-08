@@ -11,8 +11,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="max-width-5 ml-auto mr-auto px2 lg-px0 pt4">
-        <div class="lg-flex col-12">
-            <div class="lg-col-6 px2">
+        <div class="lg-flex col-12 flex-wrap">
+            <?php 
+                $firstColumn = get_theme_mod('edd_single_layout','6');
+                $secondColumn = 12 - $firstColumn;
+            ?>
+            <div class="lg-col-<?php echo esc_attr( $firstColumn ); ?> px2">
                 <a class="flex items-center justify-center col-12 inline-block" href="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>">
                     <img class="lazyload zoom-img" data-src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="">
                 </a>
@@ -23,10 +27,9 @@
                     </div>
                 <?php endif; ?> 
 
-                
             </div>
 
-            <div class="lg-col-6 px2">
+            <div class="lg-col-<?php echo esc_attr( $secondColumn ); ?> px2">
                 <?php the_title( '<h1 class="entry-title mt2 lg-mt0 mb0 lg-mb2">', '</h1>' ); ?>
                 <?php the_content(); ?>
             </div>
