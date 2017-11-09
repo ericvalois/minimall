@@ -19,7 +19,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="comments" class="comments-area hide-print max-width-3 ml-auto mr-auto">
+<div id="comments">
 
 	<?php if ( have_comments() ) : ?>
 

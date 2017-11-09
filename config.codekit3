@@ -135,6 +135,26 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/js\/edd.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/edd.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/assets\/js\/edd.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/edd.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/assets\/js\/minimall-init.js": {
 		"ft": 64,
 		"ma": 0,
@@ -333,6 +353,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/sass\/common\/_tabs.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/style.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -1118,11 +1151,25 @@
 		"oAP": "\/template-parts\/content-blank.php",
 		"oF": 0
 		},
+	"\/template-parts\/content-download-comment.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-download-comment.php",
+		"oF": 0
+		},
 	"\/template-parts\/content-download.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/content-download.php",
+		"oF": 0
+		},
+	"\/template-parts\/content-edd.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-edd.php",
 		"oF": 0
 		},
 	"\/template-parts\/content-hero.php": {
@@ -1237,11 +1284,11 @@
 		"oAP": "\/templates\/blank.php",
 		"oF": 0
 		},
-	"\/templates\/debug.php": {
+	"\/templates\/edd.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/debug.php",
+		"oAP": "\/templates\/edd.php",
 		"oF": 0
 		},
 	"\/templates\/homepage.php": {

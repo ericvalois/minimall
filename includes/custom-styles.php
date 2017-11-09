@@ -55,7 +55,8 @@ function minimall_custom_styles(){
         .btn-outline:hover,
         .btn-outline:active,
         .btn-white:hover,
-        .btn-white:focus {
+        .btn-white:focus,
+        .primary-color {
             border-color: '. $main_color .';
             color: '. $main_color .' !important;
         }

@@ -10,8 +10,11 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="max-width-5 ml-auto mr-auto px2 lg-px0 pt4">
+	<div class="max-width-5 ml-auto mr-auto  lg-px0 pt4">
         <div class="lg-flex col-12 flex-wrap">
+            
+            <?php do_action('minimall_edd_first_column'); ?>
+
             <?php 
                 $firstColumn = get_theme_mod('edd_single_layout','6');
                 $secondColumn = 12 - $firstColumn;
@@ -30,11 +33,17 @@
             </div>
 
             <div class="lg-col-<?php echo esc_attr( $secondColumn ); ?> px2">
-                <?php the_title( '<h1 class="entry-title mt2 lg-mt0 mb0 lg-mb2">', '</h1>' ); ?>
-                <?php the_content(); ?>
+                <?php do_action('minimall_edd_second_column'); ?>
             </div>
         </div>
-        
+
+        <div class="px2">
+            <ul class="minimall-tabs" role="tablist">
+                <?php do_action('minimall_edd_tabs'); ?>
+            </ul>
+
+            <?php do_action('minimall_edd_tabs_content'); ?>
+        </div>   
 
         <?php if ( get_edit_post_link() ) : ?>
             <footer class="entry-footer">

@@ -1,19 +1,19 @@
 <?php
 /**
- * Template part for displaying creativity content in templates/template-home.php
+ * Template part for displaying EDD content
  *
  * @package minimal
  */
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header left-separator col-12 max-width-5 ml-auto mr-auto px2">
+    <header class="entry-header col-12 ml-auto mr-auto px2 <?php if( get_theme_mod('edd_checkout_boxed','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ) { echo 'max-width-3 center'; }else{ echo 'max-width-5 left-separator'; } ?>">
 
         <?php the_title( '<h1 class="entry-title mb0 lg-mb2">', '</h1>' ); ?>
         
     </header><!-- .entry-header -->
 
-    <div class="entry-content col-12 max-width-5 ml-auto mr-auto px2 py2">
+    <div class="col-12 ml-auto mr-auto  py2 <?php if( get_theme_mod('edd_checkout_boxed','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ) { echo 'max-width-3'; }else{ echo 'max-width-5'; } ?>">
         <?php the_content(); ?>
     </div><!-- .entry-content -->
 
