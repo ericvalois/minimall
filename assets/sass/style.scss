@@ -8,19 +8,6 @@ Version: 1.0.0
 Text Domain: minimall
 */
 @import "common/variables";
-html{ font-size: 16px; }
-body{
-    //font-size: 16px;
-    font-weight: 400;
-    //color: $black;
-    letter-spacing: 0.01rem;
-    font-size: 100%;
-    line-height: 1.8;
-    color: #3A4145;
-    //padding-top: 80px;
-    margin: 0;
-    background-color: #fff;
-}
 
 @import "accessibility";
 
@@ -37,6 +24,7 @@ body{
 @import "common/widgets";
 
 @import "common/typography";
+
 
 @import "common/animate";
 
@@ -60,11 +48,10 @@ body{
 
 @import "basscss";
 
-
 .site-content {
     clear: both;
     margin-bottom: 100px;
-    margin-top: 100px;
+    margin-top: 4rem;
     max-width: 1200px;
     position: relative;
     word-wrap: break-word;
@@ -72,9 +59,9 @@ body{
 }
 
 @media #{$breakpoint-sm} {
-    body.typo{ font-size: 110%; }
+    //body.typo{ font-size: 110%; }
 }
 
 @media #{$breakpoint-lg} {
-    body.typo{ font-size: 115%; }
+    //body.typo{ font-size: 115%; }
 }

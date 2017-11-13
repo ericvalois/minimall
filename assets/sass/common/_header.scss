@@ -19,7 +19,12 @@
 
 #main_nav_toggle{
     .menu-close{ display: none; }
-    svg{ width: 35px;}
+    svg{ 
+        width: 35px;
+        height: 35px;
+    }
+
+    &:hover{ background-color: #fff; }
 }
 
 .open #main_nav_toggle{
@@ -33,19 +38,35 @@
 .sub-menu-toggle{
     width: 20px;
     height: 20px;
+    position: absolute;
+    top:0;
+    right: 0;
     transition: transform 0.2s linear;
-    
-    svg{
-        pointer-events: none;
-        max-width: 20px;
-        max-height: 20px;
-    }
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 0;
+    background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHFJREFUeNp0jYENgCAMBFthADeREerkdgTdxAEgyCdoXoxNCN/+fSvSysxmPPkp9hUixrihyTmv7n6OMPsTRK1V25dg8CWCU2dEbyOE4Kq6tHbHJswJPkophuvK2zjUxy/4ufATkhH+BDgEPcKoS4ABAAp1S6q/GDFcAAAAAElFTkSuQmCC') no-repeat center center;
+}
 
-    //.svg-btn{ width: 20px; height: 20px; }
+.sub-menu-toggle:hover{
+    background-color: #fff;
 }
 
 .sub-menu-toggle.menu-open{
     transform: rotate(180deg);
+}
+
+@media #{$breakpoint-lg} {
+    .sub-menu-toggle{
+        border: none;
+        width: 12px;
+        height: 12px;
+        position: relative;
+        top: auto;
+        right: auto;
+        vertical-align: middle;
+        background-size: 10px 6px; 
+    }
 }
 
 
@@ -114,7 +135,6 @@
             padding: 4px 24px;
             clear: both;
             color: #616366;
-            font-weight: 300;
             line-height: 25px;
             white-space: nowrap;
         }

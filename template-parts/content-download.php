@@ -46,7 +46,7 @@
         </div>   
 
         <?php if ( get_edit_post_link() ) : ?>
-            <footer class="entry-footer">
+            <footer class="entry-footer px2">
                 <?php
                     edit_post_link(
                         sprintf(

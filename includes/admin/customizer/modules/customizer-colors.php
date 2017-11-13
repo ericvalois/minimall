@@ -16,9 +16,9 @@ Minimall_Kirki::add_field( 'minimall', array(
 	'choices'     => array(
 		'alpha' => true,
     ),
-    'output' => array(
+    /*'output' => array(
 		array(
-			'element'  => array('a','a.black:hover','.btn-outline:hover','.btn-outline:active','#home-hero .content a'),
+			'element'  => array('a','a.black:hover','.btn-outline:hover','.btn-outline:active'),
 			'property' => 'color',
 		),
 		array(
@@ -29,7 +29,7 @@ Minimall_Kirki::add_field( 'minimall', array(
 			'element'  => array('.btn-outline:hover','.btn-outline:active'),
 			'property' => 'border-color',
 		),
-	),
+	),*/
 ) );
 /*
 Minimall_Kirki::add_field( 'minimall', array(

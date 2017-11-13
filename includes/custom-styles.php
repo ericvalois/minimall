@@ -45,17 +45,6 @@ function minimall_custom_styles(){
     $minimall_custom_css = '
         a,
         a.black:hover{ color: '. $main_color .';}
-        .btn-primary,
-        .btn-black:hover,
-        .btn-black:active,
-        .btn-black:focus
-        {
-            background-color: '. $main_color .';
-        }
-        .btn-outline:hover,
-        .btn-outline:active,
-        .btn-white:hover,
-        .btn-white:focus,
         .primary-color {
             border-color: '. $main_color .';
             color: '. $main_color .' !important;

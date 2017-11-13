@@ -1,39 +1,32 @@
 .entry-content p,
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
-.entry-content blockquote,
-.entry-content pre,
-.entry-content table,
-.entry-content figure,
+.entry-content ul,
+.entry-content ol,{
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
 .wp-block-image,
 .wp-block-gallery,
 .wp-block-video,
 .wp-block-quote,
 .wp-block-text-columns,
 .wp-block-button,
-ul,
-ol,
 .wp-block-cover-text,
-.wp-block-pullquote{
-  margin: 2em auto;
-  max-width: 800px;
+.wp-block-pullquote,
+.entry-content figure,
+.entry-content blockquote,
+.entry-content pre,
+.entry-content table{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-.wp-block-video video {
-  max-width: 800px;
-}
+.entry-content figure{ margin-left: auto; margin-right: auto;}
 
-.entry-content *.alignwide{
-  margin: 1.5em auto;
-  max-width: 1200px;
-}
+
 
 .entry-content *.alignfull{
-  margin: 1.5em 0;
+  //margin: 1.5em 0;
   max-width: 100%;
 }
 
@@ -55,12 +48,12 @@ ol,
 
 .wp-block-button a{
     @extend .btn;
-    @extend .btn-big;
-    @extend .btn-black;
+    //@extend .btn-big;
+    //@extend .btn-black;
 }
 
 .wp-block-button a:hover{
-    @extend .btn-black:hover;
+    //@extend .btn-black:hover;
 }
 
 .wp-block-column >:first-child{ margin-top: 0; }
@@ -75,5 +68,42 @@ ol,
     .entry-content .wp-block-text-columns .wp-block-column{ 
         width: 100%;
         margin: 2em 0;
+    }
+}
+
+@media #{$breakpoint-lg} {
+    .entry-content p,
+    .entry-content h1,
+    .entry-content h2,
+    .entry-content h3,
+    .entry-content h4,
+    .entry-content h5,
+    .entry-content h6,
+    .entry-content blockquote,
+    .entry-content pre,
+    .entry-content table,
+    .entry-content figure,
+    .wp-block-image,
+    .wp-block-gallery,
+    .wp-block-video,
+    .wp-block-quote,
+    .wp-block-text-columns,
+    .wp-block-button,
+    .entry-content ul,
+    .entry-content ol,
+    .wp-block-cover-text,
+    .wp-block-pullquote{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+    }
+
+    .wp-block-video video {
+        max-width: 800px;
+    }
+
+    .entry-content *.alignwide{
+        //margin: 1.5em auto;
+        max-width: 1200px;
     }
 }

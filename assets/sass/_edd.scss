@@ -9,18 +9,26 @@
     font-family: inherit;
 }
 
-.edd_download_buy_button{ margin: 1rem 0; }
+//.edd_download_buy_button{ margin: 1rem 0; }
 
-/*.edd-submit{ 
-    @extend .btn;
-    @extend .btn-big;
-    @extend .btn-black;
-    font-size: 14px;
-}*/x
+.edd-submit{ 
+    //@extend .btn;
+    //@extend .btn-big;
+    //@extend .btn-black;
+    //font-size: 0.8em;
+    //padding: 15px 30px !important;
+    //border-radius: 3px !important;
+}
 
-.edd_downloads_list{ margin: 0 -1.5rem; }
 
-.edd_price_options{ font-size: 16px; }
+
+
+
+#edd-purchase-button{ font-size: 1em; }
+
+//.edd_downloads_list{ margin: 0 -1.5rem; }
+
+.edd_price_options{ font-size: 1em; }
 .edd_price_options input{
     width: 15px;
     height: 15px;
@@ -68,15 +76,9 @@
 
 #edd-purchase-button{
     @extend .btn;
-    @extend .btn-big;
-    @extend .btn-primary;
+    //@extend .btn-big;
+    //@extend .btn-primary;
     width: auto;
-}
-
-.edd-submit{
-    @extend .btn;
-    @extend .btn-big;
-    @extend .btn-black;
 }
 
 /*

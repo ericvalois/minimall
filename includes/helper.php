@@ -79,7 +79,7 @@ function minimall_custom_menu( $theme_location ) {
         $menu = get_term( $locations[$theme_location], 'nav_menu' );
         $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-        $menu_list = '<ul class="list-reset mt0 mb0 lg-right">' ."\n";
+        $menu_list = '<ul class="list-reset m0 lg-right weight500">' ."\n";
  
         $count = 0;
         $submenu = false;
@@ -108,8 +108,8 @@ function minimall_custom_menu( $theme_location ) {
                 if ( !$menu_item->menu_item_parent ) {
                     $parent_id = $menu_item->ID;
                     
-                    $menu_list .= '<li class="mt2 mb2 lg-mt0 lg-mb0 item relative block lg-inline-block lg-px1 lg-py2 line-height-1">' ."\n";
-                    $menu_list .= '<a href="'.$link.'" class="block lg-inline-block black text-decoration-none sm-text ' . $active . implode(" ",$class) . '">'.$title.'</a>' ."\n";
+                    $menu_list .= '<li class="lg-ml1 mt2 mb2 lg-mt0 lg-mb0 item relative block lg-inline-block lg-px1 lg-py1 line-height-1">' ."\n";
+                    $menu_list .= '<a href="'.$link.'" class="text-decoration-none sm-text black ' . $active . implode(" ",$class) . '">'.$title.'</a>' ."\n";
                 }
     
                 if ( $parent_id == $menu_item->menu_item_parent ) {
@@ -117,7 +117,7 @@ function minimall_custom_menu( $theme_location ) {
                         
                     if ( !$submenu ) {
                         $submenu = true;
-                        $menu_list .= '<button class="sub-menu-toggle bg-white border-none px0 py0 lg-hide absolute top-0 right-0 z4"><svg class="nc-icon nc-icon-grid-48 nc-icon-outline stroke-2"><use href="#nc-square-down-06"/></svg></svg></button>';
+                        $menu_list .= '<button class="sub-menu-toggle px0 py0 z4"></button>';
 
                         $menu_list .= '<ul class="sub-menu  list-reset mt0 mb0 ml2 lg-ml0">' ."\n";
                     }

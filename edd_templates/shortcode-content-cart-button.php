@@ -1,4 +1,4 @@
-<div class="edd_download_buy_button">
+<div class="edd_download_buy_button mt2 mb2">
     <?php 
         $price = get_theme_mod('edd_hide_price_btn', '0');
         if( $price == 1 ){

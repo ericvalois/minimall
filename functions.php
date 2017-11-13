@@ -188,9 +188,9 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( '404 Full Width Sidebar', 'minimall' ),
 		'id'            => '404-full-sidebar',
 		'description'   => __("404 page top location","minimal"),
-		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
+		'before_widget' => '<div id="%1$s" class="mb4 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="h3 widget-title caps mb2 widgets weight700">',
+		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
 		'after_title'   => '</h4>',
         'class'         => 'list-reset',
 	) );
@@ -199,9 +199,9 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( '404 Left Sidebar', 'minimall' ),
 		'id'            => '404-left-sidebar',
 		'description'   => __("404 page left location","minimal"),
-		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
+		'before_widget' => '<div id="%1$s" class="mb4 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="h3 widget-title caps mb2 widgets weight700">',
+		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
 		'after_title'   => '</h4>',
         'class'         => 'list-reset',
 	) );
@@ -210,9 +210,9 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( '404 Right Sidebar', 'minimall' ),
 		'id'            => '404-right-sidebar',
 		'description'   => __("404 page right location","minimal"),
-		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
+		'before_widget' => '<div id="%1$s" class="mb4 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="h4 widget-title caps mb2 widgets weight700">',
+		'before_title'  => '<h4 class="h4 widget-title caps mb2 widgets">',
 		'after_title'   => '</h4>',
         'class'         => 'list-reset',
 	) );
@@ -221,9 +221,9 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( 'Blog Sidebar', 'minimall' ),
 		'id'            => 'blog-sidebar',
 		'description'   => __("Blog and archive sidebar location","minimal"),
-		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
+		'before_widget' => '<div id="%1$s" class="mb4 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="h3 widget-title caps mb2 widgets weight700">',
+		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
 		'after_title'   => '</h4>',
         'class'         => 'list-reset',
 	) );
@@ -234,7 +234,7 @@ function minimall_widgets_init() {
 		'description'   => __("Sidebar display after the post content","minimal"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt4 mb4">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="h3 widget-title caps mb2 weight700">',
+		'before_title'  => '<h4 class="widget-title caps mb2">',
 		'after_title'   => '</h4>',
     ) );
     
@@ -244,7 +244,7 @@ function minimall_widgets_init() {
 		'description'   => __("Sidebar display after the post content","minimal"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt4 mb4">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="h3 widget-title caps mb2 weight700">',
+		'before_title'  => '<h4 class="widget-title caps mb2">',
 		'after_title'   => '</h4>',
 	) );
 }
@@ -348,7 +348,7 @@ add_action( 'wp_enqueue_scripts', 'minimall_scripts' );
 /**
  * Enqueue scripts and styles for Gutenberg editor
  */
-add_action( 'enqueue_block_editor_assets', 'minimall_editor_styles' );
+//add_action( 'enqueue_block_editor_assets', 'minimall_editor_styles' );
 function minimall_editor_styles() {
     if ( is_child_theme() ) {
         wp_enqueue_style( 'minimall-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );

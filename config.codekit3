@@ -7,7 +7,7 @@
 		"uuidString": "674D2CC3-405C-45CC-B478-FA633666CE28"
 		}
 	],
-"creatorBuild": "26097",
+"creatorBuild": "26148",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -417,6 +417,19 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
+		"oAP": "\/css\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/sass\/common\/hiq.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
 		"oAP": "\/css\/style.css",
 		"oF": 0,
 		"oS": 3,

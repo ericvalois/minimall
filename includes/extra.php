@@ -158,7 +158,7 @@ add_filter( 'the_excerpt', 'minimall_the_excerpt_more_link', 21 );
 function minimall_the_excerpt_more_link( $excerpt ){
     if( is_singular('post') ){
         $post = get_post();
-        $excerpt .= '<a class="more-link btn btn-black caps xxs-text btn-big system-font" href="'. get_the_permalink() .'">' . __("Continue reading","minimal") . '</a>';
+        $excerpt .= '<a class="more-link btn btn-black caps xs-text btn-big" href="'. get_the_permalink() .'">' . __("Continue reading","minimal") . '</a>';
     }else{
         $excerpt = $excerpt;
     }
@@ -171,7 +171,7 @@ function minimall_the_excerpt_more_link( $excerpt ){
  */
 add_filter( 'the_content_more_link', 'minimall_modify_read_more_link' );
 function minimall_modify_read_more_link() {
-    return '<div class="block"><a class="more-link btn btn-black caps xxs-text btn-big system-font" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimal").'</a></div>';
+    return '<div class="block"><a class="more-link btn btn-black caps xs-text btn-big" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimal").'</a></div>';
 }
 
 /**
@@ -255,7 +255,7 @@ function minimall_default_hero() {
 add_action('minimall_header', 'minimall_display_header');
 function minimall_display_header(){
 ?>
-<header id="masthead" class="site-header line-height-3 flex items-center flex-wrap col-12 bg-white py1 px2" role="banner">
+<header id="masthead" class="site-header line-height-3 flex items-center flex-wrap col-12 bg-white py2 px2" role="banner">
         
     <div class="flex justify-between items-center lg-flex col-12 lg-col-3 line-height-1 header-menu">
         <div class="site-branding flex-auto col-6 lg-col-2 flex items-center">

@@ -166,7 +166,7 @@ function minimall_before_checkout_personal(){
 }
 
 /*
-* Remove menu on EDD Checkout
+* Remove primary menu on EDD Checkout
 */
 add_action("wp_head", "minimall_edd_checkout_remove_menu");
 function minimall_edd_checkout_remove_menu(){

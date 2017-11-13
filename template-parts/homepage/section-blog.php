@@ -25,7 +25,7 @@
                         <div class="z3 absolute top-0 right-0 bottom-0 left-0 bg-cover bg-center grayscale lazyload bg-black" data-sizes="auto" data-bgset="<?php echo esc_url( $image_url ); ?>"></div>
                     </a>
                 <?php endif; ?>
-                <h3 class="bold caps mb0 lg-mt2"><a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h3 class="bold caps mb0 lg-mt2 h4"><a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="entry-meta sm-text">
                     <?php minimall_posted_on(); ?>
                 </div>

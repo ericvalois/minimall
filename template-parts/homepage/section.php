@@ -28,9 +28,9 @@
 
     <div class="max-width-5 ml-auto mr-auto lg-py3 relative z4">
         <?php if( $section_header ): ?>
-            <header class="entry-header">
+            <header class="entry-header mb2">
                 <?php if( $section_title ): ?>
-                    <h2 class="title mt0 mb0 <?php if( !empty( $image ) ){ echo 'white'; } ?>"><?php echo wp_kses_post( $section_title  ); ?></h2>
+                    <h2 class="title mt0 mb0 h3 <?php if( !empty( $image ) ){ echo 'white'; } ?>"><?php echo wp_kses_post( $section_title  ); ?></h2>
                 <?php endif; ?>
 
                 <?php if( $section_desc ): ?>

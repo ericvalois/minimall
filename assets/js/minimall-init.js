@@ -10,9 +10,25 @@ document.getElementById("main_nav_toggle").addEventListener("click", function ()
 });
 
 var sub_menu_toggle = function ( event ) {
-
+    
     var toggle = event.target.nextSibling;
     var button = event.target;
+
+    var el;
+    
+    // we can check the tag type, and if it's not the <a>, move up.
+    if (event.target.tagType == "rect") {
+      // move up TWICE
+      el = event.target.parentElement.parentElement;
+    } else if (event.target.tagType == "svg") {
+      // move up ONCE
+      el = event.target.parentElement;
+    } else {
+      el = event.target;
+    }
+
+    console.log(event.target.parentElement);
+
 
     if (toggle.classList.contains("open")) {
         toggle.classList.remove("open");
