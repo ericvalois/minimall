@@ -29,26 +29,21 @@ function minimall_custom_comments($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
 
 
-    <li <?php comment_class("py1"); ?> id="comment-<?php comment_ID() ?>">
+    <li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
             
-        <div class="comment-intro clearfix">
+        <div class="comment-intro clearfix line-height-4">
             <div class="left mr1 mb1 "><?php echo get_avatar( $comment->comment_author_email, 57, "", "", array("class" => "rounded") ); ?></div> 
-            <span class="small-p bold upper"><?php printf(__('%s','minimall'), get_comment_author_link()) ?> </span>
-            <strong><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></strong>
-            <?php 
-                if( $comment->comment_author_email == $post_author->user_email ){
-                    echo '<span class="comment_author">' . __("Author","minimal") . '</span>';
-                }
-            ?>
+            <span class="sm-text bold upper"><?php printf(__('%s','minimall'), get_comment_author_link()) ?> </span>
+            <span><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></span>
             <br>
-            <span class="comment_date upper small-p"><?php printf(__('%1$s','minimall'), get_comment_date(), get_comment_time()) ?></span>
+            <span class="comment_date upper sm-text"><?php printf(__('%1$s','minimall'), get_comment_date(), get_comment_time()) ?></span>
         </div>
         
         <?php if ($comment->comment_approved == '0') : ?>
             <em><php _e('Your comment is awaiting moderation.','minimall'); ?></em><br />
         <?php endif; ?>
 
-        <div class="sm-text">
+        <div class="sm-text comment-content mb2 py1">
             <?php comment_text(); ?>
         </div>
         
@@ -109,7 +104,9 @@ function minimall_custom_menu( $theme_location ) {
                     $parent_id = $menu_item->ID;
                     
                     $menu_list .= '<li class="lg-ml1 mt2 mb2 lg-mt0 lg-mb0 item relative block lg-inline-block lg-px1 lg-py1 line-height-1">' ."\n";
-                    $menu_list .= '<a href="'.$link.'" class="text-decoration-none sm-text black ' . $active . implode(" ",$class) . '">'.$title.'</a>' ."\n";
+                    $menu_list .= '<a href="'.$link.'" class="text-decoration-none sm-text black inline-flex items-center ' . $active . implode(" ",$class) . '">' ."\n";               
+                    $menu_list .= $title ."\n";
+                    $menu_list .= '</a>' ."\n";
                 }
     
                 if ( $parent_id == $menu_item->menu_item_parent ) {

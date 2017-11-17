@@ -1,3 +1,14 @@
+legend {
+    display: block;
+    font-size: 120%;
+    line-height: 1;
+    font-weight: 700;
+    width: 100%;
+    margin: 0 0 21px;
+    padding: 0;
+    float: left;
+}
+
 input[type='color']::-webkit-color-swatch {
     border: none;
     border-radius: 0;
@@ -224,6 +235,8 @@ input[type='text']:hover, input[type='password']:hover, input[type='url']:hover,
       color: var(--input-placeholder-color);
     }
 }
+.btn:disabled,
+.button:disabled,
 button:disabled,
   button:disabled:hover,
   button:disabled:focus,
@@ -254,7 +267,7 @@ button:disabled,
   input[type='file'] + label:disabled:focus,
   input[type='file'] + label:disabled:active,
   input[type='file'] + label:disabled:visited {
-    border-color: transparent;
+    border-color: transparent !important;
     border-color: var(--button-disabled-border-color);
     color: hsl(0, 0%, 75%);
     color: var(--button-disabled-text-color);
@@ -365,6 +378,8 @@ input[type='submit'],
 input[type='button'],
 input[type='reset'],
 input[type='file'] + label, {
+    line-height: 2.25rem;
+    line-height: var(--button-height);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -374,7 +389,7 @@ input[type='file'] + label, {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: auto;
+  //width: auto;
   height: 2.25rem;
   height: var(--button-height);
   padding: 0 0.75rem;
@@ -412,13 +427,13 @@ input[type='file'] + label, {
 .btn-outline{
     background-color: #fff;
     border-color: var(--text-color) !important;
-    color: var(--text-color);
+    color: var(--text-color) !important;
 }
 
 .btn-outline:hover{
     background-color: #fff;
     border-color: var(--color-primary) !important;
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .btn-primary{
@@ -429,6 +444,11 @@ input[type='file'] + label, {
 .btn-primary:hover{
     background-color: var(--text-color) !important;
     border-color: var(--text-color) !important;
+}
+
+.btn-big{
+    height: 3rem;
+    height: calc(var(--button-height) * 1.2 );
 }
 
 /* ====================
@@ -606,7 +626,7 @@ input[type='file'] {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: auto;
+    //width: auto;
     height: 2.25rem;
     height: var(--button-height);
     padding: 0 0.75rem;
@@ -683,3 +703,5 @@ input[type='file'] {
     @extend .alert;
     @extend .alert_success;
 }
+
+.gform_fields{ list-style-type: none; }

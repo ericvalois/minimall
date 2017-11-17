@@ -111,7 +111,6 @@
         min-width: 200px;
         padding: 12px 0;
         margin: 2px 0 0;
-        font-size: 15px;
         text-align: left;
         list-style: none;
         visibility: hidden;
@@ -134,9 +133,10 @@
             display: block;
             padding: 4px 24px;
             clear: both;
-            color: #616366;
+            //color: #616366;
             line-height: 25px;
             white-space: nowrap;
+            opacity: 0.8;
         }
     }
 

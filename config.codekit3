@@ -37,6 +37,26 @@
 		"oAP": "\/_taxonomy-download_tag.php",
 		"oF": 0
 		},
+	"\/assets\/css\/edd-reviews.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/edd-reviews.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/edd-reviews.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/edd-reviews.min.min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/assets\/images\/default-hero.jpg": {
 		"ft": 16384,
 		"iS": 1137705,
@@ -253,6 +273,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/assets\/sass\/_private-dashboard.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/assets\/sass\/_tinymce.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -301,6 +334,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/sass\/common\/_comments.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/style.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -573,6 +619,27 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/edd_templates\/_widget-cart-item.php",
+		"oF": 0
+		},
+	"\/edd_templates\/history-purchases.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/history-purchases.php",
+		"oF": 0
+		},
+	"\/edd_templates\/license-keys.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/license-keys.php",
+		"oF": 0
+		},
+	"\/edd_templates\/licenses-manage-overview.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/licenses-manage-overview.php",
 		"oF": 0
 		},
 	"\/edd_templates\/shortcode-content-cart-button.php": {
@@ -880,6 +947,13 @@
 		"oAP": "\/includes\/admin\/customizer\/modules\/homepage-section-helper.php",
 		"oF": 0
 		},
+	"\/includes\/admin\/customizer\/modules\/private-dashboard.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/private-dashboard.php",
+		"oF": 0
+		},
 	"\/includes\/admin\/getting-started\/getting-started-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -953,18 +1027,32 @@
 		"oAP": "\/includes\/admin\/updater\/theme-updater.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/edd\/class-reviews.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/class-reviews.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/edd\/global-edd.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/global-edd.php",
+		"oF": 0
+		},
 	"\/includes\/custom-styles.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/custom-styles.php",
-		"oF": 0
-		},
-	"\/includes\/edd.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/edd.php",
 		"oF": 0
 		},
 	"\/includes\/extra.php": {
@@ -1047,6 +1135,27 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/widgets\/widget-author.php",
+		"oF": 0
+		},
+	"\/includes\/widgets\/widget-edd-comments.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/widgets\/widget-edd-comments.php",
+		"oF": 0
+		},
+	"\/includes\/widgets\/widget-edd-description.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/widgets\/widget-edd-description.php",
+		"oF": 0
+		},
+	"\/includes\/widgets\/widget-edd-reviews.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/widgets\/widget-edd-reviews.php",
 		"oF": 0
 		},
 	"\/includes\/widgets\/widget-social.php": {
@@ -1178,11 +1287,11 @@
 		"oAP": "\/template-parts\/content-download.php",
 		"oF": 0
 		},
-	"\/template-parts\/content-edd.php": {
+	"\/template-parts\/content-full-width.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/content-edd.php",
+		"oAP": "\/template-parts\/content-full-width.php",
 		"oF": 0
 		},
 	"\/template-parts\/content-hero.php": {
@@ -1199,11 +1308,25 @@
 		"oAP": "\/template-parts\/content-none.php",
 		"oF": 0
 		},
+	"\/template-parts\/content-not-found.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-not-found.php",
+		"oF": 0
+		},
 	"\/template-parts\/content-page.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/content-page.php",
+		"oF": 0
+		},
+	"\/template-parts\/content-private-dashboard.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-private-dashboard.php",
 		"oF": 0
 		},
 	"\/template-parts\/content-search.php": {
@@ -1225,13 +1348,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/custom-logo.php",
-		"oF": 0
-		},
-	"\/template-parts\/download-grid.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/template-parts\/download-grid.php",
 		"oF": 0
 		},
 	"\/template-parts\/footer\/copyright.php": {
@@ -1297,11 +1413,11 @@
 		"oAP": "\/templates\/blank.php",
 		"oF": 0
 		},
-	"\/templates\/edd.php": {
+	"\/templates\/full-width.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/edd.php",
+		"oAP": "\/templates\/full-width.php",
 		"oF": 0
 		},
 	"\/templates\/homepage.php": {
@@ -1309,6 +1425,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/homepage.php",
+		"oF": 0
+		},
+	"\/templates\/private-dashboard.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/private-dashboard.php",
 		"oF": 0
 		}
 	},

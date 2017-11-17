@@ -101,10 +101,11 @@ function minimall_customizer_styles() { ?>
         }
 
         .customize-control-kirki-radio-image .image label {
-            padding: 5px;
+            padding: 1%;
             border: 2px dashed #ccc;
-            margin: 0 5px 5px 0;
+            margin: 0 1% 1% 0;
             transition: all 0.2s ease-in-out;
+            width: 20%;
         }
         
         .customize-control-kirki-radio-image input:checked + label{
@@ -187,6 +188,11 @@ include( get_template_directory() . '/includes/admin/customizer/modules/customiz
  * Easy Digital Download Controls
  */
 include( get_template_directory() . '/includes/admin/customizer/modules/edd.php' );
+
+/**
+ * Private Dashboard Controls
+ */
+include( get_template_directory() . '/includes/admin/customizer/modules/private-dashboard.php' );
 
 /**
  * New Link Control

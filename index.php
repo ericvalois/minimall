@@ -18,7 +18,7 @@ get_header(); ?>
         
         <div id="primary" class="content-area lg-flex justify-center">
             <main id="main" class="site-main lg-col-8 <?php if( is_active_sidebar( 'blog-sidebar' ) ){ echo 'lg-pr4'; } ?>" role="main">
-                <header class="mb4">
+                <header class="mb3 lg-mb4">
                     <?php 
                         if( is_home() ){
                             $title = esc_html( get_the_title( get_option('page_for_posts', true) ) ); 
@@ -31,7 +31,7 @@ get_header(); ?>
                             $description = get_the_archive_description();
                         }
                     ?>
-                    <h1 class="page-title h4 caps mb1 mt0"><?php echo $title; ?></h1>
+                    <h1 class="page-title h6 caps mb1 mt0"><?php echo $title; ?></h1>
                     <?php if( isset( $description ) ): ?>
                         <h6 class="mt0 mb0 regular lower"><?php echo $description; ?></h6>
                     <?php endif; ?>

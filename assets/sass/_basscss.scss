@@ -1,9 +1,7 @@
 /*! ace.css | https://github.com/basscss/ace | MIT License */
-.xxs-text{ font-size: 12px; }
-.xs-text{ font-size: 14px; }
-.sm-text{ font-size: 16px; }
-.xsm-text{ font-size: 14px; }
-.xxsm-text{ font-size: 12px; }
+.xxs-text{ font-size: 70%; }
+.xs-text{ font-size: 80%; }
+.sm-text{ font-size: 90%; }
 .lg-text{ font-size: 110%; }
 .xl-text{ font-size: 120%; }
 .xxl-text{ font-size: 130%; }
@@ -18,106 +16,6 @@
 
 .display-no { display: none }
 
-/* Basscss Btn */
-/*
-.btn {
-  //font-family: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1.125rem;
-  padding: .6rem 1.3rem;
-  margin: 0;
-  height: auto;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  color: inherit;
-  letter-spacing: normal;
-}
-
-.btn:hover {
-  text-decoration: none;
-  opacity: 1;
-}
-
-.btn:focus {
-  outline: none;
-  border-color: rgba(0, 0, 0, .125);
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, .25);
-}
-
-.btn-small {
-  padding: .5rem 1rem ;
-  font-size: 14px;
-}
-
-.btn-big {
-    padding: 15px 30px;
-    letter-spacing: 0.04em;
-}
-
-.btn-narrow {
-  padding-left: $space1;
-  padding-right: $space1;
-}
-
-.btn-primary {
-  border-radius: 3px;
-  border: none;
-  color: #fff;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.100);
-}
-
-.btn-black {
-  border-radius: 3px;
-  background-color: $black;
-  border: none;
-  color: #fff;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.100);
-}
-
-.btn-white {
-    border-radius: 3px;
-    background-color: #fff;
-    border: none;
-    color: $black;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.100);
-}
-
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus{
-  background-color: $black;
-  color: #fff;
-}
-
-
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus{
-  color: #fff;
-}
-
-.btn-primary:disabled,
-.btn-primary.is-disabled {
-  opacity: .5;
-}
-
-.btn-outline {
-  border-radius: 3px;
-  border-color: $black;
-  border: 1px solid currentcolor;
-}
-
-.btn-outline:hover {
-    border-color: currentcolor;
-}
-
-.btn-outline:disabled,
-.btn-outline.is-disabled {
-  opacity: .5;
-}
-*/
 /* Basscss Typography */
 
 .font-family-inherit { font-family: inherit }
@@ -638,6 +536,8 @@
   }
 
 }
+
+.inline-flex { display: inline-flex }
 
 .flex { display: -webkit-box; display: -ms-flexbox; display: flex }
 
@@ -1351,7 +1251,7 @@
 
 .border-black  { border-color: #111111 }
 
-.border-gray   { border-color: #AAAAAA }
+.border-gray   { border-color: #eee }
 
 .border-silver { border-color: #DDDDDD }
 

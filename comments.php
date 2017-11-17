@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 		comment_form( array(
 			'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title separator h1 center separator mt4 mb4">',
 			'title_reply_after'  => '</h3>',
-			'class_submit'		 => 'btn btn-black btn-big col-12 mb2 btn_comment',
+			'class_submit'		 => 'btn mb2 btn_comment',
 			'class_form' => ' ',
 			'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( '<a href="%1$s" class="tags">Logged in as %2$s</a> <a href="%3$s" class="tags" title="Log out of this account">Log out?</a>','minimall' ), esc_url( admin_url( 'profile.php' ) ), $user_identity, esc_url( wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) ) . '</p>',
 			'comment_field' => '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Comment', 'minimall' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" ></textarea></p>',

@@ -1,0 +1,19 @@
+.page-template-private-dashboard{
+    background: #f1f1f1;
+}
+
+.private-dashboard-widget-area .widget_nav_menu ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    li{
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #eee;
+        margin: 0;
+        width: 100%;
+        display: inline-flex;
+        align-content: center;
+        line-height: 1.2;
+    }
+}

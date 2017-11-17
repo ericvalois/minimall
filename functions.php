@@ -54,7 +54,8 @@ function minimall_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'minimall' ),
-		'sub-footer' => esc_html__( 'Sub-footer', 'minimall' ),
+        'sub-footer' => esc_html__( 'Sub-footer', 'minimall' ),
+        'private-dashboard' => esc_html__( 'Private Dashboard', 'minimall' ),
 	) );
 
 	/*
@@ -188,7 +189,7 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( '404 Full Width Sidebar', 'minimall' ),
 		'id'            => '404-full-sidebar',
 		'description'   => __("404 page top location","minimal"),
-		'before_widget' => '<div id="%1$s" class="mb4 %2$s clearfix widgets">',
+		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
 		'after_title'   => '</h4>',
@@ -199,7 +200,7 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( '404 Left Sidebar', 'minimall' ),
 		'id'            => '404-left-sidebar',
 		'description'   => __("404 page left location","minimal"),
-		'before_widget' => '<div id="%1$s" class="mb4 %2$s clearfix widgets">',
+		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
 		'after_title'   => '</h4>',
@@ -210,9 +211,9 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( '404 Right Sidebar', 'minimall' ),
 		'id'            => '404-right-sidebar',
 		'description'   => __("404 page right location","minimal"),
-		'before_widget' => '<div id="%1$s" class="mb4 %2$s clearfix widgets">',
+		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="h4 widget-title caps mb2 widgets">',
+		'before_title'  => '<h4 class=" widget-title caps mb2 widgets">',
 		'after_title'   => '</h4>',
         'class'         => 'list-reset',
 	) );
@@ -221,7 +222,7 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( 'Blog Sidebar', 'minimall' ),
 		'id'            => 'blog-sidebar',
 		'description'   => __("Blog and archive sidebar location","minimal"),
-		'before_widget' => '<div id="%1$s" class="mb4 %2$s clearfix widgets">',
+		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
 		'after_title'   => '</h4>',
@@ -232,19 +233,19 @@ function minimall_widgets_init() {
 		'name'          => esc_html__( 'Posts Footer Sidebar', 'minimall' ),
 		'id'            => 'blog-footer-sidebar',
 		'description'   => __("Sidebar display after the post content","minimal"),
-		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt4 mb4">',
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title caps mb2">',
 		'after_title'   => '</h4>',
     ) );
     
     register_sidebar( array(
-		'name'          => esc_html__( 'Home page sidebar', 'minimall' ),
-		'id'            => 'home-template',
-		'description'   => __("Sidebar display after the post content","minimal"),
-		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt4 mb4">',
+		'name'          => esc_html__( 'Private Dashboard sidebar', 'minimall' ),
+		'id'            => 'private-dashboard',
+		'description'   => __("Sidebar display in the private dashboard template","minimal"),
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt0 mb2">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widget-title caps mb2">',
+		'before_title'  => '<h4 class="widget-title mb1 h6 pr2">',
 		'after_title'   => '</h4>',
 	) );
 }
@@ -275,7 +276,16 @@ require( get_template_directory() . '/includes/admin/customizer/minimall-kirki.p
  */
 require( get_template_directory() . '/includes/admin/customizer/customizer.php' );
 
-
+/**
+ * Set the post thumbnail size (aka featured image)
+ *
+ * @since 1.0.0
+ */
+if ( ! function_exists( 'minimall_set_post_thumbnail_size' ) ) :
+	function minimall_set_post_thumbnail_size() {
+		set_post_thumbnail_size( 991, 9999 );
+	}
+endif;
 
 
 
@@ -395,8 +405,122 @@ require get_template_directory() . '/includes/widgets/widget-social.php';
 require get_template_directory() . '/includes/widgets/widget-author.php';
 
 /**
- * EDD customization
+ * Is EDD active?
+ *
+ * @since 1.0.0
+ * @return bool
  */
-require get_template_directory() . '/includes/edd.php';
+function minimall_is_edd_active() {
+	return class_exists( 'Easy_Digital_Downloads' );
+}
+
+/**
+ * Is EDD Software Licensing active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_edd_sl_active() {
+	return class_exists( 'EDD_Software_Licensing' );
+}
+
+/**
+ * Is EDD Coming Soon active?
+ *
+ * @since 1.0.2
+ * @return bool
+ */
+function minimall_is_edd_coming_soon_active() {
+	return class_exists( 'EDD_Coming_Soon' );
+}
+
+/**
+ * Is EDD Recurring active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_edd_recurring_active() {
+	return class_exists( 'EDD_Recurring' );
+}
+
+/**
+ * Is EDD Reviews active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_edd_reviews_active() {
+	return class_exists( 'EDD_Reviews' );
+}
 
 
+/**
+ * Compatibility
+ */
+require get_template_directory() . '/includes/compatibility.php';
+
+
+
+
+/**
+ * Show a given widget based on it's id and it's sidebar index
+ *
+ * Example: wpse_show_widget( 'sidebar-1', 'calendar-2' ) 
+ *
+ * @param string $index. Index of the sidebar where the widget is placed in.
+ * @param string $id. Id of the widget.
+ * @return boolean. TRUE if the widget was found and called, else FALSE.
+ */
+function wpse_show_widget( $index, $id )
+{
+    global $wp_registered_widgets, $wp_registered_sidebars;
+    $did_one = FALSE;
+
+    // Check if $id is a registered widget
+    if( ! isset( $wp_registered_widgets[$id] ) 
+        || ! isset( $wp_registered_widgets[$id]['params'][0] ) ) 
+    {
+        return FALSE;
+    }
+
+    // Check if $index is a registered sidebar
+    $sidebars_widgets = wp_get_sidebars_widgets();
+    if ( empty( $wp_registered_sidebars[ $index ] ) 
+        || empty( $sidebars_widgets[ $index ] ) 
+        || ! is_array( $sidebars_widgets[ $index ] ) )
+    {
+        return FALSE;
+    }
+
+    // Construct $params
+    $sidebar = $wp_registered_sidebars[$index];
+    $params = array_merge(
+                    array( array_merge( $sidebar, array('widget_id' => $id, 'widget_name' => $wp_registered_widgets[$id]['name']) ) ),
+                    (array) $wp_registered_widgets[$id]['params']
+              );
+
+    // Substitute HTML id and class attributes into before_widget
+    $classname_ = '';
+    foreach ( (array) $wp_registered_widgets[$id]['classname'] as $cn )
+    {
+        if ( is_string($cn) )
+            $classname_ .= '_' . $cn;
+        elseif ( is_object($cn) )
+            $classname_ .= '_' . get_class($cn);
+    }
+    $classname_ = ltrim($classname_, '_');
+    $params[0]['before_widget'] = sprintf($params[0]['before_widget'], $id, $classname_);         
+    $params = apply_filters( 'dynamic_sidebar_params', $params );
+
+    // Run the callback
+    $callback = $wp_registered_widgets[$id]['callback'];            
+    if ( is_callable( $callback ) )
+    {
+        
+         call_user_func_array( $callback, $params );
+         $did_one = TRUE;
+    }
+
+    return $did_one;
+}

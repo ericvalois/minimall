@@ -10,80 +10,40 @@ Minimall_Kirki::add_section( 'typography', array(
 ) );
 
 Minimall_Kirki::add_field( 'minimall', array(
+	'type'        => 'number',
+	'settings'    => 'mobile_font_size',
+	'label'       => esc_attr__( 'Mobile Font Size', 'minimall' ),
+	'description' => esc_attr__( 'Generic value to generate the responsive typography.', 'minimall' ),
+	'section'     => 'typography',
+    'default'     => '16',
+    'priority'    => 10,
+	'choices'     => array(
+		'min'  => 12,
+		'max'  => 30,
+		'step' => 1,
+	),
+) );
+
+Minimall_Kirki::add_field( 'minimall', array(
+	'type'        => 'number',
+	'settings'    => 'desktop_font_size',
+	'label'       => esc_attr__( 'Desktop Font Size', 'minimall' ),
+	'description' => esc_attr__( 'Generic value to generate the responsive typography.', 'minimall' ),
+	'section'     => 'typography',
+    'default'     => '19',
+    'priority'    => 20,
+	'choices'     => array(
+		'min'  => 12,
+		'max'  => 30,
+		'step' => 1,
+	),
+) );
+
+/*Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'custom',
 	'settings'    => 'warning_typography',
 	'label'       => __( 'Speed Concerns', 'minimall' ),
 	'section'     => 'typography',
     'default'     => '<div style="">'.esc_html__('Google Fonts may affect negatively your site performance.','minimall').'</div><hr style="margin: 15px 0;">',
-	'priority'    => 9,
-) );
-
-/**
- * Add the body-typography control
- */
-Minimall_Kirki::add_field( 'minimall', array(
-	'type'        => 'typography',
-	'settings'    => 'body_typography',
-	'label'       => esc_attr__( 'Body Typography', 'minimall' ),
-	'description' => esc_attr__( 'Select the main typography options for your site.', 'minimall' ),
-	'help'        => esc_attr__( 'The typography options you set here apply to all content on your site.', 'minimall' ),
-	'section'     => 'typography',
-    'priority'    => 10,
-	'default'     => array(
-		'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
-		'variant'        => '400',
-		'font-size'      => '100%',
-		'line-height'    => '1.8',
-		'letter-spacing' => '0.01rem',
-        'color'          => '#3A4145',
-        'subsets'        => array( 'latin' ),
-	),
-	'output' => array(
-		array(
-			'element' => 'body',
-		),
-	),
-) );
-
-/*Minimall_Kirki::add_field( 'minimall', array(
-	'type'        => 'switch',
-	'settings'    => 'text_font',
-	'label'       => __( 'Paragraph Typography', 'minimall' ),
-	'section'     => 'typography',
-	'default'     => '0',
-	'priority'    => 40,
+	'priority'    => 30,
 ) );*/
-
-/**
- * Add the text-typography control
- */
-Minimall_Kirki::add_field( 'minimall', array(
-	'type'        => 'typography',
-	'settings'    => 'text_typography',
-	'label'       => esc_attr__( 'Paragraph Typography', 'minimall' ),
-	'description' => esc_attr__( 'Select the typography options for your headers.', 'minimall' ),
-	'help'        => esc_attr__( 'The typography options you set here will override the Body Typography options for all headers on your site (post titles, widget titles etc).', 'minimall' ),
-	'section'     => 'typography',
-    'priority'    => 50,
-    /*'active_callback'    => array(
-        array(
-            'setting'  => 'text_font',
-            'operator' => '==',
-            'value'    => true,
-        ),
-    ),*/
-	'default'     => array(
-		'font-family'    => 'Georgia,Times,"Times New Roman",serif',
-		'variant'        => '400',
-		'font-size'      => '105%',
-		'line-height'    => '1.8',
-		'letter-spacing' => '0.01rem',
-        'color'          => '#3A4145',
-        'subsets'        => array( 'latin' ),
-	),
-	'output' => array(
-		array(
-			'element' => array( '.entry-content p' ),
-		),
-	),
-) );

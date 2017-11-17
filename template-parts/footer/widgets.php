@@ -1,6 +1,5 @@
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
-    <section class="footer-widgets clearfix hide-print break-word max-width-5 ml-auto mr-auto line-height-4">
-
+    <section class="footer-widgets clearfix hide-print break-word max-width-5 ml-auto mr-auto line-height-4 <?php if( get_theme_mod('edd_checkout_hide_footer_widgets',false) == '1' && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ){ echo 'display-none'; } ?>">
         <?php 
             $layout = get_theme_mod('footer_widget_layout', '4');
             $padding = get_theme_mod('footer_widget_spacing','px2');

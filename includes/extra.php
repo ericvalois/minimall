@@ -158,7 +158,7 @@ add_filter( 'the_excerpt', 'minimall_the_excerpt_more_link', 21 );
 function minimall_the_excerpt_more_link( $excerpt ){
     if( is_singular('post') ){
         $post = get_post();
-        $excerpt .= '<a class="more-link btn btn-black caps xs-text btn-big" href="'. get_the_permalink() .'">' . __("Continue reading","minimal") . '</a>';
+        $excerpt .= '<a class="more-link btn caps xs-text" href="'. get_the_permalink() .'">' . __("Continue reading","minimal") . '</a>';
     }else{
         $excerpt = $excerpt;
     }
@@ -171,7 +171,7 @@ function minimall_the_excerpt_more_link( $excerpt ){
  */
 add_filter( 'the_content_more_link', 'minimall_modify_read_more_link' );
 function minimall_modify_read_more_link() {
-    return '<div class="block"><a class="more-link btn btn-black caps xs-text btn-big" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimal").'</a></div>';
+    return '<div class="block"><a class="more-link btn caps xs-text" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimal").'</a></div>';
 }
 
 /**
@@ -292,9 +292,14 @@ function minimall_display_primary_menu(){
 
 function minimall_site_content_class(){
     $class = array();
-    $class['initial'] = "site-content";
+    $class['initial'] = "clearfix break-word relative";
+    $class['max-width'] = "max-width-5";
     $class['padding'] = "px2";
-    $class['margin'] = 'ml-auto mr-auto';
+    $class['margin'] = 'ml-auto mr-auto mt3 lg-mt4 mb3';
+
+    if( get_theme_mod('edd_checkout_boxed','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ) {
+        $class['max-width'] = 'max-width-3';
+    }
 
     $class = implode(" ",$class);
     echo 'class="' . $class . '"';

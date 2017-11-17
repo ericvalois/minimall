@@ -1,6 +1,6 @@
 <?php
 /*
-* Template name: EDD
+* Template name: Full width
 */
 get_header(); ?>
 
@@ -10,7 +10,7 @@ get_header(); ?>
                 <?php
                 while ( have_posts() ) : the_post();
 
-                    get_template_part( 'template-parts/content', 'edd' );
+                    get_template_part( 'template-parts/content', 'full-width' );
 
                 endwhile; // End of the loop.
                 ?>

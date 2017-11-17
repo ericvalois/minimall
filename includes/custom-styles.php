@@ -30,68 +30,35 @@ function minimall_e_custom_styles(){
  */
 function minimall_custom_styles(){
     
-    $theme_options = minimall_theme_options();
 
-    if( isset( $theme_options['primary_color'] ) ){
-        $main_color = $theme_options['primary_color'];
-    }else{
-        $main_color = '#1078ff';
-    }
+    $main_color = get_theme_mod('primary_color','#1078ff');
+    $text_color = get_theme_mod('text_color','#3A4145');
+    $mobile_font_size = get_theme_mod('mobile_font_size','16');
+    $desktop_font_size = get_theme_mod('desktop_font_size','19');
     
 
     $system_font_sans = 'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Helvetica,  sans-serif;';
     $system_font_serif = 'font-family: Georgia,Cambria,"Times New Roman",Times,serif;';
 
     $minimall_custom_css = '
+        :root{
+            --unitless-min-font-size: '.$mobile_font_size.';
+            --unitless-max-font-size: '.$desktop_font_size.';
+            --color-primary: '.$main_color.';
+            --text-color: '.$text_color.';
+            --link-hover-color: '.$text_color.';
+            --link-focus-color: '.$text_color.';
+            --link-active-color: '.$text_color.';
+            --letter-spacing-base: 0.01em;
+            
+        }
         a,
         a.black:hover{ color: '. $main_color .';}
-        .primary-color {
-            border-color: '. $main_color .';
+        .primary-color,
+        .current_page_item a{
             color: '. $main_color .' !important;
         }
     ';
-
-
-    if( !empty( $theme_options['default_font'] ) ){
-        if( $theme_options['default_font'] == 'system_font_sans' ){
-            $default_font = $system_font_sans;
-        }else{
-            $default_font = $system_font_serif;
-        }
-        $minimall_custom_css .= '
-            body{ '. $default_font .' }
-        ';
-    }
-
-    if( 
-        !empty( $theme_options['headers_font'] ) &&
-        $theme_options['headers_font'] !== $theme_options['default_font']
-    ){
-        if( $theme_options['headers_font'] == 'system_font_sans' ){
-            $headers_font = $system_font_sans;
-        }else{
-            $headers_font = $system_font_serif;
-        }
-
-        $minimall_custom_css .= '
-            h1,h2,h3,h4,h5,h6{ '. $headers_font .' }
-        ';
-    }
-
-    if( 
-        !empty( $theme_options['text_font'] ) &&
-        $theme_options['text_font'] !== $theme_options['default_font']
-    ){
-        if( $theme_options['text_font'] == 'system_font_sans' ){
-            $text_font = $system_font_sans;
-        }else{
-            $text_font = $system_font_serif;
-        }
-
-        $minimall_custom_css .= '
-            p{ '. $text_font .' }
-        ';
-    }
     
     
     return $minimall_custom_css;

@@ -39,7 +39,6 @@ blockquote,
 figure,
 fieldset,
 legend,
-textarea,
 pre,
 iframe,
 hr,
@@ -465,6 +464,8 @@ blockquote {
     line-height: 1.5;
     background: #eef0f4;
 }
+
+del{ opacity: 0.5; }
 
 @media #{$breakpoint-lg} {
     .pull-right, .pull-left, .pull-excerpt { padding: 2rem; }
