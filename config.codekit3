@@ -1041,6 +1041,13 @@
 		"oAP": "\/includes\/compatibility\/edd\/class-reviews.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/edd\/edd-download-images.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/edd-download-images.php",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/edd\/global-edd.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1149,6 +1156,20 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/widgets\/widget-edd-description.php",
+		"oF": 0
+		},
+	"\/includes\/widgets\/widget-edd-download-detail.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/widgets\/widget-edd-download-detail.php",
+		"oF": 0
+		},
+	"\/includes\/widgets\/widget-edd-download-images.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/widgets\/widget-edd-download-images.php",
 		"oF": 0
 		},
 	"\/includes\/widgets\/widget-edd-reviews.php": {

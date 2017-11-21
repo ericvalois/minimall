@@ -1,4 +1,7 @@
 <?php
+/**
+ * If EDD Active
+ */
 if( minimall_is_edd_active() ){
     /**
      * EDD customization
@@ -14,16 +17,40 @@ if( minimall_is_edd_active() ){
      * EDD Widget Comments
      */
     require get_template_directory() . '/includes/widgets/widget-edd-comments.php';
-}
-
-if ( minimall_is_edd_reviews_active() ) {
-    /**
-     * EDD Reviews customization
-     */
-    require get_template_directory() . '/includes/compatibility/edd/class-reviews.php';
 
     /**
-     * EDD Widget Reviews
+     * EDD Widget Download Detail
      */
-    require get_template_directory() . '/includes/widgets/widget-edd-reviews.php';
+    require get_template_directory() . '/includes/widgets/widget-edd-download-detail.php';
+
+    /**
+     * If EDD Reviews Active
+     */
+    if ( minimall_is_edd_reviews_active() ) {
+        /**
+         * EDD Reviews customization
+         */
+        require get_template_directory() . '/includes/compatibility/edd/class-reviews.php';
+
+        /**
+         * EDD Widget Reviews
+         */
+        require get_template_directory() . '/includes/widgets/widget-edd-reviews.php';
+    }
+
+    /**
+     * If EDD Download Images Active
+     */
+    if( minimall_is_edd_download_images_active() ){
+        /**
+         *  Widget 
+         */
+        require get_template_directory() . '/includes/widgets/widget-edd-download-images.php';
+
+        /**
+         * Customization
+         */
+        require get_template_directory() . '/includes/compatibility/edd/edd-download-images.php';
+    }
 }
+

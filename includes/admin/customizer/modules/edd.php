@@ -133,56 +133,6 @@ if( function_exists('is_plugin_active') && is_plugin_active('easy-digital-downlo
             '8'  => get_template_directory_uri() . '/includes/admin/images/sidebar-right.png',
         ),
     ) );
-
-    Minimall_Kirki::add_field( 'minimall', array(
-        'type'        => 'checkbox',
-        'settings'    => 'edd_hide_single_title',
-        'label'       => __( 'Hide product title', 'minimall' ),
-        'description' => __( 'Hide product title on products page', 'minimall' ),
-        'section'     => 'edd_single',
-        'default'     => '0',
-        'priority'    => 20,
-    ) );
-
-    Minimall_Kirki::add_field( 'minimall', array(
-        'type'        => 'checkbox',
-        'settings'    => 'edd_hide_single_price',
-        'label'       => __( 'Hide product price', 'minimall' ),
-        'description' => __( 'Hide product price under the title', 'minimall' ),
-        'section'     => 'edd_single',
-        'default'     => '0',
-        'priority'    => 30,
-    ) );
-
-    Minimall_Kirki::add_field( 'minimall', array(
-        'type'        => 'checkbox',
-        'settings'    => 'edd_hide_single_excerpt',
-        'label'       => __( 'Hide product small description', 'minimall' ),
-        'description' => __( 'Hide product small description under the title', 'minimall' ),
-        'section'     => 'edd_single',
-        'default'     => '0',
-        'priority'    => 40,
-    ) );
-
-    Minimall_Kirki::add_field( 'minimall', array(
-        'type'        => 'checkbox',
-        'settings'    => 'edd_hide_single_btn_price',
-        'label'       => __( 'Hide button price', 'minimall' ),
-        'description' => __( 'Hide price in purchase button.', 'minimall' ),
-        'section'     => 'edd_single',
-        'default'     => '0',
-        'priority'    => 50,
-    ) );
-
-    Minimall_Kirki::add_field( 'minimall', array(
-        'type'        => 'checkbox',
-        'settings'    => 'edd_hide_single_comment',
-        'label'       => __( 'Hide product comments', 'minimall' ),
-        'description' => __( 'Hide product comments on products page.', 'minimall' ),
-        'section'     => 'edd_single',
-        'default'     => '0',
-        'priority'    => 60,
-    ) );
     
 
     Minimall_Kirki::add_field( 'minimall', array(

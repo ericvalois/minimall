@@ -454,6 +454,16 @@ function minimall_is_edd_reviews_active() {
 	return class_exists( 'EDD_Reviews' );
 }
 
+/**
+ * Is EDD Download Images active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_edd_download_images_active() {
+	return function_exists('edd_di_get_images');
+}
+
 
 /**
  * Compatibility
@@ -524,3 +534,6 @@ function wpse_show_widget( $index, $id )
 
     return $did_one;
 }
+
+
+remove_action( 'edd_enable_reviews','update_reviews_status' );

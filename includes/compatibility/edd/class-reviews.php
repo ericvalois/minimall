@@ -64,4 +64,4 @@ class Minimall_EDD_Reviews {
 new Minimall_EDD_Reviews;
 
 
-    remove_action( 'the_content', 'edd_reviews_load_frontend', 10, 1);
+    

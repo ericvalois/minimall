@@ -50,7 +50,7 @@ if ( post_password_required() ) {
 	<?php
 
 		comment_form( array(
-			'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title separator h1 center separator mt4 mb4">',
+			'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title center separator mt4 mb4">',
 			'title_reply_after'  => '</h3>',
 			'class_submit'		 => 'btn mb2 btn_comment',
 			'class_form' => ' ',
