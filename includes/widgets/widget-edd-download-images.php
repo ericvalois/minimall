@@ -31,7 +31,7 @@ class Minimall_Edd_Download_Images extends WP_Widget {
     
 
     if( function_exists( 'edd_di_display_images') ) :
-        echo '<div id="image-gallery" class="flex flex-wrap mxn1 mt1 gallery">';
+        echo '<div id="edd-gallery" class="flex flex-wrap mxn1 mt1 gallery">';
             edd_di_display_images();
         echo '</div>';
     endif; 

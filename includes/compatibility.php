@@ -24,6 +24,11 @@ if( minimall_is_edd_active() ){
     require get_template_directory() . '/includes/widgets/widget-edd-download-detail.php';
 
     /**
+     * EDD Widget Download Thumbnail
+     */
+    require get_template_directory() . '/includes/widgets/widget-edd-download-thumb.php';
+
+    /**
      * If EDD Reviews Active
      */
     if ( minimall_is_edd_reviews_active() ) {

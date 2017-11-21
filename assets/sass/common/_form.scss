@@ -378,6 +378,7 @@ input[type='submit'],
 input[type='button'],
 input[type='reset'],
 input[type='file'] + label, {
+    font-family: var(--font-family-sans-serif);
     line-height: 2.25rem;
     line-height: var(--button-height);
   display: -webkit-inline-box;
@@ -450,6 +451,14 @@ input[type='file'] + label, {
     height: 3rem;
     height: calc(var(--button-height) * 1.2 );
 }
+
+.btn-small{
+    height: 2rem;
+    height: calc(var(--button-height) * 0.8 );
+    padding: 0 0.75rem;
+}
+
+form p{ margin: 1rem 0; }
 
 /* ====================
    general form styling

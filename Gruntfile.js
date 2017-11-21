@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         criticalcss: {
             home: {
                 options: {
-                    url: "http://ttfb.dev/",
+                    url: "http://minimall.dev/",
                     width: 1200,
                     height: 800,
                     outputfile: "inc/performance/critical/landingpage.css",
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             },
             doc_archive: {
                 options: {
-                    url: "http://ttfb.dev/docs/",
+                    url: "http://minimall.dev/docs/",
                     width: 1200,
                     height: 1000,
                     outputfile: "inc/performance/critical/doc.css",
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             },
             doc_single: {
                 options: {
-                    url: "http://ttfb.dev/doc/light-bold/how-to-automatically-update-our-themes/",
+                    url: "http://minimall.dev/doc/light-bold/how-to-automatically-update-our-themes/",
                     width: 1200,
                     height: 1000,
                     outputfile: "inc/performance/critical/doc-single.css",
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
             },
             archive: {
                 options: {
-                    url: "http://ttfb.dev/blog/",
+                    url: "http://minimall.dev/blog/",
                     width: 1200,
                     height: 1000,
                     outputfile: "inc/performance/critical/archive.css",
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
             },
             page: {
                 options: {
-                    url: "http://ttfb.dev/speed-toolbox/",
+                    url: "http://minimall.dev/speed-toolbox/",
                     width: 1200,
                     height: 1000,
                     outputfile: "inc/performance/critical/page.css",
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
             },
             single: {
                 options: {
-                    url: "http://ttfb.dev/blog/speed-up-wordpress/",
+                    url: "http://minimall.dev/blog/speed-up-wordpress/",
                     width: 1200,
                     height: 1000,
                     outputfile: "inc/performance/critical/single.css",
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
             },
             contact: {
                 options: {
-                    url: "http://ttfb.dev/support/",
+                    url: "http://minimall.dev/support/",
                     width: 1200,
                     height: 1000,
                     outputfile: "inc/performance/critical/contact.css",
@@ -90,7 +90,7 @@ module.exports = function(grunt) {
             },
             page_404: {
                 options: {
-                    url: "http://ttfb.dev/abcdefgh/",
+                    url: "http://minimall.dev/abcdefgh/",
                     width: 1200,
                     height: 1000,
                     outputfile: "inc/performance/critical/404.css",
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
             },
             download: {
                 options: {
-                    url: "http://ttfb.dev/themes/mano/",
+                    url: "http://minimall.dev/themes/mano/",
                     width: 1200,
                     height: 1000,
                     outputfile: "inc/performance/critical/download.css",
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
                 src: ['build/*', '!build/<%= pkg.name %>-parent.zip']
             },
             second: {
-                src: ['build/*', '!build/ttfb.zip']
+                src: ['build/*', '!build/minimall.zip']
             },
             style: {
                 src: ['style-*']
@@ -161,10 +161,6 @@ module.exports = function(grunt) {
                 expand: true,
                 src: ['**', '!node_modules/**', '!build/**', '!readme.md', '!Gruntfile.js', '!package.json', '!.gitignore' ],
                 dest: 'build/'
-            },
-            acf_pro: {
-                src: 'build/advanced-custom-fields-pro.zip',
-                dest: 'inc/3rd-party/plugins/advanced-custom-fields-pro.zip'
             },
 
 
@@ -185,22 +181,13 @@ module.exports = function(grunt) {
                     archive: 'build/<%= pkg.name %>-child.zip'
                 },
                 expand: true,
-                cwd: '../ttfb-child/',
+                cwd: '../minimall-child/',
                 src: ['**/*'],
                 dest: '<%= pkg.name %>-child/'
             },
-            acf_pro: {
-                options: {
-                    archive: 'build/advanced-custom-fields-pro.zip'
-                },
-                expand: true,
-                cwd: '../../plugins/advanced-custom-fields-pro/',
-                src: ['**/*'],
-                dest: 'advanced-custom-fields-pro/'
-            },
             full: {
                 options: {
-                    archive: 'build/ttfb.zip'
+                    archive: 'build/minimall.zip'
                 },
                 expand: true,
                 cwd: 'build/',
@@ -220,6 +207,6 @@ module.exports = function(grunt) {
     grunt.registerTask('min', ['cssmin']);
 
     //grunt.registerTask('cleanstyle', ['clean:style']);
-    grunt.registerTask( 'build', ['clean:init', 'compress:acf_pro', 'copy:acf_pro', 'clean:init', 'copy:build', 'compress:parent', 'clean:first', 'compress:child', 'compress:full', 'clean:second']);
+    grunt.registerTask( 'build', ['clean:init', 'clean:init', 'copy:build', 'compress:parent', 'clean:first', 'compress:child', 'compress:full', 'clean:second']);
 
 };

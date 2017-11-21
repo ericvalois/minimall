@@ -4,6 +4,7 @@
     border-left-width: 6px;
     border-left-style: solid;
     border-radius: 3px;
+    font-family: var(--font-family-sans-serif) !important;
 }
 
 .alert_warning{ border-left-color: #f39c12; background-color: lighten(#f39c12, 30%); }

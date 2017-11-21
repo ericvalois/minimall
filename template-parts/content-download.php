@@ -17,14 +17,6 @@
                 $secondColumn = 12 - $firstColumn;
             ?>
             <div class="lg-col-<?php echo esc_attr( $firstColumn ); ?> lg-pr2">
-                <?php 
-                    $image_id = get_post_thumbnail_id();
-                    $thumb_data = wp_get_attachment_image_src( $image_id, 'large' ); 
-                    $full_data = wp_get_attachment_image_src( $image_id, 'full' ); 
-                ?>
-                <a class="flex items-center justify-center col-12 inline-block js-smartPhoto" data-group="download-<?php echo get_the_ID(); ?>" href="<?php echo $full_data[0]; ?>">
-                    <img class=" zoom-img" src="<?php echo $thumb_data[0]; ?>" alt="">
-                </a>
 
                 <?php do_action('minimall_edd_first_column'); ?>
 

@@ -38,20 +38,38 @@ function minimall_edd_widgets_init() {
     ) );
 }
     
-/*
-* Add price to archive
-*/
-add_action('edd_download_after_title','minimall_add_edd_price_under_title');
-function minimall_add_edd_price_under_title(){
-    if( !get_theme_mod('edd_hide_shop_price', false) ):
-?>
-        <div class="mt1 mb1">
-            <a class="edd_price" href="<?php the_permalink(); ?>"><?php edd_price(); ?></a>
-        </div>
-<?php
-    endif;
-}
+/**
+ * Download navigation
+ * This is used by archive-download.php, taxonomy-download_category.php, taxonomy-download_tag.php
+ *
+ * @since 1.0.0
+ */
+if ( ! function_exists( 'minimall_edd_download_nav' ) ) :
+	function minimall_edd_download_nav() {
 
+		global $wp_query;
+
+		$big          = 999999;
+		$search_for   = array( $big, '#038;' );
+		$replace_with = array( '%#%', '&' );
+
+		$pagination = paginate_links( array(
+			'base'    => str_replace( $search_for, $replace_with, get_pagenum_link( $big ) ),
+			'format'  => '?paged=%#%',
+			'current' => max( 1, get_query_var( 'paged' ) ),
+			'total'   => $wp_query->max_num_pages
+		) );
+		?>
+
+		<?php if ( ! empty( $pagination ) ) : ?>
+		<div id="minimall_edd_download_pagination" class="navigation">
+			<?php echo $pagination; ?>
+		</div>
+		<?php endif; ?>
+
+	<?php
+	}
+endif;
 /*
 * Add comment support to EDD products
 */
@@ -69,30 +87,42 @@ function minimall_edd_product_supports($supports) {
 add_action('minimall_edd_tabs','minimall_get_edd_download_tabs');
 function minimall_get_edd_download_tabs(){
     global $wp_registered_widgets;
+    global $post;
 
     $sidebar_id = 'download-tabs-sidebar';
     $sidebars_widgets = wp_get_sidebars_widgets();
     $widget_ids = $sidebars_widgets[$sidebar_id]; 
     $cpt = 1;
     
-    
-    
-
     if( !empty( $widget_ids ) ){
         foreach( $widget_ids as $id ) {
             
-                if( $cpt == 1 ){
-                    $active_class = 'active';
-                }else{
-                    $active_class = '';
-                }
+            if( $cpt == 1 ){
+                $active_class = 'active';
+            }else{
+                $active_class = '';
+            }
 
-                $wdgtvar = 'widget_'._get_widget_id_base( $id );
-                $idvar = _get_widget_id_base( $id );
-                $instance = get_option( $wdgtvar );
-                $idbs = str_replace( $idvar.'-', '', $id );
-                echo '<li role="tab"><a href="#tab-'.$id.'" class="black sm-text '.$active_class.'">'.$instance[$idbs]['title'].'</a></li>';
-                $cpt++;
+            $wdgtvar = 'widget_'._get_widget_id_base( $id );
+            $idvar = _get_widget_id_base( $id );
+            $instance = get_option( $wdgtvar );
+            $idbs = str_replace( $idvar.'-', '', $id );
+            $tab = '<li role="tab"><a href="#tab-'.$id.'" class="black sm-text '.$active_class.'">'.$instance[$idbs]['title'].'</a></li>';
+
+            if ( strchr($id,'minimall_edd_download_comments') ):
+                if( comments_open() || get_comments_number() ):
+                    echo $tab;
+                endif;
+            elseif( strchr($id,'edd_sl_changelog_widget') ):
+                $changelog 	= get_post_meta( $post->ID, '_edd_sl_changelog', true );
+                if( $changelog ):
+                    echo $tab;
+                endif;
+            else:
+                echo $tab;
+            endif;
+
+            $cpt++;
         }
     }
         

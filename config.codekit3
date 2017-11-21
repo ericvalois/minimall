@@ -23,18 +23,11 @@
 		"oAP": "\/404.php",
 		"oF": 0
 		},
-	"\/_archive-download.php": {
+	"\/archive-download.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/_archive-download.php",
-		"oF": 0
-		},
-	"\/_taxonomy-download_tag.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/_taxonomy-download_tag.php",
+		"oAP": "\/archive-download.php",
 		"oF": 0
 		},
 	"\/assets\/css\/edd-reviews.css": {
@@ -688,9 +681,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/Gruntfile.min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 0,
 		"tS": 0
 		},
@@ -1172,6 +1165,13 @@
 		"oAP": "\/includes\/widgets\/widget-edd-download-images.php",
 		"oF": 0
 		},
+	"\/includes\/widgets\/widget-edd-download-thumb.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/widgets\/widget-edd-download-thumb.php",
+		"oF": 0
+		},
 	"\/includes\/widgets\/widget-edd-reviews.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1286,6 +1286,20 @@
 		"oAP": "\/style.min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"\/taxonomy-download_category.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/taxonomy-download_category.php",
+		"oF": 0
+		},
+	"\/taxonomy-download_tag.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/taxonomy-download_tag.php",
+		"oF": 0
 		},
 	"\/template-parts\/content-blank.php": {
 		"cB": 0,

@@ -32,7 +32,7 @@
 	</header><!-- .entry-header -->
     
     <?php if( is_single() ): ?>
-	    <div class="entry-content px2">
+	    <div id="lightgallery" class="entry-content px2">
             <?php the_content(); ?>
 
             <?php

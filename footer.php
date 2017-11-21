@@ -15,17 +15,6 @@
 
     <?php get_template_part( 'template-parts/footer/copyright' ); ?>
 
-    <script src="https://unpkg.com/smartphoto@1.0.1/js/smartphoto.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/smartphoto@1.0.1/css/smartphoto.min.css">
-
-    <script>
-        window.addEventListener('DOMContentLoaded',function(){
-            new SmartPhoto(".js-smartPhoto",{
-                resizeStyle: 'fill'
-            });
-        });
-    </script>   
-
 <?php wp_footer(); ?>
 
 </body>
