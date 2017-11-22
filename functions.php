@@ -372,7 +372,7 @@ function minimall_editor_styles() {
 /**
  * Load TGM class
  */
-//require get_template_directory() . '/includes/admin/tgm/tgm.php';
+require get_template_directory() . '/includes/admin/tgm/tgm.php';
 
 /**
  * Custom template tags for this theme.

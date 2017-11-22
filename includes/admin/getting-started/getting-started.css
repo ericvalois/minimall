@@ -653,3 +653,14 @@ h4 .button {
 .muted-box:hover{ opacity: 1; }
 
 .customize-button{ font-size: 20px !important;}
+
+.inline-flex{ display: inline-flex; }
+.sm-text{ font-size: 85% !important; }
+
+.intro sup{ font-size: 50%; }
+.alert_minimall{
+    background-color: #eee;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-radius: 3px;
+}

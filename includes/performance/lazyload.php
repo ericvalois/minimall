@@ -5,43 +5,57 @@
  * @package perfthemes
  * @since 1.0
  */
-$page_options = minimall_page_options();
-$perf_options = minimall_perf_options();
+$perf_img_lazyload_active = perf_get_field("perf_img_lazyload_active","option");
+$perf_iframe_lazyload_active = perf_get_field("perf_iframe_lazyload_active","option");
 
-if ( isset( $perf_options['active_img_lazy'] ) && $perf_options['active_img_lazy'] == 1 && !is_admin() ) {
+if ( $perf_img_lazyload_active && !is_admin() ) {
 
-	add_filter( 'get_avatar'			, 'minimall_lazy_load_image', PHP_INT_MAX );
-	add_filter( 'the_content'			, 'minimall_lazy_load_image', PHP_INT_MAX );
-	add_filter( 'widget_text'			, 'minimall_lazy_load_image', PHP_INT_MAX );
-	add_filter( 'get_image_tag'			, 'minimall_lazy_load_image', PHP_INT_MAX );
-	add_filter( 'post_thumbnail_html'	, 'minimall_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'get_avatar'			, 'perf_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'the_content'			, 'perf_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'widget_text'			, 'perf_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'get_image_tag'			, 'perf_lazy_load_image', PHP_INT_MAX );
+	add_filter( 'post_thumbnail_html'	, 'perf_lazy_load_image', PHP_INT_MAX );
 
 }
 
-if ( isset( $perf_options['active_iframe_lazy'] ) && $perf_options['active_iframe_lazy'] == 1 && !is_admin() ) {
-	add_filter( 'the_content', 'minimall_lazyload_iframes', PHP_INT_MAX );
-	add_filter( 'widget_text', 'minimall_lazyload_iframes', PHP_INT_MAX );
+if ( $perf_iframe_lazyload_active && !is_admin() ) {
+	add_filter( 'the_content', 'perf_lazyload_iframes', PHP_INT_MAX );
+	add_filter( 'widget_text', 'perf_lazyload_iframes', PHP_INT_MAX );
 }
 
-function minimall_lazy_load_image( $content ){
 
-    $page_options = minimall_page_options();
+add_action( 'wp_enqueue_scripts', 'perf_lazysizes_script' );
+function perf_lazysizes_script() {
+	wp_enqueue_script( 'perf-lazysizes', plugins_url( '/vendors/lazysizes/lazysizes-all.min.js', __FILE__ ), '', '', true );
+}
 
-	if( !is_search() && !$page_options['disable_lazyload'] ){
-		$minimall_content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-	    $minimall_document = new DOMDocument();
+function perf_lazy_load_image( $content ){
+
+	global $post;
+
+	if( is_object( $post ) ){
+        $perf_on_page_lazyload_disabled = perf_get_field('perf_on_page_lazyload_disabled', $post->ID);
+    }else{
+        $perf_on_page_lazyload_disabled = false;
+    }
+
+
+
+	if( !is_search() && !$perf_on_page_lazyload_disabled ){
+		$perf_content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+	    $perf_document = new DOMDocument();
 
 	    libxml_use_internal_errors(true);
-	    if( !empty($minimall_content) ){
-	    	$minimall_document->loadHTML(utf8_decode($minimall_content));
+	    if( !empty($perf_content) ){
+	    	$perf_document->loadHTML(utf8_decode($perf_content));
 	    }else{
 	    	return;
 	    }
 
 
-	    $imgs = $minimall_document->getElementsByTagName('img');
+	    $imgs = $perf_document->getElementsByTagName('img');
 	    foreach ($imgs as $img) {
-            
+
 	    	// add data-sizes
 	    	$img->setAttribute('data-size', "auto");
 
@@ -77,11 +91,11 @@ function minimall_lazy_load_image( $content ){
 
 
 			// noscript
-			$noscript = $minimall_document->createElement('noscript');
+			$noscript = $perf_document->createElement('noscript');
 			$img->parentNode->insertBefore($noscript);
 
-			$image = $minimall_document->createElement('image');
-			$imageAttribute = $minimall_document->createAttribute('src');
+			$image = $perf_document->createElement('image');
+			$imageAttribute = $perf_document->createAttribute('src');
 			$imageAttribute->value = $existing_src;
 			$image->appendChild($imageAttribute);
 
@@ -89,37 +103,43 @@ function minimall_lazy_load_image( $content ){
 
 	    }
 
-	    $html_fragment = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $minimall_document->saveHTML()));
+	    $html_fragment = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $perf_document->saveHTML()));
 	    return $html_fragment;
 	}else{
 		return $content;
 	}
-}  
+}
 
 /**
  * Replace iframes by LazyLoad
  */
-function minimall_lazyload_iframes( $html ) {
+function perf_lazyload_iframes( $html ) {
 
-	$page_options = minimall_page_options();
+	global $post;
 
-	if( !is_search() && !$page_options['disable_lazyload'] ){
+	if( is_object( $post ) ){
+        $perf_on_page_lazyload_disabled = perf_get_field('perf_on_page_lazyload_disabled', $post->ID);
+    }else{
+        $perf_on_page_lazyload_disabled = false;
+    }
 
-		$minimall_matches = array();
-		preg_match_all( '/<iframe\s+.*?>/', $html, $minimall_matches );
+	if( !is_search() && !$perf_on_page_lazyload_disabled ){
 
-		foreach ( $minimall_matches[0] as $k=>$minimall_iframe ) {
+		$perf_matches = array();
+		preg_match_all( '/<iframe\s+.*?>/', $html, $perf_matches );
+
+		foreach ( $perf_matches[0] as $k=>$perf_iframe ) {
 
 			// Don't mess with the Gravity Forms ajax iframe
-			if ( strpos( $minimall_iframe, 'gform_ajax_frame' ) ) {
+			if ( strpos( $perf_iframe, 'gform_ajax_frame' ) ) {
 				continue;
 			}
 
-			$minimall_placeholder = 'data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=';
+			$perf_placeholder = 'data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=';
 
-			$minimall_iframe = preg_replace( '/<iframe(.*?)src=/is', '<iframe$1src="' . $minimall_placeholder . '" class="lazyload blur-up" data-src=', $minimall_iframe );
+			$perf_iframe = preg_replace( '/<iframe(.*?)src=/is', '<iframe$1src="' . $perf_placeholder . '" class="lazyload blur-up" data-src=', $perf_iframe );
 
-			$html = str_replace( $minimall_matches[0][ $k ], $minimall_iframe, $html );
+			$html = str_replace( $perf_matches[0][ $k ], $perf_iframe, $html );
 
 		}
 	}
@@ -127,15 +147,23 @@ function minimall_lazyload_iframes( $html ) {
 	return $html;
 }
 
-add_action("wp_head","minimall_img_picturefill");
-function minimall_img_picturefill(){
+add_action("wp_head","perf_img_picturefill");
+function perf_img_picturefill(){
 ?>
 <script>
     // Lazyload picturefill
-    function minimall_loadJS(u){var r=document.getElementsByTagName("script")[ 0 ],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
+    function perf_loadJS(u){var r=document.getElementsByTagName("script")[ 0 ],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
     if (!window.HTMLPictureElement || document.msElementsFromPoint) {
-        minimall_loadJS('<?php echo plugins_url( "/vendors/lazysizes/plugins/respimg/ls.respimg.min.js" , __FILE__ ); ?>');
+        perf_loadJS('<?php echo plugins_url( "/vendors/lazysizes/plugins/respimg/ls.respimg.min.js" , __FILE__ ); ?>');
     }
 </script>
 <?php
 }
+
+/*
+By enabling this option, you will improve the loading time of your website.
+By enabling this option, you will improve the loading time of your website.
+Warning!
+In the case of any display errors, we recommend disabling those options.
+The Lazy Load module defers loading of images and iframes until they become visible in the client’s viewport. This avoids blocking the download of other critical resources necessary for rendering the above the fold section of the page.
+*/

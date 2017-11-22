@@ -977,6 +977,16 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/includes\/admin\/getting-started\/getting-started.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/admin\/getting-started\/getting-started.min.min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/includes\/admin\/getting-started\/getting-started.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -1090,6 +1100,13 @@
 		"oAP": "\/includes\/performance\/clean.php",
 		"oF": 0
 		},
+	"\/includes\/performance\/controls.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/performance\/controls.php",
+		"oF": 0
+		},
 	"\/includes\/performance\/critical": {
 		"ft": 65536,
 		"oA": 1,
@@ -1103,6 +1120,13 @@
 		"oAP": "\/includes\/performance\/helper.php",
 		"oF": 0
 		},
+	"\/includes\/performance\/javascripts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/performance\/javascripts.php",
+		"oF": 0
+		},
 	"\/includes\/performance\/lazyload.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1110,12 +1134,73 @@
 		"oAP": "\/includes\/performance\/lazyload.php",
 		"oF": 0
 		},
-	"\/includes\/performance\/performance-init.php": {
+	"\/includes\/performance\/options.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/performance\/performance-init.php",
+		"oAP": "\/includes\/performance\/options.php",
 		"oF": 0
+		},
+	"\/includes\/performance\/perrformance-init.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/performance\/perrformance-init.php",
+		"oF": 0
+		},
+	"\/includes\/performance\/preload.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/performance\/preload.php",
+		"oF": 0
+		},
+	"\/includes\/performance\/stylesheets.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/performance\/stylesheets.php",
+		"oF": 0
+		},
+	"\/includes\/performance\/vendors\/lazysizes\/lazysizes-all.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/performance\/vendors\/lazysizes\/lazysizes-all.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/performance\/vendors\/lazysizes\/lazysizes-all.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/performance\/vendors\/lazysizes\/lazysizes-all.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/performance\/vendors\/lazysizes\/plugins\/bgset\/ls.bgset.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/performance\/vendors\/lazysizes\/plugins\/bgset\/ls.bgset.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/includes\/performance\/vendors\/lazysizes\/plugins\/respimg\/ls.respimg.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/performance\/vendors\/lazysizes\/plugins\/respimg\/ls.respimg.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
 		},
 	"\/includes\/template-tags.php": {
 		"cB": 0,
