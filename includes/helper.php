@@ -120,7 +120,7 @@ function minimall_custom_menu( $theme_location ) {
                     }
     
                     $menu_list .= '<li class="mt2 mb2 lg-mt0 lg-mb0 item block lg-inline-block">' ."\n";
-                    $menu_list .= '<a href="'.$link.'" class="block black text-decoration-none sm-text border-none">'.$title.'</a>' ."\n";
+                    $menu_list .= '<a href="'.$link.'" class="flex items-center black text-decoration-none sm-text border-none">'.$title.'</a>' ."\n";
                     $menu_list .= '</li>' ."\n";
                         
                     

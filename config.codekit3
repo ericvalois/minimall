@@ -526,48 +526,11 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/svg\/sprite\/Demo.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/assets\/svg\/sprite\/Demo.html",
-		"oF": 0
-		},
-	"\/assets\/svg\/sprite\/Style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/svg\/sprite\/Style.min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/assets\/svg\/sprite\/svg\/nc-icons.svg": {
+	"\/assets\/svg\/_small-down.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/svg\/sprite\/svg\/nc-icons.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/assets\/svg\/tail-right.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/svg\/tail-right.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/assets\/svg\/three-dots.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/svg\/three-dots.svg",
+		"oAP": "\/assets\/svg\/_small-down.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,

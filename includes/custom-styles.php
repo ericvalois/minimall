@@ -53,7 +53,8 @@ function minimall_custom_styles(){
             
         }
         a,
-        a.black:hover{ color: '. $main_color .';}
+        a.black:hover,
+        a.active{ color: '. $main_color .';}
         .primary-color,
         .current_page_item a{
             color: '. $main_color .' !important;
