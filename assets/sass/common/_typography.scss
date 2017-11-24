@@ -51,27 +51,9 @@ h6 {
   margin: 0;
   padding: 0;
 }
-/*
-Set html font size to match browser size
-Prevent adjustments of font size after orientation changes on some mobile devices
-Reset line height
-*/
-html {
-  font-size: 100%;
-  line-height: 1;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
+
 /* Reset font sizes so semantic markup doesn't affect styling */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
+
 
 /* Remove border from iframes */
 iframe {
@@ -158,61 +140,6 @@ iframe {
 svg {
   fill: currentColor;
 }
-/* ====================
-   fluid sizing utility variables
-   ==================== */
-:root {
-  --font-size-difference: 3;
-  --font-size-difference: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
-  --font-range-difference: 740;
-  --font-range-difference: calc(var(--unitless-upper-font-range) - var(--unitless-lower-font-range));
-  --viewport-difference: calc(100vw - 460px);
-  --viewport-difference: calc(100vw - (var(--unitless-lower-font-range) * 1px));
-}
-/* ====================
-   global font settings
-   ==================== */
-html {
-  /* font smoothing */
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-
-  /* base font family */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  font-family: var(--base-font-family);
-
-  /* responsive base font size */
-  font-size: calc(15px + 3 * (100vw - 460px) / 740);
-  font-size: calc((var(--unitless-min-font-size) * 1px) + var(--font-size-difference) * var(--viewport-difference) / var(--font-range-difference));
-
-  /* base line height */
-  line-height: 1.4;
-  line-height: var(--base-line-height);
-
-  /* base font weight */
-  font-weight: 400;
-  font-weight: var(--font-weight-base);
-
-  /* base letter spacing */
-  letter-spacing: -0.025em;
-  letter-spacing: var(--letter-spacing-base)
-
-  /* set lower font range limit */
-
-  /* set upper font range limit */
-}
-@media (max-width: 459px) {
-    html {
-    font-size: 16px;
-    font-size: calc(var(--unitless-min-font-size) * 1px);
-    }
-  }
-@media (min-width: 1200px) {
-    html {
-    font-size: 19px;
-    font-size: calc(var(--unitless-max-font-size) * 1px);
-    }
-  }
 /* ====================
    headings
    ==================== */

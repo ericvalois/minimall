@@ -461,19 +461,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/sass\/common\/hiq.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/style.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/assets\/sass\/media\/_captions.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -531,6 +518,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/assets\/svg\/_small-down.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/svg\/small-down.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/svg\/small-down.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -910,6 +907,13 @@
 		"oAP": "\/includes\/admin\/customizer\/modules\/private-dashboard.php",
 		"oF": 0
 		},
+	"\/includes\/admin\/customizer\/modules\/social-share.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/social-share.php",
+		"oF": 0
+		},
 	"\/includes\/admin\/getting-started\/getting-started-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1165,6 +1169,13 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/includes\/social-share.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/social-share.php",
+		"oF": 0
+		},
 	"\/includes\/template-tags.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1227,11 +1238,11 @@
 		"oAP": "\/includes\/widgets\/widget-edd-reviews.php",
 		"oF": 0
 		},
-	"\/includes\/widgets\/widget-social.php": {
+	"\/includes\/widgets\/widget-social-share.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-social.php",
+		"oAP": "\/includes\/widgets\/widget-social-share.php",
 		"oF": 0
 		},
 	"\/index.php": {

@@ -144,7 +144,7 @@ function minimall_get_edd_download_tabs_content(){
         }
         $widget_array = $wp_registered_widgets[$widget];
         echo '<div id="tab-'.$widget_array['id'].'" class="tab-pane py2 '.$active_class.'">';
-        wpse_show_widget( 'download-tabs-sidebar', $widget_array['id'] );
+        minimall_show_widget( 'download-tabs-sidebar', $widget_array['id'] );
         echo '</div>';
         $cpt++;
     }

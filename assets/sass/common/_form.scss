@@ -412,7 +412,7 @@ input[type='file'] + label, {
   background-color: gray;
   background-color: var(--button-background-color);
   transition: border-color 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
-  transition: border-color var(--speed) var(--easing), color var(--speed) var(--easing), background-color var(--speed) var(--easing);
+  transition: border-color var(--speed) var(--easing), color var(--speed) var(--easing), background-color var(--speed) var(--easing), padding 0.3s ease;
   cursor: pointer;
   font-size: 16px;
 }

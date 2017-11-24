@@ -18,17 +18,20 @@ $bold: 700;
 :root {
 	--max-container-width: 62rem;
 	--container-horizontal-padding: 2rem;
-	--block-element-margin-vertical: 1.5rem;
+    /*
+    --block-element-margin-vertical: 1.5rem;
 	--block-semantic-element-margin-vertical: 1.5rem;
 	--heading-margin-bottom: .5rem;
-	--border-radius: 3px;
-	--font-family-sans-serif: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+    --border-radius: 3px;
+    */
+	//--font-family-sans-serif: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
 	--font-family-serif: Georgia,'Times New Roman',Times,serif;
 	--font-family-monospace: Menlo,Monaco,Consolas,'Courier New',monospace;
 	--base-font-family: var(--font-family-sans-serif);
 	//--unitless-min-font-size: 16;
 	//--unitless-max-font-size: 19;
-	--unitless-lower-font-range: 460;
+    /*
+    --unitless-lower-font-range: 460;
 	--unitless-upper-font-range: 1200;
 	--base-line-height: 1.8;
 	--heading-line-height: 1.2;
@@ -46,11 +49,12 @@ $bold: 700;
 	--font-weight-medium: 500;
 	--font-weight-semibold: 600;
 	--font-weight-bold: 700;
-    //--letter-spacing-base: -0.025em;
 	--font-weight-base: var(--font-weight-normal);
 	--heading-font-weight: var(--font-weight-bold);
 	--strong-font-weight: var(--font-weight-bold);
-	--bold-font-weight: var(--font-weight-semibold);
+    --bold-font-weight: var(--font-weight-semibold);
+    */
+    //--letter-spacing-base: -0.025em;
 	--definition-list-title-font-weight: var(--font-weight-semibold);
 	--input-font-weight: var(--font-weight-normal);
 	--list-margin-left: 1rem;
@@ -85,7 +89,7 @@ $bold: 700;
 	--link-text-decoration: none;
 	--button-height: 2.25rem;
 	--button-vertical-padding: 0;
-	--button-horizontal-padding: 1.6rem;
+	//--button-horizontal-padding: 1.6rem;
 	--button-border-width: 1px;
 	--button-border-radius: var(--border-radius);
 	--button-font-weight: var(--font-weight-medium);
@@ -167,9 +171,9 @@ $bold: 700;
 	--block-code-padding-vertical: 1rem;
 	--block-code-padding-horizontal: 1rem;
 	--block-code-border-radius: var(--border-radius);
-	--font-size-difference: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
-	--font-range-difference: calc(var(--unitless-upper-font-range) - var(--unitless-lower-font-range));
-	--viewport-difference: calc(100vw - (var(--unitless-lower-font-range) * 1px));
+	//--font-size-difference: calc(var(--unitless-max-font-size) - var(--unitless-min-font-size));
+	//--font-range-difference: calc(var(--unitless-upper-font-range) - var(--unitless-lower-font-range));
+	//--viewport-difference: calc(100vw - (var(--unitless-lower-font-range) * 1px));
 }
 
 

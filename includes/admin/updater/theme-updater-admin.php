@@ -267,7 +267,7 @@ class Minimall_Theme_Updater_Admin {
                             <h2>Required plugins</h2>
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
-                                <div class="lg-col-6 mb3 px3">
+                                <div class="lg-col-12 mb3 px3">
                                     <!-- Kirki Toolkit -->
                                     <h4 class="mt0"><?php esc_html_e( 'Kirki Toolkit', 'minimall' ); ?></h4>
                                     <p><?php esc_html_e( 'This theme uses Kirki toolkit plugin to customize theme. This plugin adds advanced features to the WordPress customizer. Install the plugin before you go to the customizer.', 'minimall' ); ?></p>
@@ -304,7 +304,7 @@ class Minimall_Theme_Updater_Admin {
                                         <?php if ( is_plugin_active( 'wordpress-importer/wordpress-importer.php' ) ) { ?>
                                             <span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span>
                                         <?php }	else { ?>
-                                            <a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=wordpress-importer' ), 'install-plugin_customizer_wordPress_importer' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install WordPress Importer', 'minimall' ); ?></a>
+                                            <a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=wordpress-importer' ), 'install-plugin_customizer_wordPress_importer' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install WP Importer', 'minimall' ); ?></a>
                                         <?php }	?>
                                         <a href="" class="ml2 inline-flex items-center"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="14" height="14"><g class="nc-icon-wrapper" fill="#0073aa"><path fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M20,2c1.657,0,3,1.343,3,3 v14c0,1.657-1.343,3-3,3H4c-1.657,0-3-1.343-3-3V5c0-1.657,1.343-3,3-3H20z" stroke-linejoin="round"></path> <polygon data-color="color-2" fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points=" 10,8 16,12 10,16 " stroke-linejoin="round"></polygon></g></svg><small class="ml1"><?php esc_html_e('How-To Video','minimall'); ?></small></a>
                                     </p>
@@ -328,7 +328,7 @@ class Minimall_Theme_Updater_Admin {
                                     <?php if ( is_plugin_active( 'cache-enabler/cache-enabler.php' ) ) { ?>
                                         <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
                                     <?php }	else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=cache-enabler' ), 'install-plugin_cache_enabler' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Cache Enabler - WordPress Cache', 'minimall' ); ?></a></p>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=cache-enabler' ), 'install-plugin_cache_enabler' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Cache Enabler', 'minimall' ); ?></a></p>
                                     <?php }	?> 
                                 </div>
 
@@ -363,7 +363,7 @@ class Minimall_Theme_Updater_Admin {
                                     <?php if ( is_plugin_active( 'tiny-compress-images/tiny-compress-images.php' ) ) { ?>
                                         <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
                                     <?php }	else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=tiny-compress-images' ), 'install-plugin_tiny-compress_images' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Compress JPEG & PNG images', 'minimall' ); ?></a></p>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=tiny-compress-images' ), 'install-plugin_tiny-compress_images' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Compress JPEG & PNG', 'minimall' ); ?></a></p>
                                     <?php }	?> 
                                 </div>
                                 
@@ -412,6 +412,16 @@ class Minimall_Theme_Updater_Admin {
                                         <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=easy-digital-downloads' ), 'install-plugin_easy_digital_downloads' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Easy Digital Downloads', 'minimall' ); ?></a></p>
                                     <?php } ?>
                                 </div>
+
+                                <div class="lg-col-6 py3 px3 ">
+                                    <h4 class="mt0"><?php esc_html_e( 'EDD Download Images', 'minimall' ); ?></h4>
+                                    <p><?php esc_html_e( 'This plugin allows you to add extra images to your downloads.', 'minimall' ); ?></p>
+                                    <?php if ( is_plugin_active( 'edd-download-images/edd-download-images.php' ) ) { ?>
+                                        <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
+                                    <?php } else { ?>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=edd-download-images' ), 'install-plugin_edd_download_images' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install EDD Download Images', 'minimall' ); ?></a></p>
+                                    <?php } ?>
+                                </div>
                             </div>
 
                             <h2><?php esc_html_e('Other Plugins','minimall'); ?></h2>
@@ -419,7 +429,7 @@ class Minimall_Theme_Updater_Admin {
                             <div class="lg-flex flex-wrap bg-gray mb3">
                                 <div class="lg-col-6 py3 px3 ">
                                     <h4 class="mt0"><?php esc_html_e( 'Faster Font Awesome', 'minimall' ); ?></h4>
-                                    <p><?php esc_html_e( 'This plugin has been created by us to allows you to use Font Awesome Icons (+600) anywhere without affecting performance.', 'minimall' ); ?></p>
+                                    <p><?php esc_html_e( 'This plugin has been created by us to allows you to use Font Awesome Icons (+600) anywhere without negatively affecting performance.', 'minimall' ); ?></p>
                                     <?php if ( is_plugin_active( 'faster-font-awesome/faster-font-awesome.php' ) ) { ?>
                                         <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
                                     <?php } else { ?>
@@ -434,6 +444,16 @@ class Minimall_Theme_Updater_Admin {
                                         <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
                                     <?php } else { ?>
                                         <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=contact-form-7' ), 'install-plugin_contact-form-7' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Contact Form 7', 'minimall' ); ?></a></p>
+                                    <?php } ?>
+                                </div>
+
+                                <div class="lg-col-12 py3 px3 ">
+                                    <h4 class="mt0"><?php esc_html_e( 'Gutenberg Editor', 'minimall' ); ?></h4>
+                                    <p><?php esc_html_e( 'The goal of the block editor is to make adding rich content to WordPress simple and enjoyable.', 'minimall' ); ?></p>
+                                    <?php if ( is_plugin_active( 'gutenberg/gutenberg.php' ) ) { ?>
+                                        <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
+                                    <?php } else { ?>
+                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=gutenberg' ), 'install-plugin_gutenberg' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install gutenberg', 'minimall' ); ?></a></p>
                                     <?php } ?>
                                 </div>
                             </div>

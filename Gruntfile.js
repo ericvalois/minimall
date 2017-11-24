@@ -8,15 +8,15 @@ module.exports = function(grunt) {
                 options: {
                     url: "http://minimall.dev/",
                     width: 1200,
-                    height: 800,
-                    outputfile: "inc/performance/critical/landingpage.css",
+                    height: 1200,
+                    outputfile: "includes/performance/critical/home.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.lg-col-12','.lg-col-6','.lg-col-4', '.center', '.mb4', '.weight100', 'h2'],
+                    forceInclude: ['h1','.h1','.btn','p'],
                     ignoreConsole: false
                 }
             },
-            doc_archive: {
+            /*doc_archive: {
                 options: {
                     url: "http://minimall.dev/docs/",
                     width: 1200,
@@ -111,7 +111,7 @@ module.exports = function(grunt) {
                     forceInclude: [],
                     ignoreConsole: false
                 }
-            },
+            },*/
         },
 
         cssmin: {
@@ -126,9 +126,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'inc/performance/critical/',
+                    cwd: 'includes/performance/critical/',
                     src: ['*.css', '!*.min.css'],
-                    dest: 'inc/performance/critical/',
+                    dest: 'includes/performance/critical/',
                     ext: '.min.css'
                 }]
             }

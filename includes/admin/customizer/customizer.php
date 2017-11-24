@@ -195,6 +195,11 @@ include( get_template_directory() . '/includes/admin/customizer/modules/edd.php'
 include( get_template_directory() . '/includes/admin/customizer/modules/private-dashboard.php' );
 
 /**
+ * Social Share Controls
+ */
+include( get_template_directory() . '/includes/admin/customizer/modules/social-share.php' );
+
+/**
  * New Link Control
  */
 include( get_template_directory() . '/includes/admin/customizer/minimall-link/minimall-link.php' );

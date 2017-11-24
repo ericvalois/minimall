@@ -235,8 +235,8 @@ function minimall_widgets_init() {
 		'description'   => __("Sidebar display after the post content","minimal"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widget-title caps mb2">',
-		'after_title'   => '</h4>',
+		'before_title'  => '<h5 class="widget-title mb2">',
+		'after_title'   => '</h5>',
     ) );
     
     register_sidebar( array(
@@ -287,55 +287,11 @@ if ( ! function_exists( 'minimall_set_post_thumbnail_size' ) ) :
 	}
 endif;
 
-
-
-/**
- * Temp
- */
-function minimall_page_options(){
-    return;
-}
-
-/**
- * Temp
- */
-function minimall_theme_options( ){
-    $my_theme = wp_get_theme();
-    $theme_options = get_option( 'theme_mods_'.$my_theme->get( 'TextDomain' ), array() );
-
-    return $theme_options;
-}
-
-function minimall_get_option( $all_option = array(), $key = '', $default = false ){
-    if( array_key_exists($key, $all_option) ){
-        return $all_option[$key];
-    }else{
-        if( isset( $default ) ){
-            return $default;
-        }else{
-            return false;
-        }
-    }
-}
-
-function minimall_get_option2( $setting, $default ){
-    $my_theme = wp_get_theme();
-    $options = get_option( 'theme_mods_'.$my_theme->get( 'TextDomain' ), array() );
-    $value = $default;
-    if ( isset( $options[ $setting ] ) ) {
-        $value = $options[ $setting ];
-    }
-    return $value;
-}
-
 /**
  * Enqueue scripts and styles.
  */
 function minimall_scripts() {
     global $post;
-
-    $page_options = minimall_page_options();
-    $theme_options = minimall_theme_options();
 
 	/* If using a child theme, auto-load the parent theme style. */
     if ( is_child_theme() ) {
@@ -368,41 +324,15 @@ function minimall_editor_styles() {
     }
 }
 
-
 /**
- * Load TGM class
+ * Is Faster Font Awesome active?
+ *
+ * @since 1.0.0
+ * @return bool
  */
-require get_template_directory() . '/includes/admin/tgm/tgm.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/includes/template-tags.php';
-
-/**
- * minimal functions
- */
-require get_template_directory() . '/includes/extra.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/includes/jetpack.php';
-
-/**
- * Load custom style
- */
-require get_template_directory() . '/includes/custom-styles.php';
-
-/**
- * Social Widget
- */
-require get_template_directory() . '/includes/widgets/widget-social.php';
-
-/**
- * Author Widget
- */
-require get_template_directory() . '/includes/widgets/widget-author.php';
+function minimall_is_ffa_active() {
+	return function_exists('faster_font_awesome_init');
+}
 
 /**
  * Is EDD active?
@@ -464,76 +394,62 @@ function minimall_is_edd_download_images_active() {
 	return function_exists('edd_di_get_images');
 }
 
+/**
+ * Is Autoptimize active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_autoptimize_active() {
+	return function_exists('autoptimizeBase');
+}
 
 /**
  * Compatibility
  */
 require get_template_directory() . '/includes/compatibility.php';
 
-
-
+/**
+ * Load TGM class
+ */
+require get_template_directory() . '/includes/admin/tgm/tgm.php';
 
 /**
- * Show a given widget based on it's id and it's sidebar index
- *
- * Example: wpse_show_widget( 'sidebar-1', 'calendar-2' ) 
- *
- * @param string $index. Index of the sidebar where the widget is placed in.
- * @param string $id. Id of the widget.
- * @return boolean. TRUE if the widget was found and called, else FALSE.
+ * Custom template tags for this theme.
  */
-function wpse_show_widget( $index, $id )
-{
-    global $wp_registered_widgets, $wp_registered_sidebars;
-    $did_one = FALSE;
+require get_template_directory() . '/includes/template-tags.php';
 
-    // Check if $id is a registered widget
-    if( ! isset( $wp_registered_widgets[$id] ) 
-        || ! isset( $wp_registered_widgets[$id]['params'][0] ) ) 
-    {
-        return FALSE;
-    }
+/**
+ * minimal functions
+ */
+require get_template_directory() . '/includes/extra.php';
 
-    // Check if $index is a registered sidebar
-    $sidebars_widgets = wp_get_sidebars_widgets();
-    if ( empty( $wp_registered_sidebars[ $index ] ) 
-        || empty( $sidebars_widgets[ $index ] ) 
-        || ! is_array( $sidebars_widgets[ $index ] ) )
-    {
-        return FALSE;
-    }
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/includes/jetpack.php';
 
-    // Construct $params
-    $sidebar = $wp_registered_sidebars[$index];
-    $params = array_merge(
-                    array( array_merge( $sidebar, array('widget_id' => $id, 'widget_name' => $wp_registered_widgets[$id]['name']) ) ),
-                    (array) $wp_registered_widgets[$id]['params']
-              );
+/**
+ * Load custom style
+ */
+require get_template_directory() . '/includes/custom-styles.php';
 
-    // Substitute HTML id and class attributes into before_widget
-    $classname_ = '';
-    foreach ( (array) $wp_registered_widgets[$id]['classname'] as $cn )
-    {
-        if ( is_string($cn) )
-            $classname_ .= '_' . $cn;
-        elseif ( is_object($cn) )
-            $classname_ .= '_' . get_class($cn);
-    }
-    $classname_ = ltrim($classname_, '_');
-    $params[0]['before_widget'] = sprintf($params[0]['before_widget'], $id, $classname_);         
-    $params = apply_filters( 'dynamic_sidebar_params', $params );
+/**
+ * Author Widget
+ */
+require get_template_directory() . '/includes/widgets/widget-author.php';
 
-    // Run the callback
-    $callback = $wp_registered_widgets[$id]['callback'];            
-    if ( is_callable( $callback ) )
-    {
-        
-         call_user_func_array( $callback, $params );
-         $did_one = TRUE;
-    }
+/**
+ * Author Widget
+ */
+require get_template_directory() . '/includes/widgets/widget-social-share.php';
 
-    return $did_one;
-}
+/**
+ * Social Share
+ */
+require get_template_directory() . '/includes/social-share.php';
 
-
-remove_action( 'edd_enable_reviews','update_reviews_status' );
+/**
+ * Performance 
+ */
+require get_template_directory() . '/includes/performance/perrformance-init.php';

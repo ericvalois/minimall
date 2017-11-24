@@ -81,6 +81,60 @@ function minimall_register_required_plugins() {
 			'name'      => 'Contact Form 7',
 			'slug'      => 'contact-form-7',
 			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'Kirki Toolkit',
+			'slug'      => 'kirki',
+			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'Customizer Import',
+			'slug'      => 'customizer-export-import',
+			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'WordPress Importer',
+			'slug'      => 'wordpress-importer',
+			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'Autoptimize',
+			'slug'      => 'autoptimize',
+			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'Cloudflare',
+			'slug'      => 'cloudflare',
+			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'Easy Digital Download',
+			'slug'      => 'easy-digital-downloads',
+			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'EDD Download Images',
+			'slug'      => 'edd-download-images',
+			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'Faster Font Awesome',
+			'slug'      => 'faster-font-awesome',
+			'required'  => false,
+        ),
+        
+        array(
+			'name'      => 'Gutenberg',
+			'slug'      => 'gutenberg',
+			'required'  => false,
 		),
 
 	);

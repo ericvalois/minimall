@@ -153,15 +153,6 @@
 .recent-posts-widget-with-thumbnails img { width: 80px; height: 80px; filter: grayscale(1);border-radius: 3px;opacity: 0.6 }
 .rpwwt-post-categories{ font-weight: 300; }
 
-/*
-* Social Share
-*/
-.social-share-btns-container {
-  text-align: center;
-  width: 100%;
-}
-
-
 
 
 .share-btn {
@@ -172,13 +163,6 @@
     line-height: 18px;
     vertical-align: middle;
     transition: background 0.2s ease-in-out;
-
-    svg {
-        margin-right: 5px;
-        display: inline-block;
-        font-size: 18px;
-        vertical-align: middle;
-    }
 }
 
 .share-btn:hover{
