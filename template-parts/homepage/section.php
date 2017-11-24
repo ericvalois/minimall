@@ -46,6 +46,8 @@
                 include( locate_template('/template-parts/homepage/section-brands-list.php') );
             }elseif( $section == 'blog' ){
                 include( locate_template('/template-parts/homepage/section-blog.php') );
+            }elseif( $section == 'features' ){
+                include( locate_template('/template-parts/homepage/section-features.php') );
             }
         ?>
     </div>

@@ -27,7 +27,7 @@ Minimall_Kirki::add_field( 'minimall', array(
 	'choices'     => array(
 		'service' => esc_attr__( 'Services', 'minimall' ),
         'brands' => esc_attr__( 'Brands', 'minimall' ),
-        //'features' => esc_attr__( 'Features', 'minimall' ),
+        'features' => esc_attr__( 'Features', 'minimall' ),
 		//'testimonials' => esc_attr__( 'Testimonials', 'minimall' ),
 		'blog' => esc_attr__( 'Blog', 'minimall' ),
         'banner' => esc_attr__( 'Banner', 'minimall' ),
@@ -139,6 +139,19 @@ $section_args = array(
     'header' => true,
     'content_layout' => true,
     'content_type' => 'minimall_homepage_content_type_blog',
+);
+minimall_homepage_create_section( $section_args );
+
+/**
+ * Create Features section
+ */
+$section_args = array(
+    'title' => 'Features',
+    'description' => '',
+    'slug' => 'features',
+    'header' => true,
+    'content_layout' => true,
+    'content_type' => 'minimall_homepage_content_type_features',
 );
 minimall_homepage_create_section( $section_args );
 

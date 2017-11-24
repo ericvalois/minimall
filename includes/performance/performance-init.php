@@ -29,45 +29,36 @@ function performance_module_customizer_styles() { ?>
 }
 
 /**
- * Helper functions
- */
-require 'helper.php';
-
-/**
- * Custom Controls
- */
-require 'controls.php';
-
-/**
  * Stylesheets Optimization
  */
 require 'stylesheets.php';
 
 /**
- * JavaScripts Optimization
- */
-//require 'javascripts.php';
-
-/**
- * Options Metabox
- */
-//require 'options.php';
-
-
-
-
-
-/**
  * Lazy Load for image and iframe
  */
-//require 'lazyload.php';
-
-/**
- * Preload / Push module
- */
-//require 'preload.php';
+require 'lazyload.php';
 
 /**
  * WordPress cleanup
  */
-//require 'clean.php';
+require 'clean.php';
+
+/**
+ * Preload / Push module
+ */
+require 'preload.php';
+
+/**
+ * Options Metabox
+ */
+require 'metabox-options.php';
+
+
+
+
+
+
+
+
+
+

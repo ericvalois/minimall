@@ -1067,31 +1067,10 @@
 		"oAP": "\/includes\/performance\/clean.php",
 		"oF": 0
 		},
-	"\/includes\/performance\/controls.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/controls.php",
-		"oF": 0
-		},
 	"\/includes\/performance\/critical": {
 		"ft": 65536,
 		"oA": 1,
 		"oAP": "\/build\/includes\/performance\/critical",
-		"oF": 0
-		},
-	"\/includes\/performance\/helper.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/helper.php",
-		"oF": 0
-		},
-	"\/includes\/performance\/javascripts.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/javascripts.php",
 		"oF": 0
 		},
 	"\/includes\/performance\/lazyload.php": {
@@ -1101,18 +1080,18 @@
 		"oAP": "\/includes\/performance\/lazyload.php",
 		"oF": 0
 		},
-	"\/includes\/performance\/options.php": {
+	"\/includes\/performance\/metabox-options.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/performance\/options.php",
+		"oAP": "\/includes\/performance\/metabox-options.php",
 		"oF": 0
 		},
-	"\/includes\/performance\/perrformance-init.php": {
+	"\/includes\/performance\/performance-init.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/performance\/perrformance-init.php",
+		"oAP": "\/includes\/performance\/performance-init.php",
 		"oF": 0
 		},
 	"\/includes\/performance\/preload.php": {
@@ -1491,6 +1470,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/homepage\/section-content-list.php",
+		"oF": 0
+		},
+	"\/template-parts\/homepage\/section-features.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/homepage\/section-features.php",
 		"oF": 0
 		},
 	"\/template-parts\/homepage\/section.php": {

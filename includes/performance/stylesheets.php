@@ -38,7 +38,8 @@ function minimall_critical_css(){
 
     if( !is_admin() &&
     $autoptimize_css &&
-    $autoptimize_css_defer ){
+    $autoptimize_css_defer &&
+    get_theme_mod('performance_disable_critical_css', '0') != '1' ){
         echo '/* Critical CSS */ ';
         if( is_page_template("templates/homepage.php") ){
             include_once( "critical/home.min.css" );

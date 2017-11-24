@@ -273,3 +273,71 @@ function minimall_homepage_content_type_blog( $section_args ){
     ) );
     
 }
+
+/*
+* Content type : Content Features
+*/
+function minimall_homepage_content_type_features( $section_args ){
+    
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'     => 'minimall_notice',
+        'settings' => 'home_'.$section_args['slug'].'_layout_notice',
+        'label'    => $section_args['title'],
+        'section'  => 'homepage_'.$section_args['slug'],
+        'priority' => 39,
+    ) );
+    
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'radio-image',
+        'settings'    => 'home_'.$section_args['slug'].'_layout',
+        'label'       => $section_args['title'] . esc_html__( ' Layout', 'minimall' ),
+        'section'     => 'homepage_'.$section_args['slug'],
+        'default'     => '3',
+        'priority'    => 40,
+        'choices'     => array(
+            '1'   => get_template_directory_uri() . '/includes/admin/images/one-column.png',
+            '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
+            '3'  => get_template_directory_uri() . '/includes/admin/images/three-columns.png',
+            '4'  => get_template_directory_uri() . '/includes/admin/images/four-columns.png',
+        ),
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'repeater',
+        'label'       => $section_args['title'],
+        'section'     => 'homepage_'.$section_args['slug'],
+        'priority'    => 50,
+        'row_label' => array(
+            'type' => 'text',
+            'value' => $section_args['slug'],
+        ),
+        'settings'    => 'home_'.$section_args['slug'].'_features',
+        'fields' => array(
+            'icon' => array(
+                'type'        => 'textarea',
+                'label'       => esc_attr__( 'Icon', 'minimall' ),
+                'default'     => '',
+            ),
+            'title' => array(
+                'type'        => 'text',
+                'label'       => esc_attr__( 'Title', 'minimall' ),
+                'default'     => '',
+            ),
+            'desc' => array(
+                'type'        => 'textarea',
+                'label'       => esc_attr__( 'Description', 'minimall' ),
+                'default'     => '',
+            ),
+            'link_url' => array(
+                'type'        => 'text',
+                'label'       => esc_attr__( 'Link URL', 'minimall' ),
+                'description' => esc_attr__( 'http://yourlink.com', 'minimall' ),
+                'default'     => '',
+                'attribute' => '',
+            ),
+        ),
+    ) );
+    
+
+    
+}
