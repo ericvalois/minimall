@@ -546,34 +546,6 @@
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
-	"\/edd_templates\/_checkout_recommendations.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/edd_templates\/_checkout_recommendations.php",
-		"oF": 0
-		},
-	"\/edd_templates\/_shortcode-content-price.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/edd_templates\/_shortcode-content-price.php",
-		"oF": 0
-		},
-	"\/edd_templates\/_single_recommendations.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/edd_templates\/_single_recommendations.php",
-		"oF": 0
-		},
-	"\/edd_templates\/_widget-cart-item.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/edd_templates\/_widget-cart-item.php",
-		"oF": 0
-		},
 	"\/edd_templates\/history-purchases.php": {
 		"cB": 0,
 		"ft": 8192,

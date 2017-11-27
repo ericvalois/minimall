@@ -9,11 +9,25 @@
 }
 
 .edd_price_options{ font-size: 1em; }
+.edd_price_options ul{ 
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.2;
+    margin-bottom: 1.7rem;
+}
 .edd_price_options input{
     width: 15px;
     height: 15px;
 }
-.edd_download_buy_button .edd_price_options p{ margin: 1rem 0; }
+.edd_price_options p{ 
+    margin: 0 0 1rem 0;
+    font-size: 90%;
+    font-style: italic;
+}
+.edd_price_options label{
+    display: flex;
+    align-items: center;
+}
 
 @media #{$breakpoint-sm} {
     .edd_downloads_list{ 
@@ -77,6 +91,8 @@
     border: none;
     margin-bottom: 1.5rem;
 }
+
+#edd_checkout_wrap fieldset{ margin: 1.5rem 0; }
 
 .edd-cart-added-alert svg.edd-icon{
     width: 16px;

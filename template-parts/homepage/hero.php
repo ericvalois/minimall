@@ -35,8 +35,7 @@
             <?php echo esc_url( $minimall_image_src_sm[0] ); ?>">
         </div>
     <?php endif; ?>
-    <div class="py4 relative z4">
-
+    <div class="py4 mt3 mb3 relative z4">
         <div class="max-width-5 ml-auto mr-auto white home_hero_content">
             <h1 class="hero_title title white mt0 mb2 line-height-2"><?php echo wp_kses_post( nl2br( get_theme_mod('home_hero_title') ) ); ?></h1>
             <div class="hero_desc content"><?php echo wp_kses_post( get_theme_mod('home_hero_desc') ); ?></div>

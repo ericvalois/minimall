@@ -71,13 +71,13 @@ function minimall_homepage_create_section( $args ){
     Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'minimall_notice',
         'settings' => 'home_'.$args['slug'].'_style_notice',
-        'label'    => __( 'Section  Style', 'minimall' ),
+        'label'    => __( 'Style Section', 'minimall' ),
         'description'    => __( 'Adding an image will automatically display white text and a dark background.', 'minimall' ),
         'section'  => 'homepage_'.$args['slug'],
         'priority' => 60,
     ) );
     
-    Minimall_Kirki::add_field( 'minimall', array(
+    /*Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'image',
         'settings'    => 'home_'.$args['slug'].'_img',
         'label'       => __( 'Background', 'minimall' ),
@@ -93,6 +93,36 @@ function minimall_homepage_create_section( $args ){
                 'suffix'   => '!important',
             ),
         )
+    ) );*/
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'radio-buttonset',
+        'settings'    => 'home_'.$args['slug'].'_color',
+        'label'       => __( 'Text color', 'minimall' ),
+        'section'  => 'homepage_'.$args['slug'],
+        'default'     => 'black',
+        'priority'    => 70,
+        'choices'     => array(
+            'black'   => esc_attr__( 'Black', 'minimall' ),
+            'white' => esc_attr__( 'White', 'minimall' ),
+        ),
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'background',
+        'settings'    => 'home_'.$args['slug'].'_setting',
+        'label'       => esc_attr__( 'Background Control', 'minimall' ),
+        'description' => esc_attr__( 'Background conrols are pretty complex - but extremely useful if properly used.', 'minimall' ),
+        'section'     => 'homepage_'.$args['slug'],
+        'priority'    => 90,
+        'default'     => array(
+            'background-color'      => '#fff',
+            'background-image'      => '',
+            'background-repeat'     => 'no-repeat',
+            'background-position'   => 'center center',
+            'background-size'       => 'cover',
+            'background-attachment' => 'scroll',
+        ),
     ) );
 
     $args['content_type']( $args );
@@ -289,8 +319,8 @@ function minimall_homepage_content_type_features( $section_args ){
     
     Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'radio-image',
-        'settings'    => 'home_'.$section_args['slug'].'_layout',
-        'label'       => $section_args['title'] . esc_html__( ' Layout', 'minimall' ),
+        'settings'    => 'home_'.$section_args['slug'].'_layout_desktop',
+        'label'       => $section_args['title'] . esc_html__( ' Layout Desktop', 'minimall' ),
         'section'     => 'homepage_'.$section_args['slug'],
         'default'     => '3',
         'priority'    => 40,
@@ -299,6 +329,20 @@ function minimall_homepage_content_type_features( $section_args ){
             '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
             '3'  => get_template_directory_uri() . '/includes/admin/images/three-columns.png',
             '4'  => get_template_directory_uri() . '/includes/admin/images/four-columns.png',
+        ),
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'radio-image',
+        'settings'    => 'home_'.$section_args['slug'].'_layout_tablet',
+        'label'       => $section_args['title'] . esc_html__( ' Layout Tablet', 'minimall' ),
+        'section'     => 'homepage_'.$section_args['slug'],
+        'default'     => '2',
+        'priority'    => 45,
+        'choices'     => array(
+            '1'   => get_template_directory_uri() . '/includes/admin/images/one-column.png',
+            '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
+            '3'  => get_template_directory_uri() . '/includes/admin/images/three-columns.png',
         ),
     ) );
 
@@ -328,12 +372,16 @@ function minimall_homepage_content_type_features( $section_args ){
                 'label'       => esc_attr__( 'Description', 'minimall' ),
                 'default'     => '',
             ),
-            'link_url' => array(
+            'label' => array(
+                'type'        => 'text',
+                'label'       => esc_attr__( 'Link Label', 'minimall' ),
+                'default'     => '',
+            ),
+            'url' => array(
                 'type'        => 'text',
                 'label'       => esc_attr__( 'Link URL', 'minimall' ),
                 'description' => esc_attr__( 'http://yourlink.com', 'minimall' ),
                 'default'     => '',
-                'attribute' => '',
             ),
         ),
     ) );

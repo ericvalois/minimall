@@ -33,7 +33,7 @@ function minimall_edd_widgets_init() {
         'description'   => __("Sidebar display in the bottom of the download page. Each widget is a new tab.","minimal"),
         'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h4 class="widget-title mb2">',
+        'before_title'  => '<h4 class="widget-title m0 hide">',
         'after_title'   => '</h4>',
     ) );
 }
@@ -143,20 +143,13 @@ function minimall_get_edd_download_tabs_content(){
             $active_class = '';
         }
         $widget_array = $wp_registered_widgets[$widget];
-        echo '<div id="tab-'.$widget_array['id'].'" class="tab-pane py2 '.$active_class.'">';
+        echo '<div id="tab-'.$widget_array['id'].'" class="tab-pane py1 '.$active_class.'">';
         minimall_show_widget( 'download-tabs-sidebar', $widget_array['id'] );
         echo '</div>';
         $cpt++;
     }
         
 }
-
-
-
-
-
-
-
 
 /*
 * Remove EDD purchase link from the_content
@@ -223,4 +216,14 @@ function minimall_edd_download_left_sidebar(){
         return;
     }
     dynamic_sidebar( 'download-left-sidebar' );
+}
+
+/*
+* Remove variable pricing options on archive
+*/
+add_action('wp','minimall_edd_remove_pricing_options_archive');
+function minimall_edd_remove_pricing_options_archive(){
+    if( !is_singular("download") ){
+        remove_action('edd_purchase_link_top','edd_purchase_variable_pricing');
+    }
 }

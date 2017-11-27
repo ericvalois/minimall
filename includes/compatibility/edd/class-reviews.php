@@ -17,6 +17,7 @@ class Minimall_EDD_Reviews {
         //$reviews = new EDD_Reviews;
         //remove_filter( 'the_content', 'edd_reviews_load_frontend', 999);
         //add_action('minimall_edd_reviews','edd_reviews_load_frontend');
+        
 	}
 
 	/**
@@ -62,6 +63,3 @@ class Minimall_EDD_Reviews {
 
 }
 new Minimall_EDD_Reviews;
-
-
-    

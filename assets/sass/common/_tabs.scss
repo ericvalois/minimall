@@ -23,8 +23,17 @@
     display: inline-block;
     position: relative;
     z-index: 2;
-    border-radius: 4px 4px 0 0;
-    margin: 0 -5px;
+    margin: 0 -1px;
+}
+
+.minimall-tabs li:first-child a,
+.minimall-tabs li:first-child {
+    border-radius: 4px 0 0 0;
+}
+
+.minimall-tabs li:last-child a,
+.minimall-tabs li:last-child {
+    border-radius: 0 4px 0 0;
 }
 
 .minimall-tabs a {

@@ -78,9 +78,6 @@ function minimall_setup() {
     // Add theme support for selective refresh for widgets.
     add_theme_support( 'customize-selective-refresh-widgets' );
     
-    add_theme_support( 'totc-layout-control' );
-    add_theme_support( 'posts-reviews' );
-    
 
     $args = array(
         'width'              => 1000,
@@ -281,11 +278,11 @@ require( get_template_directory() . '/includes/admin/customizer/customizer.php' 
  *
  * @since 1.0.0
  */
-if ( ! function_exists( 'minimall_set_post_thumbnail_size' ) ) :
+/*if ( ! function_exists( 'minimall_set_post_thumbnail_size' ) ) :
 	function minimall_set_post_thumbnail_size() {
 		set_post_thumbnail_size( 991, 9999 );
 	}
-endif;
+endif;*/
 
 /**
  * Enqueue scripts and styles.
@@ -453,3 +450,4 @@ require get_template_directory() . '/includes/social-share.php';
  * Performance 
  */
 require get_template_directory() . '/includes/performance/performance-init.php';
+
