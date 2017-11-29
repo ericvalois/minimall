@@ -133,8 +133,6 @@ audio,
 video,
 canvas,
 iframe {
-  width: 100%;
-  width: var(--media-width);
   max-width: 100%;
 }
 svg {
