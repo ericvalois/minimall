@@ -5,7 +5,7 @@
 Minimall_Kirki::add_panel( 'performance', array(
     'title'      => esc_attr__( 'Performance', 'minimall' ),
     'priority'   => 260,
-    'panel'		 => 'minimall_options',
+    //'panel'		 => 'minimall_options',
     'capability' => 'edit_theme_options',
 ) );
 
@@ -16,7 +16,7 @@ Minimall_Kirki::add_panel( 'performance', array(
 add_action( 'customize_controls_print_styles', 'performance_module_customizer_styles', 999 );
 function performance_module_customizer_styles() { ?>
 	<style>
-        li#accordion-panel-performance_module > h3.accordion-section-title:before {
+        li#accordion-panel-performance > h3.accordion-section-title:before {
             content: "\f226";
             font-family: dashicons;
             padding: 0 3px 0 0;

@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         criticalcss: {
-            home: {
+            /*home: {
                 options: {
                     url: "http://minimall.dev/",
                     width: 1200,
@@ -15,76 +15,40 @@ module.exports = function(grunt) {
                     forceInclude: ['h1','.h1','.btn','p'],
                     ignoreConsole: false
                 }
-            },
-            /*doc_archive: {
-                options: {
-                    url: "http://minimall.dev/docs/",
-                    width: 1200,
-                    height: 1000,
-                    outputfile: "inc/performance/critical/doc.css",
-                    filename: "style.css",
-                    buffer: 1000*1024,
-                    forceInclude: [],
-                    ignoreConsole: true
-                }
-            },
-            doc_single: {
-                options: {
-                    url: "http://minimall.dev/doc/light-bold/how-to-automatically-update-our-themes/",
-                    width: 1200,
-                    height: 1000,
-                    outputfile: "inc/performance/critical/doc-single.css",
-                    filename: "style.css",
-                    buffer: 1000*1024,
-                    forceInclude: ['.display-none'],
-                    ignoreConsole: true
-                }
-            },
+            },*/
             archive: {
                 options: {
                     url: "http://minimall.dev/blog/",
                     width: 1200,
                     height: 1000,
-                    outputfile: "inc/performance/critical/archive.css",
+                    outputfile: "includes/performance/critical/archive.css",
                     filename: "style.css",
                     buffer: 1000*1024,
-                    forceInclude: [],
+                    forceInclude: ['h1','.h1','.btn','p','h2','.h2','h3','.h3','h4','.h4','h5','.h6','.lg-col-8','.lg-col-4'],
                     ignoreConsole: false
                 }
             },
-            page: {
+            /*page: {
                 options: {
-                    url: "http://minimall.dev/speed-toolbox/",
+                    url: "http://minimall.dev/style-guide/",
                     width: 1200,
                     height: 1000,
-                    outputfile: "inc/performance/critical/page.css",
+                    outputfile: "includes/performance/critical/page.css",
                     filename: "style.css",
                     buffer: 1000*1024,
-                    forceInclude: ['.display-none'],
+                    forceInclude: ['h1','.h1','.btn','p'],
                     ignoreConsole: false
                 }
             },
             single: {
                 options: {
-                    url: "http://minimall.dev/blog/speed-up-wordpress/",
+                    url: "http://minimall.dev/style-guide/",
                     width: 1200,
                     height: 1000,
-                    outputfile: "inc/performance/critical/single.css",
+                    outputfile: "includes/performance/critical/single.css",
                     filename: "style.css",
                     buffer: 1000*1024,
-                    forceInclude: ['.display-none','.lg-col-3','.lg-col-9'],
-                    ignoreConsole: false
-                }
-            },
-            contact: {
-                options: {
-                    url: "http://minimall.dev/support/",
-                    width: 1200,
-                    height: 1000,
-                    outputfile: "inc/performance/critical/contact.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['h1','.h1','.btn','p'],
                     ignoreConsole: false
                 }
             },
@@ -93,25 +57,79 @@ module.exports = function(grunt) {
                     url: "http://minimall.dev/abcdefgh/",
                     width: 1200,
                     height: 1000,
-                    outputfile: "inc/performance/critical/404.css",
+                    outputfile: "includes/performance/critical/404.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['h1','.h1','.btn','p'],
                     ignoreConsole: false
                 }
             },
-            download: {
+            edd_single: {
                 options: {
-                    url: "http://minimall.dev/themes/mano/",
+                    url: "http://minimall.dev/downloads/minimall/",
                     width: 1200,
                     height: 1000,
-                    outputfile: "inc/performance/critical/download.css",
+                    outputfile: "includes/performance/critical/edd-single.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['h1','.h1','.btn','p'],
+                    ignoreConsole: false
+                }
+            },
+            edd_archive: {
+                options: {
+                    url: "http://minimall.dev/shop/",
+                    width: 1200,
+                    height: 1000,
+                    outputfile: "includes/performance/critical/edd-archive.css",
+                    filename: "style.css",
+                    buffer: 800*1024,
+                    forceInclude: ['h1','.h1','.btn','p'],
+                    ignoreConsole: false
+                }
+            },
+            edd_checkout: {
+                options: {
+                    url: "http://minimall.dev/checkout/",
+                    width: 1200,
+                    height: 1000,
+                    outputfile: "includes/performance/critical/edd-checkout.css",
+                    filename: "style.css",
+                    buffer: 800*1024,
+                    forceInclude: ['h1','.h1','.btn','p'],
+                    ignoreConsole: false
+                }
+            },
+            full_width: {
+                options: {
+                    url: "http://minimall.dev/knowledge-base/",
+                    width: 1200,
+                    height: 1000,
+                    outputfile: "includes/performance/critical/full-width.css",
+                    filename: "style.css",
+                    buffer: 800*1024,
+                    forceInclude: ['h1','.h1','.btn','p'],
                     ignoreConsole: false
                 }
             },*/
+        },
+
+        critical: {
+            home: {
+                options: {
+                    base: '',
+                    css: [
+                        'style.css'
+                    ],
+                    width: 1200,
+                    height: 1200
+                },
+                src: 'http://minimall.dev/',
+                dest: 'includes/performance/critical/home.css',
+                
+                // ignore CSS rules
+                ignore: ['font-face'],
+            }
         },
 
         cssmin: {
@@ -197,13 +215,15 @@ module.exports = function(grunt) {
         },
     });
 
-    grunt.loadNpmTasks('grunt-criticalcss');
+    //grunt.loadNpmTasks('grunt-criticalcss');
+    grunt.loadNpmTasks('grunt-critical');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('critical', ['criticalcss','cssmin']);
+    //grunt.registerTask('critical', ['criticalcss','cssmin']);
+    grunt.registerTask('critical', ['critical','cssmin']);
     grunt.registerTask('min', ['cssmin']);
 
     //grunt.registerTask('cleanstyle', ['clean:style']);

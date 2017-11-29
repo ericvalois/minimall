@@ -1,16 +1,16 @@
 <?php
 /**
- * Adds custom widget EDD Download Images.
+ * Adds custom widget EDD metabox Gallery.
  */
-class Minimall_Edd_Download_Images extends WP_Widget {
+class Minimall_Edd_Metabox_Gallery extends WP_Widget {
 
   /**
    * Register widget with WordPress.
    */
   function __construct() {
     parent::__construct(
-      'minimall_edd_download_images', // Base ID
-      __('Minimall EDD Download Images', 'minimall'), // Name
+      'minimall_edd_metabox_gallery', // Base ID
+      __('Minimall EDD Gallery', 'minimall'), // Name
       array( 'description' => __( 'Show additionnal images in download sidebars.', 'minimall' ), ) // Args
     );
   }
@@ -30,10 +30,20 @@ class Minimall_Edd_Download_Images extends WP_Widget {
     }
     
 
-    if( function_exists( 'edd_di_display_images') ) :
+    if( function_exists( 'rwmb_meta') ) :
+        $images = rwmb_meta( 'minimall-edd_gallery' );
+        $img_per_row = get_theme_mod('edd_single_thumb','4');
+        $img_width = round( 12 / $img_per_row );
+        $thumb_size = get_theme_mod('edd_single_thumb_size','shop_thumbnail');
+
         echo '<div id="edd-gallery" class="flex flex-wrap mxn1 mt1 gallery">';
-            edd_di_display_images();
+        foreach ( $images as $key => $image ) {
+            $get_thumb = wp_get_attachment_image_src( $key, $thumb_size );
+          
+            echo '<a class="flex items-start justify-center inline-block col-'.$img_width.' px1 py1" title="'. $image['title'] .'" href="', $image['full_url'], '"><img class="zoom-img minimall-edd-thumb lazyload" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="', $get_thumb[0], '" alt="'. $image['alt'] .'" width="'. $get_thumb[1] .'" height="'. $get_thumb[2] .'"></a>';
+        }
         echo '</div>';
+
     endif; 
     
     echo $args['after_widget'];
@@ -78,9 +88,9 @@ class Minimall_Edd_Download_Images extends WP_Widget {
     return $minimall_instance;
   }
 
-} // class Minimall_Edd_Download_Images
+} // class Minimall_Edd_Metabox_Gallery
 
-// register Minimall_Edd_Download_Images widget
+// register Minimall_Edd_Metabox_Gallery widget
 add_action( 'widgets_init', function(){
-  register_widget( 'Minimall_Edd_Download_Images' );
+  register_widget( 'Minimall_Edd_Metabox_Gallery' );
 });

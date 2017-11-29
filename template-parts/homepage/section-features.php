@@ -1,4 +1,4 @@
-<?php $content_feature = get_theme_mod('home_'.$section.'_features'); ?>
+<?php $content_feature = get_theme_mod('home_'.$section.'_features_list'); ?>
 <?php if( $content_feature ): ?>
     <div class="sm-flex flex-wrap sm-mxn2 pt2">
         <?php
@@ -8,6 +8,7 @@
             $desktop_width = 12 / $layout_desktop; 
             $item_number = count( $content_feature );
         ?>
+
         <?php foreach ($content_feature as $key => $item): ?>
             <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb3';} ?>  sm-px2">
                 
@@ -23,19 +24,13 @@
                     <p class="sm-text mt1 mb0"><?php echo wp_kses_post( nl2br($item['desc']) ); ?></p>
                 <?php endif; ?>
 
-                <?php if( !empty( $item['label'] ) && !empty( $item['url'] ) ): ?>
-                    <a class="btn mt2" href="<?php echo esc_url( $item['url'] ); ?>"><?php echo esc_html( $item['label'] ); ?></a>
+                <?php if( !empty( $item['link_label'] ) && !empty( $item['link_url'] ) ): ?>
+                    <a class="btn mt2" href="<?php echo esc_url( $item['link_url'] ); ?>"><?php echo esc_html( $item['link_label'] ); ?></a>
                 <?php endif; ?>
-
-               
-
-                <?php 
-                /*echo '<pre>';
-                print_r( $item );
-                echo '</pre>';*/
-                ?>
 
             </div>
         <?php endforeach; ?>
+
     </div>
+
 <?php endif; ?>

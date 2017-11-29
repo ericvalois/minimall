@@ -37,10 +37,20 @@ function minimall_edd_widgets_init() {
         'after_title'   => '</h4>',
     ) );
 }
+
+/**
+ * Easy Digital Download Customizer Controls
+ */
+include( get_template_directory() . '/includes/compatibility/edd/edd-customizer.php' );
+
+/**
+ * Easy Digital Download Performance Module
+ */
+include( get_template_directory() . '/includes/compatibility/edd/edd-performance.php' );
     
 /**
  * Download navigation
- * This is used by archive-download.php, taxonomy-download_category.php, taxonomy-download_tag.php
+ * This is used by archive-download.php, taxonomy-download_category.php, taxonomy-download_tag.php, shortcodes
  *
  * @since 1.0.0
  */

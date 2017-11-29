@@ -33,7 +33,7 @@ Minimall_Kirki::add_field( 'minimall', array(
     'priority'    => 20,
 ) );
 
-Minimall_Kirki::add_field( 'theme_config_id', array(
+Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'checkbox',
 	'settings'    => 'performance_disable_query_string',
 	'label'       => __( 'Remove Query Strings', 'minimall' ),
@@ -43,14 +43,15 @@ Minimall_Kirki::add_field( 'theme_config_id', array(
     'priority'    => 30,
 ) );
 
-function minimall_get_clean_options(){
-    $clean_options = minimall_get_field('minimall_clean', 'option');
-    if( !isset($clean_options['emojis']) ){ $clean_options['emojis'] = false; }
-    if( !isset($clean_options['embeds']) ){ $clean_options['embeds'] = false; }
-    if( !isset($clean_options['query_strings']) ){ $clean_options['query_strings'] = false; }
-
-    return $clean_options;
-}
+Minimall_Kirki::add_field( 'minimall', array(
+	'type'        => 'checkbox',
+	'settings'    => 'performance_disable_jquery_migrate',
+	'label'       => __( 'Remove Jquery Migrate', 'minimall' ),
+	'section'     => 'performance_clean',
+	'description'     => __( 'Most WordPress sites that use up-to-date themes and plugins don’t require jQuery Migrate in the front end.','minimall'),
+    'default'     => '0',
+    'priority'    => 30,
+) );
 
 
 /*
@@ -132,3 +133,20 @@ function minimall_deregister_embeds(){
         wp_dequeue_script( 'wp-embed' );
     }
 }
+
+/**
+ * Remove jQuery Migrate
+ */
+add_action( 'wp_default_scripts', 'minimall_remove_jquery_migrate' );
+function minimall_remove_jquery_migrate( $scripts ) {
+    if ( ! is_admin() && 
+    isset( $scripts->registered['jquery'] ) &&
+    get_theme_mod('performance_disable_jquery_migrate',false) ) {
+        $script = $scripts->registered['jquery'];
+        
+        if ( $script->deps ) { // Check whether the script has any dependencies
+            $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
+        }
+    }
+}
+

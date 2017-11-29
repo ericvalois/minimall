@@ -44,18 +44,22 @@ if( minimall_is_edd_active() ){
     }
 
     /**
-     * If EDD Download Images Active
+     * If EDD Metabox Active
      */
-    if( minimall_is_edd_download_images_active() ){
+    if( minimall_is_metabox_active() ){
         /**
-         *  Widget 
+         * EDD Metabox init
          */
-        require get_template_directory() . '/includes/widgets/widget-edd-download-images.php';
+        require get_template_directory() . '/includes/compatibility/metabox/edd-metabox.php';
 
         /**
-         * Customization
+         * EDD features shortcode
          */
-        require get_template_directory() . '/includes/compatibility/edd/edd-download-images.php';
+        require get_template_directory() . '/includes/compatibility/metabox/features-shortcode.php';
+
+        /**
+         * EDD Metabox gallery widget
+         */
+        require get_template_directory() . '/includes/widgets/widget-edd-metabox-gallery.php';
     }
 }
-

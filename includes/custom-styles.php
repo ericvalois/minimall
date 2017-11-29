@@ -10,7 +10,7 @@ add_action( 'minimall_head_open', 'minimall_inline_styles', 10 );
 function minimall_inline_styles() {
 
     echo '<style>';
-        /* Theme OPtions */ 
+        /* Theme Options */ 
         do_action( 'minimall_mobile_styles' );
 
     echo '</style>';

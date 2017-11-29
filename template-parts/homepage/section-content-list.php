@@ -1,16 +1,18 @@
 <?php $content_list = get_theme_mod('home_'.$section.'_list'); ?>
 <?php if( $content_list ): ?>
-<div class="lg-flex flex-wrap lg-mxn2">
+<div class="sm-flex flex-wrap sm-mxn2 pt2">
     <?php
-        $layout = get_theme_mod('home_'.$section.'_layout', '3');
-        $col_width = 12 / $layout; 
+        $layout_tablet = get_theme_mod('home_'.$section.'_layout_tablet', '2');
+        $layout_desktop = get_theme_mod('home_'.$section.'_layout_desktop', '3');
+        $tablet_width = 12 / $layout_tablet; 
+        $desktop_width = 12 / $layout_desktop; 
         $item_number = count( $content_list );
     ?>
     <?php foreach ($content_list as $key => $item): ?>
-        <div class="lg-col-<?php echo esc_attr( $col_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb3';} ?> lg-px2">
+        <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb3';} ?> sm-px2">
             
             <?php if( $item['title'] ): ?>
-                <h3 class="regular mb0 h4 <?php if( !empty( $image ) ){ echo 'white'; } ?> <?php if( 0 === $key ){ echo 'mt2'; }else{ echo 'mt3'; } ?> lg-mt2"><?php echo wp_kses_post( nl2br( $item['title'] ) ); ?></h3>
+                <h3 class="regular mb0 h4"><?php echo wp_kses_post( nl2br( $item['title'] ) ); ?></h3>
                 <?php endif; ?>
 
             <?php if( $item['desc'] ): ?>

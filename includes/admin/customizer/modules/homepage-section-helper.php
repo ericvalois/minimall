@@ -144,8 +144,8 @@ function minimall_homepage_content_type_list( $section_args ){
     
     Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'radio-image',
-        'settings'    => 'home_'.$section_args['slug'].'_layout',
-        'label'       => $section_args['title'] . esc_html__( ' Layout', 'minimall' ),
+        'settings'    => 'home_'.$section_args['slug'].'_layout_desktop',
+        'label'       => $section_args['title'] . esc_html__( ' layout desktop', 'minimall' ),
         'section'     => 'homepage_'.$section_args['slug'],
         'default'     => '3',
         'priority'    => 40,
@@ -154,6 +154,20 @@ function minimall_homepage_content_type_list( $section_args ){
             '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
             '3'  => get_template_directory_uri() . '/includes/admin/images/three-columns.png',
             '4'  => get_template_directory_uri() . '/includes/admin/images/four-columns.png',
+        ),
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'radio-image',
+        'settings'    => 'home_'.$section_args['slug'].'_layout_tablet',
+        'label'       => $section_args['title'] . esc_html__( ' layout tablet', 'minimall' ),
+        'section'     => 'homepage_'.$section_args['slug'],
+        'default'     => '2',
+        'priority'    => 45,
+        'choices'     => array(
+            '1'   => get_template_directory_uri() . '/includes/admin/images/one-column.png',
+            '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
+            '3'  => get_template_directory_uri() . '/includes/admin/images/three-columns.png',
         ),
     ) );
     
@@ -264,28 +278,14 @@ function minimall_homepage_content_type_blog( $section_args ){
         'section'  => 'homepage_'.$section_args['slug'],
         'priority' => 39,
     ) );
-    
-    Minimall_Kirki::add_field( 'minimall', array(
-        'type'        => 'radio-image',
-        'settings'    => 'home_'.$section_args['slug'].'_layout',
-        'label'       => $section_args['title'] . esc_html__( ' Layout', 'minimall' ),
-        'section'     => 'homepage_'.$section_args['slug'],
-        'default'     => '3',
-        'priority'    => 40,
-        'choices'     => array(
-            '1'   => get_template_directory_uri() . '/includes/admin/images/one-column.png',
-            '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
-            '3'  => get_template_directory_uri() . '/includes/admin/images/three-columns.png',
-            '4'  => get_template_directory_uri() . '/includes/admin/images/four-columns.png',
-        ),
-    ) );
-    
+
     Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'slider',
         'settings'    => 'home_'.$section_args['slug'].'_quantity',
         'label'       => esc_attr__( 'Number of posts', 'minimall' ),
         'section'     => 'homepage_'.$section_args['slug'],
         'default'     => 12,
+        'priority'    => 40,
         'choices'     => array(
             'min'  => '1',
             'max'  => '12',
@@ -300,6 +300,35 @@ function minimall_homepage_content_type_blog( $section_args ){
         'section'     => 'homepage_'.$section_args['slug'],
         'default'     => '1',
         'priority'    => 42,
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'radio-image',
+        'settings'    => 'home_'.$section_args['slug'].'_layout_desktop',
+        'label'       => $section_args['title'] . esc_html__( ' layout desktop', 'minimall' ),
+        'section'     => 'homepage_'.$section_args['slug'],
+        'default'     => '3',
+        'priority'    => 45,
+        'choices'     => array(
+            '1'   => get_template_directory_uri() . '/includes/admin/images/one-column.png',
+            '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
+            '3'  => get_template_directory_uri() . '/includes/admin/images/three-columns.png',
+            '4'  => get_template_directory_uri() . '/includes/admin/images/four-columns.png',
+        ),
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'radio-image',
+        'settings'    => 'home_'.$section_args['slug'].'_layout_tablet',
+        'label'       => $section_args['title'] . esc_html__( ' layout tablet', 'minimall' ),
+        'section'     => 'homepage_'.$section_args['slug'],
+        'default'     => '2',
+        'priority'    => 50,
+        'choices'     => array(
+            '1'   => get_template_directory_uri() . '/includes/admin/images/one-column.png',
+            '2' => get_template_directory_uri() . '/includes/admin/images/two-columns.png',
+            '3'  => get_template_directory_uri() . '/includes/admin/images/three-columns.png',
+        ),
     ) );
     
 }
@@ -355,7 +384,7 @@ function minimall_homepage_content_type_features( $section_args ){
             'type' => 'text',
             'value' => $section_args['slug'],
         ),
-        'settings'    => 'home_'.$section_args['slug'].'_features',
+        'settings'    => 'home_'.$section_args['slug'].'_features_list',
         'fields' => array(
             'icon' => array(
                 'type'        => 'textarea',
@@ -372,15 +401,14 @@ function minimall_homepage_content_type_features( $section_args ){
                 'label'       => esc_attr__( 'Description', 'minimall' ),
                 'default'     => '',
             ),
-            'label' => array(
+            'link_label' => array(
                 'type'        => 'text',
                 'label'       => esc_attr__( 'Link Label', 'minimall' ),
                 'default'     => '',
             ),
-            'url' => array(
+            'link_url' => array(
                 'type'        => 'text',
                 'label'       => esc_attr__( 'Link URL', 'minimall' ),
-                'description' => esc_attr__( 'http://yourlink.com', 'minimall' ),
                 'default'     => '',
             ),
         ),

@@ -19,7 +19,7 @@ get_header(); ?>
                         do_action('minimall_before_content');
                     
                         get_template_part( 'template-parts/content', 'download' );
-        
+
                         do_action('minimall_after_content');
 
                     endwhile; // End of the loop.

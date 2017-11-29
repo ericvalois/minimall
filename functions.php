@@ -43,13 +43,15 @@ function minimall_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'minimall-hero-lg', 950, 612, true );
+    /*
+    add_image_size( 'minimall-hero-lg', 950, 612, true );
 	add_image_size( 'minimall-hero-md', 767, 494, true );
 	add_image_size( 'minimall-hero-sm', 595, 383, true );
 
     add_image_size( 'minimall-hero-placeholder', 50, 32, true );
     
     add_image_size( 'minimall-edd-thumb', 160, 160, false );
+    */
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -291,7 +293,7 @@ function minimall_scripts() {
     global $post;
 
 	/* If using a child theme, auto-load the parent theme style. */
-    if ( is_child_theme() ) {
+   if ( is_child_theme() ) {
         wp_enqueue_style( 'minimall-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
         wp_enqueue_style( 'minimall-stylesheet', get_stylesheet_uri()  );
     }else{
@@ -398,7 +400,17 @@ function minimall_is_edd_download_images_active() {
  * @return bool
  */
 function minimall_is_autoptimize_active() {
-	return function_exists('autoptimizeBase');
+	return class_exists('autoptimizeBase');
+}
+
+/**
+ * Is Metabox active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_metabox_active() {
+	return class_exists('RWMB_Loader');
 }
 
 /**

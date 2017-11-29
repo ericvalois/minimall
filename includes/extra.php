@@ -174,35 +174,6 @@ function minimall_modify_read_more_link() {
     return '<div class="block"><a class="more-link btn caps xs-text" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimal").'</a></div>';
 }
 
-/*
-* Inline default hero image
-*/
-add_action( 'minimall_mobile_styles', 'minimall_default_hero' );
-function minimall_default_hero() {
-    
-    if(  is_singular('post') || ( is_page() && empty( get_page_template_slug() ) )  ){
-
-        $minimall_image_id = minimall_select_hero_image();
-        if( !$minimall_image_id ){
-            return;
-        }
-
-        $path = wp_get_attachment_image_src( $minimall_image_id, 'minimall-hero-placeholder' );
-        $type = pathinfo($path[0], PATHINFO_EXTENSION);
-        $data = minimall_get_response($path[0]);
-        $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
-
-        $minimall_sm_hero = '
-            .bg-default{
-                background-image: url(' . $base64 . ');
-            }
-        ';
-        
-        
-        echo minimall_compress( $minimall_sm_hero );
-    }
-}
-
 /**
  * Display header
  */

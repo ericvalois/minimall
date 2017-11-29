@@ -185,11 +185,6 @@ include( get_template_directory() . '/includes/admin/customizer/modules/customiz
 include( get_template_directory() . '/includes/admin/customizer/modules/customizer-posts.php' );
 
 /**
- * Easy Digital Download Controls
- */
-include( get_template_directory() . '/includes/admin/customizer/modules/edd.php' );
-
-/**
  * Private Dashboard Controls
  */
 include( get_template_directory() . '/includes/admin/customizer/modules/private-dashboard.php' );

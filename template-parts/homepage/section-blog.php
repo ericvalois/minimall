@@ -1,7 +1,10 @@
-<div class="lg-flex flex-wrap lg-mxn2">
+<div class="sm-flex flex-wrap sm-mxn2 pt2">
     <?php
-        $layout = get_theme_mod('home_blog_layout', '3');
-        $col_width = 12 / $layout; 
+        $layout_tablet = get_theme_mod('home_'.$section.'_layout_tablet', '2');
+        $layout_desktop = get_theme_mod('home_'.$section.'_layout_desktop', '3');
+        $tablet_width = 12 / $layout_tablet; 
+        $desktop_width = 12 / $layout_desktop;
+    
         $posts_number = get_theme_mod('home_blog_quantity', '3');
     ?>
     
@@ -18,20 +21,20 @@
     <?php if ( $latest_post->have_posts() ) : ?>
 
         <?php while ( $latest_post->have_posts() ) : $latest_post->the_post(); ?>
-            <div class="lg-col-<?php echo esc_attr( $col_width ); ?> lg-px2 <?php if( $cpt != $count ){ echo 'mb3'; } ?>">
+            <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> sm-px2 <?php if( $cpt != $count ){ echo 'mb3'; } ?>">
                 <?php if( get_theme_mod('home_blog_thumb') ): ?>
                     <?php $image_url = get_the_post_thumbnail_url(get_the_ID(), "large"); ?>
-                    <a href="<?php the_permalink(); ?>" class="block relative z1 bg-white">
-                        <?php /* 
-                        <div class="z3 absolute top-0 right-0 bottom-0 left-0 bg-cover bg-center grayscale lazyload bg-black" data-sizes="auto" data-bgset="<?php echo esc_url( $image_url ); ?>"></div>
-                          */ ?>
-                        <?php the_post_thumbnail( 'post-thumbnail', ['class' => 'grayscale muted'] ); ?>       
+                    <a href="<?php the_permalink(); ?>" class=" relative z1 bg-white">
+                        <?php the_post_thumbnail( 'post-thumbnail', ['class' => 'grayscale muted mb2'] ); ?>       
                     </a>
                 <?php endif; ?>
-                <h3 class="regular caps mb0 lg-mt2 h5"><a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                
+                <h3 class="regular caps mb0 mt0 h5"><a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="entry-meta sm-text">
                     <?php minimall_posted_on(); ?>
                 </div>
+                   
+                
             </div>
             <?php $cpt++; ?>
         <?php endwhile; ?>

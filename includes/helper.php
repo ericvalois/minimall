@@ -356,3 +356,12 @@ function minimall_show_widget( $index, $id )
 
     return $did_one;
 }
+
+/**
+ * Conditional tag to check whether current page is wp-login.php or wp-register.php.
+ */
+if( ! function_exists( 'wp_is_login' ) ) {
+	function wp_is_login() {
+		return in_array( $GLOBALS[ 'pagenow' ], array( 'wp-login.php' , 'wp-register.php' ) );
+	}
+}
