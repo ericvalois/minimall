@@ -139,9 +139,7 @@ h5,
 h6 {
   margin-bottom: 0.5rem;
   line-height: 1.2;
-  line-height: var(--heading-line-height);
   font-weight: 700;
-  font-weight: var(--heading-font-weight);
 }
 /* heading sizes and spacing */
 .h00 { font-size: 4rem }
@@ -149,35 +147,29 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 2.25rem;
-  font-size: var(--font-size-1);
+  font-size: 3rem;
   margin-top: 2rem;
 }
 h2,
 .h2 {
-  font-size: 1.75rem;
-  font-size: var(--font-size-2);
+  font-size: 2.5rem;
   margin-top: 2rem;
 }
 h3,
 .h3 {
-  font-size: 1.5rem;
-  font-size: var(--font-size-3);
+  font-size: 2rem;
 }
 h4,
 .h4 {
-  font-size: 1.125rem;
-  font-size: var(--font-size-4);
+  font-size: 1.5rem;
 }
 h5,
 .h5 {
-  font-size: 1rem;
-  font-size: var(--font-size-5);
+  font-size: 1.2rem;
 }
 h6,
 .h6 {
-  font-size: 0.875rem;
-  font-size: var(--font-size-6);
+  font-size: 1rem;
 }
 /* ====================
    additional type styles
@@ -185,16 +177,11 @@ h6,
 /* small font size */
 small {
   font-size: 0.875rem;
-  font-size: var(--font-size-small);
 }
 /* additional font weights */
-strong {
-  font-weight: 600;
-  font-weight: var(--strong-font-weight);
-}
+strong,
 b {
   font-weight: 600;
-  font-weight: var(--bold-font-weight);
 }
 /* block spacing */
 p,
@@ -253,10 +240,8 @@ pre {
   border-radius: var(--block-code-border-radius);
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace, monospace;
   font-family: var(--font-family-monospace), monospace;
-  font-size: 0.875rem;
-  font-size: var(--code-font-size);
+  font-size: 90%;
   font-weight: 400;
-  font-weight: var(--font-weight-normal)
 }
 pre code {
     padding: 0;
@@ -267,13 +252,11 @@ pre code {
    ==================== */
 html {
   background-color: white;
-  background-color: var(--html-background-color);
 }
 body {
   color: hsl(0, 0%, 10%);
   color: var(--text-color);
   background-color: white;
-  background-color: var(--body-background-color);
 }
 a {
   text-decoration: none;

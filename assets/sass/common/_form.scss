@@ -378,7 +378,7 @@ input[type='submit'],
 input[type='button'],
 input[type='reset'],
 input[type='file'] + label, {
-    font-family: var(--font-family-sans-serif);
+    font-family: var(--base-font-family);
     line-height: 2.25rem;
     line-height: var(--button-height);
   display: -webkit-inline-box;
@@ -393,8 +393,7 @@ input[type='file'] + label, {
   //width: auto;
   height: 2.25rem;
   height: var(--button-height);
-  padding: 0 0.75rem;
-  padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+  padding: 0 1.6rem;
   border-width: 1px;
   border-width: var(--button-border-width);
   border-style: solid;
@@ -638,8 +637,7 @@ input[type='file'] {
     //width: auto;
     height: 2.25rem;
     height: var(--button-height);
-    padding: 0 0.75rem;
-    padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+    padding: 0 1.6rem;
     border-width: 1px;
     border-width: var(--button-border-width);
     border-style: solid;
