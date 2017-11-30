@@ -61,17 +61,15 @@ function minimall_custom_styles(){
         --link-hover-color: '.$text_color.';
         --link-focus-color: '.$text_color.';
         --link-active-color: '.$text_color.';
-        --letter-spacing-base: 0.01em; 
 
-        --block-element-margin-vertical: 1.5rem;
-        --block-semantic-element-margin-vertical: 1.5rem;
-        --heading-margin-bottom: .5rem;
+        /*--block-semantic-element-margin-vertical: 1.5rem;*/
+        /*--heading-margin-bottom: .5rem;*/
         --border-radius: 3px;
         --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
         --base-font-family: var(--font-family-sans-serif);
         --unitless-lower-font-range: 460;
         --unitless-upper-font-range: 1200;
-        --base-line-height: 1.8;
+        /*--base-line-height: 1.8;*/
         --heading-line-height: 1.2;
         --font-size-1: 3rem;
         --font-size-2: 2.5rem;
@@ -83,11 +81,11 @@ function minimall_custom_styles(){
         --font-size-large: var(--font-size-4);
         --font-size-small: 0.9rem;
         --font-weight-light: 300;
-        --font-weight-normal: 400;
+        /*--font-weight-normal: 400;*/
         --font-weight-medium: 500;
         --font-weight-semibold: 600;
         --font-weight-bold: 700;
-        --font-weight-base: var(--font-weight-normal);
+        --font-weight-base: 400;
         --heading-font-weight: var(--font-weight-bold);
         --strong-font-weight: var(--font-weight-bold);
         --bold-font-weight: var(--font-weight-semibold);
@@ -101,33 +99,15 @@ function minimall_custom_styles(){
      }
 
      html {
-       /* font smoothing */
        -moz-osx-font-smoothing: grayscale;
        -webkit-font-smoothing: antialiased;
      
-       /* base font family */
        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-       font-family: var(--base-font-family);
-     
-       /* responsive base font size */
-       font-size: calc(15px + 3 * (100vw - 460px) / 740);
+       font-size: calc(16px + 3 * (100vw - 460px) / 740);
        font-size: calc((var(--unitless-min-font-size) * 1px) + var(--font-size-difference) * var(--viewport-difference) / var(--font-range-difference));
-     
-       /* base line height */
-       line-height: 1.4;
-       line-height: var(--base-line-height);
-     
-       /* base font weight */
+       line-height: 1.8;
        font-weight: 400;
-       font-weight: var(--font-weight-base);
-     
-       /* base letter spacing */
-       letter-spacing: -0.025em;
-       letter-spacing: var(--letter-spacing-base)
-     
-       /* set lower font range limit */
-     
-       /* set upper font range limit */
+       letter-spacing: 0.01em;
     }
     @media (max-width: 459px) {
         html {
