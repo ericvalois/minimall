@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         criticalcss: {
-            /*home: {
+            home: {
                 options: {
                     url: "http://minimall.dev/",
                     width: 1200,
@@ -12,10 +12,11 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/home.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['h1','.h1','.btn','p'],
+                    forceInclude: ['h1','.h1','p'],
                     ignoreConsole: false
                 }
-            },*/
+            },
+            /*
             archive: {
                 options: {
                     url: "http://minimall.dev/blog/",
@@ -215,15 +216,15 @@ module.exports = function(grunt) {
         },
     });
 
-    //grunt.loadNpmTasks('grunt-criticalcss');
+    grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-critical');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    //grunt.registerTask('critical', ['criticalcss','cssmin']);
-    grunt.registerTask('critical', ['critical','cssmin']);
+    grunt.registerTask('critical', ['criticalcss','cssmin']);
+    //grunt.registerTask('critical', ['critical','cssmin']);
     grunt.registerTask('min', ['cssmin']);
 
     //grunt.registerTask('cleanstyle', ['clean:style']);

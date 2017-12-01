@@ -12,116 +12,86 @@ legend {
 input[type='color']::-webkit-color-swatch {
     border: none;
     border-radius: 0;
-    border-radius: var(--color-border-radius);
 }
 input[type='file'] + label:disabled,
   input[type='file'] + label:disabled:hover,
   input[type='file'] + label:disabled:focus,
   input[type='file'] + label:disabled:active,
   input[type='file'] + label:disabled:visited {
-    border-color: transparent;
-    border-color: var(--button-disabled-border-color);
+    border-color: $gray-lighter;
     color: hsl(0, 0%, 75%);
-    color: var(--button-disabled-text-color);
     background-color: hsl(0, 0%, 98%);
-    background-color: var(--button-disabled-background-color);
     cursor: not-allowed;
 }
 input[type='file'] + label:visited {
-    color: white;
-    color: var(--button-text-color);
+    color: $button-text-color;
 }
 input[type='file'] + label:active {
     border-color: transparent;
-    border-color: var(--button-active-border-color);
-    color: white;
-    color: var(--button-active-text-color);
+    color: $button-active-text-color;
     background-color: rgb(32, 21, 89);
-    background-color: var(--button-active-background-color);
 }
 input[type='file'] + label:focus {
     border-color: transparent;
-    border-color: var(--button-focus-border-color);
-    color: white;
-    color: var(--button-focus-text-color);
+    color: $button-focus-text-color;
     background-color: rgb(32, 21, 89);
-    background-color: var(--button-focus-background-color);
 }
 textarea:disabled::-webkit-input-placeholder {
-    color: hsl(0, 0%, 75%);
-    color: var(--input-disabled-placeholder-color);
+    color: $input-disabled-placeholder-color;
 }
 textarea:disabled:-ms-input-placeholder {
-    color: hsl(0, 0%, 75%);
-    color: var(--input-disabled-placeholder-color);
+    color: $input-disabled-placeholder-color;
 }
 textarea:disabled::placeholder {
-    color: hsl(0, 0%, 75%);
-    color: var(--input-disabled-placeholder-color);
+    color: $input-disabled-placeholder-color;
 }
 textarea:disabled,
   textarea:disabled:hover,
   textarea:disabled:focus {
-    border-color: hsl(0, 0%, 98%);
-    border-color: var(--input-disabled-border-color);
-    color: hsl(0, 0%, 75%);
-    color: var(--input-disabled-text-color);
-    background-color: hsl(0, 0%, 98%);
-    background-color: var(--input-disabled-background-color);
+    border-color: $input-disabled-border-color;
+    color: $input-disabled-text-color;
+    background-color: $input-disabled-background-color;
     cursor: not-allowed;
 }
 textarea:focus,
   textarea:hover:focus {
     border-color: gray;
-    border-color: var(--input-focus-border-color);
+    border-color: var(--color-primary);
     color: gray;
-    color: var(--input-focus-text-color);
-    background-color: hsl(0, 0%, 90%);
-    background-color: var(--input-focus-background-color);
+    color: var(--color-primary);
+    background-color: $input-focus-background-color;
     &::-webkit-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
     &:-ms-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
     &::placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
 }
 textarea:hover {
-    border-color: hsl(0, 0%, 90%);
-    border-color: var(--input-hover-border-color);
-    color: hsl(0, 0%, 10%);
-    color: var(--input-hover-text-color);
-    background-color: hsl(0, 0%, 90%);
-    background-color: var(--input-hover-background-color);
+    border-color: $input-hover-border-color;
+    color: $input-hover-text-color;
+    background-color: $input-hover-background-color;
     &::-webkit-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
     &:-ms-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
     &::placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
 }
 input[type='text']:disabled::-webkit-input-placeholder, input[type='password']:disabled::-webkit-input-placeholder, input[type='url']:disabled::-webkit-input-placeholder, input[type='email']:disabled::-webkit-input-placeholder, input[type='tel']:disabled::-webkit-input-placeholder, input[type='search']:disabled::-webkit-input-placeholder, input[type='number']:disabled::-webkit-input-placeholder, input[type='date']:disabled::-webkit-input-placeholder, input[type='month']:disabled::-webkit-input-placeholder, input[type='week']:disabled::-webkit-input-placeholder, input[type='datetime-local']:disabled::-webkit-input-placeholder, input[type='color']:disabled::-webkit-input-placeholder, select:disabled::-webkit-input-placeholder {
-    color: hsl(0, 0%, 75%);
-    color: var(--input-disabled-placeholder-color);
+    color: $input-disabled-placeholder-color;
 }
 input[type='text']:disabled:-ms-input-placeholder, input[type='password']:disabled:-ms-input-placeholder, input[type='url']:disabled:-ms-input-placeholder, input[type='email']:disabled:-ms-input-placeholder, input[type='tel']:disabled:-ms-input-placeholder, input[type='search']:disabled:-ms-input-placeholder, input[type='number']:disabled:-ms-input-placeholder, input[type='date']:disabled:-ms-input-placeholder, input[type='month']:disabled:-ms-input-placeholder, input[type='week']:disabled:-ms-input-placeholder, input[type='datetime-local']:disabled:-ms-input-placeholder, input[type='color']:disabled:-ms-input-placeholder, select:disabled:-ms-input-placeholder {
-    color: hsl(0, 0%, 75%);
-    color: var(--input-disabled-placeholder-color);
+    color: $input-disabled-placeholder-color;
 }
 input[type='text']:disabled::placeholder, input[type='password']:disabled::placeholder, input[type='url']:disabled::placeholder, input[type='email']:disabled::placeholder, input[type='tel']:disabled::placeholder, input[type='search']:disabled::placeholder, input[type='number']:disabled::placeholder, input[type='date']:disabled::placeholder, input[type='month']:disabled::placeholder, input[type='week']:disabled::placeholder, input[type='datetime-local']:disabled::placeholder, input[type='color']:disabled::placeholder, select:disabled::placeholder {
-    color: hsl(0, 0%, 75%);
-    color: var(--input-disabled-placeholder-color);
+    color: $input-disabled-placeholder-color;
 }
 input[type='text']:disabled,
   input[type='text']:disabled:hover,
@@ -162,12 +132,9 @@ input[type='text']:disabled,
   select:disabled,
   select:disabled:hover,
   select:disabled:focus {
-    border-color: hsl(0, 0%, 98%);
-    border-color: var(--input-disabled-border-color);
-    color: hsl(0, 0%, 75%);
-    color: var(--input-disabled-text-color);
-    background-color: hsl(0, 0%, 98%);
-    background-color: var(--input-disabled-background-color);
+    border-color: $input-disabled-border-color;
+    color: $input-disabled-text-color;
+    background-color: $input-disabled-background-color;
     cursor: not-allowed;
 }
 input[type='text']:focus,
@@ -196,43 +163,31 @@ input[type='text']:focus,
   input[type='color']:hover:focus,
   select:focus,
   select:hover:focus {
-    border-color: gray;
-    border-color: var(--input-focus-border-color);
-    color: gray;
-    color: var(--input-focus-text-color);
-    background-color: hsl(0, 0%, 90%);
-    background-color: var(--input-focus-background-color);
+    background-color: $input-focus-background-color;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
     &::-webkit-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
     &:-ms-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
     &::placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
 }
 input[type='text']:hover, input[type='password']:hover, input[type='url']:hover, input[type='email']:hover, input[type='tel']:hover, input[type='search']:hover, input[type='number']:hover, input[type='date']:hover, input[type='month']:hover, input[type='week']:hover, input[type='datetime-local']:hover, input[type='color']:hover, select:hover {
-    border-color: hsl(0, 0%, 90%);
-    border-color: var(--input-hover-border-color);
-    color: hsl(0, 0%, 10%);
-    color: var(--input-hover-text-color);
-    background-color: hsl(0, 0%, 90%);
-    background-color: var(--input-hover-background-color);
+    border-color: $input-hover-border-color;
+    color: $input-hover-text-color;
+    background-color: $input-hover-background-color;
     &::-webkit-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
     &:-ms-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
     &::placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
     }
 }
 .btn:disabled,
@@ -267,33 +222,19 @@ button:disabled,
   input[type='file'] + label:disabled:focus,
   input[type='file'] + label:disabled:active,
   input[type='file'] + label:disabled:visited {
-    border-color: transparent !important;
-    border-color: var(--button-disabled-border-color);
+    border-color: $gray-lighter !important;
     color: hsl(0, 0%, 75%);
-    color: var(--button-disabled-text-color);
     background-color: hsl(0, 0%, 98%);
-    background-color: var(--button-disabled-background-color);
     cursor: not-allowed;
 }
 .btn:visited, .button:visited, button:visited, [role='button']:visited, input[type='submit']:visited, input[type='button']:visited, input[type='reset']:visited, input[type='file'] + label:visited {
-    color: white;
-    color: var(--button-text-color);
+    color: $button-text-color;
 }
 .btn:active, .button:active, button:active, [role='button']:active, input[type='submit']:active, input[type='button']:active, input[type='reset']:active, input[type='file'] + label:active {
-    border-color: transparent;
-    border-color: var(--button-active-border-color);
-    color: white;
-    color: var(--button-active-text-color);
-    background-color: rgb(32, 21, 89);
-    background-color: var(--button-active-background-color);
+    color: $button-active-text-color;
 }
-.btn:visifocusted, .button:focus, button:focus, [role='button']:focus, input[type='submit']:focus, input[type='button']:focus, input[type='reset']:focus, input[type='file'] + label:focus {
-    border-color: transparent;
-    border-color: var(--button-focus-border-color);
-    color: white;
-    color: var(--button-focus-text-color);
-    background-color: rgb(32, 21, 89);
-    background-color: var(--button-focus-background-color);
+.btn:focus, .button:focus, button:focus, [role='button']:focus, input[type='submit']:focus, input[type='button']:focus, input[type='reset']:focus, input[type='file'] + label:focus {
+    color: $button-focus-text-color;
 }
 
 /* Remove default styling of buttons and inputs */
@@ -378,9 +319,8 @@ input[type='submit'],
 input[type='button'],
 input[type='reset'],
 input[type='file'] + label, {
-    font-family: var(--base-font-family);
-    line-height: 2.25rem;
-    line-height: var(--button-height);
+    font-family: $base-font-family;
+    line-height: $button-height;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -391,69 +331,56 @@ input[type='file'] + label, {
       -ms-flex-pack: center;
           justify-content: center;
   //width: auto;
-  height: 2.25rem;
-  height: var(--button-height);
+  height: $button-height;
   padding: 0 1.6rem;
   border-width: 1px;
-  border-width: var(--button-border-width);
   border-style: solid;
-  border-color: gray;
-  border-color: var(--button-border-color);
-  border-radius: 3px;
-  border-radius: var(--button-border-radius);
+  border-color: $button-border-color;
+  border-radius: $button-border-radius;
   outline: 0;
   text-decoration: none;
   font-weight: 500;
-  font-weight: var(--button-font-weight);
   white-space: nowrap;
-  color: white;
-  color: var(--button-text-color);
-  background-color: gray;
-  background-color: var(--button-background-color);
-  transition: border-color 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
-  transition: border-color var(--speed) var(--easing), color var(--speed) var(--easing), background-color var(--speed) var(--easing), padding 0.3s ease;
+  color: $button-text-color;
+  background-color: $button-background-color;
+  transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing, padding 0.3s ease;
   cursor: pointer;
   font-size: 16px;
 }
 .btn:hover, .button:hover ,button:hover, [role='button']:hover, input[type='submit']:hover, input[type='button']:hover, input[type='reset']:hover, input[type='file'] + label:hover {
-    border-color: transparent;
-    border-color: var(--button-hover-border-color);
-    color: white;
-    color: var(--button-hover-text-color);
-    background-color: rgb(32, 21, 89);
-    background-color: var(--button-hover-background-color);
+    color: $button-hover-text-color;
 }
 
 .btn-outline{
     background-color: #fff;
-    border-color: var(--text-color) !important;
-    color: var(--text-color) !important;
+    border-color: $text-color !important;
+    color: $text-color !important;
 }
 
 .btn-outline:hover{
     background-color: #fff;
-    border-color: var(--color-primary) !important;
-    color: var(--color-primary) !important;
+    //border-color: var(--color-primary) !important;
+    //color: var(--color-primary) !important;
 }
 
-.btn-primary{
+/*.btn-primary{
     background-color: var(--color-primary) !important;
     border-color: var(--color-primary) !important;
-}
+}*/
 
 .btn-primary:hover{
-    background-color: var(--text-color) !important;
-    border-color: var(--text-color) !important;
+    background-color: $text-color !important;
+    border-color: $text-color !important;
 }
 
 .btn-big{
     height: 3rem;
-    height: calc(var(--button-height) * 1.2 );
+    height: calc($button-height * 1.2 );
 }
 
 .btn-small{
     height: 2rem;
-    height: calc(var(--button-height) * 0.8 );
+    height: calc($button-height * 0.8 );
     padding: 0 0.75rem;
 }
 
@@ -464,27 +391,19 @@ form p{ margin: 1rem 0; }
    ==================== */
    fieldset {
     margin: 1rem 0;
-    margin: var(--fieldset-margin-vertical) 0;
-    padding: 0 0;
-    padding: var(--fieldset-padding-vertical) var(--fieldset-padding-horizontal);
+    padding: 0;
     border-width: 0;
-    border-width: var(--fieldset-border-width);
     border-style: solid;
     border-color: transparent;
-    border-color: var(--fieldset-border-color)
   }
   fieldset legend {
       margin-bottom: 1rem;
-      margin-bottom: var(--legend-margin-bottom);
       font-weight: 600;
-      font-weight: var(--legend-font-weight);
   }
   label {
     display: inline-block;
     margin-bottom: 0.5rem;
-    margin-bottom: var(--label-margin-bottom);
     font-weight: 600;
-    font-weight: var(--label-font-weight);
   }
   input,
   select,
@@ -512,101 +431,71 @@ form p{ margin: 1rem 0; }
   select {
       -webkit-appearance: none;
       -moz-appearance: none;
-    border-width: 1px;
-    border-width: var(--input-border-width);
+    border-width: $input-border-width;
     border-style: solid;
-    border-color: hsl(0, 0%, 90%);
-    border-color: var(--input-border-color);
-    border-radius: 3px;
-    border-radius: var(--input-border-radius);
+    border-color: $input-border-color;
+    border-radius: $input-border-radius;
     font-weight: 400;
-    font-weight: var(--input-font-weight);
-    color: hsl(0, 0%, 10%);
-    color: var(--input-text-color);
-    background-color: hsl(0, 0%, 90%);
-    background-color: var(--input-background-color);
-    transition: border-color 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
-    transition: border-color var(--speed) var(--easing), color var(--speed) var(--easing), background-color var(--speed) var(--easing);
+    color: $input-text-color;
+    background-color: $input-background-color;
+    transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing;
     display: block;
-    display: var(--input-display);
     width: 100%;
-    width: var(--input-width);
-    height: 2.5rem;
-    height: var(--input-height);
+    height: $input-height;
     padding: 0 0.75rem;
-    padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+    padding: $input-padding-vertical $input-padding-horizontal;
   }
   input[type='text']::-webkit-input-placeholder, input[type='password']::-webkit-input-placeholder, input[type='url']::-webkit-input-placeholder, input[type='email']::-webkit-input-placeholder, input[type='tel']::-webkit-input-placeholder, input[type='search']::-webkit-input-placeholder, input[type='number']::-webkit-input-placeholder, input[type='date']::-webkit-input-placeholder, input[type='month']::-webkit-input-placeholder, input[type='week']::-webkit-input-placeholder, input[type='datetime-local']::-webkit-input-placeholder, input[type='color']::-webkit-input-placeholder, select::-webkit-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
   }
   input[type='text']:-ms-input-placeholder, input[type='password']:-ms-input-placeholder, input[type='url']:-ms-input-placeholder, input[type='email']:-ms-input-placeholder, input[type='tel']:-ms-input-placeholder, input[type='search']:-ms-input-placeholder, input[type='number']:-ms-input-placeholder, input[type='date']:-ms-input-placeholder, input[type='month']:-ms-input-placeholder, input[type='week']:-ms-input-placeholder, input[type='datetime-local']:-ms-input-placeholder, input[type='color']:-ms-input-placeholder, select:-ms-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
   }
   input[type='text']::placeholder, input[type='password']::placeholder, input[type='url']::placeholder, input[type='email']::placeholder, input[type='tel']::placeholder, input[type='search']::placeholder, input[type='number']::placeholder, input[type='date']::placeholder, input[type='month']::placeholder, input[type='week']::placeholder, input[type='datetime-local']::placeholder, input[type='color']::placeholder, select::placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
   }
   /* ====================
      textareas
      ==================== */
   textarea {
-    border-width: 1px;
-    border-width: var(--input-border-width);
+    border-width: $input-border-width;
     border-style: solid;
-    border-color: hsl(0, 0%, 90%);
-    border-color: var(--input-border-color);
-    border-radius: 3px;
-    border-radius: var(--input-border-radius);
+    border-color: $input-border-color;
+    border-radius: $input-border-radius;
     font-weight: 400;
-    font-weight: var(--input-font-weight);
-    color: hsl(0, 0%, 10%);
-    color: var(--input-text-color);
-    background-color: hsl(0, 0%, 90%);
-    background-color: var(--input-background-color);
-    transition: border-color 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
-    transition: border-color var(--speed) var(--easing), color var(--speed) var(--easing), background-color var(--speed) var(--easing);
+    color: $input-text-color;
+    background-color: $input-background-color;
+    transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing;
     display: block;
-    display: var(--textarea-display);
     width: 100%;
-    width: var(--textarea-width);
     height: auto;
-    height: var(--textarea-height);
     resize: vertical;
     padding: 0.5rem 0.75rem;
-    padding: var(--textarea-padding-vertical) var(--textarea-padding-horizontal);
   }
   textarea::-webkit-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
   }
   textarea:-ms-input-placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
   }
   textarea::placeholder {
-      color: hsl(0, 0%, 50%);
-      color: var(--input-placeholder-color);
+      color: $input-placeholder-color;
   }
   /* ====================
      selects
      ==================== */
   select {
-    background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20width%3D%2230px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2030%2016%22%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%0A%20%20%20%20%3Cg%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22translate%28-137.000000%2C%20-145.000000%29%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%22152%20161%20137%20145%20167%20145%22%3E%3C/polygon%3E%0A%20%20%20%20%20%20%20%20%3C/g%3E%0A%20%20%20%20%3C/g%3E%0A%3C/svg%3E');
-    background-image: var(--select-background-image);
+    background-image: $select-background-image;
     background-repeat: no-repeat;
     background-position: right 1rem center;
-    background-position: var(--select-background-position);
     background-size: 0.75rem;
-    background-size: var(--select-background-size);
     cursor: pointer;
   }
 
   input[type="search"]{
     background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABSElEQVQ4T51T7VECMRTcrcB3FQgVqB1IBY4VgBWoFUgHYgVqBdoB0AEdQAd5VvCczSQ3ATl0zK/MJbdvv0I0y8wMwBTAjOSljiJiA2AF4MXdd+197Vk/mNk1gA+SAvmxIsIBPLr7W3uYAfQzyWWZuAawcPfPciYmDyTFTIzuWhAW2ltNjoh3d58dY2BmkvVaQMZVjgCE/hwRa3eXjMFlZnOST+0gAWxIXkTEbaU9hGBmI5LbiNi5+zib2HVdaJNS6g39hcWO5Hm9/x+AzLgHaCRcubsyP+WBkUwAvlJKOW55sCB5fyqBpitHTczGHMv4oKXqw7LE3bOtRWozVtNU2yxHzqveJOdliOosADVzr8q5D6c8kHYAZ+V9TASyF52ZiaZ03rRAKpnqXR7VqvRGDCeD2RfqI3fXS+xXqX4FWf2pPIeyKoi+fwMkDMJAfEVdtAAAAABJRU5ErkJggg==");
     background-repeat: no-repeat;
-    background-position: var(--select-background-position);
+    background-position: right 1rem center;
 }
 
 
@@ -635,43 +524,30 @@ input[type='file'] {
         -ms-flex-pack: center;
             justify-content: center;
     //width: auto;
-    height: 2.25rem;
-    height: var(--button-height);
+    height: $button-height;
     padding: 0 1.6rem;
     border-width: 1px;
-    border-width: var(--button-border-width);
     border-style: solid;
-    border-color: gray;
-    border-color: var(--button-border-color);
-    border-radius: 3px;
-    border-radius: var(--button-border-radius);
+    border-color: $button-border-color;
+    border-radius: $button-border-radius;
     outline: 0;
     text-decoration: none;
     font-weight: 500;
-    font-weight: var(--button-font-weight);
     white-space: nowrap;
-    color: white;
-    color: var(--button-text-color);
-    background-color: gray;
-    background-color: var(--button-background-color);
-    transition: border-color 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
-    transition: border-color var(--speed) var(--easing), color var(--speed) var(--easing), background-color var(--speed) var(--easing);
+    color: $button-text-color;
+    background-color: $button-background-color;
+    transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing;
     cursor: pointer;
   }
   input[type='file'] + label:hover {
-      border-color: transparent;
-      border-color: var(--button-hover-border-color);
-      color: white;
-      color: var(--button-hover-text-color);
+      color: $button-hover-text-color;
       background-color: rgb(32, 21, 89);
-      background-color: var(--button-hover-background-color);
   }
   /* ====================
      color inputs
      ==================== */
   input[type='color'] {
     width: 2.5rem;
-    width: var(--color-input-width);
     padding: 0;
     border: 0;
     cursor: pointer

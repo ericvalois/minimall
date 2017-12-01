@@ -1,11 +1,8 @@
 
-a:active {
-    color: rgb(32, 21, 89);
-    color: var(--link-active-color);
-}
-a:focus {
-    color: rgb(32, 21, 89);
-    color: var(--link-focus-color);
+a:active,
+a:focus,
+a:hover {
+    color: $gray-dark;
 }
 blockquote p::after { content: '\201d';
 }
@@ -83,28 +80,14 @@ th {
 }
 
 /* ====================
-   semantic block elements
-   ==================== */
-/*header,
-footer,
-article,
-section,
-nav {
-  margin: 1rem 0;
-  margin: var(--block-semantic-element-margin-vertical) 0;
-}*/
-/* ====================
    horizontal rules
    ==================== */
 hr {
   display: block;
-  height: 1px;
-  height: var(--horizontal-rule-height);
-  margin: 1rem 0;
-  margin: var(--horizontal-rule-margin-vertical) 0;
+  height: $horizontal-rule-height;
+  margin: $horizontal-rule-margin-vertical 0;
   border: none;
-  background-color: #3f2ab1;
-  background-color: var(--horizontal-rule-color);
+  background-color: $horizontal-rule-color;
 }
 /* ====================
    media/embeds
@@ -196,7 +179,6 @@ pre {
 /* definition list styling */
 dt {
   font-weight: 600;
-  font-weight: var(--definition-list-title-font-weight);
 }
 /* abbreviation */
 abbr[title] {
@@ -220,26 +202,19 @@ code,
 kbd,
 samp {
   padding: 0.25rem 0.5rem;
-  padding: var(--inline-code-padding-vertical) var(--inline-code-padding-horizontal);
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace, monospace;
-  font-family: var(--font-family-monospace), monospace;
   font-size: 0.875rem;
   font-weight: 400;
-  color: #3f2ab1;
-  color: var(--code-text-color);
-  background-color: #f2f0f9;
-  background-color: var(--code-background-color);
+  color: $text-color;
+  background-color: $input-border-color;
 }
 /* block code snippets */
 pre {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   padding: 1rem 1rem;
-  padding: var(--block-code-padding-vertical) var(--block-code-padding-horizontal);
   border-radius: 4px;
-  border-radius: var(--block-code-border-radius);
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace, monospace;
-  font-family: var(--font-family-monospace), monospace;
   font-size: 90%;
   font-weight: 400;
 }
@@ -254,49 +229,34 @@ html {
   background-color: white;
 }
 body {
-  color: hsl(0, 0%, 10%);
-  color: var(--text-color);
+  color: $text-color;
   background-color: white;
 }
 a {
   text-decoration: none;
-  text-decoration: var(--link-text-decoration);
-  color: #3f2ab1;
-  color: var(--link-color);
-  transition: color 0.1s ease-out;
-  transition: color var(--speed) var(--easing);
+  transition: color $speed $easing;
   cursor: pointer
-}
-a:hover {
-    color: rgb(32, 21, 89);
-    color: var(--link-hover-color);
 }
 
 
 /* table styling */
 table {
   width: 100%;
-  width: var(--table-width)
 }
 table caption {
     margin-bottom: 1rem;
-    margin-bottom: var(--table-caption-margin-bottom);
     text-align: left;
     font-weight: 600;
-    font-weight: var(--table-caption-font-weight);
 }
 th,
 td {
   padding: 0.5rem 0.75rem;
-  padding: var(--table-cell-padding-vertical) var(--table-cell-padding-horizontal);
-  border: 1px solid hsl(0, 0%, 90%);
-  border: var(--table-cell-border-width) solid var(--table-cell-border-color);
+  border: 1px solid $gray-lighter;
   text-align: left;
   vertical-align: top;
 }
 th {
   font-weight: 600;
-  font-weight: var(--table-heading-font-weight);
 }
 
 /* ====================

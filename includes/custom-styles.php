@@ -48,10 +48,6 @@ function minimall_custom_styles(){
 
     :root{
         --color-primary: '.$main_color.';
-        --text-color: '.$text_color.';
-        --link-hover-color: '.$text_color.';
-        --link-focus-color: '.$text_color.';
-        --link-active-color: '.$text_color.';
 
        --viewport-difference: calc(100vw - 460px);
        --viewport-difference: calc(100vw - (460 * 1px));
@@ -85,8 +81,19 @@ function minimall_custom_styles(){
     a.black:hover,
     a.active{ color: '. $main_color .';}
     .primary-color,
-    .current_page_item a{
+    .current_page_item a,
+    .btn-outline{
         color: '. $main_color .' !important;
+    }
+    
+    .btn-outline{ border-color: '. $main_color .'; }
+
+    .btn:hover, .button:hover ,button:hover, [role="button"]:hover, input[type="submit"]:hover, input[type="button"]:hover,
+    .btn:focus, .button:focus, button:focus, [role="button"]:focus, input[type="submit"]:focus, input[type="button"]:focus,
+    .btn:active, .button:active, button:active, [role="button"]:active, input[type="submit"]:active, input[type="button"]:active,
+    .btn.btn-primary{
+        border-color: '. $main_color .';
+        background-color: '. $main_color .';
     }
     ';
     
