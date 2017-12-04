@@ -6,17 +6,17 @@ module.exports = function(grunt) {
         criticalcss: {
             home: {
                 options: {
-                    url: "http://minimall.dev/",
+                    url: "http://minimall.dev",
                     width: 1200,
                     height: 1200,
                     outputfile: "includes/performance/critical/home.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['h1','.h1','p'],
+                    forceInclude: [],
                     ignoreConsole: false
                 }
             },
-            /*
+            
             archive: {
                 options: {
                     url: "http://minimall.dev/blog/",
@@ -24,20 +24,20 @@ module.exports = function(grunt) {
                     height: 1000,
                     outputfile: "includes/performance/critical/archive.css",
                     filename: "style.css",
-                    buffer: 1000*1024,
-                    forceInclude: ['h1','.h1','.btn','p','h2','.h2','h3','.h3','h4','.h4','h5','.h6','.lg-col-8','.lg-col-4'],
+                    buffer: 800*1024,
+                    forceInclude: [],
                     ignoreConsole: false
                 }
             },
-            /*page: {
+            page: {
                 options: {
                     url: "http://minimall.dev/style-guide/",
                     width: 1200,
                     height: 1000,
                     outputfile: "includes/performance/critical/page.css",
                     filename: "style.css",
-                    buffer: 1000*1024,
-                    forceInclude: ['h1','.h1','.btn','p'],
+                    buffer: 800*1024,
+                    forceInclude: [],
                     ignoreConsole: false
                 }
             },
@@ -48,8 +48,8 @@ module.exports = function(grunt) {
                     height: 1000,
                     outputfile: "includes/performance/critical/single.css",
                     filename: "style.css",
-                    buffer: 1000*1024,
-                    forceInclude: ['h1','.h1','.btn','p'],
+                    buffer: 800*1024,
+                    forceInclude: [],
                     ignoreConsole: false
                 }
             },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/404.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['h1','.h1','.btn','p'],
+                    forceInclude: [],
                     ignoreConsole: false
                 }
             },
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/edd-single.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['h1','.h1','.btn','p'],
+                    forceInclude: [],
                     ignoreConsole: false
                 }
             },
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/edd-archive.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['h1','.h1','.btn','p'],
+                    forceInclude: [],
                     ignoreConsole: false
                 }
             },
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/edd-checkout.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['h1','.h1','.btn','p'],
+                    forceInclude: [],
                     ignoreConsole: false
                 }
             },
@@ -109,36 +109,30 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/full-width.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['h1','.h1','.btn','p'],
+                    forceInclude: [],
                     ignoreConsole: false
                 }
-            },*/
-        },
-
-        critical: {
-            home: {
+            },
+            dashboard: {
                 options: {
-                    base: '',
-                    css: [
-                        'style.css'
-                    ],
+                    url: "http://minimall.dev/dashboard/",
                     width: 1200,
-                    height: 1200
-                },
-                src: 'http://minimall.dev/',
-                dest: 'includes/performance/critical/home.css',
-                
-                // ignore CSS rules
-                ignore: ['font-face'],
-            }
+                    height: 1000,
+                    outputfile: "includes/performance/critical/dashboard.css",
+                    filename: "style.css",
+                    buffer: 800*1024,
+                    forceInclude: [],
+                    ignoreConsole: false
+                }
+            },
+            
         },
-
         cssmin: {
             critical: {
                 options: {
                     aggressiveMerging: true,
                     level: {
-                        1: {
+                        2: {
                           all: true,
                         }
                     }
@@ -217,7 +211,6 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-criticalcss');
-    grunt.loadNpmTasks('grunt-critical');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-copy');

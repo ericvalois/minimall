@@ -84,10 +84,23 @@ th {
    ==================== */
 hr {
   display: block;
-  height: $horizontal-rule-height;
   margin: $horizontal-rule-margin-vertical 0;
-  border: none;
-  background-color: $horizontal-rule-color;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 30px;
+  letter-spacing: .6em;
+  height: 20px;
+  border: none !important;
+}
+hr:before {
+    content: '...';
+    display: inline-block;
+    margin-left: .6em;
+    color: rgba(0,0,0,.68);
+    position: relative;
+    top: -30px;
+    left: 50%;
+    margin-left: -50px;
 }
 /* ====================
    media/embeds
@@ -120,7 +133,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -135,24 +148,28 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 2.5rem;
-  margin-top: 2rem;
+    font-size: 2.5rem;
+    margin-top: 2rem;
 }
 h3,
 .h3 {
-  font-size: 2rem;
+    margin-top: 2rem;
+    font-size: 2rem;
 }
 h4,
 .h4 {
-  font-size: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
 }
 h5,
 .h5 {
-  font-size: 1.2rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
 }
 h6,
 .h6 {
-  font-size: 1rem;
+    margin-top: 2rem;
+    font-size: 1rem;
 }
 /* ====================
    additional type styles
@@ -212,13 +229,14 @@ samp {
 pre {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 1rem 1rem;
+  padding: 1rem;
   border-radius: 4px;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace, monospace;
   font-size: 90%;
   font-weight: 400;
+  border-radius: 3px;
 }
-pre code {
+code {
     padding: 0;
     background-color: transparent;
 }
@@ -308,6 +326,7 @@ blockquote {
     padding: 0 2rem;
     font-style: italic;
     position: relative;
+    left: -1.4rem;
 
     p{ margin-top: 0; font-style: italic;}
     footer{ line-height: 1.2;}
@@ -337,6 +356,8 @@ del{ opacity: 0.5; }
         text-align: left;
         width: 32%;
     }
+
+    blockquote { left: -2rem; }
 }
 
 .message{
@@ -361,10 +382,3 @@ figcaption{
 
 @media #{$breakpoint-sm} {}
 
-@media #{$breakpoint-lg} {
-
-}
-
-@media (min-width: 75rem) {
-
-}

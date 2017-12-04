@@ -25,7 +25,7 @@
                 <?php if( get_theme_mod('home_blog_thumb') ): ?>
                     <?php $image_url = get_the_post_thumbnail_url(get_the_ID(), "large"); ?>
                     <a href="<?php the_permalink(); ?>" class=" relative z1 bg-white">
-                        <?php the_post_thumbnail( 'post-thumbnail', ['class' => 'grayscale muted mb2'] ); ?>       
+                        <?php the_post_thumbnail( 'large', ['class' => 'grayscale muted mb2'] ); ?>       
                     </a>
                 <?php endif; ?>
                 

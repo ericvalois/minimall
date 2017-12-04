@@ -21,7 +21,7 @@ $gray-lightest: #fafafa;
 $color-success: #2ecc71;
 $color-warning: #ffca28;
 $color-error: #e74c3c;
-$black: var(--text-color);
+$black: $text-color;
 $bold: 700;
 
 $speed: 0.2s;

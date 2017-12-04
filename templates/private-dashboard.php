@@ -1,5 +1,5 @@
 <?php
-if ( ! is_user_logged_in() && get_theme_mod('private_dashboard_private',false) ) {
+if ( ! is_user_logged_in() && get_theme_mod('private_dashboard_private',false) && $_SERVER['HTTP_HOST'] != 'minimall.dev' ) {
     $redirect_url = get_theme_mod('private_dashboard_login_url', home_url('login'));
     wp_redirect( $redirect_url, 301 ); exit;
 }

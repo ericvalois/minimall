@@ -95,8 +95,9 @@ function minimall_custom_styles(){
         border-color: '. $main_color .';
         background-color: '. $main_color .';
     }
+
+    .sub-menu-toggle{background: #fff url('. get_template_directory_uri() .'/assets/svg/small-down.svg) no-repeat center center;}
     ';
-    
     
     return $minimall_custom_css;
 }
