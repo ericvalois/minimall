@@ -66,6 +66,7 @@ function minimall_edd_clean_up(){
             wp_dequeue_script( 'edd-stripe-js' );
 
             wp_dequeue_style( 'minimall-edd-reviews' );
+            wp_dequeue_style( 'edd-styles' );
         }
     endif;
 }
