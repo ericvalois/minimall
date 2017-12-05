@@ -63,3 +63,13 @@ if( minimall_is_edd_active() ){
         require get_template_directory() . '/includes/widgets/widget-edd-metabox-gallery.php';
     }
 }
+
+/**
+ * If Contact Form 7 Active
+ */
+if( minimall_is_cf7_active() ){
+    /**
+     * Contact Form 7 Optimization
+     */
+    require get_template_directory() . '/includes/compatibility/cf7/cf7.php';
+}

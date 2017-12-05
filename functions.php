@@ -414,6 +414,16 @@ function minimall_is_metabox_active() {
 }
 
 /**
+ * Is Contact Form 7 active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_cf7_active() {
+	return class_exists('WPCF7');
+}
+
+/**
  * Compatibility
  */
 require get_template_directory() . '/includes/compatibility.php';
