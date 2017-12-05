@@ -70,19 +70,6 @@ function minimall_setup() {
 
     // Add theme support for selective refresh for widgets.
     add_theme_support( 'customize-selective-refresh-widgets' );
-    
-
-    /*$args = array(
-        'width'              => 1024,
-        'height'             => 683,
-        'flex-width'         => false,
-        'flex-height'        => false,
-        'random-default'     => false,
-        'header-text'        => false,
-        'default-image'      => get_template_directory_uri() . '/assets/images/default-hero.jpg',
-        'uploads'       => true,
-    );
-    add_theme_support( 'custom-header', $args );*/
 
     /* 
     * Gutenberg Support
@@ -229,7 +216,7 @@ function minimall_widgets_init() {
 		'description'   => __("Sidebar display after the post content","minimal"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h5 class="widget-title mb2">',
+		'before_title'  => '<h5 class="widget-title mb2 mt0">',
 		'after_title'   => '</h5>',
     ) );
     
