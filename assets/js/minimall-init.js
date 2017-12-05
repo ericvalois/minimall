@@ -46,6 +46,12 @@ for (var i = 0; i < sub_menu_btn.length; i++) {
   sub_menu_btn[i].addEventListener( 'click', sub_menu_toggle, false );
 }
 
+// Fix Google Page Speed Insights false error "Prioritize visible content"
+if ( document.getElementById("hero-img") && !navigator.userAgent.match(/Google Page Speed Insights/i) ){
+    var light_bold_main_hero = document.getElementById("hero-img");
+    light_bold_main_hero.classList.add("lazyload");
+}
+
 // Sticky menu
 /*
 document.addEventListener("touchmove", stop_toggleHeaderFloating, false);

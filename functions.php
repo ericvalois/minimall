@@ -41,17 +41,8 @@ function minimall_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
-
-    /*
-    add_image_size( 'minimall-hero-lg', 950, 612, true );
-	add_image_size( 'minimall-hero-md', 767, 494, true );
-	add_image_size( 'minimall-hero-sm', 595, 383, true );
-
-    add_image_size( 'minimall-hero-placeholder', 50, 32, true );
-    
-    add_image_size( 'minimall-edd-thumb', 160, 160, false );
-    */
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 800, 535, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -81,13 +72,17 @@ function minimall_setup() {
     add_theme_support( 'customize-selective-refresh-widgets' );
     
 
-    $args = array(
-        'width'              => 1000,
-        'height'             => 450,
-        'flex-width'         => true,
-        'flex-height'        => true,
+    /*$args = array(
+        'width'              => 1024,
+        'height'             => 683,
+        'flex-width'         => false,
+        'flex-height'        => false,
+        'random-default'     => false,
+        'header-text'        => false,
+        'default-image'      => get_template_directory_uri() . '/assets/images/default-hero.jpg',
+        'uploads'       => true,
     );
-    //add_theme_support( 'custom-header', $args );
+    add_theme_support( 'custom-header', $args );*/
 
     /* 
     * Gutenberg Support
@@ -421,6 +416,16 @@ function minimall_is_metabox_active() {
  */
 function minimall_is_cf7_active() {
 	return class_exists('WPCF7');
+}
+
+/**
+ * Is Jetpack active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_jetpack_active() {
+	return class_exists('Jetpack');
 }
 
 /**

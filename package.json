@@ -1,6 +1,6 @@
 {
   "name": "minimall",
-  "version": "0.1.0",
+  "version": "0.5",
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-contrib-clean": "latest",

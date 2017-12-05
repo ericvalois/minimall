@@ -38,13 +38,3 @@ Minimall_Kirki::add_field( 'minimall', array(
 	'default'     => '0',
 	'priority'    => 30,
 ) );
-
-Minimall_Kirki::add_field( 'minimall', array(
-	'type'        => 'checkbox',
-	'settings'    => 'hide_post_share',
-    'label'       => __( 'Hide Social Share', 'minimall' ),
-    'description' => __( 'Hide social share from the posts footer.', 'minimall' ),
-	'section'     => 'posts',
-	'default'     => '0',
-	'priority'    => 40,
-) );

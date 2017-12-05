@@ -16,6 +16,9 @@
 
 .display-no { display: none }
 
+.hover-opacity{ transition: opacity 0.2s ease; }
+.hover-opacity:hover{ opacity: 0.8; }
+
 /* Basscss Typography */
 
 .font-family-inherit { font-family: inherit }

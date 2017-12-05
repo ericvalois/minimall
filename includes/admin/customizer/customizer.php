@@ -175,6 +175,11 @@ include( get_template_directory() . '/includes/admin/customizer/modules/customiz
 include( get_template_directory() . '/includes/admin/customizer/modules/customizer-general.php' );
 
 /**
+ * Header image controls
+ */
+include( get_template_directory() . '/includes/admin/customizer/modules/customizer-header.php' );
+
+/**
  * Footer controls
  */
 include( get_template_directory() . '/includes/admin/customizer/modules/customizer-footer.php' );

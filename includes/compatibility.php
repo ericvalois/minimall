@@ -73,3 +73,13 @@ if( minimall_is_cf7_active() ){
      */
     require get_template_directory() . '/includes/compatibility/cf7/cf7.php';
 }
+
+/**
+ * If Jetpack Active
+ */
+if( minimall_is_jetpack_active() ){
+    /**
+     * Jetpack Optimization
+     */
+    require get_template_directory() . '/includes/compatibility/jetpack/jetpack.php';
+}

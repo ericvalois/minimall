@@ -195,10 +195,10 @@ function minimall_pagination($pages = '', $range = 2){
 function minimall_select_hero_image(){
 
 
-    $header_img = get_theme_mod('default_hero_img','');
+    $header_img = get_theme_mod('default_hero_img', get_template_directory_uri() . '/assets/images/default-hero.jpg');
 
     if( $header_img ){
-        return minimall_get_image_id( $header_img );
+        return $header_img;
     }else{
         return false;
     }

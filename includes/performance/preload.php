@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * Add preload section
  * 
  */
+/*
 Minimall_Kirki::add_section( 'performance_preload', array(
     'title'      => esc_attr__( 'Preload', 'minimall' ),
     'priority'   => 10,
@@ -22,13 +23,12 @@ Minimall_Kirki::add_field( 'minimall', array(
     'default'     => '0',
     'priority'    => 10,
 ) );
+*/
 
 /*
 * Preload
 */
 add_action('minimall_head_open','minimall_do_preload',5);
 function minimall_do_preload(){
-    if( get_theme_mod('performance_activate_preload',false) ){
-        do_action('minimall_preload');
-    }
+    do_action('minimall_preload');
 }

@@ -12,7 +12,7 @@
         <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb3';} ?> sm-px2">
             
             <?php if( $item['title'] ): ?>
-                <h3 class="regular mb0 h4"><?php echo wp_kses_post( nl2br( $item['title'] ) ); ?></h3>
+                <h3 class="regular mb0 mt0 h4"><?php echo wp_kses_post( nl2br( $item['title'] ) ); ?></h3>
                 <?php endif; ?>
 
             <?php if( $item['desc'] ): ?>

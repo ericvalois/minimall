@@ -52,7 +52,7 @@
 		},
 	"\/assets\/images\/default-hero.jpg": {
 		"ft": 16384,
-		"iS": 1137705,
+		"iS": 152939,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-hero.jpg",
 		"oF": 0,
@@ -837,6 +837,13 @@
 		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-general.php",
 		"oF": 0
 		},
+	"\/includes\/admin\/customizer\/modules\/customizer-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/customizer\/modules\/customizer-header.php",
+		"oF": 0
+		},
 	"\/includes\/admin\/customizer\/modules\/customizer-homepage.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -969,6 +976,13 @@
 		"oAP": "\/includes\/compatibility.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/cf7\/cf7.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/cf7\/cf7.php",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/edd\/class-reviews.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -995,6 +1009,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/compatibility\/edd\/global-edd.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/jetpack\/jetpack.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/jetpack\/jetpack.php",
 		"oF": 0
 		},
 	"\/includes\/compatibility\/metabox\/edd-metabox.php": {

@@ -152,10 +152,10 @@ module.exports = function(grunt) {
                 src: ['build/']
             },
             first: {
-                src: ['build/*', '!build/<%= pkg.name %>-parent.zip']
+                src: ['build/*', '!build/<%= pkg.name %>-<%= pkg.version %>.zip']
             },
             second: {
-                src: ['build/*', '!build/minimall.zip']
+                src: ['build/*', '!build/minimall-package-<%= pkg.version %>.zip']
             },
             style: {
                 src: ['style-*']
@@ -172,7 +172,7 @@ module.exports = function(grunt) {
             },
             build: {
                 expand: true,
-                src: ['**', '!node_modules/**', '!build/**', '!readme.md', '!Gruntfile.js', '!package.json', '!.gitignore' ],
+                src: ['**', '!node_modules/**', '!build/**', '!readme.md', '!Gruntfile.js', '!package.json', '!.gitignore','!.codekit3' ],
                 dest: 'build/'
             },
 
@@ -182,7 +182,7 @@ module.exports = function(grunt) {
         compress: {
             parent: {
                 options: {
-                    archive: 'build/<%= pkg.name %>-parent.zip'
+                    archive: 'build/<%= pkg.name %>-<%= pkg.version %>.zip'
                 },
                 expand: true,
                 cwd: 'build/',
@@ -194,18 +194,18 @@ module.exports = function(grunt) {
                     archive: 'build/<%= pkg.name %>-child.zip'
                 },
                 expand: true,
-                cwd: '../minimall-child/',
+                cwd: '../<%= pkg.name %>-child/',
                 src: ['**/*'],
                 dest: '<%= pkg.name %>-child/'
             },
             full: {
                 options: {
-                    archive: 'build/minimall.zip'
+                    archive: 'build/<%= pkg.name %>-package-<%= pkg.version %>.zip'
                 },
                 expand: true,
                 cwd: 'build/',
                 src: ['**/*'],
-                dest: '<%= pkg.name %>/'
+                dest: '<%= pkg.name %>-package-<%= pkg.version %>/'
             }
         },
     });

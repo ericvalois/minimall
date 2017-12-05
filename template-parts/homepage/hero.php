@@ -10,7 +10,7 @@
 ?>
 <div id="home-hero" class="clc-wrapper bg-black relative z1 md-py2 lg-py4 px2">
     <?php if ( $image ) : ?>
-        <div class="main_image z3 absolute top-0 right-0 bottom-0 left-0 bg-cover bg-center grayscale lazyload"   
+        <div id="hero-img" class="z3 absolute top-0 right-0 bottom-0 left-0 bg-cover bg-center grayscale"   
             data-sizes="auto"
             data-bgset="<?php echo esc_url( $minimall_image_src_lg[0] ); ?> [(min-width: 64em)] | 
             <?php echo esc_url( $minimall_image_src_md[0] ); ?> [(min-width: 40em)] | 

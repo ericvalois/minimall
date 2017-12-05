@@ -1,14 +1,7 @@
 <?php
 /*
-* Create EDD Panels
+* Create Contact Form 7 Panels
 */
-/*Minimall_Kirki::add_panel( 'edd', array(
-    'title'      => esc_attr__( 'Easy Digital Download', 'minimall' ),
-    'priority'   => 100,
-    'panel'		 => 'minimall_options',
-    'capability' => 'edit_theme_options',
-) );*/
-
 Minimall_Kirki::add_section( 'cf7_performance', array(
     'title'      => esc_attr__( 'Contact Form 7', 'minimall' ),
     'priority'   => 60,
@@ -17,7 +10,7 @@ Minimall_Kirki::add_section( 'cf7_performance', array(
 ) );
 
 /*
-* Create EDD Archive Controls
+* Create Contact Form 7 Controls
 */
 Minimall_Kirki::add_field( 'minimall', array(
     'type'        => 'checkbox',
