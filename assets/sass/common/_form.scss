@@ -577,14 +577,14 @@ input[type='file'] {
 }
 
 .validation_error{
-    @extend .alert;
-    @extend .alert_danger;
+    //@extend .alert;
+    //@extend .alert_danger;
     margin-bottom: 1.5rem;
 }
 
 .gform_confirmation_message{
-    @extend .alert;
-    @extend .alert_success;
+    //@extend .alert;
+    //@extend .alert_success;
 }
 
 .gform_fields{ list-style-type: none; }

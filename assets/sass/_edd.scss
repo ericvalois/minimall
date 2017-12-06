@@ -212,13 +212,13 @@
 * EDD notice
 */
 .edd_error{
-    @extend .alert;
-    @extend .alert_danger;
+    //@extend .alert;
+    //@extend .alert_danger;
 }
 
 .edd_sucess{
-    @extend .alert;
-    @extend .alert_success;
+    //@extend .alert;
+    //@extend .alert_success;
 }
 
 /*

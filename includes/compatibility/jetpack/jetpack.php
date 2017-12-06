@@ -32,5 +32,18 @@ function minimall_optimiazation_jetpack(){
         add_filter( 'jetpack_implode_frontend_css', '__return_false' );
     endif;
 }
+/*
+add_filter( 'comments_open', 'tweakjp_rm_comments_att', 10 , 2 );
+function tweakjp_rm_comments_att( $open, $post_id ) {
+    $post = get_post( $post_id );
+    if( $post->post_type == 'attachment' ) {
+    return false;
+    }
+    return $open;
+    }
+    */
 
-
+    function jeherve_custom_tiled_gallery_width() {
+        return '543';
+        }
+        add_filter( 'tiled_gallery_content_width', 'jeherve_custom_tiled_gallery_width' );

@@ -10,10 +10,10 @@
         ?>
 
         <?php foreach ($content_feature as $key => $item): ?>
-            <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb3';} ?>  sm-px2">
+            <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb4';} ?>  sm-px2">
                 
                 <?php if( $item['icon'] ): ?>
-                    <div class="h1 mt0 line-height-1 <?php echo esc_attr( $section_color ); ?>"><?php echo wp_kses_post( $item['icon'] ); ?></div>
+                    <div class="mt0 line-height-1 <?php echo esc_attr( $section_color ); ?>"><?php echo wp_kses_post( $item['icon'] ); ?></div>
                 <?php endif; ?>
 
                 <?php if( $item['title'] ): ?>

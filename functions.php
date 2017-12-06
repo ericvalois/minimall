@@ -288,9 +288,20 @@ function minimall_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
+    }
+    
+    
+    
 }
 add_action( 'wp_enqueue_scripts', 'minimall_scripts' );
+
+/*
+* Temp to remove webfont-loader from kirki
+*/
+function wpdocs_dequeue_script() {
+    wp_dequeue_script('webfont-loader');
+ }
+ add_action( 'wp_head', 'wpdocs_dequeue_script', 999 );
 
 /**
  * Enqueue scripts and styles for Gutenberg editor
