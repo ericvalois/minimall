@@ -72,19 +72,6 @@ function minimall_setup() {
     add_theme_support( 'customize-selective-refresh-widgets' );
 
     /* 
-    * Gutenberg Support
-    */
-    add_theme_support( 'gutenberg', array(
-        'wide-images' => true,
-        'colors' => array(
-            get_theme_mod('primary_color','#1078ff'),
-            '#333',
-            '#3a4145',
-        ),
-    ) );
-    
-
-    /* 
     * Admin page
     */
 	if ( is_admin() ) {
@@ -257,16 +244,6 @@ require( get_template_directory() . '/includes/admin/customizer/minimall-kirki.p
  */
 require( get_template_directory() . '/includes/admin/customizer/customizer.php' );
 
-/**
- * Set the post thumbnail size (aka featured image)
- *
- * @since 1.0.0
- */
-/*if ( ! function_exists( 'minimall_set_post_thumbnail_size' ) ) :
-	function minimall_set_post_thumbnail_size() {
-		set_post_thumbnail_size( 991, 9999 );
-	}
-endif;*/
 
 /**
  * Enqueue scripts and styles.
@@ -294,27 +271,6 @@ function minimall_scripts() {
     
 }
 add_action( 'wp_enqueue_scripts', 'minimall_scripts' );
-
-/*
-* Temp to remove webfont-loader from kirki
-*/
-function wpdocs_dequeue_script() {
-    wp_dequeue_script('webfont-loader');
- }
- add_action( 'wp_head', 'wpdocs_dequeue_script', 999 );
-
-/**
- * Enqueue scripts and styles for Gutenberg editor
- */
-//add_action( 'enqueue_block_editor_assets', 'minimall_editor_styles' );
-function minimall_editor_styles() {
-    if ( is_child_theme() ) {
-        wp_enqueue_style( 'minimall-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
-        wp_enqueue_style( 'minimall-stylesheet', get_stylesheet_uri()  );
-    }else{
-    	wp_enqueue_style( 'minimall-stylesheet', trailingslashit( get_template_directory_uri() ) . 'style.css' );
-    }
-}
 
 /**
  * Is Faster Font Awesome active?
@@ -427,6 +383,26 @@ function minimall_is_jetpack_active() {
 }
 
 /**
+ * Is Gutenberg active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_gutenberg_active() {
+	return class_exists('WP_Block_Type');
+}
+
+/**
+ * Is Kirki active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_kirki_active() {
+	return class_exists('Kirki_Autoload');
+}
+
+/**
  * Compatibility
  */
 require get_template_directory() . '/includes/compatibility.php';
@@ -445,11 +421,6 @@ require get_template_directory() . '/includes/template-tags.php';
  * minimal functions
  */
 require get_template_directory() . '/includes/extra.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/includes/jetpack.php';
 
 /**
  * Load custom style

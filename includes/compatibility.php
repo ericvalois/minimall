@@ -83,3 +83,23 @@ if( minimall_is_jetpack_active() ){
      */
     require get_template_directory() . '/includes/compatibility/jetpack/jetpack.php';
 }
+
+/**
+ * If Gutenberg Active
+ */
+if( minimall_is_gutenberg_active() ){
+    /**
+     * Gutenberg Optimization
+     */
+    require get_template_directory() . '/includes/compatibility/gutenberg/gutenberg.php';
+}
+
+/**
+ * If Kirki Active
+ */
+if( minimall_is_kirki_active() ){
+    /**
+     * Kirki Optimization
+     */
+    require get_template_directory() . '/includes/compatibility/kirki/kirki.php';
+}

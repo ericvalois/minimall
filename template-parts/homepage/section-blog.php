@@ -23,8 +23,8 @@
         <?php while ( $latest_post->have_posts() ) : $latest_post->the_post(); ?>
             <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> sm-px2 <?php if( $cpt != $count ){ echo 'mb3'; } ?>">
                 <?php if( get_theme_mod('home_blog_thumb') ): ?>
-                    <a href="<?php the_permalink(); ?>" class="relative z1 bg-white inline-block mb2 hover-opacity">
-                        <?php the_post_thumbnail( 'post-thumbnail', ['class' => 'grayscale muted'] ); ?>       
+                    <a href="<?php the_permalink(); ?>" class="relative z1 bg-white inline-block mb2 hover-opacity fit col-12">
+                        <?php the_post_thumbnail( 'post-thumbnail', ['class' => 'grayscale muted fit'] ); ?>       
                     </a>
                 <?php endif; ?>
                 

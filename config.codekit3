@@ -1011,11 +1011,25 @@
 		"oAP": "\/includes\/compatibility\/edd\/global-edd.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/gutenberg\/gutenberg.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/gutenberg\/gutenberg.php",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/jetpack\/jetpack.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/compatibility\/jetpack\/jetpack.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/kirki\/kirki.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/kirki\/kirki.php",
 		"oF": 0
 		},
 	"\/includes\/compatibility\/metabox\/edd-metabox.php": {
@@ -1051,13 +1065,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/helper.php",
-		"oF": 0
-		},
-	"\/includes\/jetpack.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/jetpack.php",
 		"oF": 0
 		},
 	"\/includes\/partials.php": {
