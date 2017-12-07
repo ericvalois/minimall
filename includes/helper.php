@@ -299,39 +299,6 @@ function minimall_get_image_id( $image_url ) {
     return (int) $post_id;
 }
 
-// Get link from custom link controls
-function minimall_get_link_helper( $string = '' ){
-    if( empty( $string ) )
-        return false;
-
-    $output = array();
-    foreach(explode("|", urldecode($string)) as $pair){
-        $stuff  = explode(":", $pair, 2); 
-        if( count($stuff) > 1 ){
-            $output[$stuff[0]] = $stuff[1];
-        }
-    }
-
-    if ( !array_key_exists("url", $output) ){
-        $output['url'] = '';
-    }
-
-    if ( !array_key_exists("title", $output) ){
-        $output['title'] = '';
-    }
-
-    if ( !array_key_exists("target", $output) ){
-        $output['target'] = '';
-    }
-
-    if ( !array_key_exists("rel", $output) ){
-        $output['rel'] = '';
-    }
-
-    return $output;
-    
-}
-
 /**
  * Show a given widget based on it's id and it's sidebar index
  *
