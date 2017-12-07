@@ -192,16 +192,53 @@ function minimall_pagination($pages = '', $range = 2){
 /*
 * Hero image selection
 */
-function minimall_select_hero_image(){
+function minimall_get_default_hero(){
 
+    $hero_img_id = get_theme_mod('default_hero_img', false);
+    $array = array();
 
-    $header_img = get_theme_mod('default_hero_img', get_template_directory_uri() . '/assets/images/default-hero.jpg');
+    if( !empty( $hero_img_id ) && is_numeric( $hero_img_id ) ){
+        $array['sm'] = wp_get_attachment_image_src( $hero_img_id, 'medium' );
+        $array['sm'] = $array['sm'][0];
 
-    if( $header_img ){
-        return $header_img;
+        $array['md'] = wp_get_attachment_image_src( $hero_img_id, 'medium_large' );
+        $array['md'] = $array['md'][0];
+
+        $array['lg'] = wp_get_attachment_image_src( $hero_img_id, 'large' );
+        $array['lg'] = $array['lg'][0];
     }else{
-        return false;
+        $array['sm'] = get_template_directory_uri() . '/assets/images/default-hero-sm.jpg';
+        $array['md'] = get_template_directory_uri() . '/assets/images/default-hero-md.jpg';
+        $array['lg'] = get_template_directory_uri() . '/assets/images/default-hero-lg.jpg';
     }
+
+    return $array;
+}
+
+/*
+* Get homepage hero
+*/
+function minimall_get_homepage_hero(){
+    
+    $hero_img_id = get_theme_mod('home_hero_image', false);
+    $array = array();
+
+    if( !empty( $hero_img_id ) && is_numeric( $hero_img_id ) ){
+        $array['sm'] = wp_get_attachment_image_src( $hero_img_id, 'medium' );
+        $array['sm'] = $array['sm'][0];
+
+        $array['md'] = wp_get_attachment_image_src( $hero_img_id, 'medium_large' );
+        $array['md'] = $array['md'][0];
+
+        $array['lg'] = wp_get_attachment_image_src( $hero_img_id, 'large' );
+        $array['lg'] = $array['lg'][0];
+    }else{
+        $array['sm'] = get_template_directory_uri() . '/assets/images/default-homepage-hero-sm.jpg';
+        $array['md'] = get_template_directory_uri() . '/assets/images/default-homepage-hero-md.jpg';
+        $array['lg'] = get_template_directory_uri() . '/assets/images/default-homepage-hero-lg.jpg';
+    }
+
+    return $array;
 }
 
 /**

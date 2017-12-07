@@ -50,11 +50,61 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/assets\/images\/default-hero.jpg": {
+	"\/assets\/images\/default-hero-lg.jpg": {
 		"ft": 16384,
-		"iS": 152939,
+		"iS": 140584,
 		"oA": 0,
-		"oAP": "\/assets\/images\/default-hero.jpg",
+		"oAP": "\/assets\/images\/default-hero-lg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/images\/default-hero-md.jpg": {
+		"ft": 16384,
+		"iS": 115976,
+		"oA": 0,
+		"oAP": "\/assets\/images\/default-hero-md.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/images\/default-hero-sm.jpg": {
+		"ft": 16384,
+		"iS": 26924,
+		"oA": 0,
+		"oAP": "\/assets\/images\/default-hero-sm.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/images\/default-homepage-hero-lg.jpg": {
+		"ft": 16384,
+		"iS": 94686,
+		"oA": 0,
+		"oAP": "\/assets\/images\/default-homepage-hero-lg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/images\/default-homepage-hero-md.jpg": {
+		"ft": 16384,
+		"iS": 61736,
+		"oA": 0,
+		"oAP": "\/assets\/images\/default-homepage-hero-md.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/images\/default-homepage-hero-sm.jpg": {
+		"ft": 16384,
+		"iS": 20172,
+		"oA": 0,
+		"oAP": "\/assets\/images\/default-homepage-hero-sm.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

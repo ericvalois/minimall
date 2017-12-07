@@ -57,13 +57,12 @@ Minimall_Kirki::add_field( 'minimall', array(
 ) );
 
 Minimall_Kirki::add_field( 'minimall', array(
-	'type'     => 'tpfw_link',
-	'settings' => 'footer_cta',
-    'label'    => __( 'Button', 'minimall' ),
+	'type'     => 'textarea',
+	'settings' => 'footer_cta_label',
+    'label'    => __( 'Button label', 'minimall' ),
     'description' => esc_html__( 'Shortcodes are accepted', 'minimall' ),
 	'section'  => 'footer',
     'priority' => 30,
-    'default'  => esc_attr__( 'http://', 'minimall' ),
     'active_callback'    => array(
         array(
             'setting'  => 'footer_hero',
@@ -71,6 +70,30 @@ Minimall_Kirki::add_field( 'minimall', array(
             'value'    => true,
         ),
     ),
+) );
+
+Minimall_Kirki::add_field( 'minimall', array(
+	'type'     => 'link',
+	'settings' => 'footer_cta_link',
+    'label'    => __( 'Button link', 'minimall' ),
+	'section'  => 'footer',
+    'priority' => 40,
+    'active_callback'    => array(
+        array(
+            'setting'  => 'footer_hero',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+) );
+
+Minimall_Kirki::add_field( 'minimall', array(
+	'type'        => 'checkbox',
+	'settings'    => 'footer_cta_target',
+	'label'       => __( 'Button External link', 'minimall' ),
+	'section'     => 'footer',
+	'default'     => '0',
+	'priority'    => 50,
 ) );
 
 Minimall_Kirki::add_field( 'minimall', array(

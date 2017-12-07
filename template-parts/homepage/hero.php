@@ -1,20 +1,11 @@
-<?php
-    $image = get_theme_mod('home_hero_img');
-    if( $image ){
-        $image = minimall_get_image_id( $image );
-        
-        $minimall_image_src_sm = wp_get_attachment_image_src( $image, 'medium' );
-        $minimall_image_src_md = wp_get_attachment_image_src( $image, 'medium_large' );
-        $minimall_image_src_lg = wp_get_attachment_image_src( $image, 'large' );
-    }
-?>
+<?php $images = minimall_get_homepage_hero(); ?>
 <div id="home-hero" class="clc-wrapper bg-black relative z1 md-py2 lg-py4 px2">
-    <?php if ( $image ) : ?>
+    <?php if ( $images ) : ?>
         <div id="hero-img" class="z3 absolute top-0 right-0 bottom-0 left-0 bg-cover bg-center grayscale"   
             data-sizes="auto"
-            data-bgset="<?php echo esc_url( $minimall_image_src_lg[0] ); ?> [(min-width: 64em)] | 
-            <?php echo esc_url( $minimall_image_src_md[0] ); ?> [(min-width: 40em)] | 
-            <?php echo esc_url( $minimall_image_src_sm[0] ); ?>">
+            data-bgset="<?php echo esc_url( $images['lg'] ); ?> [(min-width: 64em)] | 
+            <?php echo esc_url( $images['md'] ); ?> [(min-width: 40em)] | 
+            <?php echo esc_url( $images['sm'] ); ?>">
         </div>
     <?php endif; ?>
 

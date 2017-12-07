@@ -9,11 +9,15 @@
                 <h4 class="hero-text h0 lighter mt2 mb3"><?php echo wp_kses_post( nl2br( get_theme_mod('footer_hero_title') ) ); ?></h4>
             <?php endif; ?>
 
-            <?php if( get_theme_mod('footer_cta') ): ?>
+            <?php 
+                $label = get_theme_mod('footer_cta_label',false);
+                $url = get_theme_mod('footer_cta_link',false);
+                $target = get_theme_mod('footer_cta_target',false);
+            ?>
+            <?php if( $label && $url ): ?>
                 <div class="flex justify-center ">
-                    <?php $link = minimall_get_link_helper( get_theme_mod('footer_cta') ); ?>
-                    <a <?php echo minimall_external_link( $link['target'], $link['rel'] ); ?> href="<?php echo esc_url( $link['url'] ); ?>" class="btn btn-primary btn-big lg-text">
-                        <?php echo do_shortcode( wp_kses_post( $link['title'] ) ); ?>
+                    <a <?php echo minimall_external_link( $target ); ?> href="<?php echo esc_url( $url ); ?>" class="btn btn-primary btn-big lg-text">
+                        <?php echo do_shortcode( wp_kses_post( $label ) ); ?>
                     </a>
                 </div>
             <?php endif; ?>
