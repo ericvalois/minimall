@@ -145,14 +145,6 @@ Minimall_Kirki::add_panel( 'minimall_options', array(
     'title'		 => __( 'Theme Options', 'minimall' ),
 ) );
 
-function minimal_get_hero_link_partial( $link ){
-    $theme_options = minimall_theme_options();
-
-    $link_data = minimall_get_link_data( $theme_options[$link] );
-
-    return $link_data['title'];
-}
-
 
 /**
  * Home page
@@ -198,8 +190,3 @@ include( get_template_directory() . '/includes/admin/customizer/modules/private-
  * Social Share Controls
  */
 include( get_template_directory() . '/includes/admin/customizer/modules/social-share.php' );
-
-/**
- * New Link Control
- */
-include( get_template_directory() . '/includes/admin/customizer/minimall-link/minimall-link.php' );
