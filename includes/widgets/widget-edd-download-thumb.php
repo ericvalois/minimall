@@ -38,9 +38,10 @@ class Minimall_Edd_Download_Thumbnail extends WP_Widget {
     $full_data = wp_get_attachment_image_src( $image_id, 'full' ); 
 ?>
 
-    <a class="flex items-center justify-center col-12 inline-block js-smartPhoto" data-group="download-<?php echo get_the_ID(); ?>" href="<?php echo $full_data[0]; ?>">
-        <?php echo get_the_post_thumbnail($post->ID, 'large', ['class' => 'zoom-img']); ?>
-    </a>
+    <div id="edd-main-thumb" class="mxn1">
+        <?php echo do_shortcode('[gallery link="file" type="thumbnail" size="large" columns="1" include="'. $image_id .'"]'); ?>
+    </div>
+    
 
 <?php
     echo $args['after_widget'];

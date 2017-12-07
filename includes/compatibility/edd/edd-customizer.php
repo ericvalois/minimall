@@ -10,21 +10,21 @@ Minimall_Kirki::add_panel( 'edd', array(
 ) );
 
 Minimall_Kirki::add_section( 'edd_archive', array(
-    'title'      => esc_attr__( 'Products List', 'minimall' ),
+    'title'      => esc_attr__( 'Download Archive', 'minimall' ),
     'priority'   => 10,
-    'panel'		 => 'edd',
-    'capability' => 'edit_theme_options',
-) );
-
-Minimall_Kirki::add_section( 'edd_single', array(
-    'title'      => esc_attr__( 'Product Page', 'minimall' ),
-    'priority'   => 20,
     'panel'		 => 'edd',
     'capability' => 'edit_theme_options',
 ) );
 
 Minimall_Kirki::add_section( 'edd_checkout', array(
     'title'      => esc_attr__( 'Checkout', 'minimall' ),
+    'priority'   => 20,
+    'panel'		 => 'edd',
+    'capability' => 'edit_theme_options',
+) );
+
+Minimall_Kirki::add_section( 'edd_single', array(
+    'title'      => esc_attr__( 'Download', 'minimall' ),
     'priority'   => 30,
     'panel'		 => 'edd',
     'capability' => 'edit_theme_options',
@@ -150,13 +150,40 @@ if( minimall_is_metabox_active() ){
         'settings'    => 'edd_single_thumb_size',
         'label'       => __( 'Thumbnails size', 'minimall' ),
         'section'     => 'edd_single',
-        'default'     => 'shop_thumbnail',
+        'default'     => 'thumbnail',
         'priority'    => 80,
         'choices'     => array(
-            'shop_thumbnail'   => esc_attr__( 'Thumbnail', 'minimall' ),
+            'thumbnail'   => esc_attr__( 'Thumbnail', 'minimall' ),
             'medium' => esc_attr__( 'Medium', 'minimall' ),
-            'medium_large'  => esc_attr__( 'Large', 'minimall' ),
+            'large'  => esc_attr__( 'Large', 'minimall' ),
         ),
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'select',
+        'settings'    => 'edd_single_thumb_type',
+        'label'       => __( 'Gallery Type', 'minimall' ),
+        //'description' => __( 'Read more about <a target="_blank" href="https://en.support.wordpress.com/gallery/#adding-a-gallery-or-slideshow" target="_blank">WordPress galleries</a>.', 'minimall' ),
+        'section'     => 'edd_single',
+        'default'     => 'thumbnail',
+        'priority'    => 90,
+        'multiple'    => 0,
+        'choices'     => array(
+            'thumbnail' => esc_attr__( 'Thumbnail', 'minimall' ),
+            'rectangular' => esc_attr__( 'Rectangular', 'minimall' ),
+            'square' => esc_attr__( 'Square', 'minimall' ),
+            'circle' => esc_attr__( 'Circle', 'minimall' ),
+            'circle' => esc_attr__( 'Slideshow', 'minimall' ),
+        ),
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'custom',
+        'settings'    => 'edd_single_thumb_notice',
+        'label'       => __( 'Read more about WordPress gallery', 'minimall' ),
+        'default' => __( 'Read more about <a target="_blank" href="https://en.support.wordpress.com/gallery/#adding-a-gallery-or-slideshow" target="_blank">WordPress galleries</a>.', 'minimall' ),
+        'section'     => 'edd_single',
+        'priority'    => 100,
     ) );
 }
 

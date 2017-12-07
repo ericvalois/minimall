@@ -1,7 +1,7 @@
 .minimall-tabs{ 
     list-style-type: none;
     max-width: 100%;
-    padding: 0 0 0 1.5rem;
+    padding: 0 1rem;
     position: relative;
 }
 
@@ -20,7 +20,7 @@
     border-radius: 0;
     padding: 0;
     border: 1px solid #d3ced2;
-    display: inline-block;
+    display: block;
     position: relative;
     z-index: 2;
     margin: 0 -1px;
@@ -40,7 +40,7 @@
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem 1.2rem;
-    display: inline-block;
+    display: block;
     position: relative;
     z-index: 3;
 }
@@ -71,12 +71,17 @@
     display: block;
 }
 
-@-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+@media #{$breakpoint-sm} {
 
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    .minimall-tabs{ 
+        padding: 0 0 0 1.5rem;
+    }
+
+    .minimall-tabs li {
+        display: inline-block;
+    }
+
+    .minimall-tabs a{
+        display: inline-block;
+    }
 }

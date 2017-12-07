@@ -33,15 +33,18 @@ class Minimall_Edd_Metabox_Gallery extends WP_Widget {
     if( function_exists( 'rwmb_meta') ) :
         $images = rwmb_meta( 'minimall-edd_gallery' );
         $img_per_row = get_theme_mod('edd_single_thumb','4');
-        $img_width = round( 12 / $img_per_row );
-        $thumb_size = get_theme_mod('edd_single_thumb_size','shop_thumbnail');
+        //$img_width = round( 12 / $img_per_row );
+        $thumb_size = get_theme_mod('edd_single_thumb_size','thumbnail');
+        $gallery_type = get_theme_mod('edd_single_thumb_type','thumbnail');
 
-        echo '<div id="edd-gallery" class="flex flex-wrap mxn1 mt1 gallery">';
-        foreach ( $images as $key => $image ) {
-            $get_thumb = wp_get_attachment_image_src( $key, $thumb_size );
-          
-            echo '<a class="flex items-start justify-center inline-block col-'.$img_width.' px1 py1" title="'. $image['title'] .'" href="', $image['full_url'], '"><img class="zoom-img minimall-edd-thumb lazyload" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="', $get_thumb[0], '" alt="'. $image['alt'] .'" width="'. $get_thumb[1] .'" height="'. $get_thumb[2] .'"></a>';
-        }
+        echo '<div id="edd-gallery" class="flex flex-wrap mxn1 gallery">';
+            $image_string = '';
+            foreach ( $images as $key => $image ) {
+                //$get_thumb = wp_get_attachment_image_src( $key, $thumb_size );
+                $image_string .= $key . ',';
+                //echo '<a class="flex items-start justify-center inline-block col-'.$img_width.' px1 py1" title="'. $image['title'] .'" href="', $image['full_url'], '"><img class="minimall-edd-thumb" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="', $get_thumb[0], '" alt="'. $image['alt'] .'" width="'. $get_thumb[1] .'" height="'. $get_thumb[2] .'"></a>';
+            }
+            echo do_shortcode('[gallery link="file" type="'. $gallery_type .'" size="'. $thumb_size .'" columns="'.$img_per_row.'" include="'. $image_string .'"]');
         echo '</div>';
 
     endif; 
