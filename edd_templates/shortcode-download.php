@@ -29,8 +29,9 @@ global $edd_download_shortcode_item_atts, $edd_download_shortcode_item_i;
 
 			if ( 'false' !== $edd_download_shortcode_item_atts['thumbnails'] ) :
 				edd_get_template_part( 'shortcode', 'content-image' );
-				do_action( 'edd_download_after_thumbnail' );
-			endif;
+            endif;
+
+            do_action( 'edd_download_after_thumbnail' );
 
             if( !get_theme_mod('edd_hide_shop_title', false) ):
                 edd_get_template_part( 'shortcode', 'content-title' );
@@ -40,16 +41,18 @@ global $edd_download_shortcode_item_atts, $edd_download_shortcode_item_i;
             
             if( !get_theme_mod('edd_hide_shop_price', false) ):
                 echo '<div class="mt1 mb1">';
-                echo '<a class="edd_price" href="' . get_the_permalink() . '">' . edd_price(get_the_ID() , false) . '</a>';
+                    echo '<a class="edd_price" href="' . get_the_permalink() . '">' . edd_price(get_the_ID() , false) . '</a>';
                 echo '</div>';
-                do_action( 'edd_download_after_price' );
             endif;
+
+            do_action( 'edd_download_after_price' );
               
 
             if( !get_theme_mod('edd_hide_shop_desc', false) ):
                 edd_get_template_part( 'shortcode', 'content-excerpt' );
-                do_action( 'edd_download_after_content' );
             endif;
+
+            do_action( 'edd_download_after_content' );
 
             if( !get_theme_mod('edd_hide_shop_btn', false) ):
                 edd_get_template_part( 'shortcode', 'content-cart-button' );

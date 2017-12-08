@@ -35,7 +35,9 @@
         flex-wrap: wrap;
     }
 }
-
+#edd-main-thumb,
+.edd_download_image img{ box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); }
+#edd-main-thumb .gallery-item{ padding: 0; }
 #edd-main-thumb .gallery{ margin: 0;}
 #edd-main-thumb .gallery-caption{ display: none; }
 
@@ -77,6 +79,7 @@
 .gallery-item{ transition: opacity 0.2s ease; }
 .gallery-item:hover{ opacity: 0.8; }
 #edd-gallery .gallery-item{ margin-bottom: 1rem; }
+#edd-gallery .gallery-item img{ box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1); }
 #edd-gallery .gallery{ margin: 0; }
 
 .edd-price del{ opacity: 0.5; }

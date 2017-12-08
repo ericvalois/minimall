@@ -32,7 +32,7 @@ function minimall_custom_comments($comment, $args, $depth) {
     <li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
             
         <div class="comment-intro clearfix line-height-4">
-            <div class="left mr1 mb1 "><?php echo get_avatar( $comment->comment_author_email, 57, "", "", array("class" => "rounded") ); ?></div> 
+            <div class="left mr1 mb1 "><?php echo get_avatar( $comment->comment_author_email, 48, "", "", array("class" => "rounded") ); ?></div> 
             <span class="sm-text bold upper"><?php printf(__('%s','minimall'), get_comment_author_link()) ?> </span>
             <span><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></span>
             <br>

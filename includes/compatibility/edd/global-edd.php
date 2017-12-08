@@ -231,9 +231,39 @@ function minimall_edd_download_left_sidebar(){
 /*
 * Remove variable pricing options on archive
 */
-add_action('wp','minimall_edd_remove_pricing_options_archive');
+//add_action('wp','minimall_edd_remove_pricing_options_archive');
 function minimall_edd_remove_pricing_options_archive(){
     if( !is_singular("download") ){
         remove_action('edd_purchase_link_top','edd_purchase_variable_pricing');
     }
 }
+
+add_action('edd_purchase_link_top','minimall_edd_secondary_link1');
+function minimall_edd_secondary_link1(){
+?>
+    <div class="flex items-center py1">
+<?php
+}
+
+add_action('edd_purchase_link_end','minimall_edd_secondary_link', 10);
+function minimall_edd_secondary_link(){
+    global $post;
+
+    $link_label = rwmb_meta( 'minimall-edd_secondary_label', $post->ID );
+    $link_url = rwmb_meta( 'minimall-edd_secondary_url', $post->ID );
+    $link_class = rwmb_meta( 'minimall-edd_secondary_class', $post->ID );
+    $link_target = rwmb_meta( 'minimall-edd_secondary_target', $post->ID );
+
+    if( !empty( $link_label ) && !empty( $link_url ) && is_singular('download') ){
+        echo '<a '.minimall_external_link( $link_target ).'class="'.esc_attr( $link_class ).'" href="'.esc_url( $link_url ).'">'.esc_html( $link_label ).'</a>';
+    }
+}
+
+add_action('edd_purchase_link_end','minimall_edd_secondary_link2', 20);
+function minimall_edd_secondary_link2(){
+?>
+    </div>
+<?php
+}
+
+

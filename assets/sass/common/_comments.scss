@@ -35,8 +35,7 @@ ol.comment-list p {
 .comment-reply-link:hover, 
 .comment-edit-link:hover,
 #cancel-comment-reply-link:hover {
-    color: #fff;
+    color: #fff !important;
     background-color: #3a3a3a;
-    border: 1px solid #3a3a3a;
     opacity: 1;
 }

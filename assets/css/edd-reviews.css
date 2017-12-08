@@ -70,6 +70,7 @@
     float: left;
     margin-right: 1rem;
     position: relative;
+    border-radius: 3px;
   }
   .edd-review-author b {
     vertical-align: middle;
@@ -109,11 +110,23 @@
     color: #696969;
   }
   .edd-reviews-form {
-    padding: 2rem;
-    border: 2px solid #f4f4f4;
-    background: #fcfcfc;
     margin-top: 2rem;
   }
+
+p.edd-reviews-review-form-rating {
+    display: flex;
+    align-items: center;
+}
+
+p.edd-reviews-review-form-rating label{
+    margin-right: 15px;
+}
+
+.edd-review-content p{ 
+    margin: 1rem 0;
+    font-size: 90%;
+}
+
   .edd-reviews-form .edd-reviews-review-form-submit {
     margin-bottom: 0;
   }

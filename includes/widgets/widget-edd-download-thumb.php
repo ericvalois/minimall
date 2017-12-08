@@ -38,7 +38,7 @@ class Minimall_Edd_Download_Thumbnail extends WP_Widget {
     $full_data = wp_get_attachment_image_src( $image_id, 'full' ); 
 ?>
 
-    <div id="edd-main-thumb" class="mxn1">
+    <div id="edd-main-thumb">
         <?php echo do_shortcode('[gallery link="file" type="thumbnail" size="large" columns="1" include="'. $image_id .'"]'); ?>
     </div>
     

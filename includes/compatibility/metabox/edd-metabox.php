@@ -62,3 +62,47 @@ function minimall_edd_feature_list( $meta_boxes ) {
 
 	return $meta_boxes;
 }
+
+/*
+* Create Secondary link metabox
+*/
+add_filter( 'rwmb_meta_boxes', 'minimall_edd_secondary_link_metabox' );
+function minimall_edd_secondary_link_metabox( $meta_boxes ) {
+	$prefix = 'minimall-';
+
+	$meta_boxes[] = array(
+		'id' => 'secondary-link',
+		'title' => esc_html__( 'Secondary Link', 'minimall' ),
+		'post_types' => array( 'download' ),
+		'context' => 'normal',
+		'priority' => 'low',
+		'autosave' => false,
+		'fields' => array(
+			array(
+				'id' => $prefix . 'edd_secondary_label',
+				'type' => 'text',
+				'name' => esc_html__( 'Label', 'minimall' ),
+			),
+			array(
+				'id' => $prefix . 'edd_secondary_url',
+				'type' => 'url',
+				'name' => esc_html__( 'URL', 'minimall' ),
+				'placeholder' => esc_html__( 'http://', 'minimall' ),
+            ),
+            array(
+				'id' => $prefix . 'edd_secondary_class',
+				'type' => 'text',
+				'name' => esc_html__( 'Class', 'minimall' ),
+				'placeholder' => esc_html__( 'class1 class2', 'minimall' ),
+			),
+			array(
+				'id' => $prefix . 'edd_secondary_target',
+				'name' => esc_html__( 'External link', 'minimall' ),
+				'type' => 'checkbox',
+				'desc' => esc_html__( 'Open in a new tab', 'minimall' ),
+			),
+		),
+	);
+
+	return $meta_boxes;
+}

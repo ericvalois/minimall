@@ -90,50 +90,52 @@ function minimall_lazy_load_image( $content ){
     $imgs = $document->getElementsByTagName('img');
     foreach ($imgs as $img) {
 
-        // add data-sizes
-        $img->setAttribute('data-size', "auto");
-
-        // remove sizes
-        $img->removeAttribute('sizes');
-
-        // src
-        if($img->hasAttribute('src')){
-            $existing_src = $img->getAttribute('src');
-            $img->setAttribute('src', "data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=");
-
-            $img->setAttribute('data-src', $existing_src);
-        }
+        if( !$img->hasAttribute('data-src') ){
+            // add data-sizes
+            $img->setAttribute('data-size', "auto");
         
-        // Aspect ratio for better smoohtness
-        if( $img->hasAttribute('width') && $img->hasAttribute('height')){
-            $width = $img->getAttribute('width');
-            $height = $img->getAttribute('height');
-            $aspectratio = $width . '/' . $height;
-            $img->setAttribute('data-aspectratio', $aspectratio);
+            // remove sizes
+            $img->removeAttribute('sizes');
+    
+            // src
+            if($img->hasAttribute('src')){
+                $existing_src = $img->getAttribute('src');
+                $img->setAttribute('src', "data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=");
+    
+                $img->setAttribute('data-src', $existing_src);
+            }
+            
+            // Aspect ratio for better smoohtness
+            if( $img->hasAttribute('width') && $img->hasAttribute('height')){
+                $width = $img->getAttribute('width');
+                $height = $img->getAttribute('height');
+                $aspectratio = $width . '/' . $height;
+                $img->setAttribute('data-aspectratio', $aspectratio);
+            }
+    
+            // srcset
+            if($img->hasAttribute('srcset')){
+                $existing_srcset = $img->getAttribute('srcset');
+                $img->removeAttribute('srcset');
+                $img->setAttribute('data-srcset', "$existing_srcset");
+            }
+    
+            // Set Lazyload Class
+            $existing_class = $img->getAttribute('class');
+            $img->setAttribute('class', "lazyload $existing_class");
+    
+    
+            // noscript
+            $noscript = $document->createElement('noscript');
+            $img->parentNode->insertBefore($noscript);
+    
+            $image = $document->createElement('image');
+            $imageAttribute = $document->createAttribute('src');
+            $imageAttribute->value = $existing_src;
+            $image->appendChild($imageAttribute);
+    
+            $noscript->appendChild($image);
         }
-
-        // srcset
-        if($img->hasAttribute('srcset')){
-            $existing_srcset = $img->getAttribute('srcset');
-            $img->removeAttribute('srcset');
-            $img->setAttribute('data-srcset', "$existing_srcset");
-        }
-
-        // Class
-        $existing_class = $img->getAttribute('class');
-        $img->setAttribute('class', "lazyload $existing_class");
-
-
-        // noscript
-        $noscript = $document->createElement('noscript');
-        $img->parentNode->insertBefore($noscript);
-
-        $image = $document->createElement('image');
-        $imageAttribute = $document->createAttribute('src');
-        $imageAttribute->value = $existing_src;
-        $image->appendChild($imageAttribute);
-
-        $noscript->appendChild($image);
 
     }
 

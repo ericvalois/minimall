@@ -80,7 +80,9 @@ class Minimall_EDD_Product_Details_Widget extends WP_Widget {
 
 		do_action( 'edd_product_details_widget_before_purchase_button' , $instance , $download_id );
 		// purchase button.
-		echo $purchase_button;
+        echo $purchase_button;
+        
+
 
 		// categories and tags.
 		$category_list     = $categories ? get_the_term_list( $download_id, 'download_category', '', ', ' ) : '';
