@@ -2,7 +2,7 @@
 /**
  * Adds custom widget.
  */
-class minimall_author_widget extends WP_Widget {
+class Minimall_Author_Widget extends WP_Widget {
 
   /**
    * Register widget with WordPress.
@@ -97,9 +97,9 @@ class minimall_author_widget extends WP_Widget {
     return $lminimall_instance;
   }
 
-} // class minimall_author_widget
+} // class Minimall_Author_Widget
 
-// register minimall_author_widget widget
+// register Minimall_Author_Widget widget
 add_action( 'widgets_init', function(){
-  register_widget( 'minimall_author_widget' );
+  register_widget( 'Minimall_Author_Widget' );
 });

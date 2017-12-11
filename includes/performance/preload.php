@@ -62,3 +62,14 @@ function minimall_add_hero_img_preload(){
 
     }
 }
+
+/*
+* Preload jQuery if detected
+*/
+//add_action('minimall_preload','minimall_add_jquery_preload',10);
+function minimall_add_jquery_preload(){
+    if( get_theme_mod('performance_activate_preload',false) &&
+    wp_script_is( 'jquery', 'enqueued' ) ){
+        //echo '<link rel="preload" as="script" href="' . esc_url( $images['lg'] ) . '">' . PHP_EOL;
+    }
+}

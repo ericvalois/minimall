@@ -2,7 +2,7 @@
 /**
  * Adds custom widget for EDD Comments.
  */
-class minimall_edd_download_comments extends WP_Widget {
+class Minimall_Edd_Download_Comments extends WP_Widget {
 
   /**
    * Register widget with WordPress.
@@ -77,9 +77,9 @@ class minimall_edd_download_comments extends WP_Widget {
     return $lminimall_instance;
   }
 
-} // class minimall_edd_download_comments
+} // class Minimall_Edd_Download_Comments
 
-// register minimall_edd_download_comments widget
+// register Minimall_Edd_Download_Comments widget
 add_action( 'widgets_init', function(){
-  register_widget( 'minimall_edd_download_comments' );
+  register_widget( 'Minimall_Edd_Download_Comments' );
 });

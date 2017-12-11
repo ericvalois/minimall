@@ -11,22 +11,22 @@ if( minimall_is_edd_active() ){
     /**
      * EDD Widget Description
      */
-    require get_template_directory() . '/includes/widgets/widget-edd-description.php';
+    require get_template_directory() . '/includes/compatibility/edd/widget-edd-description.php';
 
     /**
      * EDD Widget Comments
      */
-    require get_template_directory() . '/includes/widgets/widget-edd-comments.php';
+    require get_template_directory() . '/includes/compatibility/edd/widget-edd-comments.php';
 
     /**
      * EDD Widget Download Detail
      */
-    require get_template_directory() . '/includes/widgets/widget-edd-download-detail.php';
+    require get_template_directory() . '/includes/compatibility/edd/widget-edd-download-detail.php';
 
     /**
      * EDD Widget Download Thumbnail
      */
-    require get_template_directory() . '/includes/widgets/widget-edd-download-thumb.php';
+    require get_template_directory() . '/includes/compatibility/edd/widget-edd-download-thumb.php';
 
     /**
      * If EDD Reviews Active
@@ -40,7 +40,7 @@ if( minimall_is_edd_active() ){
         /**
          * EDD Widget Reviews
          */
-        require get_template_directory() . '/includes/widgets/widget-edd-reviews.php';
+        require get_template_directory() . '/includes/compatibility/edd/widget-edd-reviews.php';
     }
 
     /**
@@ -60,7 +60,7 @@ if( minimall_is_edd_active() ){
         /**
          * EDD Metabox gallery widget
          */
-        require get_template_directory() . '/includes/widgets/widget-edd-metabox-gallery.php';
+        require get_template_directory() . '/includes/compatibility/metabox/widget-edd-metabox-gallery.php';
     }
 }
 

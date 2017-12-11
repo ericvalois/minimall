@@ -27,8 +27,8 @@ Minimall_Kirki::add_field( 'minimall', array(
 */
 add_action('init', 'minimall_optimiazation_jetpack');
 function minimall_optimiazation_jetpack(){
-    if( get_theme_mod('jetpack_performance',false) ):
-        //wp_dequeue_script( 'devicepx' );
+    if( get_theme_mod('jetpack_optimization',false) ):
+        wp_dequeue_script( 'devicepx' );
         //add_filter( 'jetpack_implode_frontend_css', '__return_false' );
     endif;
 }
@@ -44,3 +44,5 @@ function minimall_remove_jetpack_gallery_comment( $open, $post_id ) {
     }
     return $open;
 }
+
+add_filter( 'jp_carousel_force_enable', '__return_true' );

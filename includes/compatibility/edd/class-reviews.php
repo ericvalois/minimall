@@ -14,9 +14,9 @@ class Minimall_EDD_Reviews {
 		add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
         add_filter( 'body_class', array( $this, 'body_classes' ) );
         
-        //$reviews = new EDD_Reviews;
-        //remove_filter( 'the_content', 'edd_reviews_load_frontend', 999);
-        //add_action('minimall_edd_reviews','edd_reviews_load_frontend');
+        // Remove reviews from regular location
+        $object_review = EDD_Reviews::get_instance();
+        remove_filter('the_content', array( $object_review,'load_frontend') );
         
 	}
 

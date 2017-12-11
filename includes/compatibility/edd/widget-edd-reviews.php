@@ -1,17 +1,17 @@
 <?php
 /**
- * Adds custom widget for EDD Description.
+ * Adds custom widget for EDD Reviews.
  */
-class minimall_edd_download_description extends WP_Widget {
+class Minimall_Edd_Download_Reviews extends WP_Widget {
 
   /**
    * Register widget with WordPress.
    */
   function __construct() {
     parent::__construct(
-      'minimall_edd_download_description', // Base ID
-      __('Minimall Download Description', 'minimall'), // Name
-      array( 'description' => __( 'Display the download main content.', 'minimall' ), ) // Args
+      'minimall_edd_download_reviews', // Base ID
+      __('Minimall Download Reviews', 'minimall'), // Name
+      array( 'description' => __( 'Display download reviews tabs.', 'minimall' ), ) // Args
     );
   }
 
@@ -24,14 +24,18 @@ class minimall_edd_download_description extends WP_Widget {
    * @param array $instance Saved values from database.
    */
   public function widget( $args, $instance ) {
+
+    if( !is_singular('download') ){ return; }
+
     echo $args['before_widget'];
     if ( !empty($instance['title']) ) {
       echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
     }
     
-    global $post;
-    
-    the_content();
+    edd_get_template_part( 'reviews' );
+    if ( get_option( 'thread_comments' ) ) {
+        edd_get_template_part( 'reviews-reply' );
+    }
     
     echo $args['after_widget'];
   }
@@ -75,9 +79,9 @@ class minimall_edd_download_description extends WP_Widget {
     return $lminimall_instance;
   }
 
-} // class minimall_edd_download_description
+} // class Minimall_Edd_Download_Reviews
 
-// register minimall_edd_download_description widget
+// register Minimall_Edd_Download_Reviews widget
 add_action( 'widgets_init', function(){
-  register_widget( 'minimall_edd_download_description' );
+  register_widget( 'Minimall_Edd_Download_Reviews' );
 });

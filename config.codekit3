@@ -912,6 +912,41 @@
 		"oAP": "\/includes\/compatibility\/edd\/global-edd.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/edd\/widget-edd-comments.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/widget-edd-comments.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/edd\/widget-edd-description.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/widget-edd-description.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/edd\/widget-edd-download-detail.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/widget-edd-download-detail.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/edd\/widget-edd-download-thumb.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/widget-edd-download-thumb.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/edd\/widget-edd-reviews.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/widget-edd-reviews.php",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/gutenberg\/gutenberg.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -945,6 +980,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/compatibility\/metabox\/features-shortcode.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/metabox\/widget-edd-metabox-gallery.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/metabox\/widget-edd-metabox-gallery.php",
 		"oF": 0
 		},
 	"\/includes\/custom-styles.php": {
@@ -1088,48 +1130,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/widgets\/widget-author.php",
-		"oF": 0
-		},
-	"\/includes\/widgets\/widget-edd-comments.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-edd-comments.php",
-		"oF": 0
-		},
-	"\/includes\/widgets\/widget-edd-description.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-edd-description.php",
-		"oF": 0
-		},
-	"\/includes\/widgets\/widget-edd-download-detail.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-edd-download-detail.php",
-		"oF": 0
-		},
-	"\/includes\/widgets\/widget-edd-download-thumb.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-edd-download-thumb.php",
-		"oF": 0
-		},
-	"\/includes\/widgets\/widget-edd-metabox-gallery.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-edd-metabox-gallery.php",
-		"oF": 0
-		},
-	"\/includes\/widgets\/widget-edd-reviews.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-edd-reviews.php",
 		"oF": 0
 		},
 	"\/includes\/widgets\/widget-social-share.php": {

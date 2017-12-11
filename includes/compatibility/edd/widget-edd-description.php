@@ -1,17 +1,17 @@
 <?php
 /**
- * Adds custom widget for EDD Reviews.
+ * Adds custom widget for EDD Description.
  */
-class minimall_edd_download_reviews extends WP_Widget {
+class Minimall_Edd_Download_Description extends WP_Widget {
 
   /**
    * Register widget with WordPress.
    */
   function __construct() {
     parent::__construct(
-      'minimall_edd_download_reviews', // Base ID
-      __('Minimall Download Reviews', 'minimall'), // Name
-      array( 'description' => __( 'Display download reviews tabs.', 'minimall' ), ) // Args
+      'minimall_edd_download_description', // Base ID
+      __('Minimall Download Description', 'minimall'), // Name
+      array( 'description' => __( 'Display the download main content.', 'minimall' ), ) // Args
     );
   }
 
@@ -29,7 +29,9 @@ class minimall_edd_download_reviews extends WP_Widget {
       echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
     }
     
-    do_action('minimall_edd_reviews');
+    global $post;
+    
+    the_content();
     
     echo $args['after_widget'];
   }
@@ -73,9 +75,9 @@ class minimall_edd_download_reviews extends WP_Widget {
     return $lminimall_instance;
   }
 
-} // class minimall_edd_download_reviews
+} // class Minimall_Edd_Download_Description
 
-// register minimall_edd_download_reviews widget
+// register Minimall_Edd_Download_Description widget
 add_action( 'widgets_init', function(){
-  register_widget( 'minimall_edd_download_reviews' );
+  register_widget( 'Minimall_Edd_Download_Description' );
 });

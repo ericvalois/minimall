@@ -238,14 +238,7 @@ function minimall_edd_remove_pricing_options_archive(){
     }
 }
 
-add_action('edd_purchase_link_top','minimall_edd_secondary_link1');
-function minimall_edd_secondary_link1(){
-?>
-    <div class="flex items-center py1">
-<?php
-}
-
-add_action('edd_purchase_link_end','minimall_edd_secondary_link', 10);
+add_action('minimall_edd_product_details_widget_after_purchase_button','minimall_edd_secondary_link', 5);
 function minimall_edd_secondary_link(){
     global $post;
 
@@ -259,11 +252,30 @@ function minimall_edd_secondary_link(){
     }
 }
 
-add_action('edd_purchase_link_end','minimall_edd_secondary_link2', 20);
-function minimall_edd_secondary_link2(){
-?>
-    </div>
-<?php
+/*
+* Before download button wraper
+*/
+add_action('minimall_edd_product_details_widget_before_purchase_button','minimall_wrap_download_btn_before', 10);
+function minimall_wrap_download_btn_before(){
+    echo '<div class="flex items-center">';
 }
 
+/*
+* After download button wraper
+*/
+add_action('minimall_edd_product_details_widget_after_purchase_button','minimall_wrap_download_btn_after', 10);
+function minimall_wrap_download_btn_after(){
+    echo '</div>';
+}
 
+/*
+* Return Download btn class
+*/
+function minimall_get_edd_btn_class( $class = '' ) {
+
+	if(has_filter('minimall_download_btn_class')) {
+		$class = apply_filters('minimall_download_btn_class', $class);
+	}
+ 
+	return $class;
+}

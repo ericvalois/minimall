@@ -321,31 +321,25 @@ input[type='reset'],
 input[type='file'] + label, {
     font-family: $base-font-family;
     line-height: $button-height;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  //width: auto;
-  height: $button-height;
-  padding: 0 1.6rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $button-border-color;
-  border-radius: $button-border-radius;
-  outline: 0;
-  text-decoration: none;
-  font-weight: 500;
-  white-space: nowrap;
-  color: $button-text-color;
-  background-color: $button-background-color;
-  transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing, padding 0.3s ease;
-  cursor: pointer;
-  font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: $button-height;
+    padding: 0 1.6rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $button-border-color;
+    border-radius: $button-border-radius;
+    outline: 0;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    color: $button-text-color;
+    background-color: $button-background-color;
+    transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing, padding 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 .btn:hover, .button:hover ,button:hover, [role='button']:hover, input[type='submit']:hover, input[type='button']:hover, input[type='reset']:hover, input[type='file'] + label:hover {
     color: $button-hover-text-color;
@@ -355,6 +349,7 @@ input[type='file'] + label, {
     background-color: #fff;
     border-color: $text-color !important;
     color: $text-color !important;
+    box-shadow: none;
 }
 
 .btn-outline:hover{
@@ -369,8 +364,8 @@ input[type='file'] + label, {
 }*/
 
 .btn-primary:hover{
-    background-color: $text-color !important;
-    border-color: $text-color !important;
+    background-color: $black !important;
+    border-color: $black !important;
 }
 
 .btn-big{

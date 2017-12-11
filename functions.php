@@ -446,4 +446,3 @@ require get_template_directory() . '/includes/social-share.php';
  * Performance 
  */
 require get_template_directory() . '/includes/performance/performance-init.php';
-

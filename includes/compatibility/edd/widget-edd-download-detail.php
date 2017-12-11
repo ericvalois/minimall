@@ -54,8 +54,9 @@ class Minimall_EDD_Product_Details_Widget extends WP_Widget {
 		$title           = apply_filters( 'widget_title', $instance['title'], $instance, $args['id'] );
         $download_title  = $instance['download_title'] ? apply_filters( 'edd_product_details_widget_download_title', '<h1 class="entry-title h2 mt2 lg-mt0 mb0 lg-mb1">' . get_the_title( $download_id ) . '</h1>', $download_id ) : '';
         $download_price  = $instance['download_price'] ? '<div class="edd-price xxl-text primary-color mt1 mb1">' . edd_price( $download_id, false ) . '</div>' : '';
-        $download_excerpt  = $instance['download_excerpt'] ? '<p class="mt1">' . get_the_excerpt( $download_id ) . '</p>' : '';
-		$purchase_button = $instance['purchase_button'] ? apply_filters( 'edd_product_details_widget_purchase_button', edd_get_purchase_link( array( 'download_id' => $download_id ) ), $download_id ) : '';
+        $download_excerpt  = $instance['download_excerpt'] ? '<p class="mt1 sm-text">' . get_the_excerpt( $download_id ) . '</p>' : '';
+        //$purchase_button = $instance['purchase_button'] ? apply_filters( 'edd_product_details_widget_purchase_button', edd_get_purchase_link( array( 'download_id' => $download_id, 'class' => 'btn btn-primary center lg-text', 'style' => 'button' ) ), $download_id ) : '';
+        $purchase_button = $instance['purchase_button'] ? edd_get_purchase_link( array( 'download_id' => $download_id, 'class' => minimall_get_edd_btn_class(), 'style' => 'button' ) ) : '';
 		$categories      = $instance['categories'] ? $instance['categories'] : '';
 		$tags            = $instance['tags'] ? $instance['tags'] : '';
 
@@ -78,11 +79,14 @@ class Minimall_EDD_Product_Details_Widget extends WP_Widget {
         // download excerpt.
 		echo $download_excerpt;
 
-		do_action( 'edd_product_details_widget_before_purchase_button' , $instance , $download_id );
+        do_action( 'edd_product_details_widget_before_purchase_button' , $instance , $download_id );
+        
+        do_action( 'minimall_edd_product_details_widget_before_purchase_button' , $instance , $download_id );
+
 		// purchase button.
         echo $purchase_button;
         
-
+        do_action( 'minimall_edd_product_details_widget_after_purchase_button' , $instance , $download_id );
 
 		// categories and tags.
 		$category_list     = $categories ? get_the_term_list( $download_id, 'download_category', '', ', ' ) : '';

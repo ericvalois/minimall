@@ -16,13 +16,13 @@
                 $firstColumn = get_theme_mod('edd_single_layout','6');
                 $secondColumn = 12 - $firstColumn;
             ?>
-            <div class="lg-col-<?php echo esc_attr( $firstColumn ); ?> lg-pr2">
+            <div class="lg-col-<?php echo esc_attr( $firstColumn ); ?> lg-pr2 mb3">
 
                 <?php do_action('minimall_edd_first_column'); ?>
 
             </div>
 
-            <div class="lg-col-<?php echo esc_attr( $secondColumn ); ?> lg-px2">
+            <div class="lg-col-<?php echo esc_attr( $secondColumn ); ?> lg-px2 mb3">
                 <?php do_action('minimall_edd_second_column'); ?>
             </div>
         </div>
