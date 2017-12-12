@@ -39,7 +39,7 @@ class Minimall_Author_Widget extends WP_Widget {
 
     $user_description = get_the_author_meta( 'user_description', $post->post_author );
 
-    $user_avatar = get_avatar( get_the_author_meta('user_email') , 90 );    
+    $user_avatar = get_avatar( get_the_author_meta('user_email') , 75 );    
     
     ?>
     <div class="flex items-center">
@@ -47,7 +47,7 @@ class Minimall_Author_Widget extends WP_Widget {
             <?php echo $user_avatar; ?>
         </div>
 
-        <p>
+        <p class="m0">
             <strong class="caps"><?php echo esc_html__("About","minimal"); ?> <?php echo $display_name; ?></strong><br>
             <?php echo nl2br( $user_description ); ?>
         </p>
