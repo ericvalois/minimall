@@ -26,6 +26,14 @@ function minimall_options_add_meta_box() {
 		'page',
 		'side',
 		'default'
+    );
+    add_meta_box(
+		'minimall_options-performance-options',
+		__( 'Performance Options', 'minimall_options' ),
+		'minimall_options_html',
+		'knowledgebase',
+		'side',
+		'default'
 	);
 }
 add_action( 'add_meta_boxes', 'minimall_options_add_meta_box' );
@@ -75,10 +83,3 @@ function minimall_options_save( $post_id ) {
 		update_post_meta( $post_id, 'minimall_options_disable_clean_up', null );
 }
 add_action( 'save_post', 'minimall_options_save' );
-
-/*
-	Usage: minimall_options_get_meta( 'minimall_options_disable_image_lazy_load' )
-	Usage: minimall_options_get_meta( 'minimall_options_disable_iframe_lazy_load' )
-	Usage: minimall_options_get_meta( 'minimall_options_disable_critical_css' )
-	Usage: minimall_options_get_meta( 'minimall_options_disable_clean_up' )
-*/

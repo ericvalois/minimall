@@ -52,6 +52,23 @@ function minimall_lazyload_disable_on_amp() {
 	}
 }
 
+function minimall_is_rest() {
+    return ( defined( 'REST_REQUEST' ) && REST_REQUEST );
+}
+
+/*
+* Detect on page lazyload disabled
+*/
+add_action('init', 'minimall_on_page_lazyload_off');
+function minimall_on_page_lazyload_off(){
+    if( !is_page() && !is_single() ){ return; }
+
+    global $post;
+    if( is_object( $post ) && get_post_meta($post->ID, 'minimall_options_disable_image_lazy_load', true) ){
+        add_filter( 'do_minimall_lazyload', '__return_false' ); 
+    }
+}
+
 
 /**
  * Lazy load module
@@ -68,8 +85,8 @@ function minimall_lazy_load_image( $content ){
 
     if ( ! get_theme_mod('performance_activate_lazyload_img', false) || 
             ! apply_filters( 'do_minimall_lazyload', true ) ||
-            is_search() ||
-            is_admin() ) {
+            is_admin() ||
+            minimall_is_rest() ) {
         return $content;
     }
     

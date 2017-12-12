@@ -16,10 +16,10 @@ function minimall_edd_metabox_features_shortcode( $atts ){
     $features = rwmb_meta( 'minimall-edd_features_items', $post->ID );
     
     if( !empty( $features ) ){
-        $output .= '<div class="sm-flex flex-wrap sm-mxn2">';
+        $output .= '<div class="sm-flex flex-wrap sm-mxn2 mt2 mb2">';
 
         foreach ($features as $item):
-            $output .= '<div class="sm-col-' .esc_attr( $col_width ) .' mb3 sm-px2">';
+            $output .= '<div class="sm-col-' .esc_attr( $col_width ) .' mb2 sm-px2">';
                 
                 if( $item['icon'] ):
                     $output .= '<div class="xl-text">' . $item['icon'] .'</div>';
