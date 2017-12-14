@@ -339,8 +339,18 @@ input[type='file'] + label, {
     transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing, padding 0.3s ease;
     cursor: pointer;
     font-size: 16px;
+}
+
+.btn,
+.button,
+[role='button'],
+input[type='submit'],
+input[type='button'],
+input[type='reset'],
+input[type='file'] + label, {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
 .btn:hover, .button:hover ,button:hover, [role='button']:hover, input[type='submit']:hover, input[type='button']:hover, input[type='reset']:hover, input[type='file'] + label:hover {
     color: $button-hover-text-color;
 }

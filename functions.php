@@ -199,8 +199,18 @@ function minimall_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Posts Footer Sidebar', 'minimall' ),
-		'id'            => 'blog-footer-sidebar',
-		'description'   => __("Sidebar display after the post content","minimal"),
+		'id'            => 'post-footer-sidebar',
+		'description'   => __("Sidebar display after post content","minimal"),
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="widget-title mb2 mt0">',
+		'after_title'   => '</h5>',
+    ) );
+
+    register_sidebar( array(
+		'name'          => esc_html__( 'Pages Footer Sidebar', 'minimall' ),
+		'id'            => 'page-footer-sidebar',
+		'description'   => __("Sidebar display after page content","minimal"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5 class="widget-title mb2 mt0">',

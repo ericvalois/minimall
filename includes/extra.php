@@ -242,7 +242,8 @@ function minimall_site_content_class(){
 /*
 * Add markup for after content hook
 */
-add_action('minimall_after_content','minimall_after_content_begin', 1);
+add_action('minimall_after_post_content','minimall_after_content_begin', 1);
+add_action('minimall_after_page_content','minimall_after_content_begin', 1);
 function minimall_after_content_begin(){
     echo '<div class="max-width-3 ml-auto mr-auto px2 lg-px0">';
 }
@@ -250,15 +251,16 @@ function minimall_after_content_begin(){
 /*
 * Add markup for after content hook
 */
-add_action('minimall_after_content','minimall_after_content_end', 999);
+add_action('minimall_after_post_content','minimall_after_content_end', 999);
+add_action('minimall_after_page_content','minimall_after_content_end', 999);
 function minimall_after_content_end(){
     echo '</div>';
 }
 
 /*
-* Add comment to posts and pages
+* Add posts cetagories and tags to posts footer
 */
-add_action('minimall_after_content','minimall_display_entry_footer',40);
+add_action('minimall_after_post_content','minimall_display_entry_footer',40);
 function minimall_display_entry_footer(){
     minimall_entry_footer();
 }
@@ -266,12 +268,26 @@ function minimall_display_entry_footer(){
 /*
 * Add posts footer sidebar
 */
-add_action('minimall_after_content','minimall_posts_footer_sidebar', 50);
-function minimall_posts_footer_sidebar(){
-    if ( is_active_sidebar( 'blog-footer-sidebar' ) && is_singular('post') ) {
+add_action('minimall_after_post_content','minimall_post_footer_sidebar', 50);
+function minimall_post_footer_sidebar(){
+    if ( is_active_sidebar( 'post-footer-sidebar' ) ) {
     ?>
         <section class="mt4 mb4 widget-area" role="complementary">
-            <?php dynamic_sidebar( 'blog-footer-sidebar' ); ?>
+            <?php dynamic_sidebar( 'post-footer-sidebar' ); ?>
+        </section>
+    <?php 
+    }
+}
+
+/*
+* Add pages footer sidebar
+*/
+add_action('minimall_after_page_content','minimall_pages_footer_sidebar', 50);
+function minimall_pages_footer_sidebar(){
+    if ( is_active_sidebar( 'page-footer-sidebar' ) ) {
+    ?>
+        <section class="mt4 mb4 widget-area" role="complementary">
+            <?php dynamic_sidebar( 'page-footer-sidebar' ); ?>
         </section>
     <?php 
     }
@@ -280,7 +296,8 @@ function minimall_posts_footer_sidebar(){
 /*
 * Add comment to posts and pages
 */
-add_action('minimall_after_content','minimall_comment',100);
+add_action('minimall_after_post_content','minimall_comment',100);
+add_action('minimall_after_page_content','minimall_comment',100);
 function minimall_comment(){
     if ( ( comments_open() || get_comments_number() ) && !is_singular('download') ) :
         

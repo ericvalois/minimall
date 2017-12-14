@@ -252,6 +252,7 @@ class Minimall_Theme_Updater_Admin {
 				<div class="panels">
 					<ul class="inline-list">
 						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Getting Started', 'minimall' ); ?></a></li>
+                        <li><a id="plugins-tab" href="#"><?php esc_html_e( 'Plugins', 'minimall' ); ?></a></li>
 						<li><a id="updates-tab" href="#"><?php esc_html_e( 'What’s New', 'minimall' ); ?></a></li>
 					</ul>
 
@@ -459,7 +460,26 @@ class Minimall_Theme_Updater_Admin {
                             </div>
 
 						</div>
+                        
+                        <!-- Plugins panel -->
+						<div id="plugins-panel" class="panel-left">
+                        <?php
+                                $minimall_plugins = wp_remote_get('https://ttfb.io/wp-json/wp/v2/knowledgebase/1293/');
 
+                                // Make sure the response came back okay.
+                                if( is_wp_error( $minimall_plugins ) ) {
+                                    return false; // Bail early
+                                }
+
+                                $body = wp_remote_retrieve_body( $minimall_plugins );
+                                $data = json_decode( $body );
+
+                                if( ! empty( $data ) ) {
+                                    echo $data->content->rendered;
+                                }
+                            ?>
+						</div><!-- .panel-left plugins -->
+                        
                         <?php
                             // Grab the change log from ttfb.io for display in the Latest Updates tab
                             $changelog = wp_remote_get( 'https://ttfb.io/themes/' . $this->api_slug . '/changelog/' );
@@ -472,7 +492,10 @@ class Minimall_Theme_Updater_Admin {
 						<!-- Updates panel -->
 						<div id="updates-panel" class="panel-left">
 							<p><?php echo $changelog; ?></p>
-						</div><!-- .panel-left updates -->
+                        </div><!-- .panel-left updates -->
+                        
+                        
+						
 
 						<div class="panel-right">
 

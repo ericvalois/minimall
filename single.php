@@ -17,11 +17,11 @@ get_header(); ?>
             <?php
                 while ( have_posts() ) : the_post();
                 
-                    do_action('minimall_before_content');
+                    do_action('minimall_before_post_content');
                 
                     get_template_part( 'template-parts/content' );
     
-                    do_action('minimall_after_content');
+                    do_action('minimall_after_post_content');
 
                 endwhile; // End of the loop.
             ?>

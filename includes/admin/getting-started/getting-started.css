@@ -109,16 +109,15 @@
 
 .getting-started .panel-left ul, .getting-started .panel-left ol {
 	margin: 0 0 5% 0;
-	background: #F8F8F8;
-	padding: 5% 5% 5% 8%;
+	padding: 0 0 0 30px;
 	list-style-type: square;
 	font-size: 16px;
 	line-height: 1.8;
 }
 .getting-started .panel-left ul li, .getting-started .panel-left ol li {
 	border-bottom: dotted 1px #ddd;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
 }
 .getting-started .panel-left ul li:last-child, .getting-started .panel-left ol li:last-child {
 	border: none;
