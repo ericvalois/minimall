@@ -110,7 +110,7 @@ function minimall_entry_footer() {
         $output = '';
         if ( ! empty( $tags_list ) ) {
             foreach( $tags_list as $tag ) {
-                $output .= '<a class="black" href="' . esc_url( get_category_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'minimall' ), $tag->name ) ) . '">' . esc_html( ucfirst($tag->name) ) . '</a>' . $separator;
+                $output .= '<a class="black" href="' . esc_url( get_tag_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'minimall' ), $tag->name ) ) . '">' . esc_html( ucfirst($tag->name) ) . '</a>' . $separator;
             }
         }
 
