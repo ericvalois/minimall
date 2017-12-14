@@ -428,9 +428,10 @@
 }
 #updates-panel ul {
 	border-bottom: 1px dotted #ddd;
-	padding: 1% 0 5% 3%;
+	padding: 0 0 15px 30px;
 	list-style-position: inside;
-	background: transparent;
+    background: transparent;
+    margin-bottom: 25px;
 }
 #updates-panel li {
 	border-bottom: 0;
