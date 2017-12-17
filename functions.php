@@ -258,6 +258,7 @@ require( get_template_directory() . '/includes/admin/customizer/customizer.php' 
 /**
  * Enqueue scripts and styles.
  */
+add_action( 'wp_enqueue_scripts', 'minimall_scripts' );
 function minimall_scripts() {
     global $post;
 
@@ -269,27 +270,22 @@ function minimall_scripts() {
     	wp_enqueue_style( 'minimall-stylesheet', trailingslashit( get_template_directory_uri() ) . 'style.css' );
     }
 
-    wp_enqueue_script( 'minimall-lazysizes', get_template_directory_uri() . '/includes/vendors/lazysizes/lazysizes-all.min.js', '', '', true );
-
     wp_enqueue_script( 'minimall-init', get_template_directory_uri() . '/assets/js/minimall-init.min.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
     }
-    
-    
-    
 }
-add_action( 'wp_enqueue_scripts', 'minimall_scripts' );
+
 
 /**
- * Is Faster Font Awesome active?
+ * Is TTFB Toolkit active?
  *
  * @since 1.0.0
  * @return bool
  */
-function minimall_is_ffa_active() {
-	return function_exists('faster_font_awesome_init');
+function minimall_is_ttfb_toolkit() {
+	return function_exists('ttfb_toolkit_init');
 }
 
 /**
@@ -455,4 +451,4 @@ require get_template_directory() . '/includes/social-share.php';
 /**
  * Performance 
  */
-require get_template_directory() . '/includes/performance/performance-init.php';
+//require get_template_directory() . '/includes/performance/performance-init.php';

@@ -74,7 +74,7 @@ function minimall_custom_menu( $theme_location ) {
         $menu = get_term( $locations[$theme_location], 'nav_menu' );
         $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-        $menu_list = '<ul class="list-reset m0 lg-right weight500">' ."\n";
+        $menu_list = '<ul class="list-reset m0 '. get_theme_mod('header_alignment','lg-right') .' weight500">' ."\n";
  
         $count = 0;
         $submenu = false;

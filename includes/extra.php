@@ -182,9 +182,10 @@ function minimall_display_header(){
 ?>
 <header id="masthead" class="site-header line-height-3 flex items-center flex-wrap col-12 bg-white py2 px2" role="banner">
         
-    <div class="flex justify-between items-center lg-flex col-12 lg-col-3 line-height-1 header-menu">
-        <div class="site-branding flex-auto col-6 lg-col-2 flex items-center">
+    <div class="flex col-12 lg-col-auto justify-between items-center line-height-1 header-menu">
+        <div class="site-branding flex-auto col-6 lg-col-2 inline-flex items-center">
             <?php get_template_part( 'template-parts/custom', 'logo' ); ?>
+            <?php do_action('minimall_after_custom_logo'); ?>
         </div><!-- .site-branding -->
 
         <?php if ( has_nav_menu( 'primary' ) ) : ?>
@@ -195,7 +196,10 @@ function minimall_display_header(){
         <?php endif; ?>
     </div><!-- .header-menu -->
     
-    <?php do_action('minimall_after_custom_logo'); ?>
+    <div class="lg-block flex-auto lg-pl2">
+        <?php do_action('minimall_header_sidebar'); ?>
+    </div>
+    
 
 </header>
 <?php
@@ -204,11 +208,11 @@ function minimall_display_header(){
 /**
  * Display primary menu
  */
-add_action('minimall_after_custom_logo', 'minimall_display_primary_menu');
+add_action('minimall_header_sidebar', 'minimall_display_primary_menu', 10);
 function minimall_display_primary_menu(){
 ?>
     <?php if ( has_nav_menu( 'primary' ) ) : ?>
-        <nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" id="site-navigation" class="main-navigation lg-block col-12 lg-col-9" role="navigation">
+        <nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" id="site-navigation" class="main-navigation" role="navigation">
             <?php minimall_custom_menu('primary'); ?>
         </nav><!-- .main-navigation -->
     <?php endif; ?>

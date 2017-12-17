@@ -9,7 +9,7 @@
 Minimall_Kirki::add_section( 'private_dashboard', array(
     'title'      => esc_attr__( 'Private Dashboard', 'minimall' ),
     'priority'   => 100,
-    'panel'		 => 'minimall_options',
+    'panel'		 => 'ttfb_options',
     'capability' => 'edit_theme_options',
 ) );
 

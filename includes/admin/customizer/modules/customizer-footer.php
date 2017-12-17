@@ -5,7 +5,7 @@
 Minimall_Kirki::add_section( 'footer', array(
 	'title'      => esc_attr__( 'Footer', 'minimall' ),
     'priority'   => 40,
-    'panel'		 => 'minimall_options',
+    'panel'		 => 'ttfb_options',
 	'capability' => 'edit_theme_options',
 ) );
 

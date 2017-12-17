@@ -989,6 +989,13 @@
 		"oAP": "\/includes\/compatibility\/metabox\/widget-edd-metabox-gallery.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/ttfb-toolkit\/minimall-preload.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/ttfb-toolkit\/minimall-preload.php",
+		"oF": 0
+		},
 	"\/includes\/custom-styles.php": {
 		"cB": 0,
 		"ft": 8192,

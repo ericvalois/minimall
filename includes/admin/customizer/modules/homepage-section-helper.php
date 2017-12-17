@@ -72,28 +72,10 @@ function minimall_homepage_create_section( $args ){
         'type'     => 'minimall_notice',
         'settings' => 'home_'.$args['slug'].'_style_notice',
         'label'    => __( 'Style Section', 'minimall' ),
-        'description'    => __( 'Adding an image will automatically display white text and a dark background.', 'minimall' ),
+        //'description'    => __( 'Adding an image will automatically display white text and a dark background.', 'minimall' ),
         'section'  => 'homepage_'.$args['slug'],
         'priority' => 60,
     ) );
-    
-    /*Minimall_Kirki::add_field( 'minimall', array(
-        'type'        => 'image',
-        'settings'    => 'home_'.$args['slug'].'_img',
-        'label'       => __( 'Background', 'minimall' ),
-        'description'       => __( 'Section background image', 'minimall' ),
-        'section'     => 'homepage_'.$args['slug'],
-        'priority'    => 80,
-        'transport' => 'postMessage',
-        'js_vars'   => array(
-            array(
-                'element'  => '#home-section-'.$args['slug']. ' .bg-section',
-                'function' => 'css',
-                'property' => 'background-image',
-                'suffix'   => '!important',
-            ),
-        )
-    ) );*/
 
     Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'radio-buttonset',
@@ -282,7 +264,7 @@ function minimall_homepage_content_type_blog( $section_args ){
     Minimall_Kirki::add_field( 'minimall', array(
         'type'        => 'slider',
         'settings'    => 'home_'.$section_args['slug'].'_quantity',
-        'label'       => esc_attr__( 'Number of posts', 'minimall' ),
+        'label'       => esc_attr__( 'Posts number', 'minimall' ),
         'section'     => 'homepage_'.$section_args['slug'],
         'default'     => 12,
         'priority'    => 40,

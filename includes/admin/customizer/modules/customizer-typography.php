@@ -5,7 +5,7 @@
 Minimall_Kirki::add_section( 'typography', array(
 	'title'      => esc_attr__( 'Typography', 'minimall' ),
     'priority'   => 20,
-    'panel'		 => 'minimall_options',
+    'panel'		 => 'ttfb_options',
 	'capability' => 'edit_theme_options',
 ) );
 
@@ -38,12 +38,3 @@ Minimall_Kirki::add_field( 'minimall', array(
 		'step' => 1,
 	),
 ) );
-
-/*Minimall_Kirki::add_field( 'minimall', array(
-	'type'        => 'custom',
-	'settings'    => 'warning_typography',
-	'label'       => __( 'Speed Concerns', 'minimall' ),
-	'section'     => 'typography',
-    'default'     => '<div style="">'.esc_html__('Google Fonts may affect negatively your site performance.','minimall').'</div><hr style="margin: 15px 0;">',
-	'priority'    => 30,
-) );*/

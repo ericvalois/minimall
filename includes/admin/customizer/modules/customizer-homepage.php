@@ -30,7 +30,7 @@ Minimall_Kirki::add_field( 'minimall', array(
         'features' => esc_attr__( 'Features', 'minimall' ),
 		//'testimonials' => esc_attr__( 'Testimonials', 'minimall' ),
 		'blog' => esc_attr__( 'Blog', 'minimall' ),
-        'banner' => esc_attr__( 'Banner', 'minimall' ),
+        //'banner' => esc_attr__( 'Banner', 'minimall' ),
         //'editor' => esc_attr__( 'Editor', 'minimall' ), // show content from a page
 	),
     'priority'    => 10,
@@ -72,6 +72,7 @@ Minimall_Kirki::add_field( 'minimall', array(
     'description' => __( 'Background image', 'minimall' ),
     'section'     => 'homepage_hero',
     'priority'    => 30,
+    'default'     => '',
     'choices'     => array(
 		'save_as' => 'id',
 	), 

@@ -2,7 +2,7 @@
 Minimall_Kirki::add_section( 'colors', array(
 	'title'      => esc_attr__( 'Colors', 'minimall' ),
     'priority'   => 80,
-    'panel'		 => 'minimall_options',
+    'panel'		 => 'ttfb_options',
 	'capability' => 'edit_theme_options',
 ) );
 

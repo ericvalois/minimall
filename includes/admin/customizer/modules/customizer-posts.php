@@ -5,7 +5,7 @@
 Minimall_Kirki::add_section( 'posts', array(
 	'title'      => esc_attr__( 'Posts', 'minimall' ),
     'priority'   => 70,
-    'panel'		 => 'minimall_options',
+    'panel'		 => 'ttfb_options',
 	'capability' => 'edit_theme_options',
 ) );
 

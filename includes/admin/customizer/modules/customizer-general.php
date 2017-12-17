@@ -5,7 +5,7 @@
 Minimall_Kirki::add_section( 'header', array(
 	'title'      => esc_attr__( 'Header', 'minimall' ),
     'priority'   => 30,
-    'panel'		 => 'minimall_options',
+    'panel'		 => 'ttfb_options',
 	'capability' => 'edit_theme_options',
 ) );
 

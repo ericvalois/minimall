@@ -103,3 +103,13 @@ if( minimall_is_kirki_active() ){
      */
     require get_template_directory() . '/includes/compatibility/kirki/kirki.php';
 }
+
+/**
+ * If TTFB Toolkit Active
+ */
+if( minimall_is_ttfb_toolkit() ){
+    /**
+     * Minimall Specific Optimization
+     */
+    require get_template_directory() . '/includes/compatibility/ttfb-toolkit/minimall-preload.php';
+}

@@ -85,8 +85,6 @@ add_action( 'customize_register', function( $wp_customize ) {
 
 } );
 
-
-
 /**
  * Minimall Customizer Styles
  */
@@ -115,7 +113,7 @@ function minimall_customizer_styles() { ?>
 
         .customize-control-kirki-radio-image .image{ display: flex; }
 
-        li#accordion-panel-minimall_options > h3.accordion-section-title:before {
+        li#accordion-panel-ttfb_options > h3.accordion-section-title:before {
             content: "\f108";
             font-family: dashicons;
             padding: 0 3px 0 0;
@@ -132,6 +130,8 @@ function minimall_customizer_styles() { ?>
             font-size: 22px;
             line-height: 1;
         }
+
+        .wp-full-overlay-sidebar { width: 400px } .wp-full-overlay.expanded { margin-left: 400px }
 	</style>
 	<?php
 
@@ -140,7 +140,7 @@ function minimall_customizer_styles() { ?>
 /*
 * Add default theme options panel
 */
-Minimall_Kirki::add_panel( 'minimall_options', array(
+Minimall_Kirki::add_panel( 'ttfb_options', array(
     'priority'	 => 300,
     'title'		 => __( 'Theme Options', 'minimall' ),
 ) );

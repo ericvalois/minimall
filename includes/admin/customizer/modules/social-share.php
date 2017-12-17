@@ -5,7 +5,7 @@
 Minimall_Kirki::add_section( 'social_share', array(
 	'title'      => esc_attr__( 'Social Share', 'minimall' ),
     'priority'   => 40,
-    'panel'		 => 'minimall_options',
+    'panel'		 => 'ttfb_options',
 	'capability' => 'edit_theme_options',
 ) );
 
