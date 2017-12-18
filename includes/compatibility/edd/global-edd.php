@@ -199,10 +199,12 @@ function minimall_before_checkout_personal(){
 /*
 * Remove primary menu on EDD Checkout
 */
-add_action("wp_head", "minimall_edd_checkout_remove_menu");
+add_action("wp_footer", "minimall_edd_checkout_remove_menu");
 function minimall_edd_checkout_remove_menu(){
     if( get_theme_mod('edd_checkout_hide_menu','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ){
-        remove_action('minimall_after_custom_logo','minimall_display_primary_menu');
+        echo '<style>';
+        echo '#site-navigation{ display: none }';
+        echo '</style>';
     }
 }
 
@@ -238,7 +240,7 @@ function minimall_edd_remove_pricing_options_archive(){
     }
 }
 
-add_action('minimall_edd_product_details_widget_after_purchase_button','minimall_edd_secondary_link', 5);
+add_action('edd_purchase_link_end','minimall_edd_secondary_link', 5);
 function minimall_edd_secondary_link(){
     global $post;
 
@@ -255,15 +257,15 @@ function minimall_edd_secondary_link(){
 /*
 * Before download button wraper
 */
-add_action('minimall_edd_product_details_widget_before_purchase_button','minimall_wrap_download_btn_before', 10);
+add_action('edd_purchase_link_top','minimall_wrap_download_btn_before', 10);
 function minimall_wrap_download_btn_before(){
-    echo '<div class="flex items-center">';
+    echo '<div class="flex items-center edd_flex_wrap">';
 }
 
 /*
 * After download button wraper
 */
-add_action('minimall_edd_product_details_widget_after_purchase_button','minimall_wrap_download_btn_after', 10);
+add_action('edd_purchase_link_end','minimall_wrap_download_btn_after', 10);
 function minimall_wrap_download_btn_after(){
     echo '</div>';
 }

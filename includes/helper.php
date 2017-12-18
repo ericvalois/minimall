@@ -69,12 +69,13 @@ function minimall_compress( $minify ){
 /**
  * Custom WordPress Menu Markup
  */
+/*
 function minimall_custom_menu( $theme_location ) {
     if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) {
         $menu = get_term( $locations[$theme_location], 'nav_menu' );
         $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-        $menu_list = '<ul class="list-reset m0 '. get_theme_mod('header_alignment','lg-right') .' weight500">' ."\n";
+        $menu_list = '<ul class="list-reset m0 weight500">' ."\n";
  
         $count = 0;
         $submenu = false;
@@ -147,6 +148,7 @@ function minimall_custom_menu( $theme_location ) {
     }
     echo $menu_list;
 }
+*/
 
 /**
  * Custom Pagination Markup

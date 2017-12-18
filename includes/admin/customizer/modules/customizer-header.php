@@ -16,12 +16,15 @@ Minimall_Kirki::add_field( 'minimall', array(
     'label'       => __( 'Header alignment', 'minimall' ),
     'description' => __( 'Header content alignment', 'minimall' ),
 	'section'     => 'header',
-	'default'     => 'lg-right',
+	'default'     => 'justify-end',
 	'priority'    => 10,
 	'multiple'    => 0,
 	'choices'     => array(
-		'lg-right' => esc_attr__( 'Right', 'minimall' ),
-		'lg-left' => esc_attr__( 'Left', 'minimall' ),
+		'justify-end' => esc_attr__( 'Right', 'minimall' ),
+        'justify-start' => esc_attr__( 'Left', 'minimall' ),
+        'justify-center' => esc_attr__( 'Center', 'minimall' ),
+        'justify-between' => esc_attr__( 'Space between', 'minimall' ),
+        'justify-around' => esc_attr__( 'Space around', 'minimall' ),
 	),
 ) );
 

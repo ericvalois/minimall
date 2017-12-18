@@ -8,12 +8,12 @@
     font-family: inherit;
 }
 
-.edd_price_options{ font-size: 1em; }
+.edd_price_options{ font-size: 90%; }
 .edd_price_options ul{ 
     list-style-type: none;
     padding-left: 0;
     line-height: 1.2;
-    margin-bottom: 1.7rem;
+    margin: 0 0 1.7rem 0 !important;
 }
 .edd_price_options input{
     width: 15px;
@@ -28,6 +28,15 @@
     display: flex;
     align-items: center;
 }
+
+.edd_downloads_list .edd-submit.button{
+    @extend .btn;
+}
+
+.edd_flex_wrap{
+    max-height: 2.25rem;
+}
+
 
 @media #{$breakpoint-sm} {
     .edd_downloads_list{ 
@@ -99,7 +108,8 @@
 
 #edd-purchase-button{
     @extend .btn-primary;
-    @extend .lg-text;
+    @extend .xl-text;
+    @extend .btn-big;
 }
 
 .max-width-3 #edd-purchase-button{
@@ -160,6 +170,11 @@
 
 .edd-table td,
 .edd_sl_table td{ @extend .sm-text; }
+
+// Fix if edd style active
+#edd_checkout_form_wrap input.edd-input, 
+#edd_checkout_form_wrap textarea.edd-input{ width: 100%; }
+
 /*
 * Purchase Confirmation
 */
@@ -184,6 +199,7 @@
 .edd_sl_license_key{ padding: 0 1rem !important; }
 
 #edd_sl_license_add_site_form .edd-input{ margin-bottom: 1rem; }
+
 
 .edd-sl-active {
     color: #fff;

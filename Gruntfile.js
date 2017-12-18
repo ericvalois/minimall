@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/home.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/page.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/single.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/404.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/edd-single.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
                     ignoreConsole: false
                 }
             },
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/edd-archive.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-3','.lg-col-4','.lg-col-6','.lg-col-12'],
                     ignoreConsole: false
                 }
             },
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/edd-checkout.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -109,7 +109,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/full-width.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/performance/critical/dashboard.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: [],
+                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },

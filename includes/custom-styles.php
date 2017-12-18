@@ -82,7 +82,8 @@ function minimall_custom_styles(){
     a.active{ color: '. $main_color .';}
     .primary-color,
     .current_page_item a,
-    .btn-outline{
+    .btn-outline,
+    .menu a:hover{
         color: '. $main_color .' !important;
     }
     
@@ -91,13 +92,15 @@ function minimall_custom_styles(){
     .btn:hover, .button:hover ,button:hover, [role="button"]:hover, input[type="submit"]:hover, input[type="button"]:hover,
     .btn:focus, .button:focus, button:focus, [role="button"]:focus, input[type="submit"]:focus, input[type="button"]:focus,
     .btn.active,.btn:active, .button:active, button:active, [role="button"]:active, input[type="submit"]:active, input[type="button"]:active,
-    .btn.btn-primary{
+    .btn.btn-primary,
+    .edd_downloads_list .edd-submit.button:hover,
+    #edd-purchase-button{
         border-color: '. $main_color .';
         background-color: '. $main_color .';
         color: #fff;
     }
 
-    .sub-menu-toggle{background: #fff url('. get_template_directory_uri() .'/assets/svg/small-down.svg) no-repeat center center;}
+    #site-navigation .menu-item-has-children > a:after{background: #fff url('. get_template_directory_uri() .'/assets/svg/small-down.svg) no-repeat center center;}
     ';
     
     return $minimall_custom_css;

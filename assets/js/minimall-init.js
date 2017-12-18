@@ -1,14 +1,18 @@
-document.getElementById("main_nav_toggle").addEventListener("click", function () {
+if( document.getElementById("main_nav_toggle") ){
+    document.getElementById("main_nav_toggle").addEventListener("click", function () {
+        
+        var main_nav = document.getElementById("masthead");
+        
+        if (main_nav.classList.contains("open")) {
+            main_nav.classList.remove("open");
+        } else {
+            main_nav.classList.add("open");
+        }
+    });
+}
 
-    var main_nav = document.getElementById("masthead");
-    
-    if (main_nav.classList.contains("open")) {
-        main_nav.classList.remove("open");
-    } else {
-        main_nav.classList.add("open");
-    }
-});
 
+/*
 var sub_menu_toggle = function ( event ) {
     
     var toggle = event.target.nextSibling;
@@ -45,6 +49,7 @@ var sub_menu_btn = document.querySelectorAll(".sub-menu-toggle");
 for (var i = 0; i < sub_menu_btn.length; i++) {
   sub_menu_btn[i].addEventListener( 'click', sub_menu_toggle, false );
 }
+*/
 
 // Fix Google Page Speed Insights false error "Prioritize visible content"
 if ( document.getElementById("hero-img") && !navigator.userAgent.match(/Google Page Speed Insights/i) ){
