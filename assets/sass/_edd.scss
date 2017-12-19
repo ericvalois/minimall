@@ -153,7 +153,8 @@
 }
 
 #edd_final_total_wrap,
-#edd_sl_renewal_fields{
+#edd_sl_renewal_fields,
+#edd_discount_code{
     margin-top: 0;
     border: 1px solid #eee;
     padding: 0.5em 1.387em;
@@ -174,6 +175,11 @@
 // Fix if edd style active
 #edd_checkout_form_wrap input.edd-input, 
 #edd_checkout_form_wrap textarea.edd-input{ width: 100%; }
+
+// Fix style of purchase code box
+#edd_discount_code .edd-input{margin-bottom: 1rem;}
+#edd_show_discount{ margin: 0; }
+
 
 /*
 * Purchase Confirmation
@@ -273,11 +279,13 @@
 .edd_error{
     //@extend .alert;
     //@extend .alert_danger;
+    color: red;
 }
 
 .edd_sucess{
     //@extend .alert;
     //@extend .alert_success;
+    color: green;
 }
 
 /*

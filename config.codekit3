@@ -884,6 +884,19 @@
 		"oAP": "\/includes\/compatibility.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/autoptimize\/critical": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/includes\/compatibility\/autoptimize\/critical",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/autoptimize\/critical-css.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/autoptimize\/critical-css.php",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/cf7\/cf7.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1003,6 +1016,34 @@
 		"oAP": "\/includes\/compatibility\/metabox\/widget-edd-metabox-gallery.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/theme-demo-import\/customizer.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/theme-demo-import\/customizer.dat",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/theme-demo-import\/demo.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/theme-demo-import\/demo.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/theme-demo-import\/posts.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/theme-demo-import\/posts.xml",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/theme-demo-import\/widgets.wie": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/theme-demo-import\/widgets.wie",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/ttfb-toolkit\/minimall-preload.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1037,94 +1078,6 @@
 		"oA": 2,
 		"oAP": "\/includes\/partials.php",
 		"oF": 0
-		},
-	"\/includes\/performance\/clean.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/clean.php",
-		"oF": 0
-		},
-	"\/includes\/performance\/critical": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/includes\/performance\/critical",
-		"oF": 0
-		},
-	"\/includes\/performance\/lazyload.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/lazyload.php",
-		"oF": 0
-		},
-	"\/includes\/performance\/metabox-options.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/metabox-options.php",
-		"oF": 0
-		},
-	"\/includes\/performance\/performance-init.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/performance-init.php",
-		"oF": 0
-		},
-	"\/includes\/performance\/preload.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/preload.php",
-		"oF": 0
-		},
-	"\/includes\/performance\/stylesheets.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/performance\/stylesheets.php",
-		"oF": 0
-		},
-	"\/includes\/performance\/vendors\/lazysizes\/lazysizes-all.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/includes\/performance\/vendors\/lazysizes\/lazysizes-all.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/includes\/performance\/vendors\/lazysizes\/lazysizes-all.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/includes\/performance\/vendors\/lazysizes\/lazysizes-all.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/includes\/performance\/vendors\/lazysizes\/plugins\/bgset\/ls.bgset.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/includes\/performance\/vendors\/lazysizes\/plugins\/bgset\/ls.bgset.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/includes\/performance\/vendors\/lazysizes\/plugins\/respimg\/ls.respimg.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/includes\/performance\/vendors\/lazysizes\/plugins\/respimg\/ls.respimg.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
 		},
 	"\/includes\/social-share.php": {
 		"cB": 0,
@@ -3444,7 +3397,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/languages, \/build, \/includes\/vendors, \/includes\/performance\/critical, \/includes\/admin\/images, \/includes\/admin\/tgm",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/languages, \/build, \/includes\/vendors, \/includes\/performance\/critical, \/includes\/admin\/images, \/includes\/admin\/tgm, \/includes\/compatibility\/autoptimize\/critical",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"uglifyDefinesString": "",

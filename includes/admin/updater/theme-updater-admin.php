@@ -261,203 +261,39 @@ class Minimall_Theme_Updater_Admin {
 						<!-- Help file panel -->
 						<div id="help-panel" class="panel-left visible">
 
-                            <div class="mb4 py2 px3 alert_minimall">
-                                <p class="m0">Don't want to read everything below? You can <a href="#">install all plugins</a> automatically.</p>
-                            </div>
+                            
 
-                            <h2>Required plugins</h2>
+                            <h2>1. Install Required Plugins</h2>
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
                                 <div class="lg-col-12 mb3 px3">
-                                    <!-- Kirki Toolkit -->
-                                    <h4 class="mt0"><?php esc_html_e( 'Kirki Toolkit', 'minimall' ); ?></h4>
-                                    <p><?php esc_html_e( 'This theme uses Kirki toolkit plugin to customize theme. This plugin adds advanced features to the WordPress customizer. Install the plugin before you go to the customizer.', 'minimall' ); ?></p>
-                                    <?php if ( is_plugin_active( 'kirki/kirki.php' ) || is_plugin_active( 'kirki-develop/kirki.php' ) ) { ?>
-                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php }	else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=kirki' ), 'install-plugin_kirki' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Kirki Toolkit', 'minimall' ); ?></a></p>
-                                    <?php }	?>
+
+                                    <p>The best way to get started quickly is to install all plugins.</p>
+
+                                    <p>Then and only then proceed to step #2 with a demo import.</p>
+
+                                    <a href="#" class="button button-primary">Install all plugins</a>
                                 </div>
                             </div>
 
-                            <h2>Demo Import</h2>
+                            <h2>2. Demo Import</h2>
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
-                                <div class="lg-col-6 bg-gray mb3 px3">
-                                    <h4 class="mt0"><?php esc_html_e( 'Import Theme Options', 'minimall' ); ?></h4>
-                                    <p>You can install the following plugin to import the options from the theme demo. Then use the file included in your theme package <code>minimall-options.bat</code> with the newly installed <a href="">Customizer Import</a>.</p>
-                                    
-                                    <p class="flex items-center">
-                                        <?php if ( is_plugin_active( 'customizer-export-import/customizer-export-import.php' ) ) { ?>
-                                            <span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span>
-                                        <?php }	else { ?>
-                                            <a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=customizer-export-import' ), 'install-plugin_customizer_export_import' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Customizer Export Import', 'minimall' ); ?></a>
-                                        <?php }	?> 
-                                        <a href="" class="ml2 inline-flex items-center"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="14" height="14"><g class="nc-icon-wrapper" fill="#0073aa"><path fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M20,2c1.657,0,3,1.343,3,3 v14c0,1.657-1.343,3-3,3H4c-1.657,0-3-1.343-3-3V5c0-1.657,1.343-3,3-3H20z" stroke-linejoin="round"></path> <polygon data-color="color-2" fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points=" 10,8 16,12 10,16 " stroke-linejoin="round"></polygon></g></svg><small class="ml1"><?php esc_html_e('How-To Video','minimall'); ?></small></a>
-                                    </p>
-                                </div>
+                                <div class="lg-col-12 mb3 px3">
 
-                                <div class="lg-col-6 bg-gray mb3 px3">
-                                    <h4 class="mt0"><?php esc_html_e( 'Import Pages and Posts', 'minimall' ); ?></h4>
-                                    <p>To import pages and Posts to replicate the theme demo. Simply use the file included in your theme package <code>minimall-demo.xml</code> with the officile WordPress <a href="">Import/Export tool</a>.</p>
-                                    
-                                    <p class="flex items-center">
-                                        <?php if ( is_plugin_active( 'wordpress-importer/wordpress-importer.php' ) ) { ?>
-                                            <span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span>
-                                        <?php }	else { ?>
-                                            <a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=wordpress-importer' ), 'install-plugin_customizer_wordPress_importer' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install WP Importer', 'minimall' ); ?></a>
-                                        <?php }	?>
-                                        <a href="" class="ml2 inline-flex items-center"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="14" height="14"><g class="nc-icon-wrapper" fill="#0073aa"><path fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M20,2c1.657,0,3,1.343,3,3 v14c0,1.657-1.343,3-3,3H4c-1.657,0-3-1.343-3-3V5c0-1.657,1.343-3,3-3H20z" stroke-linejoin="round"></path> <polygon data-color="color-2" fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points=" 10,8 16,12 10,16 " stroke-linejoin="round"></polygon></g></svg><small class="ml1"><?php esc_html_e('How-To Video','minimall'); ?></small></a>
-                                    </p>
-
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum incidunt accusantium dolor aperiam, a excepturi dolorem amet facere debitis iusto fugit quos deserunt, nesciunt beatae veritatis ullam exercitationem, animi vitae?</p>
                                 </div>
                             </div>
 
-                            <h2><?php esc_html_e('Recommended Performance Plugins','minimall'); ?></h2>
-                            <p>Thoses plugins are not required to ...</p>
+                            <h2>3. Activate your license </h2>
+
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
-                                <div class="lg-col-6 mb3 px3 ">
-                                    <!-- Cache Enabler - WordPress Cache -->
-                                    <h4 class="mt0"><?php esc_html_e( 'Server Cache', 'minimall' ); ?></h4>
-                                    <p>In one way or another, server cache must be enabled. Some hosts already offer the server cache but most don't. We recommend <a href="">Cache Enabler - WordPress Cache</a> plugin.</p>
-                                    <p class="sm-text">
-                                        <strong>Others Alternatives</strong><br>
-                                        - <a href="https://wp-rocket.me/">WP Rocket (Paid)</a><br>
-                                        - <a href="https://wordpress.org/plugins/wp-fastest-cache/">WP Fastest Cache (Free)</a><br>
-                                        - <a href="https://wordpress.org/plugins/comet-cache/">Comet Cache (Free)</a>
-                                    </p>
-                                    <?php if ( is_plugin_active( 'cache-enabler/cache-enabler.php' ) ) { ?>
-                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php }	else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=cache-enabler' ), 'install-plugin_cache_enabler' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Cache Enabler', 'minimall' ); ?></a></p>
-                                    <?php }	?> 
-                                </div>
+                                <div class="lg-col-12 mb3 px3">
 
-                                <div class="lg-col-6 mb3 px3 ">
-                                    <!-- Compress JPEG & PNG images -->
-                                    <h4 class="mt0"><?php esc_html_e( 'Browser Cache', 'minimall' ); ?></h4>
-                                    <p>Like the server cache, the browser cache is not always enabled by default. <a href="#">How to know if it's the case?</a> We recommend the free plugin <a href="https://wordpress.org/plugins/speed-up-browser-caching/">Speed Up – Browser Caching</a>. </p>
-                                    <p class="sm-text">
-                                        <strong>Others Alternatives</strong><br>
-                                        - <a href="https://wp-rocket.me/">WP Rocket (Paid)</a><br>
-                                        - <a href="https://wordpress.org/plugins/wp-fastest-cache/">WP Fastest Cache (Free)</a><br>
-                                        - <a href="https://wordpress.org/plugins/cache-control/">Cache-Control (Free)</a>
-                                        - <a href="https://wordpress.org/plugins/comet-cache/">Comet Cache (Free)</a>
-                                    </p>
-                                    <?php if ( is_plugin_active( 'speed-up-browser-caching/speed-up-browser-caching.php' ) ) { ?>
-                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php }	else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=speed-up-browser-caching' ), 'install-plugin_speed_up_browser_caching' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Speed Up – Browser Caching', 'minimall' ); ?></a></p>
-                                    <?php }	?> 
-                                </div>
-
-                                <div class="lg-col-6 mb3 px3 ">
-                                    <!-- Compress JPEG & PNG images -->
-                                    <h4 class="mt0"><?php esc_html_e( 'Images Optimization', 'minimall' ); ?></h4>
-                                    <p>Make your website faster by optimizing your JPEG and PNG images. We recommend the free plugin <a href="">Compress JPEG & PNG images</a>.</p>
-                                    <p class="sm-text">
-                                        <strong>Others Alternatives</strong><br>
-                                        - <a href="https://imagify.io/">Imagify (Paid)</a><br>
-                                        - <a href="https://wordpress.org/plugins/shortpixel-image-optimiser/">ShortPixel (Free and Paid)</a><br>
-                                        - <a href="https://wordpress.org/plugins/optimus/">Optimus (Free and Paid)</a>
-                                    </p>
-                                    <?php if ( is_plugin_active( 'tiny-compress-images/tiny-compress-images.php' ) ) { ?>
-                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php }	else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=tiny-compress-images' ), 'install-plugin_tiny-compress_images' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Compress JPEG & PNG', 'minimall' ); ?></a></p>
-                                    <?php }	?> 
-                                </div>
-                                
-                                <div class="lg-col-6 mb3 px3 ">
-                                    <!-- Cloudflare -->
-                                    <h4 class="mt0"><?php esc_html_e( 'Aggregate and Minify', 'minimall' ); ?></h4>
-                                    <p>We recommend the free plugin <a href="https://wordpress.org/plugins/autoptimize/">Autoptimize</a>. This plugin makes optimizing your site really easy. It can aggregate, minify and cache scripts and styles, injects CSS in the page head by default and can move and defer scripts to the footer.</p>
-                                    <p class="sm-text">
-                                        <strong>Others Alternatives</strong><br>
-                                        - <a href="https://wp-rocket.me/">WP Rocket (Paid)</a>
-                                    </p>
-                                    <?php if ( is_plugin_active( 'autoptimize/autoptimize.php' ) ) { ?>
-                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php }	else { ?>
-                                        <p class="flex items-center"><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=autoptimize' ), 'install-plugin_autoptimize' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Autoptimize', 'minimall' ); ?></a> <a href="" class="ml2 inline-flex items-center"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="14" height="14"><g class="nc-icon-wrapper" fill="#0073aa"><path fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M20,2c1.657,0,3,1.343,3,3 v14c0,1.657-1.343,3-3,3H4c-1.657,0-3-1.343-3-3V5c0-1.657,1.343-3,3-3H20z" stroke-linejoin="round"></path> <polygon data-color="color-2" fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points=" 10,8 16,12 10,16 " stroke-linejoin="round"></polygon></g></svg><small class="ml1"><?php esc_html_e('How-To Video','minimall'); ?></small></a></p>
-                                    <?php }	?>
-                                </div>
-
-                                <div class="lg-col-12 mb3 px3 ">
-                                    <!-- Cloudflare -->
-                                    <h4 class="mt0"><?php esc_html_e( 'Content Delivery Network (CDN)', 'minimall' ); ?></h4>
-                                    <p>Even if a CDN is not always necessery, we noticed better performance when <a href="https://www.cloudflare.com/performance/">Cloudflare</a> was activated. Cloudflare is not just about moving static files closer to visitors, it is also about ensuring that every page renders as fast and efficiently as possible from whatever device a visitor is surfing from. </p>
-                                    <p class="sm-text">
-                                        <strong>Others Alternatives</strong><br>
-                                        - <a href="https://wordpress.org/plugins/cdn-enabler/">CDN Enabler (Free)</a><br>
-                                        - <a href="https://wp-rocket.me/">WP Rocket (Paid)</a>
-                                    </p>
-                                    <?php if ( is_plugin_active( 'cloudflare/cloudflare.php' ) ) { ?>
-                                        <p><span class="muted button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php }	else { ?>
-                                        <p class="flex items-center"><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=cloudflare' ), 'install-plugin_cloudflare' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Cloudflare plugin', 'minimall' ); ?></a>  <a href="" class="ml2 inline-flex items-center"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="14" height="14"><g class="nc-icon-wrapper" fill="#0073aa"><path fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M20,2c1.657,0,3,1.343,3,3 v14c0,1.657-1.343,3-3,3H4c-1.657,0-3-1.343-3-3V5c0-1.657,1.343-3,3-3H20z" stroke-linejoin="round"></path> <polygon data-color="color-2" fill="none" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points=" 10,8 16,12 10,16 " stroke-linejoin="round"></polygon></g></svg><small class="ml1"><?php esc_html_e('How-To Video','minimall'); ?></small></a></p>
-                                    <?php }	?> 
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum incidunt accusantium dolor aperiam, a excepturi dolorem amet facere debitis iusto fugit quos deserunt, nesciunt beatae veritatis ullam exercitationem, animi vitae?</p>
                                 </div>
                             </div>
 
-
-                            <h2><?php esc_html_e('Easy Digital Download Plugins','minimall'); ?></h2>
-                            <p>If you plan to use Easy Digital Download to sell digital products.</p>
-                            <div class="lg-flex flex-wrap bg-gray mb4">
-                                <div class="lg-col-6 py3 px3 ">
-                                    <h4 class="mt0"><?php esc_html_e( 'Easy Digital Download', 'minimall' ); ?></h4>
-                                    <p><?php esc_html_e( 'Easy Digital Downloads is a complete eCommerce solution for selling digital products on WordPress.', 'minimall' ); ?></p>
-                                    <?php if ( is_plugin_active( 'easy-digital-downloads/easy-digital-downloads.php' ) ) { ?>
-                                        <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php } else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=easy-digital-downloads' ), 'install-plugin_easy_digital_downloads' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Easy Digital Downloads', 'minimall' ); ?></a></p>
-                                    <?php } ?>
-                                </div>
-
-                                <div class="lg-col-6 py3 px3 ">
-                                    <h4 class="mt0"><?php esc_html_e( 'EDD Download Images', 'minimall' ); ?></h4>
-                                    <p><?php esc_html_e( 'This plugin allows you to add extra images to your downloads.', 'minimall' ); ?></p>
-                                    <?php if ( is_plugin_active( 'edd-download-images/edd-download-images.php' ) ) { ?>
-                                        <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php } else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=edd-download-images' ), 'install-plugin_edd_download_images' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install EDD Download Images', 'minimall' ); ?></a></p>
-                                    <?php } ?>
-                                </div>
-                            </div>
-
-                            <h2><?php esc_html_e('Other Plugins','minimall'); ?></h2>
-                            <p>Lorem ipsum dolor sit maet.</p>
-                            <div class="lg-flex flex-wrap bg-gray mb3">
-                                <div class="lg-col-6 py3 px3 ">
-                                    <h4 class="mt0"><?php esc_html_e( 'Faster Font Awesome', 'minimall' ); ?></h4>
-                                    <p><?php esc_html_e( 'This plugin has been created by us to allows you to use Font Awesome Icons (+600) anywhere without negatively affecting performance.', 'minimall' ); ?></p>
-                                    <?php if ( is_plugin_active( 'faster-font-awesome/faster-font-awesome.php' ) ) { ?>
-                                        <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php } else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=faster-font-awesome' ), 'install-plugin_faster_font_awesome' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Faster Font Awesome', 'minimall' ); ?></a></p>
-                                    <?php } ?>
-                                </div>
-
-                                <div class="lg-col-6 py3 px3 ">
-                                    <h4 class="mt0"><?php esc_html_e( 'Contact Form 7', 'minimall' ); ?></h4>
-                                    <p><?php esc_html_e( 'This plugin allows you to add a contact form to your site.', 'minimall' ); ?></p>
-                                    <?php if ( is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) ) { ?>
-                                        <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php } else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=contact-form-7' ), 'install-plugin_contact-form-7' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Contact Form 7', 'minimall' ); ?></a></p>
-                                    <?php } ?>
-                                </div>
-
-                                <div class="lg-col-12 py3 px3 ">
-                                    <h4 class="mt0"><?php esc_html_e( 'Gutenberg Editor', 'minimall' ); ?></h4>
-                                    <p><?php esc_html_e( 'The goal of the block editor is to make adding rich content to WordPress simple and enjoyable.', 'minimall' ); ?></p>
-                                    <?php if ( is_plugin_active( 'gutenberg/gutenberg.php' ) ) { ?>
-                                        <p><span class="disabled button"><?php esc_html_e( 'Already activated', 'minimall' ); ?></span></p>
-                                    <?php } else { ?>
-                                        <p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=gutenberg' ), 'install-plugin_gutenberg' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install gutenberg', 'minimall' ); ?></a></p>
-                                    <?php } ?>
-                                </div>
-                            </div>
 
 						</div>
                         
@@ -573,7 +409,7 @@ class Minimall_Theme_Updater_Admin {
                                 </div>
                             <?php endif; ?>
                             
-
+                            <!--
 							<div class="border border-gray px2 py2 muted muted-box">
 								
 								<div class="panel-club-inside">
@@ -596,7 +432,7 @@ class Minimall_Theme_Updater_Admin {
                                     
 								</div>
 							</div>
-
+                            -->
 							
 						</div><!-- .panel-right -->
 					</div><!-- .panel -->

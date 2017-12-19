@@ -70,6 +70,16 @@ if( minimall_is_edd_active() ){
 }
 
 /**
+ * If Autoptimize Active
+ */
+if( minimall_is_autoptimize_active() ){
+    /**
+     * Critical CSS Optimization
+     */
+    require get_template_directory() . '/includes/compatibility/autoptimize/critical-css.php';
+}
+
+/**
  * If Contact Form 7 Active
  */
 if( minimall_is_cf7_active() ){
@@ -117,4 +127,14 @@ if( minimall_is_ttfb_toolkit() ){
      * Minimall Specific Optimization
      */
     require get_template_directory() . '/includes/compatibility/ttfb-toolkit/minimall-preload.php';
+}
+
+/**
+ * If Theme Demo Import Active
+ */
+if( minimall_is_theme_demo_import_active() ){
+    /**
+     * Minimall demo import
+     */
+    require get_template_directory() . '/includes/compatibility/theme-demo-import/demo.php';
 }

@@ -46,9 +46,7 @@ function minimall_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		//'primary' => esc_html__( 'Primary Menu', 'minimall' ),
-        //'sub-footer' => esc_html__( 'Sub-footer', 'minimall' ),
-        //'private-dashboard' => esc_html__( 'Private Dashboard', 'minimall' ),
+		'primary' => esc_html__( 'Primary Menu', 'minimall' ),
 	) );
 
 	/*
@@ -102,14 +100,6 @@ add_action( 'after_setup_theme', 'minimall_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function minimall_widgets_init() {
-    register_sidebar( array(
-		'name'          => esc_html__( 'Main header sidebar', 'minimall' ),
-		'id'            => 'header-sidebar',
-		'description'   => __("Sidebar display in the main header.","minimal"),
-		'before_widget' => '<div id="%1$s" class="%2$s lg-ml2 mt2 mb2 lg-mt0 lg-mb0">',
-		'after_widget'  => '</div>',
-    ) );
-    
     register_sidebar( array(
 		'name'          => esc_html__( 'Footer Copyright', 'minimall' ),
 		'id'            => 'footer-copy',
@@ -232,6 +222,14 @@ function minimall_widgets_init() {
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title mb1 h6 pr2">',
 		'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+		'name'          => esc_html__( 'Main header sidebar', 'minimall' ),
+		'id'            => 'header-sidebar',
+		'description'   => __("Sidebar display in the main header.","minimal"),
+		'before_widget' => '<div id="%1$s" class="%2$s lg-ml2 mt2 mb2 lg-mt0 lg-mb0">',
+		'after_widget'  => '</div>',
     ) );
     
     
@@ -364,7 +362,7 @@ function minimall_is_edd_download_images_active() {
  * @return bool
  */
 function minimall_is_autoptimize_active() {
-	return class_exists('autoptimizeBase');
+	return class_exists('autoptimizeCache');
 }
 
 /**
@@ -415,6 +413,16 @@ function minimall_is_gutenberg_active() {
  */
 function minimall_is_kirki_active() {
 	return class_exists('Kirki_Autoload');
+}
+
+/**
+ * Is Theme Demo Import active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_theme_demo_import_active() {
+	return class_exists('Theme_Demo_Import');
 }
 
 /**
