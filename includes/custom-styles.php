@@ -6,7 +6,7 @@
 /*
 * Inline styles
 */
-add_action( 'minimall_head_open', 'minimall_inline_styles', 10 );
+add_action( 'ttfb_toolkit_head_open', 'minimall_inline_styles', 10 );
 function minimall_inline_styles() {
 
     echo '<style>';

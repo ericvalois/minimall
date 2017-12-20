@@ -58,8 +58,17 @@ function minimall_setup() {
 		'comment-form',
 		'comment-list',
 		'gallery',
-		'caption',
-	) );
+        'caption',
+    ) );
+    
+    /*
+	 * Add TTFB Toolkit support
+	 */
+    add_theme_support( 'ttfb_toolkit_author_widget');
+    add_theme_support( 'ttfb_toolkit_alerts');
+    add_theme_support( 'ttfb_toolkit_icons');
+    add_theme_support( 'ttfb_toolkit_performance');
+    add_theme_support( 'ttfb_toolkit_sharing');
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'minimall_custom_background_args', array(
@@ -292,7 +301,7 @@ function minimall_scripts() {
  * @return bool
  */
 function minimall_is_ttfb_toolkit() {
-	return function_exists('ttfb_toolkit_init');
+	return class_exists( 'Ttfb_Toolkit' );
 }
 
 /**
@@ -449,23 +458,3 @@ require get_template_directory() . '/includes/extra.php';
  * Load custom style
  */
 require get_template_directory() . '/includes/custom-styles.php';
-
-/**
- * Author Widget
- */
-require get_template_directory() . '/includes/widgets/widget-author.php';
-
-/**
- * Author Widget
- */
-require get_template_directory() . '/includes/widgets/widget-social-share.php';
-
-/**
- * Social Share
- */
-require get_template_directory() . '/includes/social-share.php';
-
-/**
- * Performance 
- */
-//require get_template_directory() . '/includes/performance/performance-init.php';

@@ -562,10 +562,6 @@ h4 .button {
 		font-size: 34px;
 	}
 
-	.getting-started .intro h3 {
-		margin-bottom: 0;
-	}
-
 	.getting-started .inline-list {
 		margin-bottom: 5%;
 	}
@@ -648,6 +644,9 @@ h4 .button {
 .bg-gray{ background-color: #f7f7f7;}
 
 .panel-left h2{ font-size: 1.5em; }
+.panel-left h3{ font-size: 1.3em; }
+.panel-left h4{ font-size: 1.1em; }
+.panel-left h5{ font-size: 1em; }
 
 .muted-box{ transition: opacity 0.3s ease; }
 .muted-box:hover{ opacity: 1; }

@@ -268,11 +268,11 @@ class Minimall_Theme_Updater_Admin {
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
                                 <div class="lg-col-12 mb3 px3">
 
-                                    <p>The best way to get started quickly is to install all plugins.</p>
+                                    <p>The best way to get started quickly is to install and activate all required plugins.</p>
 
                                     <p>Then and only then proceed to step #2 with a demo import.</p>
 
-                                    <a href="#" class="button button-primary">Install all plugins</a>
+                                    <a href="<?php echo admin_url( 'themes.php?page=tgmpa-install-plugins' ); ?>" class="button button-primary">Install all plugins</a>
                                 </div>
                             </div>
 
@@ -280,8 +280,15 @@ class Minimall_Theme_Updater_Admin {
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
                                 <div class="lg-col-12 mb3 px3">
+                                    <p>Once all required plugins are installed and activated, you can safely proceed to the demo import.</p>
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum incidunt accusantium dolor aperiam, a excepturi dolorem amet facere debitis iusto fugit quos deserunt, nesciunt beatae veritatis ullam exercitationem, animi vitae?</p>
+                                    <p>This option will replicate the <a target="_blank" href="https://minimall.ttfb.io/">Minimall demo</a> site. That way you get a better overview of Minimall features.</p>
+
+                                    <?php if( minimall_is_theme_demo_import_active() ): ?>
+                                        <a href="<?php echo admin_url( 'themes.php?page=theme-demo-import' ); ?>" class="button button-primary">Import Demo Content</a>
+                                    <?php else: ?>
+                                        <button disabled class="button button-primary">Install required plugins first</button>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
@@ -289,8 +296,18 @@ class Minimall_Theme_Updater_Admin {
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
                                 <div class="lg-col-12 mb3 px3">
+                                    <p>With an active license, you can get seamless, one-click theme updates to keep your site healthy and happy.</p>
+                                    <p>You are supposed to have received your key by email after your purshase. If not, you can find your license key in your <a target="_blank" href="https://ttfb.io/dashboard">TTFB Dashboard</a>.</p>
+                                </div>
+                            </div>
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum incidunt accusantium dolor aperiam, a excepturi dolorem amet facere debitis iusto fugit quos deserunt, nesciunt beatae veritatis ullam exercitationem, animi vitae?</p>
+                            <h2>4. That's all</h2>
+
+                            <div class="lg-flex flex-wrap bg-gray mb4 pt3">
+                                <div class="lg-col-12 mb3 px3">
+                                    <p>There is no more steps. You are now free to disable plugins you don't requires and to delete posts and pages not relevent. </p>
+
+                                    <p>Feel free to refer to our complete <a href="https://ttfb.io/documentation/" target="_blank">documentation</a> for specific needs.</p>
                                 </div>
                             </div>
 
@@ -336,9 +353,9 @@ class Minimall_Theme_Updater_Admin {
 						<div class="panel-right">
 
                             <?php // Customize Button ?>
-                            <?php /*<div class="bg-gray py3 px3 mb3">
+                            <div class="bg-gray py3 px3 mb3">
                                 <a href="<?php echo wp_customize_url(); ?>" class="button button-primary master-button customize-button"><?php esc_html_e( 'Customize Minimall', 'minmall' ); ?></a>
-                            </div> */ ?>
+                            </div>
 
                             <!-- Activate license -->
 							<div class="bg-gray py3 px3 mb3">

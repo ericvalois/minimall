@@ -9,7 +9,7 @@
 */
 add_action("wp_head","minimall_action_head_open", -10);
 function minimall_action_head_open(){
-    do_action('minimall_head_open');
+    do_action('ttfb_toolkit_head_open');
 }
 
 /**

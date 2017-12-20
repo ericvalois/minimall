@@ -185,8 +185,3 @@ include( get_template_directory() . '/includes/admin/customizer/modules/customiz
  * Private Dashboard Controls
  */
 include( get_template_directory() . '/includes/admin/customizer/modules/private-dashboard.php' );
-
-/**
- * Social Share Controls
- */
-include( get_template_directory() . '/includes/admin/customizer/modules/social-share.php' );

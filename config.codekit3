@@ -787,13 +787,6 @@
 		"oAP": "\/includes\/admin\/customizer\/modules\/private-dashboard.php",
 		"oF": 0
 		},
-	"\/includes\/admin\/customizer\/modules\/social-share.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/admin\/customizer\/modules\/social-share.php",
-		"oF": 0
-		},
 	"\/includes\/admin\/getting-started\/getting-started-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1079,38 +1072,11 @@
 		"oAP": "\/includes\/partials.php",
 		"oF": 0
 		},
-	"\/includes\/social-share.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/social-share.php",
-		"oF": 0
-		},
 	"\/includes\/template-tags.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/template-tags.php",
-		"oF": 0
-		},
-	"\/includes\/vendors": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/includes\/vendors",
-		"oF": 0
-		},
-	"\/includes\/widgets\/widget-author.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-author.php",
-		"oF": 0
-		},
-	"\/includes\/widgets\/widget-social-share.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/widgets\/widget-social-share.php",
 		"oF": 0
 		},
 	"\/index.php": {

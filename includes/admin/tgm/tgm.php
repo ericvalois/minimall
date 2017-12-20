@@ -62,14 +62,14 @@ function minimall_register_required_plugins() {
         array(
 			'name'      => 'Kirki Toolkit',
 			'slug'      => 'kirki',
-			'required'  => false,
+			'required'  => true,
         ),
 
-        /*array(
+        array(
 			'name'      => 'TTFB Toolkit',
 			'slug'      => 'ttfb-toolkit',
-			'required'  => false,
-        ),*/
+			'required'  => true,
+        ),
 
         array(
 			'name'      => 'Contact Form 7',
