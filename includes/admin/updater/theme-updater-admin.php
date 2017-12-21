@@ -263,51 +263,51 @@ class Minimall_Theme_Updater_Admin {
 
                             
 
-                            <h2>1. Install Required Plugins</h2>
+                            <h2><?php _e('1. Install required plugins','minimall'); ?></h2>
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
                                 <div class="lg-col-12 mb3 px3">
 
-                                    <p>The best way to get started quickly is to install and activate all required plugins.</p>
+                                    <p><?php _e('The best way to get started quickly is to install and activate all the required plugins.','minimall'); ?></p>
 
-                                    <p>Then and only then proceed to step #2 with a demo import.</p>
+                                    <p><?php _e('Then and only then proceed to step #2 to import the demo.','minimall'); ?></p>
 
-                                    <a href="<?php echo admin_url( 'themes.php?page=tgmpa-install-plugins' ); ?>" class="button button-primary">Install all plugins</a>
+                                    <a href="<?php echo admin_url( 'themes.php?page=tgmpa-install-plugins' ); ?>" class="button button-primary"><?php _e('Install all plugins','minimall'); ?></a>
                                 </div>
                             </div>
 
-                            <h2>2. Demo Import</h2>
+                            <h2><?php _e('2. Demo import','minimall'); ?></h2>
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
                                 <div class="lg-col-12 mb3 px3">
-                                    <p>Once all required plugins are installed and activated, you can safely proceed to the demo import.</p>
+                                    <p><?php _e('Once all the required plugins are installed and activated, you can safely import the demo.','minimall'); ?></p>
 
-                                    <p>This option will replicate the <a target="_blank" href="https://minimall.ttfb.io/">Minimall demo</a> site. That way you get a better overview of Minimall features.</p>
+                                    <p><?php _e('This option will replicate the <a target="_blank" href="https://minimall.ttfb.io/">Minimall demo</a> site, giving you a better overview of Minimall’s features.','minimall'); ?></p>
 
                                     <?php if( minimall_is_theme_demo_import_active() ): ?>
-                                        <a href="<?php echo admin_url( 'themes.php?page=theme-demo-import' ); ?>" class="button button-primary">Import Demo Content</a>
+                                        <a href="<?php echo admin_url( 'themes.php?page=theme-demo-import' ); ?>" class="button button-primary"><?php _e('Import Demo Content','minimall'); ?></a>
                                     <?php else: ?>
-                                        <button disabled class="button button-primary">Install required plugins first</button>
+                                        <button disabled class="button button-primary"><?php _e('Install required plugins first','minimall'); ?></button>
                                     <?php endif; ?>
                                 </div>
                             </div>
 
-                            <h2>3. Activate your license </h2>
+                            <h2><?php _e('3. Activate your license','minimall'); ?></h2>
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
                                 <div class="lg-col-12 mb3 px3">
-                                    <p>With an active license, you can get seamless, one-click theme updates to keep your site healthy and happy.</p>
-                                    <p>You are supposed to have received your key by email after your purshase. If not, you can find your license key in your <a target="_blank" href="https://ttfb.io/dashboard">TTFB Dashboard</a>.</p>
+                                    <p><?php _e('With an active license, you can get seamless, one-click theme updates to keep your site healthy and happy.','minimall'); ?></p>
+                                    <p><?php _e('You should have received your key by email after your purchase. If not, you can find your license key in your <a target="_blank" href="https://ttfb.io/dashboard">TTFB Dashboard</a>.','minimall'); ?></p>
                                 </div>
                             </div>
 
-                            <h2>4. That's all</h2>
+                            <h2><?php _e('4. That\'s all','minimall'); ?></h2>
 
                             <div class="lg-flex flex-wrap bg-gray mb4 pt3">
                                 <div class="lg-col-12 mb3 px3">
-                                    <p>There is no more steps. You are now free to disable plugins you don't requires and to delete posts and pages not relevent. </p>
+                                    <p><?php _e('There aren’t any more steps. You are now free to disable the plugins you don’t need and to delete irrelevant posts and pages.','minimall'); ?></p>
 
-                                    <p>Feel free to refer to our complete <a href="https://ttfb.io/documentation/" target="_blank">documentation</a> for specific needs.</p>
+                                    <p><?php _e('Refer to our complete <a href="https://ttfb.io/documentation/" target="_blank">documentation</a> for specific needs.','minimall') ?></p>
                                 </div>
                             </div>
 

@@ -5,7 +5,7 @@
 Minimall_Kirki::add_panel( 'edd', array(
     'title'      => esc_attr__( 'Easy Digital Download', 'minimall' ),
     'priority'   => 100,
-    'panel'		 => 'minimall_options',
+    'panel'		 => 'ttfb_options',
     'capability' => 'edit_theme_options',
 ) );
 

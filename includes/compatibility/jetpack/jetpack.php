@@ -5,7 +5,7 @@
 Minimall_Kirki::add_section( 'jetpack_performance', array(
     'title'      => esc_attr__( 'Jetpack', 'minimall' ),
     'priority'   => 60,
-    'panel'		 => 'performance',
+    'panel'		 => 'ttfb_toolkit_performance',
     'capability' => 'edit_theme_options',
 ) );
 

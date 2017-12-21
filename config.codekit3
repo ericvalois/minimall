@@ -1009,32 +1009,11 @@
 		"oAP": "\/includes\/compatibility\/metabox\/widget-edd-metabox-gallery.php",
 		"oF": 0
 		},
-	"\/includes\/compatibility\/theme-demo-import\/customizer.dat": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/compatibility\/theme-demo-import\/customizer.dat",
-		"oF": 0
-		},
 	"\/includes\/compatibility\/theme-demo-import\/demo.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/compatibility\/theme-demo-import\/demo.php",
-		"oF": 0
-		},
-	"\/includes\/compatibility\/theme-demo-import\/posts.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/compatibility\/theme-demo-import\/posts.xml",
-		"oF": 0
-		},
-	"\/includes\/compatibility\/theme-demo-import\/widgets.wie": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/compatibility\/theme-demo-import\/widgets.wie",
 		"oF": 0
 		},
 	"\/includes\/compatibility\/ttfb-toolkit\/minimall-preload.php": {
@@ -1133,7 +1112,7 @@
 		},
 	"\/screenshot.png": {
 		"ft": 32768,
-		"iS": 141200,
+		"iS": 123674,
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
@@ -1192,13 +1171,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/taxonomy-download_tag.php",
-		"oF": 0
-		},
-	"\/template-parts\/content-blank.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/template-parts\/content-blank.php",
 		"oF": 0
 		},
 	"\/template-parts\/content-download-comment.php": {
@@ -1339,13 +1311,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/homepage\/section.php",
-		"oF": 0
-		},
-	"\/templates\/blank.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/templates\/blank.php",
 		"oF": 0
 		},
 	"\/templates\/full-width.php": {
