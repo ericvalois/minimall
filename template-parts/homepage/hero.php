@@ -9,8 +9,8 @@
         </div>
     <?php endif; ?>
 
-    <div class="max-width-5 py4 ml-auto mr-auto white home_hero_content relative z4 animated fadeInUp">
+    <div class="max-width-5 py4 ml-auto mr-auto white home_hero_content relative z4 break-word">
         <h1 class="hero_title title white mt2 mb2 line-height-2"><?php echo wp_kses_post( nl2br( get_theme_mod('home_hero_title') ) ); ?></h1>
-        <div class="hero_desc content mb2"><?php echo wp_kses_post( get_theme_mod('home_hero_desc') ); ?></div>
+        <div class="hero_desc content mb2"><?php echo apply_filters('the_content', get_theme_mod('home_hero_desc')); ?></div>
     </div>
 </div>

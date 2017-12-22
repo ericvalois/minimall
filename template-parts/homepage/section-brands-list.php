@@ -8,7 +8,7 @@
     <?php foreach ( $item_list as $key => $service): ?>
         <?php $image = wp_get_attachment_image_src( $service['image'], 'full' ); ?>
         <div class="flex-auto lg-col-<?php echo esc_attr( $col_width ); ?> lg-px2">
-            <img src="<?php echo $image[0]; ?>" alt="">
+            <img data-src="<?php echo $image[0]; ?>" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" class="lazyload">
         </div>
     <?php endforeach; ?>
 </div>

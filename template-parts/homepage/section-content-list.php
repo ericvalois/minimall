@@ -9,14 +9,14 @@
         $item_number = count( $content_list );
     ?>
     <?php foreach ($content_list as $key => $item): ?>
-        <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb3';} ?> sm-px2">
+        <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb3';} ?> sm-px2 break-word">
             
             <?php if( $item['title'] ): ?>
                 <h3 class="regular mb0 mt0 h4"><?php echo wp_kses_post( nl2br( $item['title'] ) ); ?></h3>
                 <?php endif; ?>
 
             <?php if( $item['desc'] ): ?>
-                <p class="mt2 "><?php echo wp_kses_post( nl2br($item['desc']) ); ?></p>
+                <p class="mt2 "><?php echo apply_filters('the_content', $item['desc']); ?></p>
             <?php endif; ?>
                 
             <?php if( $item['link_url'] ): ?>

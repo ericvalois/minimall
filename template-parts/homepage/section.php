@@ -39,9 +39,9 @@
         </div>
     <?php endif; ?>
 
-    <div class="max-width-5 ml-auto mr-auto lg-py3 relative z4">
+    <div class="max-width-5 ml-auto mr-auto lg-py3 relative z4 break-word">
         <?php if( $section_header ): ?>
-            <header class="entry-header mb2">
+            <header class="entry-header mb2 break-word">
                 <?php if( $section_title ): ?>
                     <h2 class="title mt0 mb0 h3 <?php echo esc_attr( $section_color ); ?>"><?php echo wp_kses_post( $section_title  ); ?></h2>
                 <?php endif; ?>
@@ -61,6 +61,10 @@
                 include( locate_template('/template-parts/homepage/section-blog.php') );
             }elseif( $section == 'features' ){
                 include( locate_template('/template-parts/homepage/section-features.php') );
+            }elseif( $section == 'page' ){
+                include( locate_template('/template-parts/homepage/section-page.php') );
+            }elseif( $section == 'free' ){
+                include( locate_template('/template-parts/homepage/section-free.php') );
             }
         ?>
     </div>

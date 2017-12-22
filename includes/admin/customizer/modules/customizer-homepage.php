@@ -29,9 +29,10 @@ Minimall_Kirki::add_field( 'minimall', array(
         'brands' => esc_attr__( 'Brands', 'minimall' ),
         'features' => esc_attr__( 'Features', 'minimall' ),
 		//'testimonials' => esc_attr__( 'Testimonials', 'minimall' ),
-		'blog' => esc_attr__( 'Blog', 'minimall' ),
+        'blog' => esc_attr__( 'Blog', 'minimall' ),
+        'page' => esc_attr__( 'Page content', 'minimall' ), // show content from a page
         //'banner' => esc_attr__( 'Banner', 'minimall' ),
-        //'editor' => esc_attr__( 'Editor', 'minimall' ), // show content from a page
+        'free' => esc_attr__( 'Free editor', 'minimall' ), // show free content 
 	),
     'priority'    => 10,
     
@@ -135,3 +136,28 @@ $section_args = array(
 );
 minimall_homepage_create_section( $section_args );
 
+/**
+ * Create Page section
+ */
+$section_args = array(
+    'title' => 'Page',
+    'description' => '',
+    'slug' => 'page',
+    'header' => true,
+    'content_layout' => false,
+    'content_type' => 'minimall_homepage_content_type_page',
+);
+minimall_homepage_create_section( $section_args );
+
+/**
+ * Create Free content section
+ */
+$section_args = array(
+    'title' => 'Free content',
+    'description' => '',
+    'slug' => 'free',
+    'header' => true,
+    'content_layout' => false,
+    'content_type' => 'minimall_homepage_content_type_free',
+);
+minimall_homepage_create_section( $section_args );

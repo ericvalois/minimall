@@ -10,7 +10,7 @@
         ?>
 
         <?php foreach ($content_feature as $key => $item): ?>
-            <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb4';} ?>  sm-px2">
+            <div class="sm-col-<?php echo esc_attr( $tablet_width ); ?> lg-col-<?php echo esc_attr( $desktop_width ); ?> <?php if( $item_number != $key + 1 ){ echo 'mb4';} ?>  sm-px2 break-word">
                 
                 <?php if( $item['icon'] ): ?>
                     <div class="mt0 line-height-1 <?php echo esc_attr( $section_color ); ?>"><?php echo wp_kses_post( $item['icon'] ); ?></div>
@@ -21,7 +21,7 @@
                 <?php endif; ?>
 
                 <?php if( $item['desc'] ): ?>
-                    <p class="sm-text mt1 mb0"><?php echo wp_kses_post( nl2br($item['desc']) ); ?></p>
+                    <p class="sm-text mt1 mb0"><?php echo apply_filters('the_content', $item['desc']); ?></p>
                 <?php endif; ?>
 
                 <?php if( !empty( $item['link_label'] ) && !empty( $item['link_url'] ) ): ?>

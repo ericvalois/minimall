@@ -1306,6 +1306,20 @@
 		"oAP": "\/template-parts\/homepage\/section-features.php",
 		"oF": 0
 		},
+	"\/template-parts\/homepage\/section-free.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/homepage\/section-free.php",
+		"oF": 0
+		},
+	"\/template-parts\/homepage\/section-page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/homepage\/section-page.php",
+		"oF": 0
+		},
 	"\/template-parts\/homepage\/section.php": {
 		"cB": 0,
 		"ft": 8192,

@@ -394,8 +394,51 @@ function minimall_homepage_content_type_features( $section_args ){
                 'default'     => '',
             ),
         ),
+    ) ); 
+}
+
+/*
+* Content type : Page
+*/
+function minimall_homepage_content_type_page( $section_args ){
+    
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'     => 'minimall_notice',
+        'settings' => 'homepage_'.$section_args['slug'],
+        'label'    => esc_attr__( 'Section Content', 'minimall' ),
+        'section'  => 'homepage_'.$section_args['slug'],
+        'priority' => 39,
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'dropdown-pages',
+        'section'     => 'homepage_'.$section_args['slug'],
+        'label'       => esc_attr__( 'Page Content', 'minimall' ),
+        'settings'    => 'home_'.$section_args['slug'].'_page',
+        'priority'    => 40,
     ) );
     
+}
 
+/*
+* Content type : Free content
+*/
+function minimall_homepage_content_type_free( $section_args ){
+    
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'     => 'minimall_notice',
+        'settings' => 'homepage_'.$section_args['slug'],
+        'label'    => esc_attr__( 'Section Content', 'minimall' ),
+        'section'  => 'homepage_'.$section_args['slug'],
+        'priority' => 39,
+    ) );
+
+    Minimall_Kirki::add_field( 'minimall', array(
+        'type'        => 'editor',
+        'section'     => 'homepage_'.$section_args['slug'],
+        'label'       => esc_attr__( 'Free Content', 'minimall' ),
+        'settings'    => 'home_'.$section_args['slug'].'_free',
+        'priority'    => 40,
+    ) );
     
 }
