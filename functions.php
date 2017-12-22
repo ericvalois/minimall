@@ -198,7 +198,7 @@ function minimall_widgets_init() {
 		'description'   => __("Blog and archive sidebar location","minimal"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
+		'before_title'  => '<h4 class="widget-title caps mt0 mb2 widgets">',
 		'after_title'   => '</h4>',
         'class'         => 'list-reset',
 	) );
