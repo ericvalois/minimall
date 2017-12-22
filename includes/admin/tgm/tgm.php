@@ -112,6 +112,12 @@ function minimall_register_required_plugins() {
 			'slug'      => 'easy-digital-downloads',
 			'required'  => false,
         ),
+
+        array(
+			'name'      => 'Meta Box',
+			'slug'      => 'meta-box',
+			'required'  => false,
+        ),
         
 
 
