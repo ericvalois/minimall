@@ -172,7 +172,7 @@ module.exports = function(grunt) {
             },
             build: {
                 expand: true,
-                src: ['**', '!node_modules/**', '!build/**', '!readme.md', '!Gruntfile.js', '!package.json', '!.gitignore','!.codekit3' ],
+                src: ['**', '!node_modules/**', '!build/**', '!readme.md', '!Gruntfile.js', '!package.json', '!.gitignore','!config.codekit3' ],
                 dest: 'build/'
             },
 
