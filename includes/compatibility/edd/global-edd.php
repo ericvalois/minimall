@@ -31,7 +31,7 @@ function minimall_edd_widgets_init() {
         'name'          => esc_html__( 'Download Tabs Section', 'minimall' ),
         'id'            => 'download-tabs-sidebar',
         'description'   => __("Sidebar display in the bottom of the download page. Each widget is a new tab.","minimal"),
-        'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets">',
+        'before_widget' => '<div id="%1$s" class="%2$s clearfix ">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="widget-title m0 hide">',
         'after_title'   => '</h4>',

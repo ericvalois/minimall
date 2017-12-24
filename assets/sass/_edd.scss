@@ -277,15 +277,27 @@
 * EDD notice
 */
 .edd_error{
-    //@extend .alert;
-    //@extend .alert_danger;
-    color: red;
+    border-left-width: 6px;
+    border-left-style: solid;
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: #f8c9c4;
+    border-color: #e74c3c;
 }
 
 .edd_sucess{
-    //@extend .alert;
-    //@extend .alert_success;
-    color: green;
+    border-left-width: 6px;
+    border-left-style: solid;
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: rgba(46, 204, 113, 0.3);
+    border-color: rgba(46, 204, 113, 0.7);
+}
+
+.checkout_login_form{
+    padding: 0.5em 1.387em;
+    background: #fafafa;
+    border: 1px solid #eee;
 }
 
 /*
