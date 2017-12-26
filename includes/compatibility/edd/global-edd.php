@@ -242,6 +242,8 @@ function minimall_edd_remove_pricing_options_archive(){
 
 add_action('edd_purchase_link_end','minimall_edd_secondary_link', 5);
 function minimall_edd_secondary_link(){
+    if( !function_exists('rwmb_meta') ){ return; }
+    
     global $post;
 
     $link_label = rwmb_meta( 'minimall-edd_secondary_label', $post->ID );
