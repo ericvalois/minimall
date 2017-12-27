@@ -645,6 +645,13 @@
 		"oAP": "\/edd_templates\/shortcode-download.php",
 		"oF": 0
 		},
+	"\/edd_templates\/shortcode-subscriptions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edd_templates\/shortcode-subscriptions.php",
+		"oF": 0
+		},
 	"\/edd_templates\/widget-cart-item.php": {
 		"cB": 0,
 		"ft": 8192,

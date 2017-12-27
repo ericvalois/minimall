@@ -16,3 +16,4 @@ wp-content/plugins/hello.php
 **/build/
 **/node_modules/*
 *.codekit3
+config.codekit3

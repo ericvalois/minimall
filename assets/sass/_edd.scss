@@ -197,13 +197,27 @@
 }
 
 .edd-table th,
-.edd_sl_table th{
+.edd_sl_table th,
+#edd_user_history th{
     font-weight: bold;
     background-color: #fafafa;
 }
 
 .edd-table ul,
 .edd_sl_table ul{ margin: 0; }
+
+/*
+* Subscription edit credit card
+*/
+#edd_secure_site_wrapper{
+    display: flex;
+    align-items: center;
+}
+
+#edd_secure_site_wrapper .padlock{
+    line-height: 1;
+    margin-right: 15px;
+}
 
 /*
 * EDD sl license
@@ -238,6 +252,7 @@
 #edd_cc_fields{
     background: #fafafa;
     border: 1px solid #eee;
+    padding: 1.5rem;
 }
 
 .edd-select-small{ 
