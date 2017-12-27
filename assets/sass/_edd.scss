@@ -98,9 +98,11 @@
     padding-left: 0;
 }
 
-.tab-pane h2{
-    @extend .h4;
-}
+.tab-pane h1{ font-size: 2.5rem; }
+.tab-pane h2{ font-size: 2rem; }
+.tab-pane h3{ font-size: 1.5rem;}
+.tab-pane h4{ font-size: 1.2rem; }
+.tab-pane h5{ font-size: 1rem;}
 
 #edd_checkout_form_wrap input[type=text], #edd_checkout_form_wrap input[type=email], #edd_checkout_form_wrap input[type=password], #edd_checkout_form_wrap input[type=tel], #edd_checkout_form_wrap textarea{
     padding: 12px 15px;
