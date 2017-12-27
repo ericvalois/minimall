@@ -117,7 +117,7 @@ function minimall_get_edd_download_tabs(){
             $idvar = _get_widget_id_base( $id );
             $instance = get_option( $wdgtvar );
             $idbs = str_replace( $idvar.'-', '', $id );
-            $tab = '<li role="tab"><a href="#tab-'.$id.'" class="black sm-text '.$active_class.'">'.$instance[$idbs]['title'].'</a></li>';
+            $tab = '<li role="tab"><a data-tab="#'. sanitize_title($instance[$idbs]['title']) .'" href="#tab-'.$id.'" class="black sm-text '.$active_class.'">'.$instance[$idbs]['title'].'</a></li>';
 
             if ( strchr($id,'minimall_edd_download_comments') ):
                 if( comments_open() || get_comments_number() ):
