@@ -42,11 +42,19 @@ window.addEventListener("load", function() {
 if( window.location.hash ) {
     // Open the right tab
     var active_tab = jQuery( '.minimall-tabs a[data-tab="'+ window.location.hash + '"]' ).first();
+    var active_panel = jQuery( '.minimall-tabs a[data-tab="'+ window.location.hash + '"]' ).first().attr('href');
 
     if( active_tab ){
         // Reset Tabs
         jQuery('.minimall-tabs a').removeClass("active");
 
+        // Set the right tab
         active_tab.addClass('active');
+
+        // Reset panel
+        jQuery('.tab-pane').removeClass("active");
+        
+        // Set the right panel
+        jQuery(active_panel).addClass('active');
     }
 }
