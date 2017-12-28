@@ -88,31 +88,31 @@
     .entry-content table,
     .entry-content figure,
     .entry-content .alert,
-    .wp-block-image,
-    .wp-block-gallery,
-    .wp-block-video,
-    .wp-block-quote,
-    .wp-block-text-columns,
-    .wp-block-button,
-    .entry-content ul,
-    .entry-content ol,
-    .entry-content hr,
-    .wp-block-cover-text,
-    .wp-block-pullquote{
+    .entry-content .wp-block-image,
+    .entry-content .wp-block-gallery,
+    .entry-content .wp-block-video,
+    .entry-content .wp-block-quote,
+    .entry-content .wp-block-text-columns,
+    .entry-content .wp-block-button,
+    .entry-content .entry-content ul,
+    .entry-content .entry-content ol,
+    .entry-content .entry-content hr,
+    .entry-content .wp-block-cover-text,
+    .entry-content .wp-block-pullquote{
         margin-left: auto;
         margin-right: auto;
         max-width: 768px;
     }
 
-    .wp-block-video video {
+    .entry-content .wp-block-video video {
         max-width: 768px;
     }
 
-    .entry-content *.alignwide{
+    .entry-content .entry-content *.alignwide{
         max-width: 1200px;
     }
 
-    .entry-content .alignwide > img{
+    .entry-content .entry-content .alignwide > img{
         margin-left: auto;
         margin-right: auto;
     }

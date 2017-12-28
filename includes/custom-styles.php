@@ -89,9 +89,9 @@ function minimall_custom_styles(){
     
     .btn-outline{ border-color: '. $main_color .'; }
 
-    .btn:hover, .button:hover ,button:hover, [role="button"]:hover, input[type="submit"]:hover, input[type="button"]:hover,
-    .btn:focus, .button:focus, button:focus, [role="button"]:focus, input[type="submit"]:focus, input[type="button"]:focus,
-    .btn.active,.btn:active, .button:active, button:active, [role="button"]:active, input[type="submit"]:active, input[type="button"]:active,
+    .btn:hover, .button:hover ,button:hover, input[type="submit"]:hover, input[type="button"]:hover,
+    .btn:focus, .button:focus, button:focus, input[type="submit"]:focus, input[type="button"]:focus,
+    .btn.active,.btn:active, .button:active, button:active, input[type="submit"]:active, input[type="button"]:active,
     .btn.btn-primary,
     .edd_downloads_list .edd-submit.button:hover,
     #edd-purchase-button{
