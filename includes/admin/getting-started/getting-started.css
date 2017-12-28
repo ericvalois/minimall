@@ -663,3 +663,22 @@ h4 .button {
     border-left-style: solid;
     border-radius: 3px;
 }
+
+/*
+* Toc
+*/
+.toc_title{ font-weight: 700; }
+#toc_container ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+#toc_container li{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#toc_container > ul{
+    padding-left: 0;
+}
