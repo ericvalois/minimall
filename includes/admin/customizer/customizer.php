@@ -131,7 +131,7 @@ function minimall_customizer_styles() { ?>
             line-height: 1;
         }
 
-        .wp-full-overlay-sidebar { width: 400px } .wp-full-overlay.expanded { margin-left: 400px }
+        @media ( min-width: 1400px ){ .wp-full-overlay-sidebar { width: 400px } .wp-full-overlay.expanded { margin-left: 400px } }
         @media ( min-width: 1900px ){ .wp-full-overlay-sidebar { width: 500px } .wp-full-overlay.expanded { margin-left: 500px } }
 	</style>
 	<?php
