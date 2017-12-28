@@ -156,3 +156,5 @@ p.edd-reviews-review-form-rating label{
   .single-download .comments-area .no-comments {
     display: none;
   }  
+
+  .edd-reviews-verified-purchase{ color: #1b8e1b; }
