@@ -98,7 +98,7 @@ add_action( 'after_setup_theme', 'minimall_setup' );
  * @global int $content_width
  */
 function minimall_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'minimall_content_width', 800 );
+    $GLOBALS['content_width'] = apply_filters( 'minimall_content_width', 1200 );
 }
 add_action( 'after_setup_theme', 'minimall_content_width', 0 );
 

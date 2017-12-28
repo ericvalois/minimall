@@ -32,6 +32,7 @@ if ( is_user_logged_in() ) :
 								<span class="edd_sl_key_sep">&nbsp;&ndash;&nbsp;</span>
 								<span class="edd_sl_key_price_option"><?php echo edd_get_price_option_name( edd_software_licensing()->get_download_id( $license->ID ), $price_id ); ?></span>
 								<?php if( edd_sl_license_has_upgrades( $license->ID ) && 'expired' !== edd_software_licensing()->get_license_status( $license->ID ) ) : ?>
+                                    <br>
                                     <span class="edd_view_upgrades">
                                         (<a href="<?php echo esc_url( add_query_arg( array( 'view' => 'upgrades', 'license_id' => $license->ID, 'action' => 'manage_licenses', 'payment_id' => $payment_id ), get_permalink( edd_get_option( 'purchase_history_page' ) ) ) ); ?>"><?php _e( 'Add More Sites', 'edd_sl' ); ?></a>)
                                     </span>
