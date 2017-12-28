@@ -251,7 +251,7 @@ class Minimall_Theme_Updater_Admin {
 
 				<div class="panels">
 					<ul class="inline-list">
-						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Quick Start', 'minimall' ); ?></a></li>
+						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Quick Setup', 'minimall' ); ?></a></li>
                         <li><a id="getting-started" href="#"><?php esc_html_e( 'Complete Setup', 'minimall' ); ?></a></li>
                         <li><a id="plugins-tab" href="#"><?php esc_html_e( 'Plugins', 'minimall' ); ?></a></li>
 						<li><a id="updates-tab" href="#"><?php esc_html_e( 'What’s New', 'minimall' ); ?></a></li>
