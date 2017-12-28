@@ -251,7 +251,8 @@ class Minimall_Theme_Updater_Admin {
 
 				<div class="panels">
 					<ul class="inline-list">
-						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Getting Started', 'minimall' ); ?></a></li>
+						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Quick Start', 'minimall' ); ?></a></li>
+                        <li><a id="getting-started" href="#"><?php esc_html_e( 'Complete Setup', 'minimall' ); ?></a></li>
                         <li><a id="plugins-tab" href="#"><?php esc_html_e( 'Plugins', 'minimall' ); ?></a></li>
 						<li><a id="updates-tab" href="#"><?php esc_html_e( 'What’s New', 'minimall' ); ?></a></li>
 					</ul>
@@ -260,8 +261,6 @@ class Minimall_Theme_Updater_Admin {
 
 						<!-- Help file panel -->
 						<div id="help-panel" class="panel-left visible">
-
-                            
 
                             <h2><?php _e('1. Install required plugins','minimall'); ?></h2>
 
@@ -311,12 +310,32 @@ class Minimall_Theme_Updater_Admin {
                                 </div>
                             </div>
 
+						</div>
+
+                        <!-- Getting Started full -->
+						<div id="getting-started" class="panel-left">
+                    
+                            <?php
+                                $minimall_getting_started = wp_remote_get('https://ttfb.io/wp-json/wp/v2/knowledgebase/1412/');
+
+                                // Make sure the response came back okay.
+                                if( is_wp_error( $minimall_getting_started ) ) {
+                                    return false; // Bail early
+                                }
+
+                                $body = wp_remote_retrieve_body( $minimall_getting_started );
+                                $data = json_decode( $body );
+
+                                if( ! empty( $data ) ) {
+                                    echo $data->content->rendered;
+                                }
+                            ?>
 
 						</div>
                         
                         <!-- Plugins panel -->
 						<div id="plugins-panel" class="panel-left">
-                        <?php
+                            <?php
                                 $minimall_plugins = wp_remote_get('https://ttfb.io/wp-json/wp/v2/knowledgebase/1293/');
 
                                 // Make sure the response came back okay.
@@ -331,6 +350,8 @@ class Minimall_Theme_Updater_Admin {
                                     echo $data->content->rendered;
                                 }
                             ?>
+
+                            
 						</div><!-- .panel-left plugins -->
                         
                         <?php
