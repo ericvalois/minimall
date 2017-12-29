@@ -131,6 +131,15 @@ function minimall_customizer_styles() { ?>
             line-height: 1;
         }
 
+        li#accordion-panel-ttfb_toolkit_performance > h3.accordion-section-title:before {
+            content: "\f226";
+            font-family: dashicons;
+            padding: 0 3px 0 0;
+            vertical-align: middle;
+            font-size: 22px;
+            line-height: 1;
+        }
+
         @media ( min-width: 1400px ){ .wp-full-overlay-sidebar { width: 400px } .wp-full-overlay.expanded { margin-left: 400px } }
         @media ( min-width: 1900px ){ .wp-full-overlay-sidebar { width: 500px } .wp-full-overlay.expanded { margin-left: 500px } }
 	</style>
