@@ -20,12 +20,14 @@ get_header(); ?>
             <main id="main" class="site-main lg-col-8 <?php if( is_active_sidebar( 'blog-sidebar' ) ){ echo 'lg-pr4'; } ?>" role="main">
                 <header class="mb3 lg-mb4">
                     <?php 
-                        if( is_home() ){
-                            $title = esc_html( get_the_title( get_option('page_for_posts', true) ) ); 
+                        if( is_home() && is_front_page() ){
+                            $title = esc_html( get_bloginfo( "name" ) );
                             $description = esc_html( get_bloginfo( "description" ) ); 
+                        }elseif( is_home() ){
+                            $title = esc_html( get_the_title( get_option('page_for_posts', true) ) ); 
+                            $description = esc_html( get_bloginfo( "description" ) );
                         }elseif( is_search() ){
                             $title = esc_html__( 'Search Results for: ', 'minimall' ) . '<span>' . get_search_query() . '</span>';
-                        
                         }else{
                             $title = get_the_archive_title();
                             $description = get_the_archive_description();
