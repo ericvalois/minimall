@@ -360,7 +360,7 @@ class Minimall_Theme_Updater_Admin {
                             if( $changelog && !is_wp_error( $changelog ) && 200 === wp_remote_retrieve_response_code( $changelog ) ) {
                                 $changelog = $changelog['body'];
                             } else {
-                                $changelog = esc_html__( 'There seems to be a temporary problem retrieving the latest updates for this theme. You can always view the latest updates in your Array Dashboard.', 'minimall' );
+                                $changelog = esc_html__( 'There seems to be a temporary problem retrieving the latest updates for this theme.', 'minimall' );
                             }
                         ?>
 						<!-- Updates panel -->
