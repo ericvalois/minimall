@@ -251,9 +251,9 @@ class Minimall_Theme_Updater_Admin {
 
 				<div class="panels">
 					<ul class="inline-list">
-						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Quick Start', 'minimall' ); ?></a></li>
+						<li class="current"><a id="help-tab" href="#"><?php esc_html_e( 'Quick Setup', 'minimall' ); ?></a></li>
                         <li><a id="getting-started" href="#"><?php esc_html_e( 'Complete Setup', 'minimall' ); ?></a></li>
-                        <li><a id="plugins-tab" href="#"><?php esc_html_e( 'Plugins', 'minimall' ); ?></a></li>
+                        <li><a id="performance-tab" href="#"><?php esc_html_e( 'Performance Setup', 'minimall' ); ?></a></li>
 						<li><a id="updates-tab" href="#"><?php esc_html_e( 'What’s New', 'minimall' ); ?></a></li>
 					</ul>
 
@@ -334,16 +334,16 @@ class Minimall_Theme_Updater_Admin {
 						</div>
                         
                         <!-- Plugins panel -->
-						<div id="plugins-panel" class="panel-left">
+						<div id="performance-panel" class="panel-left">
                             <?php
-                                $minimall_plugins = wp_remote_get('https://ttfb.io/wp-json/wp/v2/knowledgebase/1293/');
+                                $minimall_performance = wp_remote_get('https://ttfb.io/wp-json/wp/v2/knowledgebase/1428/');
 
                                 // Make sure the response came back okay.
-                                if( is_wp_error( $minimall_plugins ) ) {
+                                if( is_wp_error( $minimall_performance ) ) {
                                     return false; // Bail early
                                 }
 
-                                $body = wp_remote_retrieve_body( $minimall_plugins );
+                                $body = wp_remote_retrieve_body( $minimall_performance );
                                 $data = json_decode( $body );
 
                                 if( ! empty( $data ) ) {

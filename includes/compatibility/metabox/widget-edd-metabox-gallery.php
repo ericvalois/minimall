@@ -40,11 +40,11 @@ class Minimall_Edd_Metabox_Gallery extends WP_Widget {
         echo '<div id="edd-gallery" class="flex flex-wrap mxn1 gallery">';
             $image_string = '';
             foreach ( $images as $key => $image ) {
-                //$get_thumb = wp_get_attachment_image_src( $key, $thumb_size );
                 $image_string .= $key . ',';
-                //echo '<a class="flex items-start justify-center inline-block col-'.$img_width.' px1 py1" title="'. $image['title'] .'" href="', $image['full_url'], '"><img class="minimall-edd-thumb" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="', $get_thumb[0], '" alt="'. $image['alt'] .'" width="'. $get_thumb[1] .'" height="'. $get_thumb[2] .'"></a>';
             }
-            echo do_shortcode('[gallery link="file" type="'. $gallery_type .'" size="'. $thumb_size .'" columns="'.$img_per_row.'" include="'. $image_string .'"]');
+            
+            $shortcode = do_shortcode('[gallery link="file" type="'. $gallery_type .'" size="'. $thumb_size .'" columns="'.$img_per_row.'" include="'. $image_string .'"]');
+            echo apply_filters('minimall_edd_gallery',$shortcode);
         echo '</div>';
 
     endif; 
@@ -97,3 +97,12 @@ class Minimall_Edd_Metabox_Gallery extends WP_Widget {
 add_action( 'widgets_init', function(){
   register_widget( 'Minimall_Edd_Metabox_Gallery' );
 });
+
+// Add lazyload to widget filter
+add_filter( 'minimall_edd_gallery'	, 'ttfb_toolkit_lazy_load_image', PHP_INT_MAX );
+
+// Shortcode filter
+add_filter('minimall_edd_gallery','minimall_edd_gallery',10);
+function minimall_edd_gallery( $shortcode ){
+    return $shortcode;
+}

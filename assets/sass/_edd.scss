@@ -44,14 +44,32 @@
         flex-wrap: wrap;
     }
 }
-#edd-main-thumb,
+#edd-main-thumb img,
 .edd_download_image img{ box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); }
 #edd-main-thumb .gallery-item{ padding: 0; }
 #edd-main-thumb .gallery{ margin: 0;}
 #edd-main-thumb .gallery-caption{ display: none; }
 
 #edd-gallery{ 
-    margin-top: 1rem;
+
+    .edd-gallery-icon{
+        position: absolute;
+        top:30px;
+        right: 40px;
+        z-index: 999;
+        opacity: 1;
+        font-size: 40px;
+        color: #1078ff;
+    }
+
+    .gallery-item {
+        display: none;
+    }
+    .gallery-item:first-child {
+        display:block;
+    }
+
+    margin-top: 0;
 
     .gallery-columns-2 .gallery-item {
         max-width: 50%;
@@ -328,3 +346,9 @@ input[type=submit].edd-submit{
     padding: 0 1.6rem;
     line-height: 1;
 }
+
+/*
+* Quick EDD Subscription Upgrade Link
+*/
+.single-download .edd-sl-upgrade-link,
+.edd_download_purchase_form .edd-sl-upgrade-link{ display: none; }

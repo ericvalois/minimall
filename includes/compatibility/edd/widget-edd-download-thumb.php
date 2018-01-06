@@ -39,7 +39,10 @@ class Minimall_Edd_Download_Thumbnail extends WP_Widget {
 ?>
 
     <div id="edd-main-thumb">
-        <?php echo do_shortcode('[gallery link="file" type="thumbnail" size="large" columns="1" include="'. $image_id .'"]'); ?>
+        <?php 
+            $shortcode = do_shortcode('[gallery link="file" type="thumbnail" size="large" columns="1" include="'. $image_id .'"]'); 
+            echo apply_filters('minimall_edd_featured_img',$shortcode);
+        ?>
     </div>
     
 
@@ -92,3 +95,12 @@ class Minimall_Edd_Download_Thumbnail extends WP_Widget {
 add_action( 'widgets_init', function(){
   register_widget( 'Minimall_Edd_Download_Thumbnail' );
 });
+
+// Add lazyload to widget filter
+add_filter( 'minimall_edd_featured_img'	, 'ttfb_toolkit_lazy_load_image', PHP_INT_MAX );
+
+// Shortcode filter
+add_filter('minimall_edd_featured_img','minimall_edd_featured_img',10);
+function minimall_edd_featured_img( $shortcode ){
+    return $shortcode;
+}
