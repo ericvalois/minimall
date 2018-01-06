@@ -1016,11 +1016,32 @@
 		"oAP": "\/includes\/compatibility\/metabox\/widget-edd-metabox-gallery.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/theme-demo-import\/customizer.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/theme-demo-import\/customizer.dat",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/theme-demo-import\/demo.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/compatibility\/theme-demo-import\/demo.php",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/theme-demo-import\/posts.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/theme-demo-import\/posts.xml",
+		"oF": 0
+		},
+	"\/includes\/compatibility\/theme-demo-import\/widgets.wie": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/theme-demo-import\/widgets.wie",
 		"oF": 0
 		},
 	"\/includes\/compatibility\/ttfb-toolkit\/minimall-preload.php": {
