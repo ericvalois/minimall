@@ -128,7 +128,7 @@ function minimall_post_classes_blog_template( $classes ) {
 add_filter( 'get_custom_logo', 'minimall_logo_class' );
 function minimall_logo_class( $html ) {
 
-    $html = str_replace( 'custom-logo', 'custom-logo', $html );
+    $html = str_replace( 'custom-logo', 'custom-logo border-none', $html );
     $html = str_replace( 'custom-logo-link', 'border-none line-height-1 custom-logo-link', $html );
 
     return $html;

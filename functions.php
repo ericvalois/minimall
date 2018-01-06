@@ -69,6 +69,9 @@ function minimall_setup() {
     add_theme_support( 'ttfb_toolkit_icons');
     add_theme_support( 'ttfb_toolkit_performance');
     add_theme_support( 'ttfb_toolkit_sharing');
+    add_theme_support( 'ttfb_toolkit_spacing_widget');
+    add_theme_support( 'ttfb_toolkit_address_widget');
+    add_theme_support( 'ttfb_toolkit_social_widget');
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'minimall_custom_background_args', array(
@@ -458,3 +461,8 @@ require get_template_directory() . '/includes/extra.php';
  * Load custom style
  */
 require get_template_directory() . '/includes/custom-styles.php';
+
+/**
+ * Load custom editor styles
+ */
+require get_template_directory() . '/includes/admin/editor.php';

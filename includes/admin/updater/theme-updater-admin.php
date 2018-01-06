@@ -326,8 +326,11 @@ class Minimall_Theme_Updater_Admin {
                                 $body = wp_remote_retrieve_body( $minimall_getting_started );
                                 $data = json_decode( $body );
 
-                                if( ! empty( $data ) ) {
+                                if( ! empty( $data ) && !empty( $data->content->rendered ) ) {
                                     echo $data->content->rendered;
+                                }else{
+                                    echo '<p>' . esc_html__( 'There seems to be a temporary problem retrieving the complete setup guide.', 'minimall' ) . '<p>';
+                                    echo '<p><a class="button button-primary" href="https://ttfb.io/doc/getting-started-with-minimall/" target="_blank">'. esc_html__("Read it directly on our website","minimall") .'</a></p>';
                                 }
                             ?>
 
@@ -346,8 +349,11 @@ class Minimall_Theme_Updater_Admin {
                                 $body = wp_remote_retrieve_body( $minimall_performance );
                                 $data = json_decode( $body );
 
-                                if( ! empty( $data ) ) {
+                                if( ! empty( $data ) && ! empty( $data->content->rendered ) ) {
                                     echo $data->content->rendered;
+                                }else{
+                                    echo '<p>' . esc_html__( 'There seems to be a temporary problem retrieving the performance setup guide.', 'minimall' ) . '<p>';
+                                    echo '<p><a class="button button-primary" href="https://ttfb.io/doc/minimall-performance-setup/" target="_blank">'. esc_html__("Read it directly on our website","minimall") .'</a></p>';
                                 }
                             ?>
 
@@ -360,7 +366,8 @@ class Minimall_Theme_Updater_Admin {
                             if( $changelog && !is_wp_error( $changelog ) && 200 === wp_remote_retrieve_response_code( $changelog ) ) {
                                 $changelog = $changelog['body'];
                             } else {
-                                $changelog = esc_html__( 'There seems to be a temporary problem retrieving the latest updates for this theme. You can always view the latest updates in your Array Dashboard.', 'minimall' );
+                                $changelog = '<p>' . esc_html__( 'There seems to be a temporary problem retrieving the latest updates for this theme.', 'minimall' ) . '<p>';
+                                $changelog .= '<p><a class="button button-primary" href="https://ttfb.io/themes/minimall/changelog" target="_blank">'. esc_html__("Complete change log","minimall") .'</a></p>';
                             }
                         ?>
 						<!-- Updates panel -->
