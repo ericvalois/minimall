@@ -29,7 +29,6 @@ class Minimall_Edd_Metabox_Gallery extends WP_Widget {
       echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
     }
     
-
     if( function_exists( 'rwmb_meta') ) :
         $images = rwmb_meta( 'minimall-edd_gallery' );
         $img_per_row = get_theme_mod('edd_single_thumb','4');
@@ -37,16 +36,21 @@ class Minimall_Edd_Metabox_Gallery extends WP_Widget {
         $thumb_size = get_theme_mod('edd_single_thumb_size','thumbnail');
         $gallery_type = get_theme_mod('edd_single_thumb_type','thumbnail');
 
-        echo '<div id="edd-gallery" class="flex flex-wrap mxn1 gallery">';
-            $image_string = '';
-            foreach ( $images as $key => $image ) {
-                $image_string .= $key . ',';
-            }
+        $image_string = '';
+        foreach ( $images as $key => $image ) {
+            $image_string .= $key . ',';
+        }
+   
+        if( !empty( $image_string ) ){
+            echo '<div id="edd-gallery" class="relative">';
+                echo '<div class="edd-gallery-icon">';
+                echo '<i class="fas fa-images"></i>';
+                echo '</div>';
+                $shortcode = do_shortcode('[gallery link="file" type="'. $gallery_type .'" size="'. $thumb_size .'" columns="'.$img_per_row.'" ids="'. $image_string .'"]');
+                echo apply_filters('minimall_edd_gallery',$shortcode);
+            echo '</div>';
+        }
             
-            $shortcode = do_shortcode('[gallery link="file" type="'. $gallery_type .'" size="'. $thumb_size .'" columns="'.$img_per_row.'" include="'. $image_string .'"]');
-            echo apply_filters('minimall_edd_gallery',$shortcode);
-        echo '</div>';
-
     endif; 
     
     echo $args['after_widget'];
