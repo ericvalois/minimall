@@ -50,6 +50,46 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/assets\/css\/editor-full-width.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/editor-full-width.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/editor-full-width.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/editor-full-width.min.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/editor.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/editor.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/editor.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/editor.min.min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/assets\/images\/default-hero-lg.jpg": {
 		"ft": 16384,
 		"iS": 140584,
@@ -792,6 +832,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/admin\/customizer\/modules\/private-dashboard.php",
+		"oF": 0
+		},
+	"\/includes\/admin\/editor.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/admin\/editor.php",
 		"oF": 0
 		},
 	"\/includes\/admin\/getting-started\/getting-started-min.css": {
