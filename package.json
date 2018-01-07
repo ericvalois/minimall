@@ -12,5 +12,8 @@
     "grunt-criticalcss": "latest",
     "grunt-critical": "latest",
     "jshint-stylish": "latest"
+  },
+  "dependencies": {
+    "speedline": "^1.3.1"
   }
 }
