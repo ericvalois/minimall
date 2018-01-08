@@ -43,7 +43,6 @@
 /*
 * TTFB Toolkit Social Widget
 */
-
 .social-network{
     display: inline-flex;
     align-items: center;
@@ -57,3 +56,8 @@
     line-height: 1;
     font-size: 16px;
 }
+
+/*
+* TTFB Toolkit Address Widget
+*/
+.ttfb_toolkit_address_widget .icon{ width: 35px }

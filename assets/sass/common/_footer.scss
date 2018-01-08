@@ -23,7 +23,7 @@
     margin-bottom: 10px;
     @extend .line-height-2;
 }
-.footer-widgets li a,{ color: $black; }
+.footer-widgets a,{ color: $black; }
 .footer-widgets a:hover{ color: $blue; }
 .footer-widgets select{ 
     line-height: 1.5; 
