@@ -72,6 +72,8 @@ class Minimall_EDD_Product_Details_Widget extends WP_Widget {
 
 		// download title.
         echo $download_title;
+
+        do_action( 'minimall_edd_product_details_widget_after_title' , $instance , $download_id );
         
         // download price.
         echo $download_price;

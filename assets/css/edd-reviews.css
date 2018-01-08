@@ -158,3 +158,5 @@ p.edd-reviews-review-form-rating label{
   }  
 
   .edd-reviews-verified-purchase{ color: #1b8e1b; }
+
+.edd-reviews-average-rating-label{ display: none; }

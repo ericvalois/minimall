@@ -117,19 +117,40 @@ function minimall_get_edd_download_tabs(){
             $idvar = _get_widget_id_base( $id );
             $instance = get_option( $wdgtvar );
             $idbs = str_replace( $idvar.'-', '', $id );
-            $tab = '<li role="tab"><a data-tab="#'. sanitize_title($instance[$idbs]['title']) .'" href="#tab-'.$id.'" class="black sm-text '.$active_class.'">'.$instance[$idbs]['title'].'</a></li>';
+            
+            $tab_before = '<li role="tab"><a data-tab="#'. sanitize_title($instance[$idbs]['title']) .'" href="#'.sanitize_title($instance[$idbs]['title']).'" class="black sm-text '.$active_class.'">';
+            $tab_title = $instance[$idbs]['title'];
+            $tab_after = '</a></li>';
 
             if ( strchr($id,'minimall_edd_download_comments') ):
                 if( comments_open() || get_comments_number() ):
-                    echo $tab;
+
+                    $review_number = minimall_get_review_number();
+
+                    $count = get_comments_number() - $review_number;
+                    
+                    echo $tab_before;
+                    echo $tab_title . '<span class="muted">(' . $count . ')</span>';
+                    echo $tab_after;
                 endif;
-            elseif( strchr($id,'edd_sl_changelog_widget') ):
-                $changelog 	= get_post_meta( $post->ID, '_edd_sl_changelog', true );
-                if( $changelog ):
-                    echo $tab;
+            elseif( strchr($id,'minimall_edd_download_reviews') ):
+                if( minimall_is_edd_reviews_active() ):
+                    $review_number = minimall_get_review_number();
+
+                    if( $review_number ){
+                        $count = '<span class="muted">(' . $review_number . ')</span>';
+                    }else{
+                        $count = '';
+                    }
+
+                    echo $tab_before;
+                    echo $tab_title . $count;
+                    echo $tab_after;
                 endif;
             else:
-                echo $tab;
+                echo $tab_before;
+                echo $tab_title;
+                echo $tab_after;
             endif;
 
             $cpt++;
@@ -152,10 +173,22 @@ function minimall_get_edd_download_tabs_content(){
         }else{
             $active_class = '';
         }
-        $widget_array = $wp_registered_widgets[$widget];
-        echo '<div id="tab-'.$widget_array['id'].'" class="tab-pane py1 '.$active_class.'">';
-        minimall_show_widget( 'download-tabs-sidebar', $widget_array['id'] );
-        echo '</div>';
+
+        
+        
+        if( isset( $wp_registered_widgets[$widget] ) ){
+            $widget_array = $wp_registered_widgets[$widget];
+            
+            $wdgtvar = 'widget_'._get_widget_id_base( $widget_array['id'] );
+            $idvar = _get_widget_id_base( $widget_array['id'] );
+            $instance = get_option( $wdgtvar );
+            $idbs = str_replace( $idvar.'-', '', $widget_array['id'] );
+
+            echo '<div id="'.sanitize_title($instance[$idbs]['title']).'" class="tab-pane py1 '.$active_class.'">';
+            minimall_show_widget( 'download-tabs-sidebar', $widget_array['id'] );
+            echo '</div>';
+        }
+        
         $cpt++;
     }
         
@@ -282,4 +315,58 @@ function minimall_get_edd_btn_class( $class = '' ) {
 	}
  
 	return $class;
+}
+
+function minimall_get_review_number(){
+
+    if( !minimall_is_edd_reviews_active() ){
+        return false;
+    }
+
+    $object_review = EDD_Reviews::get_instance();
+    
+    $reviews = array();
+
+    remove_action( 'pre_get_comments',   array( $object_review, 'hide_reviews' ) );
+
+    $reviews_query = array(
+        'type'       => 'edd_review',
+        'meta_query' => array(
+            array(
+                'key'     => 'edd_review_reply',
+                'compare' => 'NOT EXISTS'
+            )
+        )
+    );
+
+    if ( ! current_user_can( 'edit_posts' ) ) {
+        $reviews_query['meta_query'] = array(
+            'relation' => 'AND',
+            array(
+                'key'     => 'edd_review_approved',
+                'value'   => '1',
+                'compare' => '='
+            ),
+            array(
+                'key'     => 'edd_review_approved',
+                'value'   => 'spam',
+                'compare' => '!='
+            ),
+            array(
+                'key'     => 'edd_review_approved',
+                'value'   => 'trash',
+                'compare' => '!='
+            ),
+            array(
+                'key'     => 'edd_review_reply',
+                'compare' => 'NOT EXISTS'
+            )
+        );
+    }
+
+    $reviews = get_comments( $reviews_query );
+
+    add_action( 'pre_get_comments',   array( $object_review, 'hide_reviews' ) );
+
+    return count($reviews);
 }

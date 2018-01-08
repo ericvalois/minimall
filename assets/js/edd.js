@@ -1,48 +1,30 @@
-window.addEventListener("load", function() {
+jQuery(document).ready(function($){
+	
+	$('.minimall-tabs a').click(function(event){
 
-    // store tabs variable
-    var myTabs = document.querySelectorAll(".minimall-tabs a");
+        event.preventDefault();
 
-    function myTabClicks(tabClickEvent) {
+        
 
-        for (var i = 0; i < myTabs.length; i++) {
-            myTabs[i].classList.remove("active");
-        }
-
-        var clickedTab = tabClickEvent.currentTarget; 
-
-        clickedTab.classList.add("active");
-
-        tabClickEvent.preventDefault();
-
+        var tab_id = $(this).attr('href');
+        
         // Change URL
-        var tab_url = jQuery(this).attr("data-tab");
-        window.history.pushState(null, null, tab_url);
+        window.history.pushState(null, null, tab_id);
 
-        var myContentPanes = document.querySelectorAll(".tab-pane");
+		$('.minimall-tabs a').removeClass('active');
+		$('.tab-pane').removeClass('active');
 
-        for (i = 0; i < myContentPanes.length; i++) {
-            myContentPanes[i].classList.remove("active");
-        }
+		$(this).addClass('active');
+		$(tab_id).addClass('active');
+	})
 
-        var anchorReference = tabClickEvent.target;
-        var activePaneId = anchorReference.getAttribute("href");
-        var activePane = document.querySelector(activePaneId);
-
-        activePane.classList.add("active");
-
-    }
-
-    for (i = 0; i < myTabs.length; i++) {
-        myTabs[i].addEventListener("click", myTabClicks)
-    }
-});
+})
 
 // Detect open tab
 if( window.location.hash ) {
     // Open the right tab
     var active_tab = jQuery( '.minimall-tabs a[data-tab="'+ window.location.hash + '"]' ).first();
-    var active_panel = jQuery( '.minimall-tabs a[data-tab="'+ window.location.hash + '"]' ).first().attr('href');
+    var active_panel = jQuery(window.location.hash);
 
     
     if( active_tab.length ){

@@ -13,10 +13,16 @@ class Minimall_EDD_Reviews {
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
         add_filter( 'body_class', array( $this, 'body_classes' ) );
+
         
-        // Remove reviews from regular location
+        // Get EDD Reviews Instance
         $object_review = EDD_Reviews::get_instance();
+
+        // Remove reviews from regular location
         remove_filter('the_content', array( $object_review,'load_frontend') );
+
+        // Add average to product details
+        add_action( 'minimall_edd_product_details_widget_after_title', array(  $object_review, 'display_average_rating' ) );
         
 	}
 
