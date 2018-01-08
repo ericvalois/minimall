@@ -44,17 +44,18 @@ if( window.location.hash ) {
     var active_tab = jQuery( '.minimall-tabs a[data-tab="'+ window.location.hash + '"]' ).first();
     var active_panel = jQuery( '.minimall-tabs a[data-tab="'+ window.location.hash + '"]' ).first().attr('href');
 
-    if( active_tab ){
+    
+    if( active_tab.length ){
         // Reset Tabs
         jQuery('.minimall-tabs a').removeClass("active");
 
-        // Set the right tab
+        // Set the active tab
         active_tab.addClass('active');
 
         // Reset panel
         jQuery('.tab-pane').removeClass("active");
         
-        // Set the right panel
+        // Set the active panel
         jQuery(active_panel).addClass('active');
     }
 }
