@@ -83,11 +83,13 @@ function minimall_custom_styles(){
     .primary-color,
     .current_page_item a,
     .btn-outline,
-    .menu a:hover{
+    .menu a:hover,
+    .social-network:hover{
         color: '. $main_color .' !important;
     }
     
-    .btn-outline{ border-color: '. $main_color .'; }
+    .btn-outline,
+    .social-network:hover{ border-color: '. $main_color .'; }
 
     .btn:hover, .button:hover ,button:hover, input[type="submit"]:hover, input[type="button"]:hover,
     .btn:focus, .button:focus, button:focus, input[type="submit"]:focus, input[type="button"]:focus,

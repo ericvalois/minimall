@@ -251,7 +251,7 @@ body {
 }
 a {
   text-decoration: none;
-  transition: color $speed $easing;
+  transition: color $speed $easing, border-color $speed $easing;
   cursor: pointer
 }
 

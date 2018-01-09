@@ -322,3 +322,27 @@ function minimall_comment(){
         comments_template();
     endif;
 }
+
+/*
+* Add Minimall's footer hero
+*/
+add_action('minimall_footer','minimall_footer_hero', 10);
+function minimall_footer_hero(){
+    get_template_part( 'template-parts/footer/hero' );
+}
+
+/*
+* Add Minimall's footer widgets
+*/
+add_action('minimall_footer','minimall_footer_widgets', 20);
+function minimall_footer_widgets(){
+    get_template_part( 'template-parts/footer/widgets' );
+}
+
+/*
+* Add Minimall's footer copyright
+*/
+add_action('minimall_footer','minimall_footer_copyright', 30);
+function minimall_footer_copyright(){
+    get_template_part( 'template-parts/footer/copyright' );
+}

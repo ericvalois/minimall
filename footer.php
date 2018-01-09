@@ -9,11 +9,8 @@
  * @package minimal
  */
 ?>
-    <?php get_template_part( 'template-parts/footer/hero' ); ?>
-    
-    <?php get_template_part( 'template-parts/footer/widgets' ); ?>
 
-    <?php get_template_part( 'template-parts/footer/copyright' ); ?>
+    <?php do_action("minimall_footer"); ?>
 
 <?php wp_footer(); ?>
 
