@@ -80,6 +80,7 @@ if ( ! function_exists( 'minimall_edd_download_nav' ) ) :
 	<?php
 	}
 endif;
+
 /*
 * Add comment support to EDD products
 */
@@ -125,17 +126,22 @@ function minimall_get_edd_download_tabs(){
             if ( strchr($id,'minimall_edd_download_comments') ):
                 if( comments_open() || get_comments_number() ):
 
-                    $review_number = minimall_get_review_number();
+                    $review_number = minimall_get_review_number( $post->ID );
+                    $comment_count = minimall_get_comment_number( $post->ID ); - $review_number;
 
-                    $count = get_comments_number() - $review_number;
+                    if( get_comments_number() - $review_number > 0 ){
+                        $count = '<span class="muted">(' . $comment_count . ')</span>';
+                    }else{
+                        $count = '';
+                    }
                     
                     echo $tab_before;
-                    echo $tab_title . '<span class="muted">(' . $count . ')</span>';
+                    echo $tab_title . $count;
                     echo $tab_after;
                 endif;
             elseif( strchr($id,'minimall_edd_download_reviews') ):
                 if( minimall_is_edd_reviews_active() ):
-                    $review_number = minimall_get_review_number();
+                    $review_number = minimall_get_review_number( $post->ID );
 
                     if( $review_number ){
                         $count = '<span class="muted">(' . $review_number . ')</span>';
@@ -174,8 +180,6 @@ function minimall_get_edd_download_tabs_content(){
             $active_class = '';
         }
 
-        
-        
         if( isset( $wp_registered_widgets[$widget] ) ){
             $widget_array = $wp_registered_widgets[$widget];
             
@@ -317,7 +321,10 @@ function minimall_get_edd_btn_class( $class = '' ) {
 	return $class;
 }
 
-function minimall_get_review_number(){
+/*
+* Return active review number
+*/
+function minimall_get_review_number( $post_id = null ){
 
     if( !minimall_is_edd_reviews_active() ){
         return false;
@@ -331,6 +338,7 @@ function minimall_get_review_number(){
 
     $reviews_query = array(
         'type'       => 'edd_review',
+        'post_id'    => $post_id,
         'meta_query' => array(
             array(
                 'key'     => 'edd_review_reply',
@@ -339,34 +347,53 @@ function minimall_get_review_number(){
         )
     );
 
-    if ( ! current_user_can( 'edit_posts' ) ) {
-        $reviews_query['meta_query'] = array(
-            'relation' => 'AND',
-            array(
-                'key'     => 'edd_review_approved',
-                'value'   => '1',
-                'compare' => '='
-            ),
-            array(
-                'key'     => 'edd_review_approved',
-                'value'   => 'spam',
-                'compare' => '!='
-            ),
-            array(
-                'key'     => 'edd_review_approved',
-                'value'   => 'trash',
-                'compare' => '!='
-            ),
-            array(
-                'key'     => 'edd_review_reply',
-                'compare' => 'NOT EXISTS'
-            )
-        );
-    }
+    $reviews_query['meta_query'] = array(
+        'relation' => 'AND',
+        array(
+            'key'     => 'edd_review_approved',
+            'value'   => '1',
+            'compare' => '='
+        ),
+        array(
+            'key'     => 'edd_review_approved',
+            'value'   => 'spam',
+            'compare' => '!='
+        ),
+        array(
+            'key'     => 'edd_review_approved',
+            'value'   => 'trash',
+            'compare' => '!='
+        ),
+        array(
+            'key'     => 'edd_review_reply',
+            'compare' => 'NOT EXISTS'
+        )
+    );
+    
 
     $reviews = get_comments( $reviews_query );
+    
 
     add_action( 'pre_get_comments',   array( $object_review, 'hide_reviews' ) );
 
     return count($reviews);
 }
+
+/*
+* Return active review number
+*/
+function minimall_get_comment_number( $post_id = null ){
+    
+    
+        $comments_query = array(
+            'type'       => 'comment',
+            'post_id'    => $post_id,
+        );
+    
+        
+    
+        $comments = get_comments( $comments_query );
+        
+    
+        return count($comments);
+    }
