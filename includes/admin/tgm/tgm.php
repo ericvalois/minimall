@@ -76,6 +76,12 @@ function minimall_register_required_plugins() {
 			'slug'      => 'contact-form-7',
 			'required'  => false,
         ),
+
+        array(
+			'name'      => 'MailChimp for WordPress',
+			'slug'      => 'mailchimp-for-wp',
+			'required'  => false,
+        ),
         
         array(
 			'name'      => 'Theme Demo Import',
