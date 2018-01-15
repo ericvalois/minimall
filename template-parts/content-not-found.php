@@ -9,11 +9,6 @@
 
 ?>
 <article id="page-404">
-	<header class="entry-header col-12 center negative-header max-width-5 ml-auto mr-auto bg-white px2 py2 lg-px4">
-
-        <h1 class="entry-title mb0 lg-mb2"><?php _e('Oops! That page can’t be found.','minimall'); ?></h1>
-        
-	</header><!-- .entry-header -->
 
 	<div class="entry-content max-width-3 ml-auto mr-auto px2 lg-px0 pt2">
         <section id="404-full-sidebar" class="lg-text" role="complementary">
