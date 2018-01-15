@@ -101,11 +101,24 @@ add_action( 'after_setup_theme', 'minimall_setup' );
  *
  * @global int $content_width
  */
-function minimall_content_width() {
-    $GLOBALS['content_width'] = apply_filters( 'minimall_content_width', 1200 );
-}
 add_action( 'after_setup_theme', 'minimall_content_width', 0 );
+function minimall_content_width() {
+    $GLOBALS['content_width'] = apply_filters( 'minimall_content_width', 768 );
+}
 
+/*
+* Custom Embed size on larger template
+*/
+add_filter('template_redirect', 'minimall_custom_content_width_embed_size');
+function minimall_custom_content_width_embed_size($embed_size){
+    if ( is_page_template('templates/full-width.php') ) {
+        global $content_width;
+        $content_width = 1143;
+    }elseif( is_singular('download') ){
+        global $content_width;
+        $content_width = 1010;
+    }
+}
 
 /**
  * Register widget area.
@@ -206,22 +219,42 @@ function minimall_widgets_init() {
 		'after_title'   => '</h4>',
         'class'         => 'list-reset',
 	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Before Posts Content', 'minimall' ),
+		'id'            => 'post-header-sidebar',
+		'description'   => __("Sidebar display before post content","minimal"),
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets max-width-3 ml-auto mr-auto mt0 mb2">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="widget-title mb1 mt0">',
+		'after_title'   => '</h5>',
+    ) );
+
+    register_sidebar( array(
+		'name'          => esc_html__( 'Before Pages Content', 'minimall' ),
+		'id'            => 'page-header-sidebar',
+		'description'   => __("Sidebar display before page content","minimal"),
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets max-width-3 ml-auto mr-auto mt0 mb2">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="widget-title mb1 mt0">',
+		'after_title'   => '</h5>',
+    ) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Posts Footer Sidebar', 'minimall' ),
+		'name'          => esc_html__( 'After Posts Content', 'minimall' ),
 		'id'            => 'post-footer-sidebar',
 		'description'   => __("Sidebar display after post content","minimal"),
-		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets max-width-3 ml-auto mr-auto mt3 mb3">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5 class="widget-title mb2 mt0">',
 		'after_title'   => '</h5>',
     ) );
 
     register_sidebar( array(
-		'name'          => esc_html__( 'Pages Footer Sidebar', 'minimall' ),
+		'name'          => esc_html__( 'After Pages Content', 'minimall' ),
 		'id'            => 'page-footer-sidebar',
 		'description'   => __("Sidebar display after page content","minimal"),
-		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets max-width-3 ml-auto mr-auto mt3 mb3">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5 class="widget-title mb2 mt0">',
 		'after_title'   => '</h5>',
