@@ -27,7 +27,7 @@ function minimall_add_editor_styles() {
 
     add_editor_style( trailingslashit( get_template_directory_uri() ) . 'assets/css/editor.min.css' );
 
-    if( get_page_template_slug( $post->ID ) != '' || is_singular('download') ){
+    if( get_page_template_slug( $post->ID ) != '' || get_post_type( $post->ID ) == 'download' ){
         add_editor_style( trailingslashit( get_template_directory_uri() ) . 'assets/css/editor-full-width.min.css' );
     }
 }
