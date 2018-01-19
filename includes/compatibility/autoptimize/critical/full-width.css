@@ -1,9 +1,10 @@
-Console output: Speed Index (lower is better): NaNConsole output: Fully loaded time : 1742msConsole output: Load Time (onload): 312ms.screen-reader-text {
+.screen-reader-text {
   clip: rect(1px 1px 1px 1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
   position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .screen-reader-text:focus {

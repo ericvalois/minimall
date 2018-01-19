@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             page: {
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             single: {
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             page_404: {
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             edd_single: {
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             edd_archive: {
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-3','.lg-col-4','.lg-col-6','.lg-col-12'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             edd_checkout: {
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             full_width: {
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             dashboard: {
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
                     filename: "style.css",
                     buffer: 800*1024,
                     forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: false
+                    ignoreConsole: true
                 }
             },
             

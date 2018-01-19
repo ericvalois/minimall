@@ -1,9 +1,10 @@
-Console output: Speed Index (lower is better): NaN.screen-reader-text {
+.screen-reader-text {
   clip: rect(1px 1px 1px 1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
   position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .screen-reader-text:focus {
@@ -32,8 +33,7 @@ Console output: Speed Index (lower is better): NaN.screen-reader-text {
   color: #000;
 }
 
-.lazyload,
-.lazyloading {
+.lazyload {
   opacity: 0;
 }
 
@@ -428,8 +428,7 @@ ul ul {
   min-height: 60px;
 }
 
-.hero .lazyload,
-.hero .lazyloading {
+.hero .lazyload {
   opacity: 0;
 }
 
