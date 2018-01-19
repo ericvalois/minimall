@@ -11,6 +11,5 @@ jQuery(document).ready(function($){
 
 		$(this).addClass('active');
 		$(tab_id).addClass('active');
-	})
-
+    })
 })

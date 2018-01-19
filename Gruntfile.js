@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/home.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/archive.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/page.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/single.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/404.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/edd-single.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
                     ignoreConsole: false
                 }
             },
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/edd-archive.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-3','.lg-col-4','.lg-col-6','.lg-col-12'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-3','.lg-col-4','.lg-col-6','.lg-col-12'],
                     ignoreConsole: false
                 }
             },
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/edd-checkout.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
@@ -109,19 +109,19 @@ module.exports = function(grunt) {
                     outputfile: "includes/compatibility/autoptimize/critical/full-width.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },
             dashboard: {
                 options: {
-                    url: "http://minimall.dev/dashboard/",
+                    url: "http://minimall.dev/subscriptions/",
                     width: 1200,
                     height: 1000,
                     outputfile: "includes/compatibility/autoptimize/critical/dashboard.css",
                     filename: "style.css",
                     buffer: 800*1024,
-                    forceInclude: ['.justify-end','.justify-start','.justify-between','.justify-center'],
+                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignoreConsole: false
                 }
             },

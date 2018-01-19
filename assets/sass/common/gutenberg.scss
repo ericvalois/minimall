@@ -1,40 +1,48 @@
-.entry-content p,
-.entry-content ul,
-.entry-content ol,{
+.gutenberg-content > *{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.wp-block-table{ display: table}
+
+.alignfull{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gutenberg-content p,
+.gutenberg-content ul,
+.gutenberg-content ol,{
     margin-top: 0;
     margin-bottom: 1.5em;
 }
 
-.entry-content .wp-block-image,
-.entry-content .wp-block-gallery,
-.entry-content .wp-block-video,
-.entry-content .wp-block-quote,
-.entry-content .wp-block-text-columns,
-.entry-content .wp-block-button,
-.entry-content .wp-block-cover-text,
-.entry-content .wp-block-pullquote,
-.entry-content figure,
-.entry-content blockquote,
-.entry-content pre,
-.entry-content table{
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-video,
+.wp-block-quote,
+.wp-block-text-columns,
+.wp-block-button,
+.wp-block-cover-text,
+.wp-block-pullquote,
+.gutenberg-content figure,
+.gutenberg-content blockquote,
+.gutenberg-content pre,
+.gutenberg-content table{
     margin-top: 3rem;
     margin-bottom: 3rem;
     
 }
 
-.entry-content figure{ 
-    margin-left: auto; 
-    margin-right: auto;
+.gutenberg-content figure{ 
     max-width: 100%;
 }
 
-
-
-.entry-content *.alignfull{
+.gutenberg-content *.alignfull{
   max-width: 100%;
 }
 
-.entry-content .alignfull > img{
+.gutenberg-content .alignfull > img{
     margin-left: auto;
     margin-right: auto;
 }
@@ -57,69 +65,73 @@
 
 .wp-block-button a{
     @extend .btn;
-    //@extend .btn-big;
-    //@extend .btn-black;
-}
-
-.wp-block-button a:hover{
-    //@extend .btn-black:hover;
 }
 
 .wp-block-column >:first-child{ margin-top: 0; }
 .wp-block-column >:last-child{ margin-bottom: 0; }
 
-
 @media( max-width: 40em) {
-    .entry-content .wp-block-text-columns{ 
+    .wp-block-text-columns{ 
         display: block;
         
     }
-    .entry-content .wp-block-text-columns .wp-block-column{ 
-        width: 100%;
+    .wp-block-text-columns .wp-block-column{ 
+        width: 100% !important;
         margin: 2em 0;
     }
 }
 
 @media #{$breakpoint-md} {
-    .entry-content p,
-    .entry-content h1,
-    .entry-content h2,
-    .entry-content h3,
-    .entry-content h4,
-    .entry-content h5,
-    .entry-content h6,
-    .entry-content h6,
-    .entry-content blockquote,
-    .entry-content pre,
-    .entry-content table,
-    .entry-content figure,
-    .entry-content .alert,
-    .entry-content ul,
-    .entry-content ol,
-    .entry-content hr,
-    .entry-content .wp-block-image,
-    .entry-content .wp-block-gallery,
-    .entry-content .wp-block-video,
-    .entry-content .wp-block-quote,
-    .entry-content .wp-block-text-columns,
-    .entry-content .wp-block-button,
-    .entry-content .wp-block-cover-text,
-    .entry-content .wp-block-pullquote{
-        margin-left: auto;
-        margin-right: auto;
+    .gutenberg-content p,
+    .gutenberg-content p,
+    .gutenberg-content h1,
+    .gutenberg-content h2,
+    .gutenberg-content h3,
+    .gutenberg-content h4,
+    .gutenberg-content h5,
+    .gutenberg-content h6,
+    .gutenberg-content h6,
+    .gutenberg-content blockquote,
+    .gutenberg-content pre,
+    .gutenberg-content table,
+    .gutenberg-content figure,
+    .gutenberg-content .alert,
+    .gutenberg-content ul,
+    .gutenberg-content ol,
+    .gutenberg-content hr,
+    .gutenberg-content .alert_shortcode,
+    .gutenberg-content .overflow-auto,
+    .wp-block-image,
+    .wp-block-gallery,
+    .wp-block-video,
+    .wp-block-video video
+    .wp-block-quote,
+    .wp-block-text-columns,
+    .wp-block-button,
+    .wp-block-cover-text,
+    .wp-block-pullquote,
+    .alert_shortcode{
         max-width: 768px;
     }
 
-    .entry-content .wp-block-video video {
-        max-width: 768px;
-    }
-
-    .entry-content *.alignwide{
-        max-width: 1200px;
-    }
-
-    .entry-content .alignwide > img{
+    .gutenberg-content > *,
+    .wp-block-table{
         margin-left: auto;
         margin-right: auto;
     }
+
+    .gutenberg-content .alignwide > img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wp-block-gallery.alignfull{ justify-content: center; }
+}
+
+@media #{$breakpoint-lg} {
+    .gutenberg-content *.alignwide{ max-width: 900px; }
+}
+
+@media #{$breakpoint-xlg} { 
+    .gutenberg-content .alignwide{ max-width: 1200px; }
 }

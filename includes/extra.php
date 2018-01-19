@@ -25,7 +25,7 @@ function minimall_pingback_header() {
 /*
 * Wrap all table for a better responsive world
 */
-add_filter( 'the_content', 'minimall_filter_tableContentWrapper' );
+//add_filter( 'the_content', 'minimall_filter_tableContentWrapper' );
 function minimall_filter_tableContentWrapper($content) {
 
 	$minimall_content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
@@ -118,7 +118,7 @@ function minimall_post_classes_blog_template( $classes ) {
     if( is_archive() || is_home() || is_search() ){
         $classes[] = 'mb4';
     }elseif( is_single() && !is_singular('download') ){
-        $classes[] = 'px2';
+        //$classes[] = 'px2';
     }
       
     return $classes;

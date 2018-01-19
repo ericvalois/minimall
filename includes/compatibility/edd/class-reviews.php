@@ -23,6 +23,8 @@ class Minimall_EDD_Reviews {
 
         // Add average to product details
         add_action( 'minimall_edd_product_details_widget_after_title', array(  $object_review, 'display_average_rating' ) );
+
+        add_action('wp_footer', array( $this, 'open_tab' ) );
         
 	}
 
@@ -65,6 +67,28 @@ class Minimall_EDD_Reviews {
 		}
 
 		return $classes;
+    }
+
+    /**
+	 * Activate the review tab
+	 *
+	 * @access public
+	 * @since  1.3.2
+	 */
+    public function open_tab(){
+        if( isset( $_GET['edd_review_submitted'] ) && $_GET['edd_review_submitted'] == 1 ){
+        ?>
+            <script>
+                jQuery(document).ready(function($){
+                    $('.minimall-tabs a').removeClass('active');
+                    $('.tab-pane').removeClass('active');
+
+                    $('.minimall-tabs a[data-tab="#reviews"]').addClass('active');
+                    $('#reviews').addClass('active');
+                });
+            </script>
+        <?php
+        }
     }
 
 }
