@@ -26,7 +26,10 @@ function minimall_critical_css(){
             include_once( "critical/home.min.css" );
         }elseif( is_singular('download') ){
             echo '/* Critical edd-single */ ';
-            include_once( "critical/edd-single.css" );
+            include_once( "critical/edd-single.min.css" );
+        }elseif( is_page_template("templates/private-dashboard.php") ){
+            echo '/* Critical Private Dashboard */ ';
+            include_once( "critical/dashboard.min.css" );
         }elseif( is_post_type_archive( 'download' ) || is_tax( 'download_category' ) || is_tax( 'download_tag' ) || ( is_page() && has_shortcode( $post->post_content, 'downloads') )  ){
             echo '/* Critical edd-archive */ ';
             include_once( "critical/edd-archive.min.css" );

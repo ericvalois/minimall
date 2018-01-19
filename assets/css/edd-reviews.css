@@ -160,3 +160,10 @@ p.edd-reviews-review-form-rating label{
   .edd-reviews-verified-purchase{ color: #1b8e1b; }
 
 .edd-reviews-average-rating-label{ display: none; }
+
+.edd_review{ border-bottom: 1px solid #eee; }
+.children .edd_review:last-child{ 
+    border: none;
+    padding-bottom: 0;
+}
+.edd-reviews-area .children{ margin-bottom: 0; }

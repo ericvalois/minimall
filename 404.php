@@ -12,11 +12,10 @@ get_header(); ?>
     <?php get_template_part( 'template-parts/content', 'hero' ); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+        <main id="main" class="site-main" role="main">
 			<?php
-
+                get_template_part( 'template-parts/content-header', 'page' );
 				get_template_part( 'template-parts/content', 'not-found' );
-
 			?>
 
 		</main><!-- #main -->

@@ -84,7 +84,7 @@ if ( ! function_exists( 'minimall_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function minimall_entry_footer() {
-    echo '<section class="mt3 mb3 sm-text black-link">';
+    echo '<section class="mt3 mb3 sm-text black-link max-width-3 ml-auto mr-auto">';
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() && !get_theme_mod('hide_post_cat') ) {
 		

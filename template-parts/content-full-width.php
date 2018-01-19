@@ -14,21 +14,7 @@
     <div class="py2">
         <?php the_content(); ?>
 
-        <?php if ( get_edit_post_link() ) : ?>
-            <footer class="entry-footer">
-                <?php
-                    edit_post_link(
-                        sprintf(
-                            /* translators: %s: Name of current post */
-                            esc_html__( 'Edit %s', 'minimall' ),
-                            the_title( '<span class="screen-reader-text">"', '"</span>', false )
-                        ),
-                        '<span class="edit-link">',
-                        '</span>'
-                    );
-                ?>
-            </footer><!-- .entry-footer -->
-        <?php endif; ?>
+        <?php get_template_part( 'template-parts/edit-post-link' ); ?>
     </div><!-- .entry-content -->
 
 </article><!-- #post-## -->

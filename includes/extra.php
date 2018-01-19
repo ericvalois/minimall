@@ -25,7 +25,7 @@ function minimall_pingback_header() {
 /*
 * Wrap all table for a better responsive world
 */
-add_filter( 'the_content', 'minimall_filter_tableContentWrapper' );
+//add_filter( 'the_content', 'minimall_filter_tableContentWrapper' );
 function minimall_filter_tableContentWrapper($content) {
 
 	$minimall_content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
@@ -117,6 +117,8 @@ add_filter( 'post_class','minimall_post_classes_blog_template' );
 function minimall_post_classes_blog_template( $classes ) {
     if( is_archive() || is_home() || is_search() ){
         $classes[] = 'mb4';
+    }elseif( is_single() && !is_singular('download') ){
+        //$classes[] = 'px2';
     }
       
     return $classes;
@@ -251,7 +253,7 @@ function minimall_site_content_class(){
 add_action('minimall_after_post_content','minimall_after_content_begin', 1);
 add_action('minimall_after_page_content','minimall_after_content_begin', 1);
 function minimall_after_content_begin(){
-    echo '<div class="max-width-3 ml-auto mr-auto px2 lg-px0">';
+    echo '<div class="px2">';
 }
 
 /*
@@ -272,7 +274,21 @@ function minimall_display_entry_footer(){
 }
 
 /*
-* Add posts footer sidebar
+* Add before posts content sidebar
+*/
+add_action('minimall_before_post_content','minimall_post_header_sidebar', 10);
+function minimall_post_header_sidebar(){
+    if ( is_active_sidebar( 'post-header-sidebar' ) ) {
+    ?>
+        <section class="widget-area px2" role="complementary">
+            <?php dynamic_sidebar( 'post-header-sidebar' ); ?>
+        </section>
+    <?php 
+    }
+}
+
+/*
+* Add after posts content sidebar
 */
 add_action('minimall_after_post_content','minimall_post_footer_sidebar', 50);
 function minimall_post_footer_sidebar(){
@@ -285,8 +301,23 @@ function minimall_post_footer_sidebar(){
     }
 }
 
+
 /*
-* Add pages footer sidebar
+* Add before pages content sidebar
+*/
+add_action('minimall_before_page_content','minimall_pages_header_sidebar', 10);
+function minimall_pages_header_sidebar(){
+    if ( is_active_sidebar( 'page-header-sidebar' ) ) {
+    ?>
+        <section class="widget-area px2" role="complementary">
+            <?php dynamic_sidebar( 'page-header-sidebar' ); ?>
+        </section>
+    <?php 
+    }
+}
+
+/*
+* Add after pages content sidebar
 */
 add_action('minimall_after_page_content','minimall_pages_footer_sidebar', 50);
 function minimall_pages_footer_sidebar(){
@@ -307,6 +338,8 @@ add_action('minimall_after_page_content','minimall_comment',100);
 function minimall_comment(){
     if ( ( comments_open() || get_comments_number() ) && !is_singular('download') ) :
         
+        echo '<section class="comment-section max-width-3 ml-auto mr-auto">';
+
         $comments_number = get_comments_number();
         if ( $comments_number == 1 ) {
             $comment_label = esc_html__("Comment","minimal");
@@ -320,6 +353,8 @@ function minimall_comment(){
         }
 
         comments_template();
+
+        echo '</div>';
     endif;
 }
 
@@ -345,4 +380,13 @@ function minimall_footer_widgets(){
 add_action('minimall_footer','minimall_footer_copyright', 30);
 function minimall_footer_copyright(){
     get_template_part( 'template-parts/footer/copyright' );
+}
+
+/*
+* Add edit post link
+*/
+add_action('minimall_after_post_content','minimall_edit_post_link',1);
+add_action('minimall_after_page_content','minimall_edit_post_link',1);
+function minimall_edit_post_link(){
+    get_template_part( 'template-parts/edit-post-link' );
 }

@@ -1269,6 +1269,20 @@
 		"oAP": "\/template-parts\/content-full-width.php",
 		"oF": 0
 		},
+	"\/template-parts\/content-header-page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-header-page.php",
+		"oF": 0
+		},
+	"\/template-parts\/content-header-single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-header-single.php",
+		"oF": 0
+		},
 	"\/template-parts\/content-hero.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1323,6 +1337,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/custom-logo.php",
+		"oF": 0
+		},
+	"\/template-parts\/edit-post-link.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/edit-post-link.php",
 		"oF": 0
 		},
 	"\/template-parts\/footer\/copyright.php": {
