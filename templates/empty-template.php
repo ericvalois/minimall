@@ -5,7 +5,7 @@
 */
 get_header(); ?>
 
-    <div id="empty-template" class="entry-content <?php echo esc_attr( minimall_conditionnal_gutenberg_class('gutenberg-content', '') ); ?>">
+    <div id="empty-template" class="entry-content <?php if( function_exists('minimall_conditionnal_gutenberg_class') ){ echo esc_attr( minimall_conditionnal_gutenberg_class('gutenberg-content', '') ); } ?>">
         <?php
             while ( have_posts() ) : the_post();
 
