@@ -472,6 +472,16 @@ function minimall_is_theme_demo_import_active() {
 }
 
 /**
+ * Is EDD Description active?
+ *
+ * @since 1.0.0
+ * @return bool
+ */
+function minimall_is_variable_pricing_desciption() {
+	return function_exists('edd_vpd_output_description');
+}
+
+/**
  * Compatibility
  */
 require get_template_directory() . '/includes/compatibility.php';
