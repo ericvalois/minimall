@@ -11,7 +11,7 @@ function minimall_edd_widgets_init() {
         'name'          => esc_html__( 'Download Right Section', 'minimall' ),
         'id'            => 'download-right-sidebar',
         'description'   => __("Sidebar display at the right of the download page.","minimal"),
-        'before_widget' => '<div id="%1$s" class="%2$s clearfix mb2">',
+        'before_widget' => '<div id="%1$s" class="%2$s clearfix mb2 widgets">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="widget-title mb2">',
         'after_title'   => '</h4>',
@@ -265,48 +265,6 @@ function minimall_edd_download_left_sidebar(){
         return;
     }
     dynamic_sidebar( 'download-left-sidebar' );
-}
-
-/*
-* Remove variable pricing options on archive
-*/
-//add_action('wp','minimall_edd_remove_pricing_options_archive');
-function minimall_edd_remove_pricing_options_archive(){
-    if( !is_singular("download") ){
-        remove_action('edd_purchase_link_top','edd_purchase_variable_pricing');
-    }
-}
-
-add_action('edd_purchase_link_end','minimall_edd_secondary_link', 5);
-function minimall_edd_secondary_link(){
-    if( !function_exists('rwmb_meta') ){ return; }
-    
-    global $post;
-
-    $link_label = rwmb_meta( 'minimall-edd_secondary_label', $post->ID );
-    $link_url = rwmb_meta( 'minimall-edd_secondary_url', $post->ID );
-    $link_class = rwmb_meta( 'minimall-edd_secondary_class', $post->ID );
-    $link_target = rwmb_meta( 'minimall-edd_secondary_target', $post->ID );
-
-    if( !empty( $link_label ) && !empty( $link_url ) && is_singular('download') ){
-        echo '<a '.minimall_external_link( $link_target ).'class="'.esc_attr( $link_class ).'" href="'.esc_url( $link_url ).'">'.esc_html( $link_label ).'</a>';
-    }
-}
-
-/*
-* Before download button wraper
-*/
-add_action('edd_purchase_link_top','minimall_wrap_download_btn_before', 10);
-function minimall_wrap_download_btn_before(){
-    echo '<div class="flex items-center edd_flex_wrap">';
-}
-
-/*
-* After download button wraper
-*/
-add_action('edd_purchase_link_end','minimall_wrap_download_btn_after', 10);
-function minimall_wrap_download_btn_after(){
-    echo '</div>';
 }
 
 /*
