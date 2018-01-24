@@ -40,7 +40,7 @@ class Minimall_Edd_Download_Thumbnail extends WP_Widget {
 
     <div id="edd-main-thumb">
         <?php 
-            $shortcode = do_shortcode('[gallery link="file" type="thumbnail" size="large" columns="1" include="'. $image_id .'"]'); 
+            $shortcode = do_shortcode('[gallery link="file" type="thumbnail" size="minimall-edd-thumbnails" columns="1" include="'. $image_id .'"]'); 
             echo apply_filters('minimall_edd_featured_img',$shortcode);
         ?>
     </div>

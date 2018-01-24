@@ -44,6 +44,12 @@ function minimall_setup() {
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 800, 535, true );
 
+
+    /*
+    * Easy Digital Download Image size
+    */
+    add_image_size( 'minimall-edd-thumbnails', 1143, 1143, array('center','top') );
+
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'minimall' ),

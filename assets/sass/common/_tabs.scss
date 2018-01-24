@@ -26,16 +26,6 @@
     margin: 0 -1px;
 }
 
-.minimall-tabs li:first-child a,
-.minimall-tabs li:first-child {
-    border-radius: 4px 0 0 0;
-}
-
-.minimall-tabs li:last-child a,
-.minimall-tabs li:last-child {
-    border-radius: 0 4px 0 0;
-}
-
 .minimall-tabs a {
     text-decoration: none;
     font-weight: 600;
@@ -63,7 +53,7 @@
 
 .tab-pane{
     display: none;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
@@ -83,5 +73,20 @@
 
     .minimall-tabs a{
         display: inline-block;
+    }
+}
+
+@media #{$breakpoint-lg} {
+
+    .tab-pane{ padding: 1rem 2rem; }
+
+    .minimall-tabs li:first-child a,
+    .minimall-tabs li:first-child {
+        border-radius: 4px 0 0 0;
+    }
+
+    .minimall-tabs li:last-child a,
+    .minimall-tabs li:last-child {
+        border-radius: 0 4px 0 0;
     }
 }
