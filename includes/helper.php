@@ -194,9 +194,14 @@ function minimall_pagination($pages = '', $range = 2){
 /*
 * Hero image selection
 */
-function minimall_get_default_hero(){
+function minimall_get_default_hero( $post_id = null ){
 
-    $hero_img_id = get_theme_mod('default_hero_img', false);
+    if( get_theme_mod('thumb_as_hero', false) && has_post_thumbnail() && $post_id ){
+        $hero_img_id = get_post_thumbnail_id( $post_id );
+    }else{
+        $hero_img_id = get_theme_mod('default_hero_img', false);
+    }
+    
     $array = array();
 
     if( !empty( $hero_img_id ) && is_numeric( $hero_img_id ) ){
@@ -370,4 +375,19 @@ if( ! function_exists( 'wp_is_login' ) ) {
 	function wp_is_login() {
 		return in_array( $GLOBALS[ 'pagenow' ], array( 'wp-login.php' , 'wp-register.php' ) );
 	}
+}
+
+/* 
+* Add gutenberg class
+*/
+function minimall_conditionnal_gutenberg_class( $is_class = "", $is_not_class = "" ){
+
+    if( (!is_page() && !is_single()) ){ return false; }
+
+    if( minimall_is_gutenberg_active() && function_exists('the_gutenberg_project') && gutenberg_post_has_blocks( get_the_ID() ) ){
+        return $is_class;
+    }else{
+        return $is_not_class;
+    }
+
 }
