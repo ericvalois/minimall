@@ -7,7 +7,7 @@
 		"uuidString": "674D2CC3-405C-45CC-B478-FA633666CE28"
 		}
 	],
-"creatorBuild": "26148",
+"creatorBuild": "26261",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -538,19 +538,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/sass\/common\/gutenberg.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/style.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/assets\/sass\/media\/_captions.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -635,6 +622,16 @@
 		"oA": 2,
 		"oAP": "\/comments.php",
 		"oF": 0
+		},
+	"\/css\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/style.min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/edd_templates\/history-purchases.php": {
 		"cB": 0,
@@ -1021,12 +1018,58 @@
 		"oAP": "\/includes\/compatibility\/edd\/widget-edd-reviews.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/gutenberg\/gutenberg-editor.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/gutenberg-editor.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/compatibility\/gutenberg\/gutenberg-editor.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/gutenberg-editor.css",
+		"oF": 2,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/includes\/compatibility\/gutenberg\/gutenberg.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/gutenberg.min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/includes\/compatibility\/gutenberg\/gutenberg.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/compatibility\/gutenberg\/gutenberg.php",
 		"oF": 0
+		},
+	"\/includes\/compatibility\/gutenberg\/gutenberg.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/gutenberg.css",
+		"oF": 2,
+		"oS": 3,
+		"uL": 1
 		},
 	"\/includes\/compatibility\/jetpack\/jetpack.php": {
 		"cB": 0,
@@ -2040,6 +2083,10 @@
 		"id-match": {
 			"active": 0,
 			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			},
+		"implicit-arrow-linebreak": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"indent": {
 			"active": 0,
