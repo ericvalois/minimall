@@ -80,6 +80,9 @@ function minimall_setup() {
     add_theme_support( 'ttfb_toolkit_social_widget');
     add_theme_support( 'ttfb_toolkit_debug_widget');
 
+    // Gutenberg Custom Modules
+    add_theme_support( 'ttfb_toolkit_gutenberg_pillar_post');
+
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'minimall_custom_background_args', array(
 		'default-color' => 'ffffff',
