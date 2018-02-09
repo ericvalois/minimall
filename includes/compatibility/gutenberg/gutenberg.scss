@@ -5,6 +5,11 @@
 @import "../../../assets/sass/basscss";
 @import "../../../assets/sass/common/form";
 
+.gutenberg-content .wp-block-subhead{
+    font-size: 130%;
+    opacity: 1;
+}
+
 .gutenberg-content > *{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -17,7 +22,7 @@
 
 
 
-.gutenberg-content > [class^='wp-block-']{
+[class^='wp-block-']{
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -25,6 +30,7 @@
 .gutenberg-content > [class^='wp-block-'] p,
 .gutenberg-content > [class^='wp-block-'] ul,
 .gutenberg-content > [class^='wp-block-'] ol,
+.gutenberg-content .wp-block-subhead,
 .gutenberg-content > .wp-block-button{
     margin-top: 0;
     margin-bottom: 1.5em;
