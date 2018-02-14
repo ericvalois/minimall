@@ -113,12 +113,16 @@ function minimall_body_classes_typo( $classes ) {
 /**
  * Add custom post class for blog page
  */
-add_filter( 'post_class','minimall_post_classes_blog_template' );
-function minimall_post_classes_blog_template( $classes ) {
+add_filter( 'post_class','minimall_article_class' );
+function minimall_article_class( $classes ) {
     if( is_archive() || is_home() || is_search() ){
         $classes[] = 'mb4';
-    }elseif( is_single() && !is_singular('download') ){
-        //$classes[] = 'px2';
+    }elseif( 
+        ( is_single() || is_page() ) && 
+        ( !is_singular('download') && !is_page_template() ) &&
+        !minimall_is_gutenberg_post()
+    ){
+        $classes[] = 'px2';
     }
       
     return $classes;
@@ -158,9 +162,10 @@ function minimall_auto_id_headings( $content ) {
  */
 add_filter( 'the_excerpt', 'minimall_the_excerpt_more_link', 21 );
 function minimall_the_excerpt_more_link( $excerpt ){
-    if( is_singular('post') ){
-        $post = get_post();
-        $excerpt .= '<a class="more-link btn caps xs-text" href="'. get_the_permalink() .'">' . __("Continue reading","minimal") . '</a>';
+    global $post;
+
+    if( $post->post_type == 'post' ){
+        $excerpt .= '<a class="more-link btn caps xs-text" href="'. get_the_permalink() .'">' . __("Continue reading","minimall") . '</a>';
     }else{
         $excerpt = $excerpt;
     }
@@ -173,7 +178,7 @@ function minimall_the_excerpt_more_link( $excerpt ){
  */
 add_filter( 'the_content_more_link', 'minimall_modify_read_more_link' );
 function minimall_modify_read_more_link() {
-    return '<div class="block"><a class="more-link btn caps xs-text" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimal").'</a></div>';
+    return '<div class="block"><a class="more-link btn caps xs-text" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimall").'</a></div>';
 }
 
 /**
@@ -342,9 +347,9 @@ function minimall_comment(){
 
         $comments_number = get_comments_number();
         if ( $comments_number == 1 ) {
-            $comment_label = esc_html__("Comment","minimal");
+            $comment_label = esc_html__("Comment","minimall");
         } elseif( $comments_number > 1 ) {
-            $comment_label = esc_html__("Comments","minimal");
+            $comment_label = esc_html__("Comments","minimall");
         }
         if( isset($comment_label) ){
             echo '<h3 class="comments-title separator mt4 mb4 center bold">';

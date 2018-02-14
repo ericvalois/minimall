@@ -17,7 +17,7 @@ Minimall_Kirki::add_section( 'homepage_layout', array(
 Minimall_Kirki::add_field( 'minimall', array(
 	'type'        => 'sortable',
 	'settings'    => 'homepage_layout',
-	'label'       => __( 'Reorder homepage sections', 'minimal' ),
+	'label'       => __( 'Reorder homepage sections', 'minimall' ),
 	'section'     => 'homepage_layout',
 	'default'     => array(
 		'services',

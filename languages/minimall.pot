@@ -1,9 +1,11 @@
+#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: TTFB\n"
 "POT-Creation-Date: 2018-02-14 11:03-0500\n"
-"PO-Revision-Date: 2018-02-14 11:27-0500\n"
+"PO-Revision-Date: 2017-08-30 16:00-0400\n"
+"Last-Translator: Eric Valois <eric.v@bulledev.com>\n"
 "Language-Team: Eric Valois <eric.v@bulledev.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,8 +18,6 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: Eric Valois <eric.v@bulledev.com>\n"
-"Language: fr_FR\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: comments.php:47 template-parts/content-download-comment.php:40
 msgid "Comments are closed."
-msgstr "Les commentaires sont fermés."
+msgstr ""
 
 #: comments.php:57 template-parts/content-download-comment.php:51
 #, php-format
@@ -33,69 +33,65 @@ msgid ""
 "<a href=\"%1$s\" class=\"tags\">Logged in as %2$s</a> <a href=\"%3$s\" class="
 "\"tags\" title=\"Log out of this account\">Log out?</a>"
 msgstr ""
-"<a href=\"%1$s\" class=\"tags\">Connecté comme %2$s</a> <a href=\"%3$s\" "
-"class=\"tags\" title=\"Vous déconnecter de ce compte\">Déconnexion?</a>"
 
 #: comments.php:58 includes/extra.php:350
 #: template-parts/content-download-comment.php:52
 msgid "Comment"
-msgstr "Commentaire"
+msgstr ""
 
 #: comments.php:63 template-parts/content-download-comment.php:57
 msgid "Name"
-msgstr "Nom"
+msgstr ""
 
 #: comments.php:69 template-parts/content-download-comment.php:63
 msgid "Email"
-msgstr "Courriel"
+msgstr ""
 
 #: comments.php:76
 msgid "Website"
-msgstr "Site internet"
+msgstr ""
 
 #: edd_templates/history-purchases.php:3
 msgid "Your account has been successfully verified!"
-msgstr "Votre compte a été vérifié avec succès!"
+msgstr ""
 
 #: edd_templates/history-purchases.php:18
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #: edd_templates/history-purchases.php:19
 msgid "Date"
-msgstr "Date"
+msgstr ""
 
 #: edd_templates/history-purchases.php:20
 msgid "Amount"
-msgstr "Montant"
+msgstr ""
 
 #: edd_templates/history-purchases.php:21
 msgid "Details"
-msgstr "Détails"
+msgstr ""
 
 #: edd_templates/history-purchases.php:38
 msgid "Complete Purchase"
-msgstr "Achat compléter"
+msgstr ""
 
 #: edd_templates/history-purchases.php:41
 msgid "View Details"
-msgstr "Détails de la réservation"
+msgstr ""
 
 #: edd_templates/history-purchases.php:62
 msgid "You have not made any purchases"
 msgstr ""
-"Vous n'avez effectué aucun achat et vous n'avez aucun téléchargement de "
-"disponible."
 
 #: edd_templates/license-keys.php:14
 #: edd_templates/licenses-manage-overview.php:14
 msgid "Item"
-msgstr "Article"
+msgstr ""
 
 #: edd_templates/license-keys.php:15
 #: edd_templates/licenses-manage-overview.php:15
 msgid "License Details"
-msgstr "Détails de la licence"
+msgstr ""
 
 #: edd_templates/license-keys.php:37
 #: edd_templates/licenses-manage-overview.php:36
@@ -111,12 +107,12 @@ msgstr ""
 #: edd_templates/licenses-manage-overview.php:55
 #: edd_templates/licenses-manage-overview.php:73
 msgid "Manage Sites"
-msgstr "Gérer les sites"
+msgstr ""
 
 #: edd_templates/license-keys.php:69
 #: edd_templates/licenses-manage-overview.php:68
 msgid "Activations:"
-msgstr "﻿Activations:"
+msgstr ""
 
 #: edd_templates/license-keys.php:76
 #: edd_templates/licenses-manage-overview.php:75
@@ -131,28 +127,28 @@ msgstr ""
 #: edd_templates/license-keys.php:84
 #: edd_templates/licenses-manage-overview.php:83
 msgid "Status:"
-msgstr "Statut:"
+msgstr ""
 
 #: edd_templates/license-keys.php:89
 #: edd_templates/licenses-manage-overview.php:88
 msgid "Expired:"
-msgstr "Expiré :"
+msgstr ""
 
 #: edd_templates/license-keys.php:89
 #: edd_templates/licenses-manage-overview.php:88
 msgid "Expires:"
-msgstr "Expiration:"
+msgstr ""
 
 #: edd_templates/license-keys.php:91
 #: edd_templates/licenses-manage-overview.php:90
 msgid "Never"
-msgstr "Jamais"
+msgstr ""
 
 #: edd_templates/license-keys.php:97 edd_templates/license-keys.php:99
 #: edd_templates/licenses-manage-overview.php:96
 #: edd_templates/licenses-manage-overview.php:98
 msgid "Renew Now"
-msgstr "Renouveler maintenant"
+msgstr ""
 
 #: edd_templates/license-keys.php:106
 #: edd_templates/licenses-manage-overview.php:105
@@ -162,7 +158,7 @@ msgstr ""
 #: edd_templates/license-keys.php:106
 #: edd_templates/licenses-manage-overview.php:105
 msgid "View Details and Downloads"
-msgstr "Voir les détails et les téléchargements"
+msgstr ""
 
 #: edd_templates/license-keys.php:119
 #: edd_templates/licenses-manage-overview.php:118
@@ -176,39 +172,39 @@ msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:18
 msgid "<strong>Success:</strong> Subscription payment method updated"
-msgstr "<strong>Succés:</strong> La méthode de paiement a été mise à jour"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:35
 msgid "Subscription"
-msgstr "Abonnement"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:36
 msgid "Subscription Details"
-msgstr "Détails de l'abonnement"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:42
 msgid "N/A"
-msgstr "N/A"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:52
 msgid "View Invoice"
-msgstr "Voir la facture"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:56
 msgid "Update Payment"
-msgstr "Mise à jour du paiement"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:61
 msgid "Renew"
-msgstr "Renouveler"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:66
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:71
 msgid "Reactivate"
-msgstr "Réactiver"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:83
 msgid "Trialling Until:"
@@ -216,23 +212,23 @@ msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:90
 msgid "Until cancelled"
-msgstr "Jusqu'à annulation"
+msgstr ""
 
 #: edd_templates/shortcode-subscriptions.php:106
 msgid "You have not made any subscription purchases."
-msgstr "Vous n'avez pas acheté d'abonnement."
+msgstr ""
 
 #: edd_templates/widget-cart-item.php:6
 msgid "Remove"
-msgstr "Retirer"
+msgstr ""
 
 #: functions.php:55
 msgid "Primary Menu"
-msgstr "Menu principal"
+msgstr ""
 
 #: functions.php:139
 msgid "Footer Copyright"
-msgstr "Copyright de pied de page"
+msgstr ""
 
 #: functions.php:141
 msgid "Sub Footer Widgets Sidebar"
@@ -240,7 +236,7 @@ msgstr ""
 
 #: functions.php:149
 msgid "Footer 1"
-msgstr "Pied de page 1"
+msgstr ""
 
 #: functions.php:151
 msgid "First footer column location"
@@ -248,7 +244,7 @@ msgstr ""
 
 #: functions.php:159
 msgid "Footer 2"
-msgstr "Pied de page 2"
+msgstr ""
 
 #: functions.php:161
 msgid "Second footer column location"
@@ -256,7 +252,7 @@ msgstr ""
 
 #: functions.php:169
 msgid "Footer 3"
-msgstr "Pied de page 3"
+msgstr ""
 
 #: functions.php:171
 msgid "Third footer column location"
@@ -264,7 +260,7 @@ msgstr ""
 
 #: functions.php:179
 msgid "Footer 4"
-msgstr "Pied de page 4"
+msgstr ""
 
 #: functions.php:181
 msgid "Fourth footer column location"
@@ -296,7 +292,7 @@ msgstr ""
 
 #: functions.php:222
 msgid "Blog Sidebar"
-msgstr "Barre latérale du blog"
+msgstr ""
 
 #: functions.php:224
 msgid "Blog and archive sidebar location"
@@ -348,15 +344,15 @@ msgstr ""
 
 #: functions.php:285
 msgid "Sidebar display in the main header."
-msgstr "Affichage de barre latérale de l’en-tête principal."
+msgstr ""
 
 #: header.php:22
 msgid "Skip to content"
-msgstr "Accéder au contenu"
+msgstr ""
 
 #: includes/admin/customizer/customizer.php:145
 msgid "Theme Options"
-msgstr "Options du thème"
+msgstr ""
 
 #: includes/admin/customizer/include-kirki.php:67
 #: includes/admin/customizer/include-kirki.php:70
@@ -367,27 +363,27 @@ msgstr ""
 
 #: includes/admin/customizer/include-kirki.php:68
 msgid "Install Now"
-msgstr "Installer Maintenant"
+msgstr ""
 
 #: includes/admin/customizer/include-kirki.php:71
 msgid "Activate Now"
-msgstr "Activez maintenant"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-colors.php:3
 msgid "Colors"
-msgstr "Couleurs"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-colors.php:12
 msgid "Primary Color"
-msgstr "Primaire couleur"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-colors.php:24
 msgid "Text Color"
-msgstr "Couleur de surbrillance pour l’étiquette"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:6
 msgid "Footer"
-msgstr "Bas de page"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:23
 msgid "Activate Footer Hero"
@@ -399,11 +395,11 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:47
 msgid "Main Title"
-msgstr "Titre Principal"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:62
 msgid "Button label"
-msgstr "Etquette du bouton"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:63
 msgid "Shortcodes are accepted"
@@ -411,7 +407,7 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:78
 msgid "Button link"
-msgstr "Lien du bouton"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:93
 msgid "Button External link"
@@ -420,7 +416,7 @@ msgstr ""
 #: includes/admin/customizer/modules/customizer-footer.php:110
 #: includes/compatibility/edd/edd-customizer.php:120
 msgid "Layout"
-msgstr "Mise en page"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:125
 msgid "Columns spacings"
@@ -432,21 +428,21 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:131
 msgid "Small"
-msgstr "Petit"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:132
 #: includes/compatibility/edd/edd-customizer.php:157
 msgid "Medium"
-msgstr "Moyen"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:133
 #: includes/compatibility/edd/edd-customizer.php:158
 msgid "Large"
-msgstr "Large"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:134
 msgid "XLarge"
-msgstr "Extra large"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:141
 msgid "Columns Breakpoints"
@@ -460,24 +456,24 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:147
 msgid "Mobile"
-msgstr "Mobile"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:148
 msgid "Tablet"
-msgstr "Tablette"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:149
 msgid "Desktop"
-msgstr "Ordinateur de bureau"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-footer.php:150
 msgid "Large Desktop"
-msgstr "Large Desktop"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-general.php:6
 #: includes/admin/customizer/modules/customizer-header.php:6
 msgid "Header"
-msgstr "En-tête"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-general.php:15
 msgid "Default Hero Image"
@@ -497,19 +493,19 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-header.php:23
 msgid "Right"
-msgstr "Droite"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-header.php:24
 msgid "Left"
-msgstr "Gauche"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-header.php:25
 msgid "Center"
-msgstr "Au centre"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-header.php:26
 msgid "Space between"
-msgstr "Espace entre"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-header.php:27
 msgid "Space around"
@@ -517,7 +513,7 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-header.php:43
 msgid "Default hero image"
-msgstr "Image heros par défaut"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-header.php:44
 msgid "At least 1024px by 450px"
@@ -542,7 +538,7 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:12
 msgid "Homepage Layout"
-msgstr "Mise en page de la page d’accueil"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:20
 msgid "Reorder homepage sections"
@@ -550,25 +546,25 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:28
 msgid "Services"
-msgstr "Services"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:29
 msgid "Brands"
-msgstr "Marques"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:30
 #: includes/compatibility/metabox/edd-metabox.php:31
 #: includes/compatibility/metabox/edd-metabox.php:49
 msgid "Features"
-msgstr "Options"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:32
 msgid "Blog"
-msgstr "Blogue"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:33
 msgid "Page content"
-msgstr "Contenu de la page"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:35
 msgid "Free editor"
@@ -576,11 +572,11 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:48
 msgid "Hero"
-msgstr "Héros"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:56
 msgid "Hero Title"
-msgstr "Titre (section Hero)"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:64
 msgid "Hero Description"
@@ -589,15 +585,15 @@ msgstr ""
 #: includes/admin/customizer/modules/customizer-homepage.php:72
 #: includes/admin/customizer/modules/homepage-section-helper.php:236
 msgid "Image"
-msgstr "Image"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-homepage.php:73
 msgid "Background image"
-msgstr "Image d'arrière-plan"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-posts.php:6
 msgid "Posts"
-msgstr "Posts"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-posts.php:15
 msgid "Hide Author Avatar"
@@ -625,7 +621,7 @@ msgstr ""
 
 #: includes/admin/customizer/modules/customizer-typography.php:6
 msgid "Typography"
-msgstr "Typographie"
+msgstr ""
 
 #: includes/admin/customizer/modules/customizer-typography.php:15
 msgid "Mobile Font Size"
@@ -646,15 +642,15 @@ msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:30
 msgid "Display Header"
-msgstr "Afficher l'entête"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:40
 msgid "Section Title"
-msgstr "Titre de la section"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:56
 msgid "Section Description"
-msgstr "Description de section"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:74
 msgid "Style Section"
@@ -662,19 +658,19 @@ msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:83
 msgid "Text color"
-msgstr "Couleur du texte de la Boîte"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:88
 msgid "Black"
-msgstr "Noir"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:89
 msgid "White"
-msgstr "Blanc"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:96
 msgid "Background Control"
-msgstr "Contrôle d’arrière-plan"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:97
 msgid ""
@@ -685,7 +681,7 @@ msgstr ""
 #: includes/admin/customizer/modules/homepage-section-helper.php:122
 #: includes/admin/customizer/modules/homepage-section-helper.php:203
 msgid " List"
-msgstr "liste"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:130
 #: includes/admin/customizer/modules/homepage-section-helper.php:290
@@ -700,16 +696,16 @@ msgstr ""
 #: includes/admin/customizer/modules/homepage-section-helper.php:169
 #: includes/admin/customizer/modules/homepage-section-helper.php:378
 msgid "Title"
-msgstr "Titre"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:174
 #: includes/admin/customizer/modules/homepage-section-helper.php:383
 msgid "Description"
-msgstr "Description"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:179
 msgid "Link Text"
-msgstr "Texte du lien"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:180
 msgid "This will be the label for your link"
@@ -719,24 +715,24 @@ msgstr ""
 #: includes/admin/customizer/modules/homepage-section-helper.php:241
 #: includes/admin/customizer/modules/homepage-section-helper.php:393
 msgid "Link URL"
-msgstr "Lien URL"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:186
 #: includes/admin/customizer/modules/homepage-section-helper.php:242
 msgid "http://yourlink.com"
-msgstr "http://YourLink.com"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:211
 msgid " Layout"
-msgstr "Masque de présentation"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:259
 msgid " Posts"
-msgstr " Articles"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:267
 msgid "Posts number"
-msgstr "Nombre de publication"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:281
 msgid "Display post thumbnails"
@@ -752,20 +748,20 @@ msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:373
 msgid "Icon"
-msgstr "Icône"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:388
 msgid "Link Label"
-msgstr "Label link"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:408
 #: includes/admin/customizer/modules/homepage-section-helper.php:431
 msgid "Section Content"
-msgstr "Contenu de la section"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:416
 msgid "Page Content"
-msgstr "Contenu de la page"
+msgstr ""
 
 #: includes/admin/customizer/modules/homepage-section-helper.php:439
 msgid "Free Content"
@@ -793,27 +789,27 @@ msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:339
 msgid "Install Required Plugins"
-msgstr "Installer les extensions requises"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:340
 msgid "Install Plugins"
-msgstr "Installer des extensions"
+msgstr ""
 
 #. translators: %s: plugin name.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:342
 #, php-format
 msgid "Installing Plugin: %s"
-msgstr "Installation de l’extension : %s"
+msgstr ""
 
 #. translators: %s: plugin name.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:344
 #, php-format
 msgid "Updating Plugin: %s"
-msgstr "Mise à jour de l'extension: %s"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:345
 msgid "Something went wrong with the plugin API."
-msgstr "Quelque chose se passe mal avec l’API de l’extension."
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:348
 #, php-format
@@ -881,16 +877,16 @@ msgstr[1] ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:397
 msgid "Return to Required Plugins Installer"
-msgstr "Retourner à l’installateur de plugins requis"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:398
 msgid "Return to the Dashboard"
-msgstr "Retour au tableau de bord"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:399
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3304
 msgid "Plugin activated successfully."
-msgstr "Extension activée avec succès."
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:400
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3097
@@ -903,7 +899,7 @@ msgstr[1] ""
 #: includes/admin/tgm/class-tgm-plugin-activation.php:402
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
-msgstr "Aucune mesure prise. Le plugin %1$s était déjà actif."
+msgstr ""
 
 #. translators: 1: plugin name.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:404
@@ -912,51 +908,44 @@ msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
-"Le plugin n’est pas activé. Une version plus récente de %s est nécessaire "
-"pour ce thème. Veuillez mettre à jour le plugin."
 
 #. translators: 1: dashboard link.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:406
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Toutes extensions installées et activées. %1$s"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:407
 msgid "Dismiss this notice"
-msgstr "Retirer cette notice"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:408
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
 msgstr ""
-"Il existe un ou plusieurs plugins requis ou recommandés pour installer, "
-"mettre à jour ou activer."
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:409
 msgid "Please contact the administrator of this site for help."
-msgstr "Veuillez contacter l’administrateur du site pour obtenir de l’aide."
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:615
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
-"Cette extension doit être mise à jour pour être compatible avec votre thème."
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:616
 msgid "Update Required"
-msgstr "Mise à jour requise"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:731
 msgid "Set the parent_slug config variable instead."
-msgstr "Définir la variable de configuration parent_slug à la place."
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:1038
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
-"Le pack d’extension distant ne contient pas de dossier avec le nom désiré et "
-"le re-nommage ne fonctionne pas."
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:1038
 #: includes/admin/tgm/class-tgm-plugin-activation.php:1048
@@ -964,79 +953,75 @@ msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
-"Veuillez contacter le fournisseur de l’extension et demandez-lui "
-"d’empaqueter son extension en respectant les instructions de WordPress."
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:1048
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
 msgstr ""
-"Le paquet distant de l’extension contient plus d’un fichier, mais les "
-"fichiers ne sont pas empaquetés dans un dossier."
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:1237
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3093
 msgctxt "plugin A *and* plugin B"
 msgid "and"
-msgstr "et"
+msgstr ""
 
 #. translators: %s: version number
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2106
 #, php-format
 msgid "TGMPA v%s"
-msgstr "TGMPA v%s"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2415
 msgid "Required"
-msgstr "Requis"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2418
 msgid "Recommended"
-msgstr "Recommandé"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2434
 msgid "WordPress Repository"
-msgstr "Dépôt WordPress"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2437
 msgid "External Source"
-msgstr "Source externe"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2440
 msgid "Pre-Packaged"
-msgstr "Pré-Packagé"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2457
 msgid "Not Installed"
-msgstr "Non installé"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2461
 msgid "Installed But Not Activated"
-msgstr "Installé mais pas activé"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2463
 msgid "Active"
-msgstr "Actifs"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2469
 msgid "Required Update not Available"
-msgstr "La Mise à jour Requise n’est pas Disponible"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2472
 msgid "Requires Update"
-msgstr "Mise à jour requise"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2475
 msgid "Update recommended"
-msgstr "Mise à jour Recommandée"
+msgstr ""
 
 #. translators: 1: install status, 2: update status
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2484
 #, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
-msgstr "%1$s, %2$s"
+msgstr ""
 
 #. translators: 1: number of plugins.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2530
@@ -1074,189 +1059,179 @@ msgstr[1] ""
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2624
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
-msgstr "inconnu"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2632
 msgid "Installed version:"
-msgstr "Version installée :"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2640
 msgid "Minimum required version:"
-msgstr "Version minimum requise :"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2652
 msgid "Available version:"
-msgstr "Version disponible :"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2675
 msgid "No plugins to install, update or activate."
-msgstr "Pas de plugins à installer, à mettre à jour ou à activer."
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2689
 msgid "Plugin"
-msgstr "Plugin"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2690
 msgid "Source"
-msgstr "Source"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2691
 msgid "Type"
-msgstr "Type"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2695
 msgid "Version"
-msgstr "Version"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2696
 msgid "Status"
-msgstr "Statut"
+msgstr ""
 
 #. translators: %2$s: plugin name in screen reader markup
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2745
 #, php-format
 msgid "Install %2$s"
-msgstr "Installer %2$s"
+msgstr ""
 
 #. translators: %2$s: plugin name in screen reader markup
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2750
 #, php-format
 msgid "Update %2$s"
-msgstr "Mettre à jour %2$s"
+msgstr ""
 
 #. translators: %2$s: plugin name in screen reader markup
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2756
 #, php-format
 msgid "Activate %2$s"
-msgstr "Activer %2$s"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2828
 msgid "Upgrade message from the plugin author:"
-msgstr "Message de mise à jour de la part de l’auteur du plugin :"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2861
 msgid "Install"
-msgstr "Installation"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2867
 msgid "Update"
-msgstr "Mettre à jour"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2870
 msgid "Activate"
-msgstr "Activer"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2901
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
-"Aucun plugins ont été sélectionnés pour être installé. Pas d’action prise."
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2903
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
-"Aucune extension n’a été sélectionnée pour être mise à jour. Aucune action "
-"n’a été effectuée."
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2944
 msgid "No plugins are available to be installed at this time."
-msgstr "Tous les plugins installés et activés avec succès. %s"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:2946
 msgid "No plugins are available to be updated at this time."
-msgstr "Aucun plugin n’est disponible pour être mis à jour pour le moment."
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3053
 msgid "No plugins were selected to be activated. No action taken."
 msgstr ""
-"Aucune extension n’a été sélectionnée pour être activée. Aucune action n’a "
-"été effectuée."
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3079
 msgid "No plugins are available to be activated at this time."
-msgstr "Tous les plugins installés et activés avec succès. %s"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3303
 msgid "Plugin activation failed."
-msgstr "Échec d’activation de l’extension"
+msgstr ""
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3643
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "Mise à jour du plugin %1$s (%2$d/%3$d)"
+msgstr ""
 
 #. translators: 1: plugin name, 2: error message.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3646
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
-"Une erreur a eu lieu durant l’installation de %1$s: <strong>%2$s</strong>."
 
 #. translators: 1: plugin name.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3648
 #, php-format
 msgid "The installation of %1$s failed."
-msgstr "L’installation de %1$s a échoué."
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3652
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
-"Le process d’installation et d’activation démarre. Cette opération peut "
-"prendre quelques minutes selon votre hébergement, patientez…"
 
 #. translators: 1: plugin name.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3654
 #, php-format
 msgid "%1$s installed and activated successfully."
-msgstr "%1$s installé et activé avec succès."
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3655
 msgid "All installations and activations have been completed."
-msgstr "Toutes les installations et les activations ont été effectuées"
+msgstr ""
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3657
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "Installation et activation de l’extension %1$s (%2$d/%3$d)"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3660
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
-"Le process d’installation démarre. Cette opération peut prendre quelques "
-"minutes selon votre hébergement, soyez patients"
 
 #. translators: 1: plugin name.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3662
 #, php-format
 msgid "%1$s installed successfully."
-msgstr "%1$s installé avec succès"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3663
 msgid "All installations have been completed."
-msgstr "Toutes les installations ont été effectuées."
+msgstr ""
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3665
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "Installation de l’extension %1$s (%2$d/%3$d)"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3670
 msgid "Show Details"
-msgstr "Afficher les détails"
+msgstr ""
 
 #: includes/admin/tgm/class-tgm-plugin-activation.php:3670
 msgid "Hide Details"
-msgstr "Cacher les détails"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:59
 msgid "Settings saved."
-msgstr "Réglages enregistrés."
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:63
 msgid "Settings removed."
@@ -1264,7 +1239,7 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:244
 msgid "Getting Started with"
-msgstr "Premiers pas avec"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:248
 msgid "You will find everything you need to get started with Minimall below."
@@ -1272,11 +1247,11 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:254
 msgid "Quick Setup"
-msgstr "Installation Rapide"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:255
 msgid "Complete Setup"
-msgstr "Terminer l'installation"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:256
 msgid "Performance Setup"
@@ -1284,7 +1259,7 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:257
 msgid "What’s New"
-msgstr "Quoi de neuf"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:265
 msgid "1. Install required plugins"
@@ -1302,7 +1277,7 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:274
 msgid "Install all plugins"
-msgstr "Installer toutes les extensions"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:278
 msgid "2. Demo import"
@@ -1323,7 +1298,7 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:287
 msgid "Import Demo Content"
-msgstr "Importer le contenu de démonstration"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:289
 msgid "Install required plugins first"
@@ -1393,7 +1368,7 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:393
 msgid "Sweet, your license is active!"
-msgstr "Cool, votre licence est active!"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:395
 msgid ""
@@ -1442,8 +1417,6 @@ msgid ""
 "<strong>Warning:</strong> Deleting your <a href=\"%1$s\">Customizer</a> "
 "settings can not be undone."
 msgstr ""
-"<strong>Attention:</strong> L'effacement des réglages de l'outil de <a href="
-"\"%1$s\">personnalisation</a> ne peut pas être annulé."
 
 #: includes/admin/updater/theme-updater-admin.php:464
 msgid "Consider creating a backup of your settings before deleting them."
@@ -1451,7 +1424,7 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:469
 msgid "Warning: This will delete your settings."
-msgstr "Attention: Ceci va effacer vos réglages."
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:471
 msgid "Delete Default Settings"
@@ -1459,39 +1432,39 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:547
 msgid "Error"
-msgstr "Erreur"
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:578
 #: includes/admin/updater/theme-updater-admin.php:625
 #: includes/admin/updater/theme-updater-admin.php:678
 msgid "An error occurred, please try again."
-msgstr "Une erreur inconnue s'est produite. Veuillez réessayer."
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:592
 #, php-format
 msgid "Your license key expired on %s."
-msgstr "Votre clé de licence a expiré le %s."
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:599
 msgid "Your license key has been disabled."
-msgstr "Votre clé de licence a été désactivée."
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:604
 msgid "Invalid license."
-msgstr "Licence invalide."
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:610
 msgid "Your license is not active for this URL."
-msgstr "Votre licence n’est pas active pour cette URL."
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:615
 #, php-format
 msgid "This appears to be an invalid license key for %s."
-msgstr "Cette clé de licence semble être invalide pour %s."
+msgstr ""
 
 #: includes/admin/updater/theme-updater-admin.php:620
 msgid "Your license key has reached its activation limit."
-msgstr "Votre clé de licence a atteint sa limite d'activation."
+msgstr ""
 
 #. Theme Name of the plugin/theme
 #: includes/admin/updater/theme-updater.php:33
@@ -1500,11 +1473,11 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater.php:34
 msgid "Enter your theme license key."
-msgstr "Entrer la clé de licence de votre thème."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:35
 msgid "Enter your license key"
-msgstr "Entrez votre clé de licence"
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:36
 msgid "License action:"
@@ -1512,28 +1485,28 @@ msgstr ""
 
 #: includes/admin/updater/theme-updater.php:37
 msgid "Deactivate License"
-msgstr "Désactiver la licence"
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:38
 msgid "Activate License"
-msgstr "Activer la licence"
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:39
 msgid "Save License"
-msgstr "Sauvegarder la licence"
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:40
 #: includes/admin/updater/theme-updater.php:52
 msgid "License status is unknown."
-msgstr "Le status de la licence est inconnu."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:41
 msgid "Renew?"
-msgstr "Renouveler?"
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:42
 msgid "unlimited"
-msgstr "illimité"
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:43
 msgid ""
@@ -1549,40 +1522,38 @@ msgstr ""
 #: includes/admin/updater/theme-updater.php:45
 #, php-format
 msgid "You have %1$s / %2$s sites activated."
-msgstr "Vous avez %1$s / %2$s sites activé(s)."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:46
 #, php-format
 msgid "License key expired %s."
-msgstr "La clé de licence a expiré %s."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:47
 msgid "License key has expired."
-msgstr "La clé de licence a expiré."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:48
 msgid "License keys do not match."
-msgstr "Les clés de licence ne correspondent pas."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:49
 msgid "License is inactive."
-msgstr "La licence est désactivée."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:50
 msgid "License key is disabled."
-msgstr "La clé de licence est désactivée."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:51
 msgid "Site is inactive."
-msgstr "Le site est inactif."
+msgstr ""
 
 #: includes/admin/updater/theme-updater.php:53
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
 msgstr ""
-"La mise à jour de ce thème entraîne la perte des personnalisations que vous "
-"avez effectuées. 'Annuler' pour arrêter, 'OK' pour mettre à jour."
 
 #: includes/admin/updater/theme-updater.php:54
 #, php-format
@@ -1591,13 +1562,10 @@ msgid ""
 "title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
 "a>."
 msgstr ""
-"<strong>%1$s %2$s</strong> est disponible. <a href=\"%3$s\" class=\"thickbox"
-"\" title=\"%4s\">Découvrez les nouveautés</a> ou <a href=\"%5$s\"%6$s>mettre "
-"à jour maintenant</a>."
 
 #: includes/compatibility/cf7/cf7.php:6
 msgid "Contact Form 7"
-msgstr "Contact Form 7"
+msgstr ""
 
 #: includes/compatibility/cf7/cf7.php:18
 msgid "Activate Contact Form 7 Optimization"
@@ -1615,15 +1583,15 @@ msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:13
 msgid "Download Archive"
-msgstr "Télécharger l’archive"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:20
 msgid "Checkout"
-msgstr "Validation de la Commande"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:27
 msgid "Download"
-msgstr "Télécharger"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:39
 msgid "Hide product title"
@@ -1675,7 +1643,7 @@ msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:136
 msgid "Thumbnails per row"
-msgstr "Miniature par ligneName"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:137
 msgid ""
@@ -1685,32 +1653,32 @@ msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:151
 msgid "Thumbnails size"
-msgstr "﻿Taille des Mignatures"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:156
 #: includes/compatibility/edd/edd-customizer.php:172
 msgid "Thumbnail"
-msgstr "Vignette"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:165
 msgid "Gallery Type"
-msgstr "Type de galerie"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:173
 msgid "Rectangular"
-msgstr "Rectangulaire"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:174
 msgid "Square"
-msgstr "Carré"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:175
 msgid "Circle"
-msgstr "Cercle"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:176
 msgid "Slideshow"
-msgstr "Diaporama"
+msgstr ""
 
 #: includes/compatibility/edd/edd-customizer.php:183
 msgid "Read more about WordPress gallery"
@@ -1782,7 +1750,7 @@ msgstr ""
 
 #: includes/compatibility/edd/global-edd.php:13
 msgid "Sidebar display at the right of the download page."
-msgstr "Barre latéral affiché à droite du Download"
+msgstr ""
 
 #: includes/compatibility/edd/global-edd.php:21
 msgid "Download Left Section"
@@ -1790,7 +1758,7 @@ msgstr ""
 
 #: includes/compatibility/edd/global-edd.php:23
 msgid "Sidebar display at the left of the download page."
-msgstr "Barre latéral affiché à gauche du Download"
+msgstr ""
 
 #: includes/compatibility/edd/global-edd.php:31
 msgid "Download Tabs Section"
@@ -1823,7 +1791,7 @@ msgstr ""
 #: includes/compatibility/edd/widget-edd-reviews.php:55
 #: includes/compatibility/metabox/widget-edd-metabox-gallery.php:67
 msgid "New title"
-msgstr "Nouveau titre"
+msgstr ""
 
 #: includes/compatibility/edd/widget-edd-comments.php:57
 #: includes/compatibility/edd/widget-edd-description.php:55
@@ -1832,7 +1800,7 @@ msgstr "Nouveau titre"
 #: includes/compatibility/edd/widget-edd-reviews.php:59
 #: includes/compatibility/metabox/widget-edd-metabox-gallery.php:71
 msgid "Title:"
-msgstr "Titre :"
+msgstr ""
 
 #: includes/compatibility/edd/widget-edd-description.php:13
 msgid "Minimall Download Description"
@@ -1846,7 +1814,7 @@ msgstr ""
 #: includes/compatibility/edd/widget-edd-download-detail.php:135
 #, php-format
 msgid "%s Details"
-msgstr "Détail du %s"
+msgstr ""
 
 #: includes/compatibility/edd/widget-edd-download-detail.php:18
 #, php-format
@@ -1856,12 +1824,12 @@ msgstr ""
 #: includes/compatibility/edd/widget-edd-download-detail.php:167
 #, php-format
 msgid "%s:"
-msgstr "%s :"
+msgstr ""
 
 #: includes/compatibility/edd/widget-edd-download-detail.php:185
 #, php-format
 msgid "%s ID"
-msgstr "%s ID"
+msgstr ""
 
 #: includes/compatibility/edd/widget-edd-download-detail.php:192
 #, php-format
@@ -1886,7 +1854,7 @@ msgstr ""
 #: includes/compatibility/edd/widget-edd-download-detail.php:224
 #, php-format
 msgid "Show %s"
-msgstr "Afficher %s"
+msgstr ""
 
 #: includes/compatibility/edd/widget-edd-download-thumb.php:13
 msgid "Minimall Download Thumbnail"
@@ -1906,7 +1874,7 @@ msgstr ""
 
 #: includes/compatibility/jetpack/jetpack.php:6
 msgid "Jetpack"
-msgstr "Connecté via Jetpack"
+msgstr ""
 
 #: includes/compatibility/jetpack/jetpack.php:18
 msgid "Activate Jetpack Optimization"
@@ -1924,15 +1892,15 @@ msgstr ""
 
 #: includes/compatibility/metabox/edd-metabox.php:17
 msgid "Gallery"
-msgstr "Galerie"
+msgstr ""
 
 #: includes/compatibility/metabox/edd-metabox.php:41
 msgid "Item per row"
-msgstr "Objet par rangée"
+msgstr ""
 
 #: includes/compatibility/metabox/edd-metabox.php:57
 msgid "Add a feature"
-msgstr "Ajouter une fonctionnalité"
+msgstr ""
 
 #: includes/compatibility/metabox/widget-edd-metabox-gallery.php:13
 msgid "Minimall EDD Gallery"
@@ -1940,74 +1908,74 @@ msgstr ""
 
 #: includes/compatibility/metabox/widget-edd-metabox-gallery.php:14
 msgid "Show additionnal images in download sidebars."
-msgstr "Afficher les images additionnels dans téléchargement encadrés."
+msgstr ""
 
 #: includes/extra.php:168 includes/extra.php:181
 msgid "Continue reading"
-msgstr "Continuer la lecture"
+msgstr ""
 
 #: includes/extra.php:352
 msgid "Comments"
-msgstr "Commentaires"
+msgstr ""
 
 #: includes/helper.php:36
 #, php-format
 msgid "%s"
-msgstr "%s"
+msgstr ""
 
 #: includes/helper.php:39
 #, php-format
 msgid "%1$s"
-msgstr "%1$s"
+msgstr ""
 
 #: includes/helper.php:175
 msgid "First"
-msgstr "Prénom"
+msgstr ""
 
 #: includes/helper.php:176
 msgid "Previus page"
-msgstr "Page précédante"
+msgstr ""
 
 #: includes/helper.php:188
 msgid "Next page"
-msgstr "Prochaine page"
+msgstr ""
 
 #: includes/helper.php:189
 msgid "Last"
-msgstr "Dernière"
+msgstr ""
 
 #: includes/template-tags.php:38 includes/template-tags.php:127
 msgid "Leave a comment"
-msgstr "Laisser un commentaire"
+msgstr ""
 
 #: includes/template-tags.php:38 includes/template-tags.php:127
 msgid "1 Comment"
-msgstr "1 Commentaire"
+msgstr ""
 
 #: includes/template-tags.php:38 includes/template-tags.php:127
 msgid "% Comments"
-msgstr "% Commentaires"
+msgstr ""
 
 #: includes/template-tags.php:96 includes/template-tags.php:113
 #, php-format
 msgid "View all posts in %s"
-msgstr "Voir tous les articles dans %s"
+msgstr ""
 
 #: index.php:30
 msgid "Search Results for: "
-msgstr "Résultats de la recherche pour :"
+msgstr ""
 
 #: taxonomy-download_category.php:11
 msgid "Category: "
-msgstr "Catégorie:"
+msgstr ""
 
 #: taxonomy-download_tag.php:11
 msgid "Tag: "
-msgstr "Sujets: %s"
+msgstr ""
 
 #: template-parts/content-download-comment.php:48
 msgid "Leave a Comment"
-msgstr "Laisser un commentaire"
+msgstr ""
 
 #. translators: %s: Name of current post
 #: template-parts/content-download.php:54
@@ -2015,47 +1983,41 @@ msgstr "Laisser un commentaire"
 #: template-parts/edit-post-link.php:14
 #, php-format
 msgid "Edit %s"
-msgstr "Modifier%s"
+msgstr ""
 
 #: template-parts/content-header-page.php:6
 msgid "Oops! That page can’t be found."
-msgstr "Oops ! Cette page est introuvable."
+msgstr ""
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr "Rien trouvé"
+msgstr ""
 
 #: template-parts/content-none.php:21
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
 
 #: template-parts/content-none.php:25
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"D&eacute;sol&eacute; mais aucun r&eacute;sultat ne correspond &agrave; vos "
-"crit&egrave;des de recherche. Essayez de nouveau avec des mots-cl&eacute;s "
-"diff&eacute;rents."
 
 #: template-parts/content-none.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Il semble que nous ne pouvons trouver ce que vous cherchez. Essayez via le "
-"moteur de recherche."
 
 #: template-parts/content.php:20
 msgid "Pages:"
-msgstr "Pages :"
+msgstr ""
 
 #: template-parts/homepage/section-blog.php:45
 msgid "Sorry, no posts matched your criteria."
-msgstr "Désolé, aucun article ne correspond à vos critères."
+msgstr ""
 
 #. Theme URI of the plugin/theme
 msgid "https://ttfb.io/themes/minimall/"
@@ -2063,11 +2025,11 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid "Minimall WordPress theme"
-msgstr "Minimall WordPress theme"
+msgstr ""
 
 #. Author of the plugin/theme
 msgid "TTFB"
-msgstr "TTFB"
+msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://ttfb.io/"
