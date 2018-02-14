@@ -389,5 +389,17 @@ function minimall_conditionnal_gutenberg_class( $is_class = "", $is_not_class = 
     }else{
         return $is_not_class;
     }
+}
 
+/* 
+* Is Gutenberg post
+*/
+function minimall_is_gutenberg_post(){
+
+    if( minimall_is_gutenberg_active() && function_exists('the_gutenberg_project') && gutenberg_post_has_blocks( get_the_ID() ) ){
+        return true;
+    }
+
+    return false;
+    
 }

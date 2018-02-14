@@ -113,12 +113,16 @@ function minimall_body_classes_typo( $classes ) {
 /**
  * Add custom post class for blog page
  */
-add_filter( 'post_class','minimall_post_classes_blog_template' );
-function minimall_post_classes_blog_template( $classes ) {
+add_filter( 'post_class','minimall_article_class' );
+function minimall_article_class( $classes ) {
     if( is_archive() || is_home() || is_search() ){
         $classes[] = 'mb4';
-    }elseif( is_single() && !is_singular('download') ){
-        //$classes[] = 'px2';
+    }elseif( 
+        ( is_single() || is_page() ) && 
+        ( !is_singular('download') && !is_page_template() ) &&
+        !minimall_is_gutenberg_post()
+    ){
+        $classes[] = 'px2';
     }
       
     return $classes;

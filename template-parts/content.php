@@ -8,7 +8,7 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('px2'); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	
     
     <?php if( is_single() ): ?>
