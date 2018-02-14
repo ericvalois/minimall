@@ -15,7 +15,10 @@ function minimall_add_preload(){
             echo '<link rel="preload" as="image" href="' . esc_url( $images['sm'] ) . '" media="(max-width: 40em)">' . PHP_EOL;
             echo '<link rel="preload" as="image" href="' . esc_url( $images['md'] ) . '" media="(min-width: 40em) and (max-width: 64em)">' . PHP_EOL;
             echo '<link rel="preload" as="image" href="' . esc_url( $images['lg'] ) . '" media="(min-width: 64em)">' . PHP_EOL;
-        }elseif( ( !is_page_template() && is_page() ) || is_singular('post') ){
+        }elseif( ( is_single() || is_page() ) && 
+                 !is_page_template() &&
+                 !is_singular('download')
+        ){
             $images = minimall_get_default_hero();
             echo '<link rel="preload" as="image" href="' . esc_url( $images['sm'] ) . '" media="(max-width: 40em)">' . PHP_EOL;
             echo '<link rel="preload" as="image" href="' . esc_url( $images['md'] ) . '" media="(min-width: 40em) and (max-width: 64em)">' . PHP_EOL;
