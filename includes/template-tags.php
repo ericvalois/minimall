@@ -46,7 +46,7 @@ function minimall_posted_on() {
 	$minimall_output = '';
 	if ( ! empty( $minimall_categories ) ) {
 
-		echo '<span class="cat">' . __("Categories", "minimal") . ': ';
+		echo '<span class="cat">' . __("Categories", "minimall") . ': ';
 
 	    foreach( $minimall_categories as $category ) {
 	        $minimall_output .= '<a class="white-color upper" href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>' . $cat_separator;
@@ -61,7 +61,7 @@ function minimall_posted_on() {
 	/*$minimall_posttags = get_the_tags();
 	if ($minimall_posttags) {
 
-		echo '<span class="tag">' . __("Tags", "minimal") . ': ';
+		echo '<span class="tag">' . __("Tags", "minimall") . ': ';
 		$cpt = 1;
 		foreach($minimall_posttags as $tag) {
 			if( $cpt != 1){

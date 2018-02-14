@@ -10,7 +10,7 @@ function minimall_edd_widgets_init() {
     register_sidebar( array(
         'name'          => esc_html__( 'Download Right Section', 'minimall' ),
         'id'            => 'download-right-sidebar',
-        'description'   => __("Sidebar display at the right of the download page.","minimal"),
+        'description'   => __("Sidebar display at the right of the download page.","minimall"),
         'before_widget' => '<div id="%1$s" class="%2$s clearfix mb2 widgets">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="widget-title mb2">',
@@ -20,7 +20,7 @@ function minimall_edd_widgets_init() {
     register_sidebar( array(
         'name'          => esc_html__( 'Download Left Section', 'minimall' ),
         'id'            => 'download-left-sidebar',
-        'description'   => __("Sidebar display at the left of the download page.","minimal"),
+        'description'   => __("Sidebar display at the left of the download page.","minimall"),
         'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="widget-title mb2">',
@@ -30,7 +30,7 @@ function minimall_edd_widgets_init() {
     register_sidebar( array(
         'name'          => esc_html__( 'Download Tabs Section', 'minimall' ),
         'id'            => 'download-tabs-sidebar',
-        'description'   => __("Sidebar display in the bottom of the download page. Each widget is a new tab.","minimal"),
+        'description'   => __("Sidebar display in the bottom of the download page. Each widget is a new tab.","minimall"),
         'before_widget' => '<div id="%1$s" class="%2$s clearfix ">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="widget-title m0 hide">',

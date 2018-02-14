@@ -138,7 +138,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( 'Footer Copyright', 'minimall' ),
 		'id'            => 'footer-copy',
-		'description'   => esc_html__("Sub Footer Widgets Sidebar","minimal"),
+		'description'   => esc_html__("Sub Footer Widgets Sidebar","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<strong class="block widget-title mb2 mt0 small-p">',
@@ -148,7 +148,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( 'Footer 1', 'minimall' ),
 		'id'            => 'footer-1',
-		'description'   => esc_html__("First footer column location","minimal"),
+		'description'   => esc_html__("First footer column location","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<strong class="block widget-title mb2 mt0 small-p">',
@@ -158,7 +158,7 @@ function minimall_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 2', 'minimall' ),
 		'id'            => 'footer-2',
-		'description'   => esc_html__("Second footer column location","minimal"),
+		'description'   => esc_html__("Second footer column location","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<strong class="block widget-title mb2 mt0 small-p">',
@@ -168,7 +168,7 @@ function minimall_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 3', 'minimall' ),
 		'id'            => 'footer-3',
-		'description'   => esc_html__("Third footer column location","minimal"),
+		'description'   => esc_html__("Third footer column location","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<strong class="block widget-title mb2 mt0 small-p">',
@@ -178,7 +178,7 @@ function minimall_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 4', 'minimall' ),
 		'id'            => 'footer-4',
-		'description'   => esc_html__("Fourth footer column location","minimal"),
+		'description'   => esc_html__("Fourth footer column location","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb2 footer_widget widget %2$s clearfix break-word">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<strong class="block widget-title mb2 mt0 small-p">',
@@ -188,7 +188,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( '404 Full Width Sidebar', 'minimall' ),
 		'id'            => '404-full-sidebar',
-		'description'   => __("404 page top location","minimal"),
+		'description'   => __("404 page top location","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
@@ -199,7 +199,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( '404 Left Sidebar', 'minimall' ),
 		'id'            => '404-left-sidebar',
-		'description'   => __("404 page left location","minimal"),
+		'description'   => __("404 page left location","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title caps mb2 widgets">',
@@ -210,7 +210,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( '404 Right Sidebar', 'minimall' ),
 		'id'            => '404-right-sidebar',
-		'description'   => __("404 page right location","minimal"),
+		'description'   => __("404 page right location","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class=" widget-title caps mb2 widgets">',
@@ -221,7 +221,7 @@ function minimall_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Blog Sidebar', 'minimall' ),
 		'id'            => 'blog-sidebar',
-		'description'   => __("Blog and archive sidebar location","minimal"),
+		'description'   => __("Blog and archive sidebar location","minimall"),
 		'before_widget' => '<div id="%1$s" class="mb3 %2$s clearfix widgets">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title caps mt0 mb2 widgets">',
@@ -232,7 +232,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( 'Before Posts Content', 'minimall' ),
 		'id'            => 'post-header-sidebar',
-		'description'   => __("Sidebar display before post content","minimal"),
+		'description'   => __("Sidebar display before post content","minimall"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets max-width-3 ml-auto mr-auto mt0 mb2">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5 class="widget-title mb1 mt0">',
@@ -242,7 +242,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( 'Before Pages Content', 'minimall' ),
 		'id'            => 'page-header-sidebar',
-		'description'   => __("Sidebar display before page content","minimal"),
+		'description'   => __("Sidebar display before page content","minimall"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets max-width-3 ml-auto mr-auto mt0 mb2">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5 class="widget-title mb1 mt0">',
@@ -252,7 +252,7 @@ function minimall_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'After Posts Content', 'minimall' ),
 		'id'            => 'post-footer-sidebar',
-		'description'   => __("Sidebar display after post content","minimal"),
+		'description'   => __("Sidebar display after post content","minimall"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets max-width-3 ml-auto mr-auto mt3 mb3">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5 class="widget-title mb2 mt0">',
@@ -262,7 +262,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( 'After Pages Content', 'minimall' ),
 		'id'            => 'page-footer-sidebar',
-		'description'   => __("Sidebar display after page content","minimal"),
+		'description'   => __("Sidebar display after page content","minimall"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets max-width-3 ml-auto mr-auto mt3 mb3">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5 class="widget-title mb2 mt0">',
@@ -272,7 +272,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( 'Private Dashboard sidebar', 'minimall' ),
 		'id'            => 'private-dashboard',
-		'description'   => __("Sidebar display in the private dashboard template","minimal"),
+		'description'   => __("Sidebar display in the private dashboard template","minimall"),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt0 mb2">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title mb1 h6 pr2">',
@@ -282,7 +282,7 @@ function minimall_widgets_init() {
     register_sidebar( array(
 		'name'          => esc_html__( 'Main header sidebar', 'minimall' ),
 		'id'            => 'header-sidebar',
-		'description'   => __("Sidebar display in the main header.","minimal"),
+		'description'   => __("Sidebar display in the main header.","minimall"),
 		'before_widget' => '<div id="%1$s" class="%2$s lg-ml2 mt2 mb2 lg-mt0 lg-mb0">',
 		'after_widget'  => '</div>',
     ) );

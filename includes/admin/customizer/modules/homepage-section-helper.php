@@ -119,7 +119,7 @@ function minimall_homepage_content_type_list( $section_args ){
     Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'minimall_notice',
         'settings' => 'home_'.$section_args['slug'].'_layout_notice',
-        'label'    => $section_args['title'] . esc_html__(' List', 'minimal'),
+        'label'    => $section_args['title'] . esc_html__(' List', 'minimall'),
         'section'  => 'homepage_'.$section_args['slug'],
         'priority' => 39,
     ) );
@@ -200,7 +200,7 @@ function minimall_homepage_content_type_img( $section_args ){
     Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'minimall_notice',
         'settings' => 'home_'.$section_args['slug'].'_layout_notice',
-        'label'    => $section_args['title'] . esc_html__(' List', 'minimal'),
+        'label'    => $section_args['title'] . esc_html__(' List', 'minimall'),
         'section'  => 'homepage_'.$section_args['slug'],
         'priority' => 39,
     ) );
@@ -256,7 +256,7 @@ function minimall_homepage_content_type_blog( $section_args ){
     Minimall_Kirki::add_field( 'minimall', array(
         'type'     => 'minimall_notice',
         'settings' => 'home_'.$section_args['slug'].'_layout_notice',
-        'label'    => $section_args['title'] . esc_html__(' Posts', 'minimal'),
+        'label'    => $section_args['title'] . esc_html__(' Posts', 'minimall'),
         'section'  => 'homepage_'.$section_args['slug'],
         'priority' => 39,
     ) );
