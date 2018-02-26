@@ -15,7 +15,7 @@
                 $target = get_theme_mod('footer_cta_target',false);
             ?>
             <?php if( $label && $url ): ?>
-                <div class="flex justify-center ">
+                <div class="flex justify-center">
                     <a <?php echo minimall_external_link( $target ); ?> href="<?php echo esc_url( $url ); ?>" class="btn btn-primary btn-big lg-text">
                         <?php echo do_shortcode( wp_kses_post( $label ) ); ?>
                     </a>
