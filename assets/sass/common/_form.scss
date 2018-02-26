@@ -559,7 +559,11 @@ input[type='file'] {
 * Widget search form
 */
 .widget_search input[type="submit"]{
-    @extend .hide;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
 .widget_search label{
@@ -576,14 +580,7 @@ input[type='file'] {
 }
 
 .validation_error{
-    //@extend .alert;
-    //@extend .alert_danger;
     margin-bottom: 1.5rem;
-}
-
-.gform_confirmation_message{
-    //@extend .alert;
-    //@extend .alert_success;
 }
 
 .gform_fields{ list-style-type: none; }
