@@ -19,7 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'minimall' ); ?></a>
+	<a class="skip-link screen-reader-text hide" href="#content"><?php esc_html_e( 'Skip to content', 'minimall' ); ?></a>
 
     <?php do_action("minimall_before_header"); ?>
 

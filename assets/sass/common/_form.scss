@@ -312,7 +312,8 @@ button,
 input[type='submit'],
 input[type='button'],
 input[type='reset'],
-input[type='file'] + label {
+input[type='file'] + label,
+.wp-block-button .wp-block-button__link {
     font-family: $base-font-family;
     line-height: $button-height;
     display: inline-flex;
