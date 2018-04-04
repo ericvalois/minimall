@@ -7,7 +7,7 @@
 		"uuidString": "674D2CC3-405C-45CC-B478-FA633666CE28"
 		}
 	],
-"creatorBuild": "26268",
+"creatorBuild": "26330",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -2882,7 +2882,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "https:\/\/minimall.dev\/",
+	"externalServerAddress": "http:\/\/minimall.local\/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

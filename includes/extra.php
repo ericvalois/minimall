@@ -217,11 +217,9 @@ function minimall_display_header(){
  */
 add_action('minimall_header_sidebar', 'minimall_display_primary_menu', 10);
 function minimall_display_primary_menu(){
-?>
-    <?php if ( has_nav_menu( 'primary' ) ) : ?>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
-    <?php endif; ?>
-<?php
+    if ( has_nav_menu( 'primary' ) ) :
+        wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) );
+    endif;
 }
 
 /**
