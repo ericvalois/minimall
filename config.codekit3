@@ -7,7 +7,7 @@
 		"uuidString": "674D2CC3-405C-45CC-B478-FA633666CE28"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -103,6 +103,7 @@
 	"\/assets\/images\/default-hero-lg.jpg": {
 		"ft": 16384,
 		"iS": 140584,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-hero-lg.jpg",
 		"oF": 0,
@@ -113,6 +114,7 @@
 	"\/assets\/images\/default-hero-md.jpg": {
 		"ft": 16384,
 		"iS": 115976,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-hero-md.jpg",
 		"oF": 0,
@@ -123,6 +125,7 @@
 	"\/assets\/images\/default-hero-sm.jpg": {
 		"ft": 16384,
 		"iS": 26924,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-hero-sm.jpg",
 		"oF": 0,
@@ -133,6 +136,7 @@
 	"\/assets\/images\/default-homepage-hero-lg.jpg": {
 		"ft": 16384,
 		"iS": 94686,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-homepage-hero-lg.jpg",
 		"oF": 0,
@@ -143,6 +147,7 @@
 	"\/assets\/images\/default-homepage-hero-md.jpg": {
 		"ft": 16384,
 		"iS": 61736,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-homepage-hero-md.jpg",
 		"oF": 0,
@@ -153,6 +158,7 @@
 	"\/assets\/images\/default-homepage-hero-sm.jpg": {
 		"ft": 16384,
 		"iS": 20172,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-homepage-hero-sm.jpg",
 		"oF": 0,
@@ -549,6 +555,19 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/common\/gutenberg.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/sass\/common\/gutenberg2.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -1487,7 +1506,8 @@
 	"creationDate": 530886072,
 	"displayValue": "minimall",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-lotr"
+	"iconImageName": "meme-lotr",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3290,6 +3310,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
