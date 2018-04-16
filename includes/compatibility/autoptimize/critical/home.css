@@ -271,10 +271,6 @@ h5 {
   font-size: 1.2rem;
 }
 
-strong {
-  font-weight: 700;
-}
-
 p,
 ul {
   margin: 1.5rem 0;
@@ -339,12 +335,29 @@ ul ul {
   margin-bottom: 0;
 }
 
+.edd-cart-number-of-items {
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
 .sm-text {
   font-size: 90%;
 }
 
+.lg-text {
+  font-size: 110%;
+}
+
+.text-color {
+  color: #3A4145;
+}
+
 .regular {
   font-weight: normal;
+}
+
+.style-none {
+  font-style: none;
 }
 
 .break-word {
@@ -383,12 +396,12 @@ ul ul {
   margin-top: .5rem;
 }
 
-.mb1 {
-  margin-bottom: .5rem;
+.mr1 {
+  margin-right: .5rem;
 }
 
-.ml1 {
-  margin-left: .5rem;
+.mb1 {
+  margin-bottom: .5rem;
 }
 
 .mt2 {
@@ -584,6 +597,20 @@ ul ul {
   .sm-mxn2 {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
+  }
+}
+
+@media (min-width:64em) {
+  .lg-mt0 {
+    margin-top: 0;
+  }
+
+  .lg-mb0 {
+    margin-bottom: 0;
+  }
+
+  .lg-ml2 {
+    margin-left: 1.5rem;
   }
 }
 

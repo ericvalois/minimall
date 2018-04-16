@@ -1,7 +1,3 @@
-.lazyload {
-  opacity: 0;
-}
-
 .site-header {
   min-height: 80px;
 }
@@ -153,7 +149,8 @@
 
 .edd_downloads_list .edd-submit.button:visited,
 .button:visited,
-button:visited {
+button:visited,
+input[type='submit']:visited {
   color: #fff;
 }
 
@@ -183,7 +180,8 @@ input::-ms-reveal {
 
 .edd_downloads_list .edd-submit.button,
 .button,
-button {
+button,
+input[type='submit'] {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   line-height: 2.25rem;
   display: -webkit-inline-box;
@@ -211,9 +209,14 @@ button {
 }
 
 .edd_downloads_list .edd-submit.button,
-.button {
+.button,
+input[type='submit'] {
   -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+form {
+  max-width: 768px;
 }
 
 input {
@@ -246,9 +249,11 @@ html {
 
 html,
 body,
+p,
 ul,
 li,
-h1 {
+h1,
+h3 {
   margin: 0;
   padding: 0;
 }
@@ -270,7 +275,8 @@ svg {
   fill: currentColor;
 }
 
-h1 {
+h1,
+h3 {
   margin-bottom: 1rem;
   line-height: 1.2;
   font-weight: 700;
@@ -281,6 +287,17 @@ h1 {
   margin-top: 2rem;
 }
 
+h3 {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.h5 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+p,
 ul {
   margin: 1.5rem 0;
 }
@@ -343,6 +360,12 @@ ul ul {
   margin-right: -1.5rem;
 }
 
+.edd_downloads_list .edd_download_excerpt p {
+  margin: 1rem 0;
+  font-size: 1em;
+  font-family: inherit;
+}
+
 @media (min-width:40em) {
   .edd_downloads_list {
     display: -webkit-box;
@@ -363,7 +386,13 @@ ul ul {
   height: 16px;
 }
 
-.edd-submit {
+.edd-cart-number-of-items {
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.edd-submit,
+input[type=submit].edd-submit {
   font-size: 16px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -373,8 +402,24 @@ ul ul {
   line-height: 1;
 }
 
+.xs-text {
+  font-size: 80%;
+}
+
 .sm-text {
   font-size: 90%;
+}
+
+.lg-text {
+  font-size: 110%;
+}
+
+.text-color {
+  color: #3A4145;
+}
+
+.style-none {
+  font-style: none;
 }
 
 .break-word {
@@ -419,8 +464,24 @@ ul ul {
   margin-bottom: 0;
 }
 
-.ml1 {
-  margin-left: .5rem;
+.mt1 {
+  margin-top: .5rem;
+}
+
+.mr1 {
+  margin-right: .5rem;
+}
+
+.mb1 {
+  margin-bottom: .5rem;
+}
+
+.mt2 {
+  margin-top: 1.5rem;
+}
+
+.mb2 {
+  margin-bottom: 1.5rem;
 }
 
 .mt3 {
@@ -464,6 +525,10 @@ ul ul {
 }
 
 @media (min-width:64em) {
+  .lg-col-3 {
+    width: 25%;
+  }
+
   .lg-col-4 {
     width: 33.33333%;
   }
@@ -572,8 +637,20 @@ ul ul {
 }
 
 @media (min-width:64em) {
+  .lg-mt0 {
+    margin-top: 0;
+  }
+
+  .lg-mb0 {
+    margin-bottom: 0;
+  }
+
   .lg-mb2 {
     margin-bottom: 1.5rem;
+  }
+
+  .lg-ml2 {
+    margin-left: 1.5rem;
   }
 
   .lg-mt4 {
@@ -585,6 +662,14 @@ ul ul {
   .lg-pl2 {
     padding-left: 1.5rem;
   }
+}
+
+.black {
+  color: #3A4145;
+}
+
+.blue {
+  color: #1078ff;
 }
 
 .bg-white {

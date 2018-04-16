@@ -5,7 +5,7 @@
 */
 get_header(); ?>
 
-    <div id="empty-template" class="entry-content max-width-3 ml-auto mr-auto">
+    <div id="empty-template" class="entry-content max-width-3 ml-auto mr-auto first-mt0">
         <?php
             while ( have_posts() ) : the_post();
 

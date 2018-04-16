@@ -12,7 +12,7 @@
 	
     
     <?php if( is_single() ): ?>
-	    <div class="entry-content max-width-3 ml-auto mr-auto">
+	    <div class="entry-content max-width-3 ml-auto mr-auto first-mt0">
             <?php the_content(); ?>
 
             <?php
