@@ -171,7 +171,7 @@ function minimall_pagination($pages = '', $range = 2){
  
     if(1 != $pages)
     {
-        echo '<nav class="pagination"><ul class="list-reset flex xxs-text caps">';
+        echo '<nav class="pagination"><ul class="list-reset flex flex-wrap xxs-text caps">';
         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<li><a class="btn btn-black btn-black btn-small" href="'.get_pagenum_link(1).'">' .esc_html__("First","minimall"). '</a></li>';
         if($paged > 1 && $showitems < $pages) echo '<li><a class="btn btn-black btn-black btn-small" href="'.get_pagenum_link($paged - 1).'">' .esc_html__("Previus page","minimall"). '</a></li>';
 

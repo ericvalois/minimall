@@ -13,6 +13,7 @@ get_header(); ?>
 
             endwhile; // End of the loop.
         ?>
+        
     </div><!-- #empty-template -->
 
 <?php

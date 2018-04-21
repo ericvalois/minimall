@@ -6,6 +6,10 @@
   }
 }
 
+.lazyload {
+  opacity: 0;
+}
+
 .site-header {
   min-height: 80px;
 }
@@ -328,9 +332,8 @@ ul ul {
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 100vw;
-  margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 @media (min-width:64em) {
@@ -343,10 +346,6 @@ ul ul {
 
 .first-mt0>:first-child {
   margin-top: 0!important;
-}
-
-.xs-text {
-  font-size: 80%;
 }
 
 .sm-text {
@@ -608,10 +607,6 @@ ul ul {
   .lg-pl2 {
     padding-left: 1.5rem;
   }
-}
-
-.black {
-  color: #3A4145;
 }
 
 .bg-white {
