@@ -61,3 +61,81 @@
 * TTFB Toolkit Address Widget
 */
 .ttfb_toolkit_address_widget .icon{ width: 35px }
+
+/*
+* Widget With Thumbnails
+*/
+.recent-posts-widget-with-thumbnails ul { list-style: outside none none; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; line-height: 1.5;}
+.widgets.recent-posts-widget-with-thumbnails ul li { overflow: hidden; margin: 0 0 1rem 0; }
+.recent-posts-widget-with-thumbnails ul li:last-child { margin: 0; }
+.recent-posts-widget-with-thumbnails ul li img { display: inline; float: left; margin: .3em .75em .75em 0; }
+.recent-posts-widget-with-thumbnails img { width: 80px; height: 80px; filter: grayscale(1);border-radius: 3px;opacity: 0.6 }
+.rpwwt-post-categories{ font-weight: 300; }
+
+/*
+* Share Widget
+*/
+.share-btn {
+    padding: 4px 16px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
+    vertical-align: middle;
+    transition: background 0.2s ease-in-out;
+}
+
+.share-btn:hover{
+    color: #fff;
+    svg{ fill: #fff; }
+}
+
+// Colors
+.share-btn {
+  background-color: #95a5a6;
+  &:hover {
+    background-color: darken(#95a5a6, 10%);
+  }
+}
+.share-btn-twitter {
+  background-color: #00aced;
+  &:hover {
+    background-color: darken(#00aced, 10%);
+  }
+}
+.share-btn-facebook {
+  background-color: #3b5998;
+  &:hover {
+    background-color: darken(#3b5998, 10%);
+  }
+}
+.share-btn-linkedin {
+  background-color: #007bb6;
+  &:hover {
+    background-color: darken(#007bb6, 10%);
+  }
+}
+.share-btn-reddit {
+  background-color: #ED001C;
+  &:hover {
+    background-color: darken(#ED001C, 10%);
+  }
+}
+.share-btn-google-plus {
+  background-color: #e93f2e;
+  &:hover {
+    background-color: darken(#e93f2e, 10%);
+  }
+}
+.share-btn-pinterest {
+  background-color: #B81626;
+  &:hover {
+    background-color: darken(#B81626, 10%);
+  }
+}
+.share-btn-mail {
+	background-color: #016ED6;
+	&:hover {
+		background-color: darken(#016ED6, 5%);
+	}
+}
