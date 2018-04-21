@@ -182,13 +182,13 @@ module.exports = function(grunt) {
                         'assets/css/basscss.css',
                     ],
                     width: 1200,
-                    height: 1000,
+                    height: 1500,
                     include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
                     ignore: ['.screen-reader-text', '.btn'],
                     minify: false,
                     timeout: 100000,
                 },
-                src: 'http://minimall.local/pillar-post-block/',
+                src: 'http://minimall.local/hello-world/',
                 dest: 'includes/compatibility/autoptimize/critical/empty.css'
             }
         },
