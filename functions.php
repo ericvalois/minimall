@@ -332,6 +332,10 @@ function minimall_scripts() {
     	wp_enqueue_style( 'minimall-stylesheet', trailingslashit( get_template_directory_uri() ) . 'style.css' );
     }
 
+    // Overwrite TTFB Toolkit Basscss
+    wp_enqueue_style( 'ttfb-toolkit-basscss', get_template_directory_uri() . '/assets/css/basscss.css' );
+
+    // Minimall's Basic javascript
     wp_enqueue_script( 'minimall-init', get_template_directory_uri() . '/assets/js/minimall-init.min.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

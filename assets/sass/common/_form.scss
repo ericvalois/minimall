@@ -312,7 +312,8 @@ button,
 input[type='submit'],
 input[type='button'],
 input[type='reset'],
-input[type='file'] + label {
+input[type='file'] + label,
+.wp-block-button .wp-block-button__link {
     font-family: $base-font-family;
     line-height: $button-height;
     display: inline-flex;
@@ -333,6 +334,7 @@ input[type='file'] + label {
     transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing, padding 0.3s ease;
     cursor: pointer;
     font-size: 16px;
+    -webkit-appearance: none;
 }
 
 .btn,
@@ -357,14 +359,7 @@ input[type='file'] + label, {
 
 .btn-outline:hover{
     background-color: #fff;
-    //border-color: var(--color-primary) !important;
-    //color: var(--color-primary) !important;
 }
-
-/*.btn-primary{
-    background-color: var(--color-primary) !important;
-    border-color: var(--color-primary) !important;
-}*/
 
 .btn-primary:hover{
     background-color: $black !important;
@@ -559,7 +554,11 @@ input[type='file'] {
 * Widget search form
 */
 .widget_search input[type="submit"]{
-    @extend .hide;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
 .widget_search label{
@@ -576,14 +575,7 @@ input[type='file'] {
 }
 
 .validation_error{
-    //@extend .alert;
-    //@extend .alert_danger;
     margin-bottom: 1.5rem;
-}
-
-.gform_confirmation_message{
-    //@extend .alert;
-    //@extend .alert_success;
 }
 
 .gform_fields{ list-style-type: none; }

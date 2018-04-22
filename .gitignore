@@ -13,6 +13,8 @@ wp-content/uploads/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 
+**.DS_Store
+
 **/build/
 **/node_modules/*
 *.codekit3

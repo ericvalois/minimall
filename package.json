@@ -1,6 +1,6 @@
 {
   "name": "minimall",
-  "version": "1.4.4",
+  "version": "1.4.6",
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-contrib-clean": "latest",
@@ -9,8 +9,8 @@
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
+    "grunt-critical": "^1.1.0",
     "grunt-criticalcss": "latest",
-    "grunt-critical": "latest",
     "jshint-stylish": "latest"
   },
   "dependencies": {

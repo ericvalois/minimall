@@ -65,91 +65,6 @@ function minimall_compress( $minify ){
     return $minify;
 }
 
-
-/**
- * Custom WordPress Menu Markup
- */
-/*
-function minimall_custom_menu( $theme_location ) {
-    if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) {
-        $menu = get_term( $locations[$theme_location], 'nav_menu' );
-        $menu_items = wp_get_nav_menu_items($menu->term_id);
-
-        $menu_list = '<ul class="list-reset m0 weight500">' ."\n";
- 
-        $count = 0;
-        $submenu = false;
-        
-        global $post;
-
-        if( is_array($menu_items) && !empty( $menu_items ) ){
-            foreach( $menu_items as $menu_item ) {
-                
-                $link = $menu_item->url;
-                $title = $menu_item->title;
-                $class = $menu_item->classes;
-
-                if( is_object( $post ) ){
-
-                    if( $menu_item->object_id == $post->ID || ( $menu_item->object_id == get_option( 'page_for_posts' ) && is_home() ) ){
-                        $active = ' active ';
-                    }else{
-                        $active = '';
-                    }
-
-                }else{
-                    $active = '';
-                }
-                
-                if ( !$menu_item->menu_item_parent ) {
-                    $parent_id = $menu_item->ID;
-                    
-                    $menu_list .= '<li class="lg-ml1 mt2 mb2 lg-mt0 lg-mb0 item relative block lg-inline-block lg-px1 lg-py1 line-height-1">' ."\n";
-                    $menu_list .= '<a href="'.$link.'" class="text-decoration-none sm-text black inline-flex items-center ' . $active . implode(" ",$class) . '">' ."\n";               
-                    $menu_list .= $title ."\n";
-                    $menu_list .= '</a>' ."\n";
-                }
-    
-                if ( $parent_id == $menu_item->menu_item_parent ) {
-
-                        
-                    if ( !$submenu ) {
-                        $submenu = true;
-                        $menu_list .= '<button class="sub-menu-toggle px0 py0 z4"></button>';
-
-                        $menu_list .= '<ul class="sub-menu  list-reset mt0 mb0 ml2 lg-ml0">' ."\n";
-                    }
-    
-                    $menu_list .= '<li class="mt2 mb2 lg-mt0 lg-mb0 item block lg-inline-block">' ."\n";
-                    $menu_list .= '<a href="'.$link.'" class="flex items-center black text-decoration-none sm-text border-none">'.$title.'</a>' ."\n";
-                    $menu_list .= '</li>' ."\n";
-                        
-                    
-                    if ( !isset( $menu_items[ $count + 1 ] ) || $menu_items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ){
-                        $menu_list .= '</ul>' ."\n";
-                        $submenu = false;
-                    }
-    
-                }
-    
-                if ( !isset( $menu_items[ $count + 1 ] ) || $menu_items[ $count + 1 ]->menu_item_parent != $parent_id ) { 
-                    $menu_list .= '</li>' ."\n";      
-                    $submenu = false;
-                }
-    
-                $count++;
-            }
-        } // end if
-         
-        $menu_list .= '</ul>' ."\n";
- 
-    } else {
-        $menu_list = '<!-- no menu defined in location "'.$theme_location.'" -->';
-    }
-    echo $menu_list;
-}
-*/
-
 /**
  * Custom Pagination Markup
  */
@@ -171,7 +86,7 @@ function minimall_pagination($pages = '', $range = 2){
  
     if(1 != $pages)
     {
-        echo '<nav class="pagination"><ul class="list-reset flex xxs-text caps">';
+        echo '<nav class="pagination"><ul class="list-reset flex flex-wrap xxs-text caps">';
         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<li><a class="btn btn-black btn-black btn-small" href="'.get_pagenum_link(1).'">' .esc_html__("First","minimall"). '</a></li>';
         if($paged > 1 && $showitems < $pages) echo '<li><a class="btn btn-black btn-black btn-small" href="'.get_pagenum_link($paged - 1).'">' .esc_html__("Previus page","minimall"). '</a></li>';
 
@@ -379,6 +294,7 @@ if( ! function_exists( 'wp_is_login' ) ) {
 
 /* 
 * Add gutenberg class
+* Deprecated since v1.4.6
 */
 function minimall_conditionnal_gutenberg_class( $is_class = "", $is_not_class = "" ){
 

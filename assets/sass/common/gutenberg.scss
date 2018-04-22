@@ -1,73 +1,88 @@
-.gutenberg-content > *{
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
-
-.alignfull{
+.entry-content > *{
+    width: calc(100% - 3rem);
     margin-left: auto;
     margin-right: auto;
 }
 
-.gutenberg-content p,
-.gutenberg-content ul,
-.gutenberg-content ol,{
-    margin-top: 0;
-    margin-bottom: 1.5em;
+/*
+* Fix width on list pages
+*/
+.blog .entry-content > *,
+.archive .entry-content > *,
+.search .entry-content > *{
+    width: initial;
 }
 
-.wp-block-image,
-.wp-block-gallery,
-.wp-block-video,
-.wp-block-quote,
-.wp-block-text-columns,
-.wp-block-button,
-.wp-block-cover-text,
-.wp-block-pullquote,
-.gutenberg-content figure,
-.gutenberg-content blockquote,
-.gutenberg-content pre,
-.gutenberg-content table{
+.entry-content .alignfull {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    
+    width: 100vw;
+    margin-left:    calc(50% - 50vw);
+    margin-right:   calc(50% - 50vw);
 }
 
-.gutenberg-content figure{ 
+.alignwide {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/*
+* Center small image 
+*/
+.wp-block-image.alignfull img,
+.wp-block-image.alignwide img,
+.wp-block-image.aligncenter img, // Fix img alignment
+.wp-block-gallery.alignfull img, // Fix img alignment
+.wp-block-gallery.alignwide img{ // Fix img alignment
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+* Fix separator block alignment
+*/
+.wp-block-separator{ max-width: 100%;}
+
+
+/*
+* Fix wide blocks on archives
+*/
+.blog .alignfull,
+.blog .alignwide,
+.archive .alignfull,
+.archive .alignwide,
+.search .alignfull,
+.search .alignwide{
     max-width: 100%;
 }
 
-.gutenberg-content *.alignfull{
-  max-width: 100%;
+@media #{$breakpoint-lg} {
+
+    .entry-content > *{
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .entry-content .alignwide {
+        margin-left:    calc(25% - 25vw);
+        margin-right:   calc(25% - 25vw);
+        width:          auto;
+        max-width:      1000%;
+    }
+
+    /*
+    * Gallery alignment
+    */
+    .wp-block-gallery{
+        margin-left: -8px;
+        margin-right: -8px;
+    }
 }
 
-.gutenberg-content .alignfull > img{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wp-block-pullquote{
-    border-top: none;
-    border-bottom: none;
-    text-align: left;
-    border-left: 3px solid rgba(0,0,0,0.8);
-    padding: 0 2rem;
-    
-}
-
-.wp-block-button{ 
-    background-color: inherit;
-    display: block;
-    height: auto;
-    padding: 0;
-}
-
-.wp-block-button a{
-    @extend .btn;
-}
-
-.wp-block-column >:first-child{ margin-top: 0; }
-.wp-block-column >:last-child{ margin-bottom: 0; }
-
+/*
+* text Columns
+*/
 @media( max-width: 40em) {
     .wp-block-text-columns{ 
         display: block;
@@ -79,57 +94,23 @@
     }
 }
 
+/*
+* wp-block-columns
+*/
+.wp-block-columns{ display: block; }
+
 @media #{$breakpoint-md} {
-    .gutenberg-content p,
-    .gutenberg-content p,
-    .gutenberg-content h1,
-    .gutenberg-content h2,
-    .gutenberg-content h3,
-    .gutenberg-content h4,
-    .gutenberg-content h5,
-    .gutenberg-content h6,
-    .gutenberg-content h6,
-    .gutenberg-content blockquote,
-    .gutenberg-content pre,
-    .gutenberg-content table,
-    .gutenberg-content figure,
-    .gutenberg-content .alert,
-    .gutenberg-content ul,
-    .gutenberg-content ol,
-    .gutenberg-content hr,
-    .gutenberg-content .alert_shortcode,
-    .gutenberg-content .overflow-auto,
-    .wp-block-image,
-    .wp-block-gallery,
-    .wp-block-video,
-    .wp-block-video video
-    .wp-block-quote,
-    .wp-block-text-columns,
-    .wp-block-button,
-    .wp-block-cover-text,
-    .wp-block-pullquote,
-    .alert_shortcode{
-        max-width: 768px;
+    .wp-block-columns{
+        display: grid;
+        grid-gap: 0 1.5rem;
+        grid-row-gap: 1.5rem;
     }
 
-    .gutenberg-content > *,
-    .wp-block-table{
-        margin-left: auto;
-        margin-right: auto;
+    .wp-block-columns *{
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
     }
-
-    .gutenberg-content .alignwide > img{
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .wp-block-gallery.alignfull{ justify-content: center; }
 }
 
-@media #{$breakpoint-lg} {
-    .gutenberg-content *.alignwide{ max-width: 900px; }
-}
-
-@media #{$breakpoint-xlg} { 
-    .gutenberg-content .alignwide{ max-width: 1200px; }
-}
+.first-mt0 > :first-child{ margin-top: 0 !important; }
+.last-mb0 > :first-child{ margin-top: 0 !important; }

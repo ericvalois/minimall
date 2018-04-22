@@ -18,10 +18,10 @@
     list-style-type: none;
 }
 
-.footer-widgets{ @extend .sm-text; }
+.footer-widgets{ font-size: 90% }
 .footer-widgets li{ 
     margin-bottom: 10px;
-    @extend .line-height-2;
+    line-height: 1.125;
 }
 .footer-widgets a,{ color: $black; }
 .footer-widgets a:hover{ color: $blue; }
@@ -37,9 +37,3 @@
 #colophon{ border-top: 1px solid #d8d6d6; }
 
 ul.children{ margin: 1rem; }
-
-.aff-logo{ 
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-.aff-logo:hover{ filter: grayscale(0%);}

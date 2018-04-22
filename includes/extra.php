@@ -217,11 +217,9 @@ function minimall_display_header(){
  */
 add_action('minimall_header_sidebar', 'minimall_display_primary_menu', 10);
 function minimall_display_primary_menu(){
-?>
-    <?php if ( has_nav_menu( 'primary' ) ) : ?>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
-    <?php endif; ?>
-<?php
+    if ( has_nav_menu( 'primary' ) ) :
+        wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) );
+    endif;
 }
 
 /**
@@ -344,9 +342,9 @@ function minimall_comment(){
     if ( ( comments_open() || get_comments_number() ) && !is_singular('download') ) :
         
         echo '<section class="comment-section max-width-3 ml-auto mr-auto">';
-
+/*
         $comments_number = get_comments_number();
-        if ( $comments_number == 1 ) {
+        if ( $comments_number <= 1 ) {
             $comment_label = esc_html__("Comment","minimall");
         } elseif( $comments_number > 1 ) {
             $comment_label = esc_html__("Comments","minimall");
@@ -356,10 +354,10 @@ function minimall_comment(){
             echo $comment_label;
             echo '</h3>';
         }
-
+*/
         comments_template();
 
-        echo '</div>';
+        //echo '</div>';
     endif;
 }
 

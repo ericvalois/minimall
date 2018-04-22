@@ -7,7 +7,7 @@
 		"uuidString": "674D2CC3-405C-45CC-B478-FA633666CE28"
 		}
 	],
-"creatorBuild": "26268",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -29,6 +29,16 @@
 		"oA": 2,
 		"oAP": "\/archive-download.php",
 		"oF": 0
+		},
+	"\/assets\/css\/basscss.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/basscss.min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/assets\/css\/edd-reviews.css": {
 		"aP": 1,
@@ -93,6 +103,7 @@
 	"\/assets\/images\/default-hero-lg.jpg": {
 		"ft": 16384,
 		"iS": 140584,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-hero-lg.jpg",
 		"oF": 0,
@@ -103,6 +114,7 @@
 	"\/assets\/images\/default-hero-md.jpg": {
 		"ft": 16384,
 		"iS": 115976,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-hero-md.jpg",
 		"oF": 0,
@@ -113,6 +125,7 @@
 	"\/assets\/images\/default-hero-sm.jpg": {
 		"ft": 16384,
 		"iS": 26924,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-hero-sm.jpg",
 		"oF": 0,
@@ -123,6 +136,7 @@
 	"\/assets\/images\/default-homepage-hero-lg.jpg": {
 		"ft": 16384,
 		"iS": 94686,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-homepage-hero-lg.jpg",
 		"oF": 0,
@@ -133,6 +147,7 @@
 	"\/assets\/images\/default-homepage-hero-md.jpg": {
 		"ft": 16384,
 		"iS": 61736,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-homepage-hero-md.jpg",
 		"oF": 0,
@@ -143,6 +158,7 @@
 	"\/assets\/images\/default-homepage-hero-sm.jpg": {
 		"ft": 16384,
 		"iS": 20172,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/default-homepage-hero-sm.jpg",
 		"oF": 0,
@@ -304,19 +320,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/sass\/_basscss.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/style.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/assets\/sass\/_blog.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -379,6 +382,19 @@
 		"oA": 1,
 		"oAP": "\/style.css",
 		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/sass\/basscss\/_basscss.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/basscss.css",
+		"oF": 3,
 		"oS": 3,
 		"uL": 1
 		},
@@ -1152,6 +1168,14 @@
 		"oAP": "\/build\/node_modules",
 		"oF": 0
 		},
+	"\/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/package.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -1469,7 +1493,8 @@
 	"creationDate": 530886072,
 	"displayValue": "minimall",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-lotr"
+	"iconImageName": "meme-lotr",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2864,7 +2889,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "https:\/\/minimall.dev\/",
+	"externalServerAddress": "http:\/\/minimall.local\/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -3272,6 +3297,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

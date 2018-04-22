@@ -39,6 +39,9 @@ function minimall_critical_css(){
         }elseif(  is_page_template("templates/full-width.php") ){
             echo '/* Critical full-width */ ';
             include_once( "critical/full-width.min.css" );
+        }elseif(  is_page_template("templates/empty-template.php") ){
+            echo '/* Critical Empty Template */ ';
+            include_once( "critical/empty.min.css" );
         }elseif( is_archive() || is_home() || is_search()  ){
             echo '/* Critical archive */ ';
             include_once( "critical/archive.min.css" );

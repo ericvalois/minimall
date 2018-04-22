@@ -1,5 +1,6 @@
 .edd_downloads_list{
-    @extend .mxn2;
+    margin-left: -$space2; 
+    margin-right: -$space2
 }
 
 .edd_downloads_list .edd_download_excerpt p{
@@ -128,7 +129,7 @@
 
 #edd-purchase-button{
     @extend .btn-primary;
-    @extend .xl-text;
+    font-size: 120%;
     @extend .btn-big;
 }
 
@@ -189,12 +190,12 @@
 //.edd_go_to_checkout{ display: inline-flex !important; }
 .edd-cart-ajax-alert{
     //display: block;
-    @extend .sm-text;
+    font-size: 90%;
     padding-top: 5px;
 }
 
 .edd-table td,
-.edd_sl_table td{ @extend .sm-text; }
+.edd_sl_table td{ font-size: 90%; }
 
 // Fix if edd style active
 #edd_checkout_form_wrap input.edd-input, 

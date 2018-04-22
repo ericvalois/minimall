@@ -3,130 +3,196 @@ module.exports = function(grunt) {
 
         pkg: grunt.file.readJSON('package.json'),
 
-        criticalcss: {
+        critical: {
             home: {
                 options: {
-                    url: "http://minimall.dev",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1200,
-                    outputfile: "includes/compatibility/autoptimize/critical/home.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/',
+                dest: 'includes/compatibility/autoptimize/critical/home.css'
             },
-            
             archive: {
                 options: {
-                    url: "http://minimall.dev/blog/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/archive.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/blog/',
+                dest: 'includes/compatibility/autoptimize/critical/archive.css'
             },
             page: {
                 options: {
-                    url: "http://minimall.dev/style-guide/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/page.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/style-guide/',
+                dest: 'includes/compatibility/autoptimize/critical/page.css'
             },
             single: {
                 options: {
-                    url: "http://minimall.dev/style-guide/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/single.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/style-guide/',
+                dest: 'includes/compatibility/autoptimize/critical/single.css'
             },
             page_404: {
                 options: {
-                    url: "http://minimall.dev/abcdefgh/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/404.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/abcdefgh/',
+                dest: 'includes/compatibility/autoptimize/critical/404.css'
             },
             edd_single: {
                 options: {
-                    url: "http://minimall.dev/downloads/minimall/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/edd-single.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/downloads/light-bold/',
+                dest: 'includes/compatibility/autoptimize/critical/edd-single.css'
             },
             edd_archive: {
                 options: {
-                    url: "http://minimall.dev/shop/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/edd-archive.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-3','.lg-col-4','.lg-col-6','.lg-col-12'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/shop/',
+                dest: 'includes/compatibility/autoptimize/critical/edd-archive.css' 
             },
             edd_checkout: {
                 options: {
-                    url: "http://minimall.dev/checkout/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/edd-checkout.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/checkout/',
+                dest: 'includes/compatibility/autoptimize/critical/edd-checkout.css'   
             },
             full_width: {
                 options: {
-                    url: "http://minimall.dev/full-width/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/full-width.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/full-width/',
+                dest: 'includes/compatibility/autoptimize/critical/full-width.css'
             },
             dashboard: {
                 options: {
-                    url: "http://minimall.dev/subscriptions/",
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
                     width: 1200,
                     height: 1000,
-                    outputfile: "includes/compatibility/autoptimize/critical/dashboard.css",
-                    filename: "style.css",
-                    buffer: 800*1024,
-                    forceInclude: ['.screen-reader-text', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignoreConsole: true
-                }
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/subscriptions/',
+                dest: 'includes/compatibility/autoptimize/critical/dashboard.css'
             },
-            
+            empty_template: {
+                options: {
+                    base: '',
+                    css: [
+                        'style.css',
+                        'assets/css/basscss.css',
+                    ],
+                    width: 1200,
+                    height: 1500,
+                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
+                    ignore: ['.screen-reader-text', '.btn'],
+                    minify: false,
+                    timeout: 100000,
+                },
+                src: 'http://minimall.local/hello-world/',
+                dest: 'includes/compatibility/autoptimize/critical/empty.css'
+            }
         },
+
         cssmin: {
             critical: {
                 options: {
@@ -208,15 +274,25 @@ module.exports = function(grunt) {
                 dest: '<%= pkg.name %>-package-<%= pkg.version %>/'
             }
         },
+
+
+        
+
+
     });
 
-    grunt.loadNpmTasks('grunt-criticalcss');
+    //grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-critical');
 
-    grunt.registerTask('critical', ['criticalcss','cssmin']);
+    //grunt.registerTask('critical', ['criticalcss','cssmin']);
+
+    
+    grunt.registerTask('criticalgenerate', ['critical','cssmin']);
+
     //grunt.registerTask('critical', ['critical','cssmin']);
     grunt.registerTask('min', ['cssmin']);
 

@@ -5,7 +5,7 @@
 */
 get_header(); ?>
 
-    <div id="empty-template" class="entry-content <?php if( function_exists('minimall_conditionnal_gutenberg_class') ){ echo esc_attr( minimall_conditionnal_gutenberg_class('gutenberg-content', '') ); } ?>">
+    <div id="empty-template" class="entry-content max-width-3 ml-auto mr-auto first-mt0">
         <?php
             while ( have_posts() ) : the_post();
 
@@ -13,6 +13,7 @@ get_header(); ?>
 
             endwhile; // End of the loop.
         ?>
+        
     </div><!-- #empty-template -->
 
 <?php
