@@ -294,6 +294,7 @@ if( ! function_exists( 'wp_is_login' ) ) {
 
 /* 
 * Add gutenberg class
+* Deprecated since v1.4.6
 */
 function minimall_conditionnal_gutenberg_class( $is_class = "", $is_not_class = "" ){
 
