@@ -27,6 +27,9 @@
 .hover-opacity{ transition: opacity 0.2s ease; }
 .hover-opacity:hover{ opacity: 0.8; }
 
+.first-mt0 > :first-child{ margin-top: 0 !important; }
+.last-mb0 > :first-child{ margin-top: 0 !important; }
+
 /* Basscss Typography */
 
 .font-family-inherit { font-family: inherit }
