@@ -333,6 +333,7 @@ function minimall_scripts() {
     }
 
     // Overwrite TTFB Toolkit Basscss
+    wp_deregister_style('ttfb-toolkit-basscss');
     wp_enqueue_style( 'ttfb-toolkit-basscss', get_template_directory_uri() . '/assets/css/basscss.css' );
 
     // Minimall's Basic javascript
@@ -523,3 +524,4 @@ require get_template_directory() . '/includes/custom-styles.php';
  * Load custom editor styles
  */
 require get_template_directory() . '/includes/admin/editor.php';
+
