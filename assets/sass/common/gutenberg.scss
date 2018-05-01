@@ -44,6 +44,13 @@
 */
 .wp-block-separator{ max-width: 100%;}
 
+/*
+* Fix Gallery caption gradient
+*/
+.wp-block-gallery .blocks-gallery-image figcaption, 
+.wp-block-gallery .blocks-gallery-item figcaption {
+    background: linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,.2) 60%,transparent);
+}
 
 /*
 * Fix wide blocks on archives
