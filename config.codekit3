@@ -1037,6 +1037,46 @@
 		"oAP": "\/includes\/compatibility\/edd\/widget-edd-reviews.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/gutenberg\/editor-full.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/editor-full.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/compatibility\/gutenberg\/editor-full.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/editor-full.min.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/compatibility\/gutenberg\/editor.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/editor.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/compatibility\/gutenberg\/editor.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/editor.min.min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/includes\/compatibility\/gutenberg\/gutenberg.php": {
 		"cB": 0,
 		"ft": 8192,

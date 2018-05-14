@@ -1,0 +1,96 @@
+/*
+* Title Width
+*/
+
+/* Main column width */
+body.gutenberg-editor-page .editor-post-title,
+body.gutenberg-editor-page .editor-default-block-appender,
+body.gutenberg-editor-page .editor-block-list__block {
+    max-width: 768px;
+}
+
+/* Width of "wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
+    max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+    max-width: none;
+}
+
+/*
+* Text styles
+*/
+.editor-post-title .editor-post-title__input{
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 51px;
+}
+
+/*
+* Colors
+*/
+.pink { color: rgb(247, 141, 167) }
+.has-fuchsia-background-color { background-color: rgb(247, 141, 167); }
+.has-fuchsia-color { color: rgb(247, 141, 167); }
+
+.lime  { color: rgb(123, 220, 181) }
+.has-lime-background-color { background-color: rgb(123, 220, 181); }
+.has-lime-color { color: rgb(123, 220, 181); }
+
+.yellow  { color: rgb(252, 185, 0) }
+.has-yellow-background-color { background-color: rgb(252, 185, 0); }
+.has-yellow-color { color: rgb(252, 185, 0); }
+
+.orange  { color: rgb(255, 105, 0) }
+.has-orange-background-color { background-color: rgb(255, 105, 0); }
+.has-orange-color { color: rgb(255, 105, 0); }
+
+.red     { color: rgb(207, 46, 46) }
+.has-red-background-color { background-color: rgb(207, 46, 46); }
+.has-red-color { color: rgb(207, 46, 46); }
+
+.green { color: rgb(0, 208, 132) }
+.has-green-background-color { background-color: rgb(0, 208, 132); }
+.has-green-color { color: rgb(0, 208, 132); }
+
+.pale-blue { color: rgb(142, 209, 252) }
+.has-pale-blue-background-color { background-color: rgb(142, 209, 252); }
+.has-pale-blue-color { color: rgb(142, 209, 252); }
+
+.blue { color: rgb(6, 147, 227) }
+.has-blue-background-color { background-color: rgb(6, 147, 227); }
+.has-blue-color { color: rgb(6, 147, 227); }
+
+.bg-darken-1 { background-color: rgba(0, 0, 0, .0625) }
+.has-darken-1-background-color { background-color: rgba(0, 0, 0, .0625); }
+.has-darken-1-color { color: rgba(0, 0, 0, .0625); }
+
+.bg-darken-2 { background-color: rgba(0, 0, 0, .125) }
+.has-darken-2-background-color { background-color: rgba(0, 0, 0, .125) }
+.has-darken-2-color { color: rgba(0, 0, 0, .125) }
+
+.bg-darken-3 { background-color: rgba(0, 0, 0, .25) }
+.has-darken-3-background-color { background-color: rgba(0, 0, 0, .25) }
+.has-darken-3-color { color: rgba(0, 0, 0, .25) }
+
+.bg-darken-4 { background-color: rgba(0, 0, 0, .5) }
+.has-darken-4-background-color { background-color: rgba(0, 0, 0, .5) }
+.has-darken-4-color { color: rgba(0, 0, 0, .5) }
+
+.bg-lighten-1 { background-color: rgba(255, 255, 255, .0625) }
+.has-lighten-4-background-color { background-color: rgba(255, 255, 255, .5) }
+.has-lighten-4-color { color: rgba(255, 255, 255, .5) }
+
+.bg-lighten-2 { background-color: rgba(255, 255, 255, .125) }
+.has-lighten-4-background-color { background-color: rgba(255, 255, 255, .5) }
+.has-lighten-4-color { color: rgba(255, 255, 255, .5) }
+
+.bg-lighten-3 { background-color: rgba(255, 255, 255, .25) }
+.has-lighten-4-background-color { background-color: rgba(255, 255, 255, .5) }
+.has-lighten-4-color { color: rgba(255, 255, 255, .5) }
+
+.bg-lighten-4 { background-color: rgba(255, 255, 255, .5) }
+.has-lighten-4-background-color { background-color: rgba(255, 255, 255, .5) }
+.has-lighten-4-color { color: rgba(255, 255, 255, .5) }

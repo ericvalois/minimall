@@ -37,7 +37,7 @@ class Minimall_Edd_Metabox_Gallery extends WP_Widget {
         $thumb_size = get_theme_mod('edd_single_thumb_size','thumbnail');
         $gallery_type = get_theme_mod('edd_single_thumb_type','thumbnail');
 
-        echo '<div id="edd-gallery" class="flex flex-wrap mxn1 gallery">';
+        echo '<div id="edd-gallery" class="flex flex-wrap mxn1">';
             $image_string = '';
             foreach ( $images as $key => $image ) {
                 $image_string .= $key . ',';

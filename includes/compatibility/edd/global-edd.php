@@ -198,6 +198,10 @@ function minimall_get_edd_download_tabs_content(){
         
 }
 
+function minimall_download_class(){ 
+    return false;
+}
+
 /*
 * Remove EDD purchase link from the_content
 */

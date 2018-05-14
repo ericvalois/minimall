@@ -334,7 +334,6 @@ function minimall_scripts() {
 
     // Overwrite TTFB Toolkit Basscss
     wp_deregister_style('ttfb-toolkit-basscss');
-    wp_enqueue_style( 'ttfb-toolkit-basscss', get_template_directory_uri() . '/assets/css/basscss.css' );
 
     // Minimall's Basic javascript
     wp_enqueue_script( 'minimall-init', get_template_directory_uri() . '/assets/js/minimall-init.min.js', array(), '', true );

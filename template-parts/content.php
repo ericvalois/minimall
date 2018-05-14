@@ -12,7 +12,7 @@
 	
     
     <?php if( is_single() ): ?>
-	    <div class="entry-content max-width-3 ml-auto mr-auto first-mt0">
+	    
             <?php the_content(); ?>
 
             <?php
@@ -21,12 +21,12 @@
                     'after'  => '</div>',
                 ) );
             ?>
-        </div>
+        
     <?php else: ?>
         
         <?php get_template_part( 'template-parts/content-header','single' ); ?>
         
-        <div class="entry-content">
+        
             <?php
                 if ( has_excerpt() ) {
                     the_excerpt();
@@ -34,7 +34,7 @@
                     the_content();
                 }
             ?>
-        </div>
+        
     <?php endif; ?>
 
 </article><!-- #post-## -->

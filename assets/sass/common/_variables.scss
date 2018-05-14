@@ -1,7 +1,12 @@
-$breakpoint-sm: '(min-width: 40em)' !default;
-$breakpoint-md: '(min-width: 52em)' !default;
-$breakpoint-lg: '(min-width: 64em)' !default;
-$breakpoint-xlg: '(min-width: 72em)' !default;
+$sm-width: 40em;
+$md-width: 52em;
+$lg-width: 64em;
+$xlg-width: 75em;
+
+$breakpoint-sm: (min-width: $sm-width) !default;
+$breakpoint-md: (min-width: $md-width) !default;
+$breakpoint-lg: (min-width: $lg-width) !default;
+$breakpoint-xlg: (min-width: $xlg-width) !default;
 
 $space1: 0.5rem !default;
 $space2: 1.5rem !default;

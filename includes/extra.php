@@ -111,18 +111,43 @@ function minimall_body_classes_typo( $classes ) {
 }
 
 /**
- * Add custom post class for blog page
+ * Add custom post class for posts
  */
 add_filter( 'post_class','minimall_article_class' );
 function minimall_article_class( $classes ) {
     if( is_archive() || is_home() || is_search() ){
-        $classes[] = 'mb4';
+        $classes[] = 'mb4'; 
+    }elseif( is_page_template("templates/full-width.php") ){
+        $classes[] = 'entry-content-full';
+    }elseif( is_singular("download") ){
+        $classes[] = 'entry-content-full max-width-5 ml-auto mr-auto first-mt0 mt3 lg-mt4 mb3';
+    }elseif( is_single() ){
+        $classes[] = 'entry-content max-width-3 ml-auto mr-auto first-mt0'; 
     }elseif( 
         ( is_single() || is_page() ) && 
         ( !is_singular('download') && !is_page_template() ) &&
         !minimall_is_gutenberg_post()
     ){
         $classes[] = 'px2';
+    }
+      
+    return $classes;
+}
+
+/*
+* Deprecated
+*/
+function minimall_site_content_class(){ 
+    return false;
+}
+
+/**
+ * Add custom post class for home, archive, search
+ */
+add_filter( 'post_class','minimall_archive_class' );
+function minimall_archive_class( $classes = array() ) {
+    if( is_archive() || is_home() || is_search() ){
+        $classes[] = 'max-width-5';
     }
       
     return $classes;
@@ -235,11 +260,11 @@ function minimall_top_header_sidebar(){
 /*
 * 
 */
-function minimall_site_content_class(){
+function minimall_full_width_class(){
     $class = array();
     $class['initial'] = "clearfix break-word relative";
     $class['max-width'] = "max-width-5";
-    $class['padding'] = "px2";
+    //$class['padding'] = "px2";
     $class['margin'] = 'ml-auto mr-auto mt3 lg-mt4 mb3';
 
     if( get_theme_mod('edd_checkout_boxed','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ) {

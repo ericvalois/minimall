@@ -45,7 +45,7 @@ Text Domain: minimall
 
 @import "common/comments";
 
-//@import "basscss";
+@import "basscss/basscss";
 
 @media #{$breakpoint-sm} {}
 
