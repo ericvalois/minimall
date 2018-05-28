@@ -1307,20 +1307,8 @@
 
 .color-inherit { color: inherit }
 
-figure.wp-block-image,
-.blocks-gallery-item{ position: relative; }
-figure.wp-block-image:before,
-.blocks-gallery-item:before {
-    position: absolute;
-    z-index: 1;
-    content: " ";
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 50%);
-}
+.has-text-color-background-color{ background-color: $text-color; }
+.has-text-color-color{ color: $text-color; }
 
 .white  { color: #FFF }
 .has-white-background-color { background-color: #FFF; }

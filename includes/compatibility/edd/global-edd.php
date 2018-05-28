@@ -346,16 +346,12 @@ function minimall_get_review_number( $post_id = null ){
 */
 function minimall_get_comment_number( $post_id = null ){
     
+    $comments_query = array(
+        'type'       => 'comment',
+        'post_id'    => $post_id,
+    );
+
+    $comments = get_comments( $comments_query );
     
-        $comments_query = array(
-            'type'       => 'comment',
-            'post_id'    => $post_id,
-        );
-    
-        
-    
-        $comments = get_comments( $comments_query );
-        
-    
-        return count($comments);
-    }
+    return count($comments);
+}
