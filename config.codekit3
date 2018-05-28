@@ -995,6 +995,13 @@
 		"oAP": "\/includes\/compatibility\/edd\/global-edd.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/edd\/gutenberg-support.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/gutenberg-support.php",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/edd\/widget-edd-cart.php": {
 		"cB": 0,
 		"ft": 8192,

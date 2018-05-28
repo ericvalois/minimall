@@ -47,6 +47,11 @@ include( get_template_directory() . '/includes/compatibility/edd/edd-customizer.
  * Easy Digital Download Performance Module
  */
 include( get_template_directory() . '/includes/compatibility/edd/edd-performance.php' );
+
+/**
+ * Easy Digital Download Gutenberg module
+ */
+include( get_template_directory() . '/includes/compatibility/edd/gutenberg-support.php' );
     
 /**
  * Download navigation
