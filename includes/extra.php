@@ -120,7 +120,7 @@ function minimall_article_class( $classes ) {
     }elseif( is_page_template("templates/full-width.php") ){
         $classes[] = 'entry-content-full';
     }elseif( is_singular("download") ){
-        $classes[] = 'entry-content-full max-width-5 ml-auto mr-auto first-mt0 mt3 lg-mt4 mb3';
+        $classes[] = 'entry-content-full max-width-5 ml-auto mr-auto first-mt0 mt3 lg-mt4 mb3 px2';
     }elseif( is_single() ){
         $classes[] = 'entry-content max-width-3 ml-auto mr-auto first-mt0'; 
     }elseif( 
@@ -128,7 +128,7 @@ function minimall_article_class( $classes ) {
         ( !is_singular('download') && !is_page_template() ) &&
         !minimall_is_gutenberg_post()
     ){
-        $classes[] = 'px2';
+        $classes[] = '';
     }
       
     return $classes;
