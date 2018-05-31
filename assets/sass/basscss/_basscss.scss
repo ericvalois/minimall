@@ -1,12 +1,26 @@
 @import "../common/variables";
 
 /*! ace.css | https://github.com/basscss/ace | MIT License */
-.xxs-text{ font-size: 70%; }
-.xs-text{ font-size: 80%; }
-.sm-text{ font-size: 90%; }
-.lg-text{ font-size: 110%; }
-.xl-text{ font-size: 120%; }
-.xxl-text{ font-size: 130%; }
+.font-size-70,
+.xxs-text{ font-size: 70% }
+.font-size-80,
+.xs-text{ font-size: 80% }
+.font-size-90,
+.sm-text{ font-size: 90% }
+.font-size-100{ font-size: 100% }
+.font-size-110,
+.lg-text{ font-size: 110% }
+.font-size-120,
+.xl-text{ font-size: 120% }
+.font-size-130,
+.xxl-text{ font-size: 130% }
+.font-size-140{ font-size: 140% }
+.font-size-150{ font-size: 150% }
+.font-size-160{ font-size: 160% }
+.font-size-170{ font-size: 170% }
+.font-size-180{ font-size: 180% }
+.font-size-190{ font-size: 190% }
+.font-size-200{ font-size: 200% }
 
 .weight1,
 .weight100{ font-weight: 100 !important; }
@@ -28,7 +42,7 @@
 .hover-opacity:hover{ opacity: 0.8; }
 
 .first-mt0 > :first-child{ margin-top: 0 !important; }
-.last-mb0 > :first-child{ margin-top: 0 !important; }
+.last-mb0 > :last-child{ margin-bottom: 0 !important; }
 
 /* Basscss Typography */
 
