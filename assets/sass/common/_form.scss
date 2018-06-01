@@ -331,7 +331,12 @@ input[type='file'] + label,
     white-space: nowrap;
     color: $button-text-color;
     background-color: $button-background-color;
-    transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing, padding 0.3s ease;
+    transition: 
+        border-color $speed $easing, 
+        color $speed $easing, 
+        background-color $speed $easing, 
+        padding 0.2s ease,
+        box-shadow 0.2s ease;
     cursor: pointer;
     font-size: 16px;
     -webkit-appearance: none;
@@ -357,11 +362,14 @@ input[type='file'] + label, {
     box-shadow: none;
 }
 
-.btn-outline:hover{
+.btn-outline:hover,
+.btn-outline:focus{
     background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.btn-primary:hover{
+.btn-primary:hover,
+.btn-primary:focus{
     background-color: $black !important;
     border-color: $black !important;
 }
