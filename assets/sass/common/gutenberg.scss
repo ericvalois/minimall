@@ -79,6 +79,11 @@
  
 .entry-content > figure.wp-block-image.aligncenter { margin: 1.5rem auto 1.5rem auto; }
 
+/*
+* Fix Spacer Block on mobile
+*/
+.wp-block-spacer{ max-height: 40px; }
+
 @media (min-width: 815px) {
 
     .entry-content > *{
@@ -101,6 +106,11 @@
         margin-left: -8px;
         margin-right: -8px;
     }
+
+    /*
+    * Restore spacer block height
+    */
+    .wp-block-spacer{ max-height: none; }
 }
 
 @media #{$breakpoint-xlg} {
