@@ -13,6 +13,14 @@ get_header(); ?>
 
             endwhile; // End of the loop.
         ?>
+
+        <?php 
+            if( comments_open() ): 
+                comments_template();
+            endif;
+        ?>
+
+        
         
     </div><!-- #empty-template -->
 
