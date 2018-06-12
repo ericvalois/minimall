@@ -91,15 +91,9 @@ function minimall_custom_styles(){
     .btn-outline,
     .social-network:hover{ border-color: '. $main_color .'; }
 
-    .btn:hover, .button:hover ,button:hover, input[type="submit"]:hover, input[type="button"]:hover,
-    .btn:focus, .button:focus, button:focus, input[type="submit"]:focus, input[type="button"]:focus,
-    .btn.active,.btn:active, .button:active, button:active, input[type="submit"]:active, input[type="button"]:active,
     .btn.btn-primary,
-    .edd_downloads_list .edd-submit.button:hover,
     #edd-purchase-button{
-        border-color: '. $main_color .';
         background-color: '. $main_color .';
-        color: #fff;
     }
 
     #site-navigation .menu-item-has-children > a:after{background: #fff url('. get_template_directory_uri() .'/assets/svg/small-down.svg) no-repeat center center;}
