@@ -96,7 +96,7 @@ function minimall_custom_styles(){
         background-color: '. $main_color .';
     }
 
-    #site-navigation .menu-item-has-children > a:after{background: #fff url('. get_template_directory_uri() .'/assets/svg/small-down.svg) no-repeat center center;}
+    #site-navigation .menu-item-has-children > a:after{background: #fff url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHdpZHRoPSIxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtOCAxMS40LTUuNC01LjQgMS40LTEuNCA0IDQgNC00IDEuNCAxLjR6Ii8+PC9zdmc+) no-repeat center center;}
     ';
     
     return $minimall_custom_css;
