@@ -135,6 +135,18 @@ function minimall_article_class( $classes ) {
 }
 
 /*
+* 
+*/
+//add_filter( 'post_class','minimall_private_dashboard_class' );
+function minimall_private_dashboard_class(){
+    /*if( is_page_template("templates/private-dashboard.php") ){
+        $classes[] = 'clearfix break-word relative max-width-5 px2 ml-auto mr-auto mt3 lg-mt4 mb3';
+    }*/
+
+    return $classes;
+}
+
+/*
 * Deprecated
 */
 function minimall_site_content_class(){ 
@@ -190,7 +202,7 @@ function minimall_the_excerpt_more_link( $excerpt ){
     global $post;
 
     if( $post->post_type == 'post' ){
-        $excerpt .= '<a class="more-link btn caps xs-text" href="'. get_the_permalink() .'">' . __("Continue reading","minimall") . '</a>';
+        $excerpt .= '<a class="more-link btn btn-default caps xs-text" href="'. get_the_permalink() .'">' . __("Continue reading","minimall") . '</a>';
     }else{
         $excerpt = $excerpt;
     }
@@ -203,7 +215,7 @@ function minimall_the_excerpt_more_link( $excerpt ){
  */
 add_filter( 'the_content_more_link', 'minimall_modify_read_more_link' );
 function minimall_modify_read_more_link() {
-    return '<div class="block"><a class="more-link btn caps xs-text" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimall").'</a></div>';
+    return '<div class="block"><a class="more-link btn btn-default caps xs-text" href="' . get_permalink() . '">'. esc_html__("Continue reading","minimall").'</a></div>';
 }
 
 /**
@@ -228,7 +240,7 @@ function minimall_display_header(){
         <?php endif; ?>
     </div><!-- .header-menu -->
     
-    <nav id="site-navigation" class="lg-flex flex-auto items-center <?php echo get_theme_mod('header_alignment','justify-end'); ?> lg-pl2 sm-text">
+    <nav id="site-navigation" class="lg-flex flex-auto items-center <?php echo get_theme_mod('header_alignment','justify-end'); ?>  lg-pl2 sm-text">
         <?php do_action('minimall_header_sidebar'); ?>
     </nav>
     
@@ -243,7 +255,7 @@ function minimall_display_header(){
 add_action('minimall_header_sidebar', 'minimall_display_primary_menu', 10);
 function minimall_display_primary_menu(){
     if ( has_nav_menu( 'primary' ) ) :
-        wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) );
+        wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'menu mxn2 lg-ml0 lg-mr0', 'before' => '<span class="item">', 'after'=>'</span>' ) );
     endif;
 }
 

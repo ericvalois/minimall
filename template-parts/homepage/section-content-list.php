@@ -20,7 +20,7 @@
             <?php endif; ?>
                 
             <?php if( $item['link_url'] ): ?>
-                <a class="btn <?php if( !empty( $image ) ){ echo 'btn-white'; }else{ echo 'btn-black'; } ?> " href="<?php echo esc_url( $item['link_url'] ); ?>"><?php echo esc_html( $item['link_text'] ); ?></a>
+                <a class="btn btn-default <?php if( !empty( $image ) ){ echo 'btn-white'; }else{ echo 'btn-black'; } ?> " href="<?php echo esc_url( $item['link_url'] ); ?>"><?php echo esc_html( $item['link_text'] ); ?></a>
             <?php endif; ?>
         </div>
     <?php endforeach; ?>

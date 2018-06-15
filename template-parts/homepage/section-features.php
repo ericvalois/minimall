@@ -25,7 +25,7 @@
                 <?php endif; ?>
 
                 <?php if( !empty( $item['link_label'] ) && !empty( $item['link_url'] ) ): ?>
-                    <a class="btn mt2" href="<?php echo esc_url( $item['link_url'] ); ?>"><?php echo esc_html( $item['link_label'] ); ?></a>
+                    <a class="btn mt2 btn-default" href="<?php echo esc_url( $item['link_url'] ); ?>"><?php echo esc_html( $item['link_label'] ); ?></a>
                 <?php endif; ?>
 
             </div>
