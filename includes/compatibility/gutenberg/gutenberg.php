@@ -84,12 +84,25 @@ function minimall_gutenberg_init(){
         )
     );
     add_theme_support( 'align-wide' );
+
+    /*
+    * Add support for core block's styles
+    */
+    //add_theme_support( 'wp-block-styles' );
 }
 
 /**
- * Enqueue block editor stylesheet
+ * Enqueue block editor stylesheets
  */
 add_action( 'enqueue_block_editor_assets', 'minimall_gutenberg_editor_stylesheet' );
 function minimall_gutenberg_editor_stylesheet(){
-    wp_enqueue_style('minimall-editor-css', get_template_directory_uri() . '/includes/compatibility/gutenberg/editor.min.css' );
+    // Global style
+    wp_enqueue_style('minimall-editor-global-css', get_template_directory_uri() . '/includes/compatibility/gutenberg/editor.min.css' );
+
+    // BASSCSS style
+    wp_enqueue_style('minimall-editor-basscss-css', get_template_directory_uri() . '/assets/css/gutenberg-basscss.css' );
+
+    // Theme style
+    wp_enqueue_style('minimall-editor-theme-css', get_template_directory_uri() . '/assets/css/gutenberg-minimall.css' );
 }
+

@@ -31,8 +31,9 @@
     align-items: center;
 }
 
-.edd_downloads_list .edd-submit.button{
+.edd_downloads_list .edd-submit{
     @extend .btn;
+    @extend .btn-default;
 }
 
 .edd_flex_wrap{
@@ -129,7 +130,7 @@
 }
 
 #edd-purchase-button{
-    @extend .btn-primary;
+    @extend .btn;
     font-size: 120%;
     @extend .btn-big;
 }
@@ -331,12 +332,11 @@
 */
 .page-numbers{
     @extend .btn;
+    @extend .btn-default;
     @extend .btn-small;
 }
 
-.page-numbers.current{
-    @extend .btn-primary;
-}
+.page-numbers.current{ opacity:0.7;}
 
 #edd_download_pagination{ margin: 0 1.5rem; }
 
