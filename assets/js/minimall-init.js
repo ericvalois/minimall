@@ -11,6 +11,27 @@ if( document.getElementById("main_nav_toggle") ){
     });
 }
 
+if( document.getElementsByClassName("menu-item-has-children") ){
+    //document.getElementsByClassName("menu-item-has-children").addEventListener("click", function () {
+        
+        
+
+        clickerFn = function() {
+            console.log('Click just happened');
+            if (this.classList.contains("open")) {
+                this.classList.remove("open");
+            } else {
+                this.classList.add("open");
+            }
+        }
+
+        var el = document.getElementsByClassName('menu-item-has-children');
+        for (var i=0; i < el.length; i++) {
+            // Here we have the same onclick
+            el.item(i).onclick = clickerFn;
+        }
+    //});
+}
 
 // Fix Google Page Speed Insights false error "Prioritize visible content"
 if ( document.getElementById("hero-img") && !navigator.userAgent.match(/Google Page Speed Insights/i) ){
