@@ -105,7 +105,7 @@ function minimall_custom_js(){
  */
 add_filter( 'body_class','minimall_body_classes_typo' );
 function minimall_body_classes_typo( $classes ) {
-    $classes[] = 'typo';
+    $classes[] = 'typo break-word';
 
     return $classes;
 }
