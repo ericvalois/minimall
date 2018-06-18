@@ -300,7 +300,7 @@ function minimall_top_header_sidebar(){
 /*
 * Return full width template classes
 */
-function minimall_get_full_width_template_class(){
+function minimall_get_full_width_template_class( $class = array() ){
 	if(has_filter('minimall_full_width_template_class')) {
 		$class = apply_filters('minimall_full_width_template_class', $class);
 	}
@@ -312,8 +312,7 @@ function minimall_get_full_width_template_class(){
  * Add class to full width template
  */
 add_filter('minimall_full_width_template_class','minimall_full_width_template_initial_class');
-function minimall_full_width_template_initial_class() {
-    $class = array();
+function minimall_full_width_template_initial_class( $class = array() ) {
     $class['initial'] = "clearfix break-word relative";
     $class['max-width'] = "max-width-5";
     $class['margin'] = 'ml-auto mr-auto mt3 lg-mt4 mb3';
@@ -330,7 +329,7 @@ function minimall_full_width_template_initial_class() {
 /** 
 * Return Empty template classes
 */
-function minimall_get_empty_template_class(){
+function minimall_get_empty_template_class( $class = array() ){
 	if(has_filter('minimall_empty_template_class')) {
 		$class = apply_filters('minimall_empty_template_class', $class);
 	}
@@ -342,7 +341,7 @@ function minimall_get_empty_template_class(){
  * Add class to the Empty template
  */
 add_filter('minimall_empty_template_class','minimall_empty_template_initial_class');
-function minimall_empty_template_initial_class() {
+function minimall_empty_template_initial_class( $class = array() ) {
    
     $class = "entry-content max-width-3 ml-auto mr-auto first-mt0";
 
@@ -352,7 +351,7 @@ function minimall_empty_template_initial_class() {
 /** 
 * Return Private template classes
 */
-function minimall_get_private_template_class(){
+function minimall_get_private_template_class( $class = array() ){
 	if(has_filter('minimall_private_template_class')) {
 		$class = apply_filters('minimall_private_template_class', $class);
 	}
@@ -364,7 +363,7 @@ function minimall_get_private_template_class(){
  * Add class to the private template
  */
 add_filter('minimall_private_template_class','minimall_private_template_initial_class');
-function minimall_private_template_initial_class() {
+function minimall_private_template_initial_class( $class = array() ) {
    
     $class = "clearfix break-word relative max-width-5 px2 ml-auto mr-auto mt3 lg-mt4 mb3";
 
