@@ -1,24 +1,7 @@
-.site-header {
-    min-height: 80px;
-    //z-index: 998;
-    //box-shadow: 0 0 10px rgba(33,33,33,0.25);
-}
-
-#site-navigation {
-    max-height: 0px;
-    //overflow: hidden;
-    transition-duration: 0.5s;
-    transition-timing-function: swing;
-}
-
-.open #site-navigation{
-    max-height: 1000px;
-    transition: max-height 0.5s ease-in;
-}
-
 #main_nav_toggle{
     
     .menu-close{ display: none; }
+
     svg{ 
         width: 35px;
         height: 35px;
@@ -36,24 +19,18 @@
     .menu-open{ display: none; }
 }
 
-.sub-menu li:last-child{ margin-bottom: 0; }
-
-.menu a{ color: $text-color; }
-
-#site-navigation ul{ 
-    list-style-type: none;
-}
-
 @media(max-width: 63.999em ){
+
+    .open #site-navigation{
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in;
+    }
+
     #site-navigation{
 
-        .menu{
-            list-style-type: none;
-            padding: 0.5rem 0 0 0;
-            margin-top: 1.5rem;
-        }
-
-        .menu-item{ margin: 0; }
+        max-height: 0px;
+        transition-duration: 0.5s;
+        transition-timing-function: swing;
 
         .menu-item:not(.menu-item-has-children) a,
         .menu-item-has-children > .item{ 
@@ -98,132 +75,112 @@
     
         .sub-menu a{ padding-left: 2.5rem !important; }
     
-        a{
-            font-weight: 500;
-            white-space: nowrap;
-            font-size: 15px;
-        }
     }
 }
 
 
 @media #{$breakpoint-lg} {
 
-
-
     #site-navigation{ 
         max-height: 100px;
         transition-duration: 0s;
         overflow: visible !important;
 
-        .menu{
+        .menu-item-has-children > .item a:after{
+            content: " ";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 0;
+            opacity: 0.6;
+            margin-left: 0.5rem;
+        }
+
+        .sub-menu{
+            max-height: 700px;
+            overflow: visible;
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: block;
+            float: left;
+            min-width: 200px;
+            padding: 12px 0;
+            //margin: 2px 0 0;
+            text-align: left;
+            list-style: none;
+            visibility: hidden;
+            opacity: 0;
+            background-color: #fff;
+            border: 1px solid #dcdee0;
+            background-clip: padding-box;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px -5px rgba(37,45,51, .25);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transform: translateX(0px) translateY(20px); 
+        }
+
+        .sub-menu li{
+            display: block;
+            padding: 0.3rem 0;
             margin: 0;
         }
-    }
 
-    #site-navigation li{
-        display: inline-block;
-        position: relative;
-        margin: 0;
-        padding: 0.5rem 0;
-    }
+        .sub-menu a{
+            opacity: 0.8;
+            display: block;
+            padding: 0 1rem;
+        }
 
-    #site-navigation .menu-item-has-children > .item a:after{
-        content: " ";
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 0;
-        opacity: 0.6;
-        margin-left: 0.5rem;
-    }
+        .sub-menu:after, 
+        .sub-menu:before {
+            bottom: 100%;
+            left: 30px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
 
-    #site-navigation .menu a{
-        padding: 4px 24px;
-    }
+        .sub-menu:after {
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #ffffff;
+            border-width: 10px;
+            margin-left: -10px;
+        }
 
-    #site-navigation .menu .sub-menu{
-        max-height: 700px;
-        overflow: visible;
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        display: block;
-        float: left;
-        min-width: 200px;
-        padding: 12px 0;
-        //margin: 2px 0 0;
-        text-align: left;
-        list-style: none;
-        visibility: hidden;
-        opacity: 0;
-        background-color: #fff;
-        border: 1px solid #dcdee0;
-        background-clip: padding-box;
-        border-radius: 4px;
-        box-shadow: 0 10px 40px -5px rgba(37,45,51, .25);
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        transform: translateX(0px) translateY(20px); 
-    }
+        .sub-menu:before {
+            border-color: rgba(220, 222, 224, 0);
+            border-bottom-color: #dcdee0;
+            border-width: 11px;
+            margin-left: -11px;
+        }
 
-    #site-navigation .sub-menu li{
-        display: block;
-        padding: 0;
-    }
-    
-    #site-navigation .sub-menu a{
-        padding: 4px 24px;
-        clear: both;
-        line-height: 2;
-        white-space: nowrap;
-        opacity: 0.8;
-    }
+        .menu li:hover .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0px) translateY(0px);
+            
+        }
 
-    #site-navigation .sub-menu:after, 
-    #site-navigation .sub-menu:before {
-        bottom: 100%;
-        left: 30px;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-    }
+        /*
+        * Right Panel
+        */
+        .menu .right-panel .sub-menu{
+            left: auto;
+            right: 0;
+        }
 
-    #site-navigation .sub-menu:after {
-        border-color: rgba(255, 255, 255, 0);
-        border-bottom-color: #ffffff;
-        border-width: 10px;
-        margin-left: -10px;
-    }
+        .menu .right-panel .sub-menu:after, 
+        .menu .right-panel .sub-menu:before {
+            right: 30px;
+            left: auto;
+        }
 
-    #site-navigation .sub-menu:before {
-        border-color: rgba(220, 222, 224, 0);
-        border-bottom-color: #dcdee0;
-        border-width: 11px;
-        margin-left: -11px;
-    }
-
-    #site-navigation .menu li:hover .sub-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0px) translateY(0px);
-        
-    }
-
-    // Right Panel
-    #site-navigation .menu .right-panel .sub-menu{
-        left: auto;
-        right: 0;
-    }
-
-    #site-navigation .menu .right-panel .sub-menu:after, 
-    #site-navigation .menu .right-panel .sub-menu:before {
-        right: 30px;
-        left: auto;
     }
     
 }
