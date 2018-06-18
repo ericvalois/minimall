@@ -255,10 +255,38 @@ function minimall_display_header(){
 add_action('minimall_header_sidebar', 'minimall_display_primary_menu', 10);
 function minimall_display_primary_menu(){
     if ( has_nav_menu( 'primary' ) ) :
-        wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => 'menu mxn2 lg-ml0 lg-mr0', 'before' => '<span class="item">', 'after'=>'</span>' ) );
+        wp_nav_menu( array( 
+                        'theme_location' => 'primary', 
+                        'container' => '', 
+                        'menu_class' => 'menu mxn2 p0 lg-m0 list-reset', 
+                        'before' => '<span class="item">', 
+                        'after'=>'</span>',
+                        'items_wrap' => '<ul class="%2$s">%3$s</ul>'
+        ) );
     endif;
 }
 
+/**
+ * Add class to primary menu LI
+ */
+add_filter('nav_menu_css_class', 'minimall_primary_menu_more_classes_li', 1, 3);
+function minimall_primary_menu_more_classes_li($classes, $item, $args) {
+    if($args->theme_location == 'primary') {
+        $classes[] = 'm0 lg-mx1 relative lg-inline-block lg-py1';
+    }
+    return $classes;
+    
+}
+
+/**
+ * Add class to primary menu a
+ */
+add_filter('wp_nav_menu','minimall_primary_menu_more_classes_link');
+function minimall_primary_menu_more_classes_link( $initial ) {
+    return preg_replace('/<a /', '<a class="text-color weight500 font-size-100 nowrap lg-p1"', $initial);
+}
+
+  
 /**
  * Add top sidebar
  */
