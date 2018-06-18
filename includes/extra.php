@@ -224,7 +224,7 @@ function minimall_modify_read_more_link() {
 add_action('minimall_header', 'minimall_display_header');
 function minimall_display_header(){
 ?>
-<header id="masthead" class="site-header line-height-3 flex items-center flex-wrap col-12 bg-white py2 px2" role="banner">
+<header id="masthead" class="site-header line-height-3 flex items-center flex-wrap col-12 bg-white py2 px2 overflow-hidden lg-overflow-visible" role="banner">
         
     <div class="flex col-12 lg-col-auto justify-between items-center line-height-1 header-menu">
         <div class="site-branding flex-auto inline-flex items-center">

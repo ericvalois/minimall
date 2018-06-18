@@ -130,6 +130,8 @@
 
 .overflow-auto   { overflow: auto }
 
+.overflow-visible{ overflow: visible }
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -1156,6 +1158,7 @@
   .sm-overflow-hidden { overflow: hidden }
   .sm-overflow-scroll { overflow: scroll }
   .sm-overflow-auto   { overflow: auto }
+  .sm-overflow-visible{ overflow: visible }
 
   .sm-left  { float: left }
   .sm-right { float: right }
@@ -1173,6 +1176,7 @@
   .md-overflow-hidden { overflow: hidden }
   .md-overflow-scroll { overflow: scroll }
   .md-overflow-auto   { overflow: auto }
+  .md-overflow-visible{ overflow: visible }
 
   .md-left  { float: left }
   .md-right { float: right }
@@ -1190,6 +1194,7 @@
   .lg-overflow-hidden { overflow: hidden }
   .lg-overflow-scroll { overflow: scroll }
   .lg-overflow-auto   { overflow: auto }
+  .lg-overflow-visible{ overflow: visible }
 
   .lg-left  { float: left }
   .lg-right { float: right }
