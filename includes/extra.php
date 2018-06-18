@@ -298,13 +298,24 @@ function minimall_top_header_sidebar(){
 }
 
 /*
-* 
+* Return full width template classes
 */
-function minimall_full_width_class(){
+function minimall_get_full_width_template_class(){
+	if(has_filter('minimall_full_width_template_class')) {
+		$class = apply_filters('minimall_full_width_template_class', $class);
+	}
+ 
+	return $class;
+}
+
+/**
+ * Add class to full width template
+ */
+add_filter('minimall_full_width_template_class','minimall_full_width_template_initial_class');
+function minimall_full_width_template_initial_class() {
     $class = array();
     $class['initial'] = "clearfix break-word relative";
     $class['max-width'] = "max-width-5";
-    //$class['padding'] = "px2";
     $class['margin'] = 'ml-auto mr-auto mt3 lg-mt4 mb3';
 
     if( get_theme_mod('edd_checkout_boxed','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ) {
@@ -312,8 +323,55 @@ function minimall_full_width_class(){
     }
 
     $class = implode(" ",$class);
-    echo 'class="' . $class . '"';
+    
+    return $class;
 }
+
+/** 
+* Return Empty template classes
+*/
+function minimall_get_empty_template_class(){
+	if(has_filter('minimall_empty_template_class')) {
+		$class = apply_filters('minimall_empty_template_class', $class);
+	}
+ 
+	return $class;
+}
+
+/**
+ * Add class to the Empty template
+ */
+add_filter('minimall_empty_template_class','minimall_empty_template_initial_class');
+function minimall_empty_template_initial_class() {
+   
+    $class = "entry-content max-width-3 ml-auto mr-auto first-mt0";
+
+    return $class;
+}
+
+/** 
+* Return Private template classes
+*/
+function minimall_get_private_template_class(){
+	if(has_filter('minimall_private_template_class')) {
+		$class = apply_filters('minimall_private_template_class', $class);
+	}
+ 
+	return $class;
+}
+
+/**
+ * Add class to the private template
+ */
+add_filter('minimall_private_template_class','minimall_private_template_initial_class');
+function minimall_private_template_initial_class() {
+   
+    $class = "clearfix break-word relative max-width-5 px2 ml-auto mr-auto mt3 lg-mt4 mb3";
+
+    return $class;
+}
+
+
               
 /*
 * Add markup for after content hook
@@ -346,7 +404,12 @@ function minimall_display_entry_footer(){
 */
 add_action('minimall_before_post_content','minimall_post_header_sidebar', 10);
 function minimall_post_header_sidebar(){
-    if ( is_active_sidebar( 'post-header-sidebar' ) ) {
+
+    global $post;
+
+    if( !is_object($post) ){ return false; }
+
+    if ( is_active_sidebar( 'post-header-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-before-sidebar", true) ) {
     ?>
         <section class="widget-area px2" role="complementary">
             <?php dynamic_sidebar( 'post-header-sidebar' ); ?>
@@ -360,7 +423,11 @@ function minimall_post_header_sidebar(){
 */
 add_action('minimall_after_post_content','minimall_post_footer_sidebar', 50);
 function minimall_post_footer_sidebar(){
-    if ( is_active_sidebar( 'post-footer-sidebar' ) ) {
+    global $post;
+
+    if( !is_object($post) ){ return false; }
+
+    if ( is_active_sidebar( 'post-footer-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ) {
     ?>
         <section class="mt4 mb4 widget-area" role="complementary">
             <?php dynamic_sidebar( 'post-footer-sidebar' ); ?>
@@ -375,7 +442,11 @@ function minimall_post_footer_sidebar(){
 */
 add_action('minimall_before_page_content','minimall_pages_header_sidebar', 10);
 function minimall_pages_header_sidebar(){
-    if ( is_active_sidebar( 'page-header-sidebar' ) ) {
+    global $post;
+
+    if( !is_object($post) ){ return false; }
+
+    if ( is_active_sidebar( 'page-header-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-before-sidebar", true) ) {
     ?>
         <section class="widget-area px2" role="complementary">
             <?php dynamic_sidebar( 'page-header-sidebar' ); ?>
@@ -389,10 +460,32 @@ function minimall_pages_header_sidebar(){
 */
 add_action('minimall_after_page_content','minimall_pages_footer_sidebar', 50);
 function minimall_pages_footer_sidebar(){
-    if ( is_active_sidebar( 'page-footer-sidebar' ) ) {
+    global $post;
+
+    if( !is_object($post) ){ return false; }
+
+    if ( is_active_sidebar( 'page-footer-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ) {
     ?>
         <section class="mt4 mb4 widget-area" role="complementary">
             <?php dynamic_sidebar( 'page-footer-sidebar' ); ?>
+        </section>
+    <?php 
+    }
+}
+
+/*
+* Add after content sidebar on the Empty template
+*/
+add_action('minimall_after_empty_content','minimall_empty_footer_sidebar', 50);
+function minimall_empty_footer_sidebar(){
+    global $post;
+
+    if( !is_object($post) ){ return false; }
+
+    if ( is_active_sidebar( 'empty-footer-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ) {
+    ?>
+        <section class="mt4 mb4 widget-area" role="complementary">
+            <?php dynamic_sidebar( 'empty-footer-sidebar' ); ?>
         </section>
     <?php 
     }
@@ -403,26 +496,14 @@ function minimall_pages_footer_sidebar(){
 */
 add_action('minimall_after_post_content','minimall_comment',100);
 add_action('minimall_after_page_content','minimall_comment',100);
+add_action('minimall_after_empty_content','minimall_comment',100);
 function minimall_comment(){
     if ( ( comments_open() || get_comments_number() ) && !is_singular('download') ) :
         
         echo '<section class="comment-section max-width-3 ml-auto mr-auto">';
-/*
-        $comments_number = get_comments_number();
-        if ( $comments_number <= 1 ) {
-            $comment_label = esc_html__("Comment","minimall");
-        } elseif( $comments_number > 1 ) {
-            $comment_label = esc_html__("Comments","minimall");
-        }
-        if( isset($comment_label) ){
-            echo '<h3 class="comments-title separator mt4 mb4 center bold">';
-            echo $comment_label;
-            echo '</h3>';
-        }
-*/
+
         comments_template();
 
-        //echo '</div>';
     endif;
 }
 

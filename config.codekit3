@@ -1195,6 +1195,13 @@
 		"oAP": "\/includes\/helper.php",
 		"oF": 0
 		},
+	"\/includes\/page-options.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/page-options.php",
+		"oF": 0
+		},
 	"\/includes\/partials.php": {
 		"cB": 0,
 		"ft": 8192,

@@ -1,5 +1,5 @@
 <?php
-if ( ! is_user_logged_in() && get_theme_mod('private_dashboard_private',false) && $_SERVER['HTTP_HOST'] != 'minimall.dev' ) {
+if ( ! is_user_logged_in() && get_theme_mod('private_dashboard_private',false) && $_SERVER['HTTP_HOST'] != 'minimall.local' ) {
     $redirect_url = get_theme_mod('private_dashboard_login_url', home_url('login'));
     wp_redirect( $redirect_url, 301 ); exit;
 }
@@ -8,7 +8,7 @@ if ( ! is_user_logged_in() && get_theme_mod('private_dashboard_private',false) &
 */
 get_header(); ?>
 
-    <div id="site-content" <?php minimall_site_content_class(); ?>>
+    <div id="site-content" class="<?php echo minimall_get_private_template_class(); ?>">
         <header class="">
             <?php the_title( '<h1 class="entry-title mb3 mt0">', '</h1>' ); ?>
         </header><!-- .entry-header -->

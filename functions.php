@@ -268,6 +268,16 @@ function minimall_widgets_init() {
 		'before_title'  => '<h5 class="widget-title mb2 mt0">',
 		'after_title'   => '</h5>',
     ) );
+
+    register_sidebar( array(
+		'name'          => esc_html__( 'After Empty Content', 'minimall' ),
+		'id'            => 'empty-footer-sidebar',
+		'description'   => __("Sidebar display after the empty template's content","minimall"),
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="widget-title mb2 mt0">',
+		'after_title'   => '</h5>',
+    ) );
     
     register_sidebar( array(
 		'name'          => esc_html__( 'Private Dashboard sidebar', 'minimall' ),
@@ -315,6 +325,11 @@ require( get_template_directory() . '/includes/admin/customizer/minimall-kirki.p
  * Customizer Options
  */
 require( get_template_directory() . '/includes/admin/customizer/customizer.php' );
+
+/**
+ * On Page Options
+ */
+require( get_template_directory() . '/includes/page-options.php' );
 
 
 /**

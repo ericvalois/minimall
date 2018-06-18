@@ -5,7 +5,7 @@
 */
 get_header(); ?>
 
-    <div id="primary" <?php minimall_full_width_class(); ?>>
+    <div id="primary" class="<?php echo minimall_get_full_width_template_class(); ?>">
         <main id="main" class="site-main" role="main">
             <?php
             while ( have_posts() ) : the_post();
