@@ -354,3 +354,32 @@ input[type=submit].edd-submit{
 */
 .single-download .edd-sl-upgrade-link,
 .edd_download_purchase_form .edd-sl-upgrade-link{ display: none; }
+
+/*
+* Gutenberg Support
+*/
+.download-template .entry-content > span > div > *,
+.download-template .entry-content-full > span > div > *{
+    width: calc(100% - 3rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-template .entry-content .alignfull  {
+    width: 100vw;
+    //max-width: 100%;
+    margin-left:    calc(50% - 50vw);
+    margin-right:   calc(50% - 50vw);
+}
+
+@media (min-width: 815px) {
+
+
+
+    .download-template .entry-content > span > div .alignwide{
+        margin-left:    calc(25% - 25vw);
+        margin-right:   calc(25% - 25vw);
+        width:          auto;
+        max-width:      1000%;
+    }
+}
