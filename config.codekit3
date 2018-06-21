@@ -100,6 +100,26 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/assets\/css\/gutenberg-basscss.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/gutenberg-basscss.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/css\/gutenberg-minimall.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/gutenberg-minimall.min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/assets\/images\/default-hero-lg.jpg": {
 		"ft": 16384,
 		"iS": 140584,
@@ -393,7 +413,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/basscss.css",
+		"oAP": "\/assets\/css\/gutenberg-basscss.css",
 		"oF": 3,
 		"oS": 3,
 		"uL": 1
@@ -433,6 +453,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/sass\/common\/_button.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/style.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -561,9 +594,9 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/style.css",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/gutenberg-minimall.css",
+		"oF": 3,
 		"oS": 3,
 		"uL": 1
 		},
@@ -618,26 +651,6 @@
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
-		},
-	"\/assets\/svg\/_small-down.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/svg\/_small-down.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/assets\/svg\/small-down.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/svg\/small-down.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		},
 	"\/build": {
 		"ft": 65536,
@@ -995,6 +1008,13 @@
 		"oAP": "\/includes\/compatibility\/edd\/global-edd.php",
 		"oF": 0
 		},
+	"\/includes\/compatibility\/edd\/gutenberg-support.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/compatibility\/edd\/gutenberg-support.php",
+		"oF": 0
+		},
 	"\/includes\/compatibility\/edd\/widget-edd-cart.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1036,6 +1056,46 @@
 		"oA": 2,
 		"oAP": "\/includes\/compatibility\/edd\/widget-edd-reviews.php",
 		"oF": 0
+		},
+	"\/includes\/compatibility\/gutenberg\/editor-full.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/editor-full.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/compatibility\/gutenberg\/editor-full.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/editor-full.min.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/compatibility\/gutenberg\/editor.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/editor.min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/compatibility\/gutenberg\/editor.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/compatibility\/gutenberg\/editor.min.min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/includes\/compatibility\/gutenberg\/gutenberg.php": {
 		"cB": 0,
@@ -1133,6 +1193,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/helper.php",
+		"oF": 0
+		},
+	"\/includes\/page-options.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/page-options.php",
 		"oF": 0
 		},
 	"\/includes\/partials.php": {

@@ -23,6 +23,18 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 
+		<h2 class="comments-title center separator mt4 mb4">
+			<?php
+			$comment_count = get_comments_number();
+			if ( '1' === $comment_count ) {
+				esc_html_e( 'Comment', 'minimall' );
+			} elseif( $comment_count > '1' ) {
+				esc_html_e( 'Comments', 'minimall' );
+			}
+			?>
+		</h2><!-- .comments-title -->
+
+        
 		<?php the_comments_navigation(); ?>
 
 		<ol class="comment-list list-reset">
@@ -52,7 +64,7 @@ if ( post_password_required() ) {
 		comment_form( array(
 			'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title center separator mt4 mb4">',
 			'title_reply_after'  => '</h3>',
-			'class_submit'		 => 'btn mb2 btn_comment',
+			'class_submit'		 => 'btn btn-default mb2 btn_comment',
 			'class_form' => ' ',
 			'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( '<a href="%1$s" class="tags">Logged in as %2$s</a> <a href="%3$s" class="tags" title="Log out of this account">Log out?</a>','minimall' ), esc_url( admin_url( 'profile.php' ) ), $user_identity, esc_url( wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) ) . '</p>',
 			'comment_field' => '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Comment', 'minimall' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" ></textarea></p>',

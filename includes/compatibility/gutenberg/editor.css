@@ -1,0 +1,117 @@
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: calc(16px + 3 * (100vw - 460px) / 740);
+    line-height: 1.8;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+ }
+ @media (max-width: 459px) {
+     html { font-size: 16px; }
+ }
+ @media (min-width: 1200px) {
+     html { font-size: 19px; }
+ }
+
+ body.gutenberg-editor-page .editor-post-title{ text-align: center;}
+/*
+* Title Width
+*/
+/* Main column width */
+body.gutenberg-editor-page .editor-post-title,
+body.gutenberg-editor-page .editor-default-block-appender,
+body.gutenberg-editor-page .editor-block-list__block {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Width of "wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
+    max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+    max-width: none;
+}
+
+/*
+* Text styles
+*/
+.editor-post-title .editor-post-title__input{
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 51px;
+    text-align: center;
+    
+}
+
+/*
+* Colors
+*/
+.wp-block-button .pink { color: rgb(247, 141, 167) }
+.wp-block-button .has-fuchsia-background-color { background-color: rgb(247, 141, 167); }
+.wp-block-button .has-fuchsia-color { color: rgb(247, 141, 167); }
+
+.wp-block-button .lime  { color: rgb(123, 220, 181) }
+.wp-block-button .has-lime-background-color { background-color: rgb(123, 220, 181); }
+.wp-block-button .has-lime-color { color: rgb(123, 220, 181); }
+
+.wp-block-button .yellow  { color: rgb(252, 185, 0) }
+.wp-block-button .has-yellow-background-color { background-color: rgb(252, 185, 0); }
+.wp-block-button .has-yellow-color { color: rgb(252, 185, 0); }
+
+.wp-block-button .orange  { color: rgb(255, 105, 0) }
+.wp-block-button .has-orange-background-color { background-color: rgb(255, 105, 0); }
+.wp-block-button .has-orange-color { color: rgb(255, 105, 0); }
+
+.wp-block-button .red     { color: rgb(207, 46, 46) }
+.wp-block-button .has-red-background-color { background-color: rgb(207, 46, 46); }
+.wp-block-button .has-red-color { color: rgb(207, 46, 46); }
+
+.wp-block-button .green { color: rgb(0, 208, 132) }
+.wp-block-button .has-green-background-color { background-color: rgb(0, 208, 132); }
+.wp-block-button .has-green-color { color: rgb(0, 208, 132); }
+
+.wp-block-button .pale-blue { color: rgb(142, 209, 252) }
+.wp-block-button .has-pale-blue-background-color { background-color: rgb(142, 209, 252); }
+.wp-block-button .has-pale-blue-color { color: rgb(142, 209, 252); }
+
+.wp-block-button .blue { color: rgb(6, 147, 227) }
+.wp-block-button .has-blue-background-color { background-color: rgb(6, 147, 227); }
+.wp-block-button .has-blue-color { color: rgb(6, 147, 227); }
+
+.wp-block-button .bg-darken-1 { background-color: rgba(0, 0, 0, .0625) }
+.wp-block-button .has-darken-1-background-color { background-color: rgba(0, 0, 0, .0625); }
+.wp-block-button .has-darken-1-color { color: rgba(0, 0, 0, .0625); }
+
+.wp-block-button .bg-darken-2 { background-color: rgba(0, 0, 0, .125) }
+.wp-block-button .has-darken-2-background-color { background-color: rgba(0, 0, 0, .125) }
+.wp-block-button .has-darken-2-color { color: rgba(0, 0, 0, .125) }
+
+.wp-block-button .bg-darken-3 { background-color: rgba(0, 0, 0, .25) }
+.wp-block-button .has-darken-3-background-color { background-color: rgba(0, 0, 0, .25) }
+.wp-block-button .has-darken-3-color { color: rgba(0, 0, 0, .25) }
+
+.wp-block-button .bg-darken-4 { background-color: rgba(0, 0, 0, .5) }
+.wp-block-button .has-darken-4-background-color { background-color: rgba(0, 0, 0, .5) }
+.wp-block-button .has-darken-4-color { color: rgba(0, 0, 0, .5) }
+
+.wp-block-button .bg-lighten-1 { background-color: rgba(255, 255, 255, .0625) }
+.wp-block-button .has-lighten-4-background-color { background-color: rgba(255, 255, 255, .5) }
+.wp-block-button .has-lighten-4-color { color: rgba(255, 255, 255, .5) }
+
+.wp-block-button .bg-lighten-2 { background-color: rgba(255, 255, 255, .125) }
+.wp-block-button .has-lighten-4-background-color { background-color: rgba(255, 255, 255, .5) }
+.wp-block-button .has-lighten-4-color { color: rgba(255, 255, 255, .5) }
+
+.wp-block-button .bg-lighten-3 { background-color: rgba(255, 255, 255, .25) }
+.wp-block-button .has-lighten-4-background-color { background-color: rgba(255, 255, 255, .5) }
+.wp-block-button .has-lighten-4-color { color: rgba(255, 255, 255, .5) }
+
+.wp-block-button .bg-lighten-4 { background-color: rgba(255, 255, 255, .5) }
+.wp-block-button .has-lighten-4-background-color { background-color: rgba(255, 255, 255, .5) }
+.wp-block-button .has-lighten-4-color { color: rgba(255, 255, 255, .5) }

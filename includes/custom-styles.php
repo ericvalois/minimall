@@ -91,18 +91,15 @@ function minimall_custom_styles(){
     .btn-outline,
     .social-network:hover{ border-color: '. $main_color .'; }
 
-    .btn:hover, .button:hover ,button:hover, input[type="submit"]:hover, input[type="button"]:hover,
-    .btn:focus, .button:focus, button:focus, input[type="submit"]:focus, input[type="button"]:focus,
-    .btn.active,.btn:active, .button:active, button:active, input[type="submit"]:active, input[type="button"]:active,
     .btn.btn-primary,
-    .edd_downloads_list .edd-submit.button:hover,
     #edd-purchase-button{
-        border-color: '. $main_color .';
         background-color: '. $main_color .';
-        color: #fff;
     }
 
-    #site-navigation .menu-item-has-children > a:after{background: #fff url('. get_template_directory_uri() .'/assets/svg/small-down.svg) no-repeat center center;}
+    #site-navigation .sub-menu{display: none}
+    
+    .menu-item-has-children .item:after,
+    .menu-item-has-children a:after{background: transparent url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHdpZHRoPSIxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtOCAxMS40LTUuNC01LjQgMS40LTEuNCA0IDQgNC00IDEuNCAxLjR6Ii8+PC9zdmc+) no-repeat center center;}
     ';
     
     return $minimall_custom_css;

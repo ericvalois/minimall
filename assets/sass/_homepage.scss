@@ -4,3 +4,5 @@
 }
 
 .hero_desc p:last-child{ margin-bottom: 0;}
+
+.page-template-homepage main .btn{ @extend .btn-default; }

@@ -306,75 +306,26 @@ input[type='search']::-webkit-search-results-decoration {
    generic button mixin
    ==================== */
 /* applying the mixin */
-.btn,
 .button,
 button,
 input[type='submit'],
 input[type='button'],
 input[type='reset'],
-input[type='file'] + label,
-.wp-block-button .wp-block-button__link {
-    font-family: $base-font-family;
-    line-height: $button-height;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: $button-height;
-    padding: 0 1.6rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: $button-border-color;
-    border-radius: $button-border-radius;
-    outline: 0;
-    text-decoration: none;
-    font-weight: 500;
-    white-space: nowrap;
-    color: $button-text-color;
-    background-color: $button-background-color;
-    transition: border-color $speed $easing, color $speed $easing, background-color $speed $easing, padding 0.3s ease;
-    cursor: pointer;
-    font-size: 16px;
-    -webkit-appearance: none;
+input[type='file'] + label {
+    @extend %btn-shared;
 }
 
-.btn,
 .button,
+button,
 input[type='submit'],
 input[type='button'],
 input[type='reset'],
-input[type='file'] + label, {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+input[type='file'] + label{ 
+    @extend %btn-default-bg-color;
 }
 
-.btn:hover, .button:hover ,button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='reset']:hover, input[type='file'] + label:hover {
-    color: $button-hover-text-color;
-}
-
-.btn-outline{
-    background-color: #fff;
-    border-color: $text-color !important;
-    color: $text-color !important;
-    box-shadow: none;
-}
-
-.btn-outline:hover{
-    background-color: #fff;
-}
-
-.btn-primary:hover{
-    background-color: $black !important;
-    border-color: $black !important;
-}
-
-.btn-big{
-    height: 3rem;
-    height: calc($button-height * 1.2 );
-}
-
-.btn-small{
-    height: 2rem;
-    height: calc($button-height * 0.8 );
-    padding: 0 0.75rem;
+.button:hover ,button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='reset']:hover, input[type='file'] + label:hover {
+    @extend %btn-hover;
 }
 
 form{ max-width: 768px; }

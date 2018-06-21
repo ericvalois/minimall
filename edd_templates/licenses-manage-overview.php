@@ -93,13 +93,13 @@ if ( is_user_logged_in() ) :
 								<?php if( edd_sl_renewals_allowed() ) : ?>
                                     <div class="edd_sl_renewal">
 	                                    <?php if( 'expired' === edd_software_licensing()->get_license_status( $license->ID ) && edd_software_licensing()->can_renew( $license->ID ) ) : ?>
-                                            <a class="btn btn-black mt1 mb1" href="<?php echo edd_software_licensing()->get_renewal_url( $license->ID ); ?>" title="<?php esc_attr_e( 'Renew Now', 'edd_sl' ); ?>"><?php _e( 'Renew Now', 'edd_sl' ); ?></a>
+                                            <a class="btn btn-default btn-small mt1 mb1" href="<?php echo edd_software_licensing()->get_renewal_url( $license->ID ); ?>" title="<?php esc_attr_e( 'Renew Now', 'edd_sl' ); ?>"><?php _e( 'Renew Now', 'edd_sl' ); ?></a>
 	                                    <?php elseif( ! edd_software_licensing()->is_lifetime_license( $license->ID ) && edd_software_licensing()->can_extend( $license->ID ) ) : ?>
-                                            <a class="btn btn-black mt1 mb1" href="<?php echo edd_software_licensing()->get_renewal_url( $license->ID ); ?>" title="<?php esc_attr_e( 'Renew Now', 'edd_sl' ); ?>"><?php _e( 'Renew Now', 'edd_sl' ); ?></a>
+                                            <a class="btn btn-default btn-small mt1 mb1" href="<?php echo edd_software_licensing()->get_renewal_url( $license->ID ); ?>" title="<?php esc_attr_e( 'Renew Now', 'edd_sl' ); ?>"><?php _e( 'Renew Now', 'edd_sl' ); ?></a>
 	                                    <?php endif; ?>
                                     </div>
 								<?php endif; ?>
-
+                                admin12744069
 							<?php endif; ?>
 						</div>
 						<a class="edd_sl_purchase_number" href="<?php echo esc_url( edd_get_success_page_uri( '?payment_key=' . edd_get_payment_key( $payment_id ) ) ); ?>" title="<?php esc_attr_e( 'View Purchase Record', 'edd_sl' ); ?>"><?php echo __( 'View Details and Downloads', 'edd_sl' ); ?></a>

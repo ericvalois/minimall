@@ -1,25 +1,23 @@
 <?php
 /*
 * Template name: Full width
-* Template Post Type: post, page
+* Template Post Type: post, page, download
 */
 get_header(); ?>
 
-    <div id="site-content" <?php minimall_site_content_class(); ?>>
-        <div id="primary" class="content-area">
-            <main id="main" class="site-main" role="main">
-                <?php
-                while ( have_posts() ) : the_post();
+    <div id="primary" class="<?php echo minimall_get_full_width_template_class(); ?>">
+        <main id="main" class="site-main" role="main">
+            <?php
+            while ( have_posts() ) : the_post();
 
-                    get_template_part( 'template-parts/content', 'full-width' );
+                get_template_part( 'template-parts/content', 'full-width' );
 
-                endwhile; // End of the loop.
-                ?>
+            endwhile; // End of the loop.
+            ?>
 
-            </main><!-- #main -->
-            
-        </div><!-- #primary -->
-    </div><!-- #site-content -->
+        </main><!-- #main -->
+        
+    </div><!-- #primary -->
 
 <?php
 get_footer();

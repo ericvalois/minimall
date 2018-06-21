@@ -1,3 +1,4 @@
+// Toggle Main Menu
 if( document.getElementById("main_nav_toggle") ){
     document.getElementById("main_nav_toggle").addEventListener("click", function () {
         
@@ -11,6 +12,22 @@ if( document.getElementById("main_nav_toggle") ){
     });
 }
 
+// Toggle Child Menu
+if( document.getElementsByClassName("menu-item-has-children") ){
+
+        toggleChildMenu = function() {
+            if (this.classList.contains("open")) {
+                this.classList.remove("open");
+            } else {
+                this.classList.add("open");
+            }
+        }
+
+        var el = document.getElementsByClassName('menu-item-has-children');
+        for (var i=0; i < el.length; i++) {
+            el.item(i).onclick = toggleChildMenu;
+        }
+}
 
 // Fix Google Page Speed Insights false error "Prioritize visible content"
 if ( document.getElementById("hero-img") && !navigator.userAgent.match(/Google Page Speed Insights/i) ){

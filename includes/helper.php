@@ -87,21 +87,21 @@ function minimall_pagination($pages = '', $range = 2){
     if(1 != $pages)
     {
         echo '<nav class="pagination"><ul class="list-reset flex flex-wrap xxs-text caps">';
-        if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<li><a class="btn btn-black btn-black btn-small" href="'.get_pagenum_link(1).'">' .esc_html__("First","minimall"). '</a></li>';
-        if($paged > 1 && $showitems < $pages) echo '<li><a class="btn btn-black btn-black btn-small" href="'.get_pagenum_link($paged - 1).'">' .esc_html__("Previus page","minimall"). '</a></li>';
+        if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link(1).'">' .esc_html__("First","minimall"). '</a></li>';
+        if($paged > 1 && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link($paged - 1).'">' .esc_html__("Previus page","minimall"). '</a></li>';
 
         for ($i=1; $i <= $pages; $i++)
         {
             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
             {
                 echo '<li>';
-                echo ($paged == $i)? '<a class="active btn btn-black btn-black btn-small" href="#">'.$i.'</a>':'<a href="'.get_pagenum_link($i).'"  class="btn btn-black inactive btn-black btn-small">'.$i.'</a>';
+                echo ($paged == $i)? '<a class="active-page btn btn-default btn-small" href="#">'.$i.'</a>':'<a href="'.get_pagenum_link($i).'"  class="btn btn-primary inactive btn-small">'.$i.'</a>';
                 echo "</li>";
             }
         }
 
-        if ($paged < $pages && $showitems < $pages) echo '<li><a class="btn btn-black btn-black btn-small" href="'.get_pagenum_link($paged + 1).'">' .esc_html__("Next page","minimall"). '</a></li>';  
-        if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<li class=""><a class="btn btn-black btn-black btn-small" href="'.get_pagenum_link($pages).'">' .esc_html__("Last","minimall"). '</a></li>';
+        if ($paged < $pages && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link($paged + 1).'">' .esc_html__("Next page","minimall"). '</a></li>';  
+        if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<li class=""><a class="btn btn-default btn-small" href="'.get_pagenum_link($pages).'">' .esc_html__("Last","minimall"). '</a></li>';
         echo "</ul></nav>\n";
     }
 }
@@ -296,26 +296,29 @@ if( ! function_exists( 'wp_is_login' ) ) {
 * Add gutenberg class
 * Deprecated since v1.4.6
 */
-function minimall_conditionnal_gutenberg_class( $is_class = "", $is_not_class = "" ){
+if( ! function_exists( 'minimall_conditionnal_gutenberg_class' ) ) {
+    function minimall_conditionnal_gutenberg_class( $is_class = "", $is_not_class = "" ){
 
-    if( (!is_page() && !is_single()) ){ return false; }
+        if( (!is_page() && !is_single()) ){ return false; }
 
-    if( minimall_is_gutenberg_active() && function_exists('the_gutenberg_project') && gutenberg_post_has_blocks( get_the_ID() ) ){
-        return $is_class;
-    }else{
-        return $is_not_class;
+        if( minimall_is_gutenberg_active() && function_exists('the_gutenberg_project') && gutenberg_post_has_blocks( get_the_ID() ) ){
+            return $is_class;
+        }else{
+            return $is_not_class;
+        }
     }
 }
 
 /* 
 * Is Gutenberg post
 */
-function minimall_is_gutenberg_post(){
+if( ! function_exists( 'minimall_is_gutenberg_post' ) ) {
+    function minimall_is_gutenberg_post(){
 
-    if( minimall_is_gutenberg_active() && function_exists('the_gutenberg_project') && gutenberg_post_has_blocks( get_the_ID() ) ){
-        return true;
+        if( minimall_is_gutenberg_active() && function_exists('the_gutenberg_project') && gutenberg_post_has_blocks( get_the_ID() ) ){
+            return true;
+        }
+
+        return false; 
     }
-
-    return false;
-    
 }

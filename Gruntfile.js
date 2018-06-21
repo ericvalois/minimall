@@ -1,3 +1,6 @@
+var included_class = ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'];
+var excluded_class = ['.screen-reader-text', '.btn', '.menu-item-has-children', '#site-navigation .sub-menu', '#site-navigation .sub-menu:after', '#site-navigation .sub-menu:before'];
+
 module.exports = function(grunt) {
     grunt.initConfig({
 
@@ -7,14 +10,11 @@ module.exports = function(grunt) {
             home: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1200,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -24,14 +24,11 @@ module.exports = function(grunt) {
             archive: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -41,14 +38,11 @@ module.exports = function(grunt) {
             page: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -58,14 +52,11 @@ module.exports = function(grunt) {
             single: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -75,14 +66,11 @@ module.exports = function(grunt) {
             page_404: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -92,14 +80,11 @@ module.exports = function(grunt) {
             edd_single: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -109,14 +94,11 @@ module.exports = function(grunt) {
             edd_archive: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -126,14 +108,11 @@ module.exports = function(grunt) {
             edd_checkout: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -143,14 +122,11 @@ module.exports = function(grunt) {
             full_width: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
@@ -160,31 +136,25 @@ module.exports = function(grunt) {
             dashboard: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1000,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center','.lg-col-4','.lg-col-8','.lg-col-6','.lg-col-12'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },
-                src: 'http://minimall.local/subscriptions/',
+                src: 'http://minimall.local/private-dashboard-template/',
                 dest: 'includes/compatibility/autoptimize/critical/dashboard.css'
             },
             empty_template: {
                 options: {
                     base: '',
-                    css: [
-                        'style.css',
-                        'assets/css/basscss.css',
-                    ],
+                    css: ['style.css'],
                     width: 1200,
                     height: 1500,
-                    include: ['.hide', '.justify-end','.justify-start','.justify-between','.justify-center'],
-                    ignore: ['.screen-reader-text', '.btn'],
+                    include: included_class,
+                    ignore: excluded_class,
                     minify: false,
                     timeout: 100000,
                 },

@@ -1,6 +1,7 @@
-.edd_downloads_list{
-    margin-left: -$space2; 
-    margin-right: -$space2
+.entry-content-full .edd_downloads_list{
+    //margin-left: -$space2; 
+    //margin-right: -$space2;
+    width: auto;
 }
 
 .edd_downloads_list .edd_download_excerpt p{
@@ -30,8 +31,9 @@
     align-items: center;
 }
 
-.edd_downloads_list .edd-submit.button{
+.edd_downloads_list .edd-submit{
     @extend .btn;
+    @extend .btn-default;
 }
 
 .edd_flex_wrap{
@@ -128,7 +130,7 @@
 }
 
 #edd-purchase-button{
-    @extend .btn-primary;
+    @extend .btn;
     font-size: 120%;
     @extend .btn-big;
 }
@@ -330,12 +332,11 @@
 */
 .page-numbers{
     @extend .btn;
+    @extend .btn-default;
     @extend .btn-small;
 }
 
-.page-numbers.current{
-    @extend .btn-primary;
-}
+.page-numbers.current{ opacity:0.7;}
 
 #edd_download_pagination{ margin: 0 1.5rem; }
 
@@ -353,3 +354,32 @@ input[type=submit].edd-submit{
 */
 .single-download .edd-sl-upgrade-link,
 .edd_download_purchase_form .edd-sl-upgrade-link{ display: none; }
+
+/*
+* Gutenberg Support
+*/
+.download-template .entry-content > span > div > *,
+.download-template .entry-content-full > span > div > *{
+    width: calc(100% - 3rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-template .entry-content .alignfull  {
+    width: 100vw;
+    //max-width: 100%;
+    margin-left:    calc(50% - 50vw);
+    margin-right:   calc(50% - 50vw);
+}
+
+@media (min-width: 815px) {
+
+
+
+    .download-template .entry-content > span > div .alignwide{
+        margin-left:    calc(25% - 25vw);
+        margin-right:   calc(25% - 25vw);
+        width:          auto;
+        max-width:      1000%;
+    }
+}

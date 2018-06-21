@@ -81,7 +81,7 @@ function minimall_setup() {
     add_theme_support( 'ttfb_toolkit_debug_widget');
 
     // Gutenberg Custom Modules
-    add_theme_support( 'ttfb_toolkit_gutenberg_pillar_post');
+    add_theme_support( 'ttfb_toolkit_gutenberg_chapter-block');
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'minimall_custom_background_args', array(
@@ -268,6 +268,16 @@ function minimall_widgets_init() {
 		'before_title'  => '<h5 class="widget-title mb2 mt0">',
 		'after_title'   => '</h5>',
     ) );
+
+    register_sidebar( array(
+		'name'          => esc_html__( 'After Empty Content', 'minimall' ),
+		'id'            => 'empty-footer-sidebar',
+		'description'   => __("Sidebar display after the empty template's content","minimall"),
+		'before_widget' => '<div id="%1$s" class="%2$s clearfix widgets mt3 mb3">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="widget-title mb2 mt0">',
+		'after_title'   => '</h5>',
+    ) );
     
     register_sidebar( array(
 		'name'          => esc_html__( 'Private Dashboard sidebar', 'minimall' ),
@@ -316,6 +326,11 @@ require( get_template_directory() . '/includes/admin/customizer/minimall-kirki.p
  */
 require( get_template_directory() . '/includes/admin/customizer/customizer.php' );
 
+/**
+ * On Page Options
+ */
+require( get_template_directory() . '/includes/page-options.php' );
+
 
 /**
  * Enqueue scripts and styles.
@@ -333,7 +348,7 @@ function minimall_scripts() {
     }
 
     // Overwrite TTFB Toolkit Basscss
-    wp_enqueue_style( 'ttfb-toolkit-basscss', get_template_directory_uri() . '/assets/css/basscss.css' );
+    wp_deregister_style('ttfb-toolkit-basscss');
 
     // Minimall's Basic javascript
     wp_enqueue_script( 'minimall-init', get_template_directory_uri() . '/assets/js/minimall-init.min.js', array(), '', true );

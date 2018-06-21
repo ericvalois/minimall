@@ -1,7 +1,10 @@
 {
   "name": "minimall",
-  "version": "1.4.6",
+  "version": "1.5",
   "devDependencies": {
+    "connect": "^3.0.2",
+    "connect-livereload": "^0.5.4",
+    "critical": "^0.7.0",
     "grunt": "~0.4.4",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-compress": "latest",
@@ -10,10 +13,10 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-critical": "^1.1.0",
-    "grunt-criticalcss": "latest",
-    "jshint-stylish": "latest"
+    "grunt-criticalcss": "latest"
   },
   "dependencies": {
+    "critical": "^1.3.3",
     "speedline": "^1.3.1"
   }
 }

@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-    <div id="site-content" <?php minimall_site_content_class(); ?>>
+    <div id="site-content" <?php minimall_download_class(); ?>>
         <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
 

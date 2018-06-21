@@ -1,0 +1,77 @@
+%btn-shared {
+    font-family: $base-font-family;
+    line-height: $button-height;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: $button-height;
+    padding: 0 1.6rem;
+    border-radius: $button-border-radius;
+    outline: 0;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    color: $button-text-color;
+    transition: 
+        border-color $speed $easing, 
+        color $speed $easing, 
+        background-color $speed $easing, 
+        padding 0.2s ease,
+        box-shadow 0.5s ease,
+        opacity 0.2s ease;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-appearance: none;
+}
+
+%btn-default-bg-color { background-color: $button-background-color; }
+
+%btn-box-shadow { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+%btn-hover {
+    color: $button-hover-text-color;
+    opacity: 0.9;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+}
+
+/* element styles */
+/* ====================
+   generic button mixin
+   ==================== */
+/* applying the mixin */
+.btn{
+    @extend %btn-shared;
+    @extend %btn-box-shadow;
+}
+
+.btn-primary{
+    @extend %btn-box-shadow;
+    background-color: var(--color-primary);
+}
+
+.btn-default{ 
+    @extend %btn-default-bg-color;
+    
+}
+
+.btn:hover{
+    @extend %btn-hover;
+}
+
+.btn-outline{
+    background-color: #fff;
+    border: 1px solid $text-color !important;
+    color: $text-color !important;
+    box-shadow: none;
+}
+
+.btn-big{
+    height: 3rem;
+    height: calc($button-height * 1.2 );
+}
+
+.btn-small{
+    height: 2rem;
+    height: calc($button-height * 0.8 );
+    padding: 0 0.75rem;
+}

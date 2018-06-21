@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-    <div id="site-content" <?php minimall_site_content_class(); ?>>
+    <div id="site-content" class="clearfix break-word relative max-width-5 px2 ml-auto mr-auto mt3 lg-mt4 mb3">
         
         <div id="primary" class="content-area lg-flex justify-center">
             <main id="main" class="site-main lg-col-8 <?php if( is_active_sidebar( 'blog-sidebar' ) ){ echo 'lg-pr4'; } ?>" role="main">

@@ -4,7 +4,7 @@ Theme URI: https://ttfb.io/themes/minimall/
 Author: TTFB
 Author URI: https://ttfb.io/
 Description: Minimall WordPress theme
-Version: 1.4.6
+Version: 1.5
 Text Domain: minimall
 */
 @import "common/variables";
@@ -18,6 +18,8 @@ Text Domain: minimall
 @import "common/header";
 
 @import "common/footer";
+
+@import "common/button";
 
 @import "common/form";
 
@@ -45,7 +47,7 @@ Text Domain: minimall
 
 @import "common/comments";
 
-//@import "basscss";
+@import "basscss/basscss";
 
 @media #{$breakpoint-sm} {}
 

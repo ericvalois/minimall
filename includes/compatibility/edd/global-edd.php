@@ -47,6 +47,11 @@ include( get_template_directory() . '/includes/compatibility/edd/edd-customizer.
  * Easy Digital Download Performance Module
  */
 include( get_template_directory() . '/includes/compatibility/edd/edd-performance.php' );
+
+/**
+ * Easy Digital Download Gutenberg module
+ */
+include( get_template_directory() . '/includes/compatibility/edd/gutenberg-support.php' );
     
 /**
  * Download navigation
@@ -198,6 +203,10 @@ function minimall_get_edd_download_tabs_content(){
         
 }
 
+function minimall_download_class(){ 
+    return false;
+}
+
 /*
 * Remove EDD purchase link from the_content
 */
@@ -342,16 +351,12 @@ function minimall_get_review_number( $post_id = null ){
 */
 function minimall_get_comment_number( $post_id = null ){
     
+    $comments_query = array(
+        'type'       => 'comment',
+        'post_id'    => $post_id,
+    );
+
+    $comments = get_comments( $comments_query );
     
-        $comments_query = array(
-            'type'       => 'comment',
-            'post_id'    => $post_id,
-        );
-    
-        
-    
-        $comments = get_comments( $comments_query );
-        
-    
-        return count($comments);
-    }
+    return count($comments);
+}

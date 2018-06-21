@@ -120,8 +120,14 @@ function minimall_register_required_plugins() {
         ),
 
         array(
-			'name'      => 'Meta Box',
-			'slug'      => 'meta-box',
+			'name'      => 'Gutenberg',
+			'slug'      => 'gutenberg',
+			'required'  => false,
+        ),
+
+        array(
+			'name'      => 'TTFB Blocks',
+			'slug'      => 'ttfb-blocks',
 			'required'  => false,
         ),
         
