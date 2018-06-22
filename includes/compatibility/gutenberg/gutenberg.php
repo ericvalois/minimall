@@ -7,11 +7,11 @@ function minimall_gutenberg_init(){
 
     add_theme_support( 'editor-color-palette',
         array(
-            'name' => 'primary color',
+            'name' => 'primary',
             'color' => get_theme_mod('primary_color','#1078ff'),
         ),
         array(
-            'name' => 'text color',
+            'name' => 'text',
             'color' => get_theme_mod('text_color','#3A4145'),
         ),
         array(
@@ -92,6 +92,21 @@ function minimall_gutenberg_init(){
 }
 
 /**
+ * Add custom colors to Gutenberg.
+ */
+function minimall_primary_gutenberg_colors() {
+	// Retrieve the accent color fro the Customizer.
+	$primary = get_theme_mod('primary_color','#1078ff');
+	// Build styles.
+	$css  = '';
+	$css .= '.has-primary-color { color: ' . esc_attr( $primary ) . ' !important; }';
+	$css .= '.has-primary-background-color { background-color: ' . esc_attr( $primary ) . ' !important; }';
+	return wp_strip_all_tags( $css );
+}
+
+
+
+/**
  * Enqueue block editor stylesheets
  */
 add_action( 'enqueue_block_editor_assets', 'minimall_gutenberg_editor_stylesheet' );
@@ -104,5 +119,7 @@ function minimall_gutenberg_editor_stylesheet(){
 
     // Theme style
     wp_enqueue_style('minimall-editor-theme-css', get_template_directory_uri() . '/assets/css/gutenberg-minimall.css' );
-}
 
+    // Add custom colors to Gutenberg.
+	wp_add_inline_style( 'minimall-editor-global-css', minimall_primary_gutenberg_colors() );
+}

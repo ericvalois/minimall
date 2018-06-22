@@ -84,7 +84,8 @@ function minimall_custom_styles(){
     .current_page_item a,
     .btn-outline,
     .menu a:hover,
-    .social-network:hover{
+    .social-network:hover,
+    .has-primary-color{
         color: '. $main_color .' !important;
     }
     
@@ -92,7 +93,8 @@ function minimall_custom_styles(){
     .social-network:hover{ border-color: '. $main_color .'; }
 
     .btn.btn-primary,
-    #edd-purchase-button{
+    #edd-purchase-button,
+    .has-primary-background-color{
         background-color: '. $main_color .';
     }
 
