@@ -163,20 +163,13 @@
 /*
 * wp-block-columns
 */
-.wp-block-columns{ display: block; }
 
-@media #{$breakpoint-md} {
-    .wp-block-columns{
-        display: grid;
-        grid-gap: 0 1.5rem;
-        grid-row-gap: 1.5rem;
-    }
-
-    .wp-block-columns *{
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
+.entry-content .wp-block-columns{
+    grid-gap: 0 1.5rem;
+    grid-row-gap: 1.5rem;
 }
+
+
 
 
 
