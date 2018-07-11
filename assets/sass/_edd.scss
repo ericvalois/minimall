@@ -303,10 +303,18 @@
     text-align: right;
 }
 
+.edd_cart_item_name{
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
 .edd_cart_actions{ text-align: right; }
 .edd_cart_remove_item_btn{ color: red; }
 
-.edd_cart_item_image{ margin-right: 1rem; }
+.edd_cart_item_image{ 
+    margin-right: 0.5rem;
+    float: left;
+}
 
 // Add spaceing after checkout cart
 #edd_checkout_cart_form{ margin-bottom: 2rem; }
