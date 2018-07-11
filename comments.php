@@ -87,7 +87,7 @@ if ( post_password_required() ) {
 				'<p class="comment-form-url"><label for="url">' .
 				esc_html__( 'Website', 'minimall' ) . '</label>' .
 				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-				'" size="30" /></p></div>'
+				'" size="30" /></p>'
 			))
 		) );
 
