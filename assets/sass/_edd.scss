@@ -131,7 +131,7 @@
 
 #edd-purchase-button{
     @extend .btn;
-    font-size: 120%;
+    font-size: 120% !important;
     @extend .btn-big;
 }
 
