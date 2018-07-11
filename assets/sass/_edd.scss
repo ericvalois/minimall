@@ -381,3 +381,8 @@ input[type=submit].edd-submit{
         max-width:      1000%;
     }
 }
+
+/**
+* Fix tabs section width
+*/
+.download-tabs-section{ width: 100% !important; }
