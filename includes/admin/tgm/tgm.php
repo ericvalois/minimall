@@ -125,14 +125,6 @@ function minimall_register_required_plugins() {
 			'required'  => false,
         ),
 
-        array(
-			'name'      => 'TTFB Blocks',
-			'slug'      => 'ttfb-blocks',
-			'required'  => false,
-        ),
-        
-
-
 	);
 
 	/*
