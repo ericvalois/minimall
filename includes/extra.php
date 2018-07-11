@@ -403,18 +403,16 @@ function minimall_display_entry_footer(){
 */
 add_action('minimall_before_post_content','minimall_post_header_sidebar', 10);
 function minimall_post_header_sidebar(){
-
     global $post;
 
-    if( !is_object($post) ){ return false; }
-
-    if ( is_active_sidebar( 'post-header-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-before-sidebar", true) ) {
-    ?>
-        <section class="widget-area px2" role="complementary">
-            <?php dynamic_sidebar( 'post-header-sidebar' ); ?>
-        </section>
-    <?php 
-    }
+    if( !is_singular("post") ){ return false; }
+    if( !is_active_sidebar( 'post-header-sidebar' ) ){ return false; }
+    if( get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ){ return false; }
+?>
+    <section class="widget-area px2" role="complementary">
+        <?php dynamic_sidebar( 'post-header-sidebar' ); ?>
+    </section>
+<?php 
 }
 
 /*
@@ -424,15 +422,14 @@ add_action('minimall_after_post_content','minimall_post_footer_sidebar', 50);
 function minimall_post_footer_sidebar(){
     global $post;
 
-    if( !is_object($post) ){ return false; }
-
-    if ( is_active_sidebar( 'post-footer-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ) {
-    ?>
-        <section class="mt4 mb4 widget-area" role="complementary">
-            <?php dynamic_sidebar( 'post-footer-sidebar' ); ?>
-        </section>
-    <?php 
-    }
+    if( !is_singular("post") ){ return false; }
+    if( !is_active_sidebar( 'post-footer-sidebar' ) ){ return false; }
+    if( get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ){ return false; }
+?>
+    <section class="mt4 mb4 widget-area" role="complementary">
+        <?php dynamic_sidebar( 'post-footer-sidebar' ); ?>
+    </section>
+<?php 
 }
 
 
@@ -441,17 +438,17 @@ function minimall_post_footer_sidebar(){
 */
 add_action('minimall_before_page_content','minimall_pages_header_sidebar', 10);
 function minimall_pages_header_sidebar(){
+
     global $post;
 
-    if( !is_object($post) ){ return false; }
-
-    if ( is_active_sidebar( 'page-header-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-before-sidebar", true) ) {
-    ?>
+    if( !is_page() ){ return false; }
+    if( !is_active_sidebar( 'page-header-sidebar' ) ){ return false; }
+    if( get_post_meta($post->ID, "minimall-hide-before-sidebar", true) ){ return false; }
+?>
         <section class="widget-area px2" role="complementary">
             <?php dynamic_sidebar( 'page-header-sidebar' ); ?>
         </section>
-    <?php 
-    }
+<?php
 }
 
 /*
@@ -459,17 +456,17 @@ function minimall_pages_header_sidebar(){
 */
 add_action('minimall_after_page_content','minimall_pages_footer_sidebar', 50);
 function minimall_pages_footer_sidebar(){
+
     global $post;
-
-    if( !is_object($post) ){ return false; }
-
-    if ( is_active_sidebar( 'page-footer-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ) {
-    ?>
+    
+    if( !is_page() ){ return false; }
+    if( !is_active_sidebar( 'page-footer-sidebar' ) ){ return false; }
+    if( get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ){ return false; }
+?>
         <section class="mt4 mb4 widget-area" role="complementary">
             <?php dynamic_sidebar( 'page-footer-sidebar' ); ?>
         </section>
-    <?php 
-    }
+    <?php
 }
 
 /*
@@ -479,15 +476,15 @@ add_action('minimall_after_empty_content','minimall_empty_footer_sidebar', 50);
 function minimall_empty_footer_sidebar(){
     global $post;
 
-    if( !is_object($post) ){ return false; }
+    if( !is_object($post) ){ return false; }   
+    if( !is_active_sidebar( 'empty-footer-sidebar' ) ){ return false; }
+    if( get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ){ return false; }
 
-    if ( is_active_sidebar( 'empty-footer-sidebar' ) && !get_post_meta($post->ID, "minimall-hide-after-sidebar", true) ) {
-    ?>
-        <section class="mt4 mb4 widget-area" role="complementary">
-            <?php dynamic_sidebar( 'empty-footer-sidebar' ); ?>
-        </section>
-    <?php 
-    }
+?>
+    <section class="mt4 mb4 widget-area" role="complementary">
+        <?php dynamic_sidebar( 'empty-footer-sidebar' ); ?>
+    </section>
+<?php 
 }
 
 /*
