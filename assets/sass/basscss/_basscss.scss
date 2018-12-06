@@ -2,25 +2,52 @@
 
 /*! ace.css | https://github.com/basscss/ace | MIT License */
 .font-size-70,
-.xxs-text{ font-size: 70% }
+.xxs-text,
+.has-70-font-size{ font-size: 70% }
+
 .font-size-80,
-.xs-text{ font-size: 80% }
+.xs-text,
+.has-80-font-size{ font-size: 80% }
+
 .font-size-90,
-.sm-text{ font-size: 90% }
-.font-size-100{ font-size: 100% }
+.sm-text,
+.has-90-font-size{ font-size: 90% }
+
+.font-size-100,
+.has-100-font-size{ font-size: 100% }
+
 .font-size-110,
-.lg-text{ font-size: 110% }
+.lg-text,
+.has-110-font-size{ font-size: 110% }
+
 .font-size-120,
-.xl-text{ font-size: 120% }
+.xl-text,
+.has-120-font-size{ font-size: 120% }
+
 .font-size-130,
-.xxl-text{ font-size: 130% }
-.font-size-140{ font-size: 140% }
-.font-size-150{ font-size: 150% }
-.font-size-160{ font-size: 160% }
-.font-size-170{ font-size: 170% }
-.font-size-180{ font-size: 180% }
-.font-size-190{ font-size: 190% }
-.font-size-200{ font-size: 200% }
+.xxl-text,
+.has-130-font-size{ font-size: 130% }
+
+.font-size-140,
+.has-140-font-size{ font-size: 140% }
+
+.font-size-150,
+.has-150-font-size{ font-size: 150% }
+
+.font-size-160,
+.has-160-font-size{ font-size: 160% }
+
+.font-size-170,
+.has-170-font-size{ font-size: 170% }
+
+.font-size-180,
+.has-180-font-size{ font-size: 180% }
+
+.font-size-190,
+.has-190-font-size{ font-size: 190% }
+
+.font-size-200,
+.has-200-font-size{ font-size: 200% }
 
 .weight1,
 .weight100{ font-weight: 100 !important; }

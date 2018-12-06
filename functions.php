@@ -538,3 +538,4 @@ require get_template_directory() . '/includes/custom-styles.php';
  * Load custom editor styles
  */
 require get_template_directory() . '/includes/admin/editor.php';
+
