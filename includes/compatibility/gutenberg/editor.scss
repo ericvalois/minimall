@@ -68,6 +68,10 @@ p{ font-size: 100%; }
     height: 43px;
 }
 
+p.has-background {
+    padding: 20px 30px;
+}
+
 /* Default background-color */
 .wp-block-button__link:not(.has-background){ @extend %btn-default-bg-color; }
 

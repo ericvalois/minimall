@@ -5,84 +5,125 @@
 add_action( 'after_setup_theme', 'minimall_gutenberg_init' );
 function minimall_gutenberg_init(){
 
-    add_theme_support( 'editor-color-palette',
+    
+    add_theme_support( 'editor-color-palette', array(
         array(
-            'name' => 'primary',
+            'name' => __( 'primary','minimall'),
+            'slug' => 'primary',
             'color' => get_theme_mod('primary_color','#1078ff'),
         ),
         array(
-            'name' => 'text',
+            'name' => __('textcolor','minimall'),
+            'slug' => 'textcolor',
             'color' => get_theme_mod('text_color','#3A4145'),
         ),
         array(
-            'name' => 'white',
+            'name' => __('white','minimall'),
+            'slug' => 'white',
             'color' => '#fff',
         ),
         array(
-            'name' => 'pink',
+            'name' => __('pink','minimall'),
+            'slug' => 'pink',
             'color' => 'rgb(247, 141, 167)',
         ),
         array(
-            'name' => 'red',
+            'name' => __('red','minimall'),
+            'slug' => 'red',
             'color' => 'rgb(207, 46, 46)',
         ),
         array(
-            'name' => 'orange',
+            'name' => __('orange','minimall'),
+            'slug' => 'orange',
             'color' => 'rgb(255, 105, 0)',
         ),
         array(
-            'name' => 'yellow',
+            'name' => __('yellow','minimall'),
+            'slug' => 'yellow',
             'color' => 'rgb(252, 185, 0)',
         ),
         array(
-            'name' => 'lime',
+            'name' => __('lime','minimall'),
+            'slug' => 'lime',
             'color' => 'rgb(123, 220, 181)',
         ),
         array(
-            'name' => 'green',
+            'name' => __('green','minimall'),
+            'slug' => 'green',
             'color' => 'rgb(0, 208, 132)',
         ),
         array(
-            'name' => 'pale blue',
+            'name' => __('pale blue','minimall'),
+            'slug' => 'pale-blue',
             'color' => 'rgb(142, 209, 252)',
         ),
         array(
-            'name' => 'blue',
+            'name' => __('blue','minimall'),
+            'slug' => '',
             'color' => 'rgb(6, 147, 227)',
         ),
         array(
-            'name' => 'Darken 1',
+            'name' => __('Darken 1','minimall'),
+            'slug' => 'darken-1',
             'color' => 'rgba(0, 0, 0, .0625)',
         ),
         array(
-            'name' => 'Darken 2',
+            'name' => __('Darken 2','minimall'),
+            'slug' => 'darken-2',
             'color' => 'rgba(0, 0, 0, .125)',
         ),
         array(
-            'name' => 'Darken 3',
+            'name' => __('Darken 3','minimall'),
+            'slug' => 'darken-3',
             'color' => 'rgba(0, 0, 0, .25)',
         ),
         array(
-            'name' => 'Darken 4',
+            'name' => __('Darken 4','minimall'),
+            'slug' => 'darken-4',
             'color' => 'rgba(0, 0, 0, .5)',
         ),
         array(
-            'name' => 'Lighten 1',
+            'name' => __('Darken 5','minimall'),
+            'slug' => 'darken-5',
+            'color' => 'rgba(0, 0, 0, .65)',
+        ),
+        array(
+            'name' => __('Darken 6','minimall'),
+            'slug' => 'darken-6',
+            'color' => 'rgba(0, 0, 0, .8)',
+        ),
+        array(
+            'name' => __('Lighten 1','minimall'),
+            'slug' => 'lighten-1',
             'color' => 'rgba(255, 255, 255, .0625)',
         ),
         array(
-            'name' => 'Lighten 2',
+            'name' => __('Lighten 2','minimall'),
+            'slug' => 'lighten-2',
             'color' => 'rgba(255, 255, 255, .125)',
         ),
         array(
-            'name' => 'Lighten 3',
+            'name' => __('Lighten 3','minimall'),
+            'slug' => 'lighten-3',
             'color' => 'rgba(255, 255, 255, .25)',
         ),
         array(
-            'name' => 'Lighten 4',
+            'name' => __('Lighten 4','minimall'),
+            'slug' => 'lighten-4',
             'color' => 'rgba(255, 255, 255, .5)',
+        ),
+        array(
+            'name' => __('Lighten 5','minimall'),
+            'slug' => 'lighten-5',
+            'color' => 'rgba(255, 255, 255, .65)',
+        ),
+        array(
+            'name' => __('Lighten 6','minimall'),
+            'slug' => 'lighten-6',
+            'color' => 'rgba(255, 255, 255, .8)',
         )
-    );
+    ));
+        
 
 
     /*
