@@ -35,6 +35,8 @@ if ( post_password_required() ) {
 		</h2><!-- .comments-title -->
 
         
+
+        
 		<?php the_comments_navigation(); ?>
 
 		<ol class="comment-list list-reset">

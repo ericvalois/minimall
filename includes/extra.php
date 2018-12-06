@@ -173,6 +173,18 @@ function minimall_logo_class( $html ) {
 
     $html = str_replace( 'custom-logo', 'custom-logo border-none', $html );
     $html = str_replace( 'custom-logo-link', 'border-none line-height-1 custom-logo-link', $html );
+    $html = str_replace( 'class"custom-logo', 'data-no-lazy="true" class="custom-logo', $html );
+
+    return $html;
+}
+
+/**
+ * 
+ */
+add_filter( 'get_custom_logo', 'minimall_logo_no_lazy' );
+function minimall_logo_no_lazy( $html ) {
+
+    $html = str_replace( 'class"custom-logo', 'data-no-lazy="true" class="custom-logo', $html );
 
     return $html;
 }
