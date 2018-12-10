@@ -327,6 +327,7 @@ input[type='file'] + label{
 
 .button:hover ,button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='reset']:hover, input[type='file'] + label:hover {
     @extend %btn-hover;
+    color: #fff;
 }
 
 form{ max-width: 768px; }
