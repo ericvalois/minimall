@@ -97,18 +97,45 @@
 /**
 * Button style
 */
-/* Global style */
-.wp-block-button .wp-block-button__link{ 
-    @extend %btn-shared;
-    @extend %btn-box-shadow;
+/* Reset */
+.wp-block-button,
+.wp-block-button__link{ 
+    padding: inherit;
+    color: inherit;
 }
 
-/* Default background-color */
-.wp-block-button__link:not(.has-background){ @extend %btn-default-bg-color; }
+.wp-block-button{
 
-/* custom hover style */
-.wp-block-button__link:hover,
-.wp-block-button__link:focus{ @extend %btn-hover; }
+    .wp-block-button__link{ 
+        @extend %btn-shared;
+        @extend %btn-box-shadow;
+    }
+
+    /* Default background-color */
+    .wp-block-button__link:not(.has-background){ @extend %btn-default-bg-color; }
+
+    /* Default text color */
+    &:not(.is-style-outline) .wp-block-button__link:not(.has-textcolor-color){ color: $button-text-color; }
+
+    /* Outline */
+    &.is-style-outline .wp-block-button__link{ @extend %btn-outline; }
+
+    /* Square */
+    &.is-style-squared .wp-block-button__link{ border-radius: 0; }
+
+    /* Large */
+    &.btn-big .wp-block-button__link{ @extend %btn-big; }
+
+    /* Small */
+    &.btn-small .wp-block-button__link{  @extend %btn-small; }
+
+    /* custom hover style */
+    .wp-block-button__link:hover,
+    .wp-block-button__link:focus{ @extend %btn-hover; }
+}
+
+
+
 
 /*
 * Fix Spacer Block on mobile

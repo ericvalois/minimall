@@ -1,5 +1,6 @@
 @import "../../../assets/sass/common/variables";
 @import "../../../assets/sass/common/button";
+@import "../../../assets/sass/common/colors";
 
 
 
@@ -8,22 +9,23 @@ html {
     -webkit-font-smoothing: antialiased;
   
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-size: calc(16px + 3 * (100vw - 460px) / 740);
-    font-size: calc((16 * 1px) + 3 * var(--viewport-difference) / 740);
+    //font-size: calc(16px + 3 * (100vw - 460px) / 740);
+    //font-size: calc((16 * 1px) + 3 * var(--viewport-difference) / 740);
     line-height: 1.8;
     font-weight: 400;
     letter-spacing: 0.01em;
+    font-size: 100%;
 }
 
 @media (max-width: 459px) {
-    html {
+    body {
         font-size: 16px;
         font-size: calc(var(--mobile-font-size) * 1px);
     }
 }
 
 @media (min-width: 1200px) {
-    html {
+    body {
         font-size: 19px;
         font-size: calc(var(--desktop-font-size) * 1px);
     }
@@ -34,7 +36,7 @@ html {
 * Main column width
 */
 .wp-block { max-width: 768px; }
-.wp-block[data-align="wide"] { max-width: 1080px; }
+.wp-block[data-align="wide"] { max-width: 1200px; }
 .wp-block[data-align="full"] { max-width: none; }
 
 /*
@@ -60,17 +62,32 @@ p{ font-size: 100%; }
 
 
 /*
-*
+* padding for <p> with background 
 */
+p.has-background {
+    padding: 20px 30px;
+}
+
+
+/*
+* Buttons
+*/
+
+.wp-block-button{ padding: 0; } // Reset padding
+
 .wp-block-button__link{
     @extend %btn-shared;
     @extend %btn-box-shadow;
     height: 43px;
 }
 
-p.has-background {
-    padding: 20px 30px;
-}
+
+
+/* Outline */
+.is-style-outline .wp-block-button__link{ @extend %btn-outline; }
+
+/* Square */
+.is-style-squared .wp-block-button__link{ border-radius: 0; }
 
 /* Default background-color */
 .wp-block-button__link:not(.has-background){ @extend %btn-default-bg-color; }
@@ -78,6 +95,12 @@ p.has-background {
 /* custom hover style */
 .wp-block-button__link:hover,
 .wp-block-button__link:focus{ @extend %btn-hover; }
+
+/* Large */
+.btn-big .wp-block-button__link{ @extend %btn-big; }
+
+/* Small */
+.btn-small .wp-block-button__link{  @extend %btn-small; }
 
 /*
 * Colors

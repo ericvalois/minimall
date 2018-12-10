@@ -1,3 +1,5 @@
+@import "variables";
+
 %btn-shared {
     font-family: $base-font-family;
     line-height: $button-height;
@@ -11,7 +13,6 @@
     text-decoration: none;
     font-weight: 500;
     white-space: nowrap;
-    color: $button-text-color;
     transition: 
         border-color $speed $easing, 
         color $speed $easing, 
@@ -29,9 +30,28 @@
 %btn-box-shadow { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
 %btn-hover {
-    color: $button-hover-text-color;
+    //color: $button-hover-text-color;
     opacity: 0.9;
     box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+}
+
+%btn-outline {
+    background-color: #fff;
+    border: 2px solid currentColor;
+    color: currentColor;
+    box-shadow: none;
+}
+
+%btn-big {
+    height: $button-height * 1.2;
+    font-size: 110%;
+    padding: 0 2rem;
+}
+
+%btn-small {
+    height: $button-height * 0.8;
+    padding: 0 1rem;
+    font-size: 14px;
 }
 
 /* element styles */
@@ -44,34 +64,28 @@
     @extend %btn-box-shadow;
 }
 
+.btn:not(.has-background){ @extend %btn-default-bg-color; }
+.btn:not(.has-textcolor-color){ color: $button-text-color; }
+
 .btn-primary{
     @extend %btn-box-shadow;
     background-color: var(--color-primary);
 }
 
-.btn-default{ 
-    @extend %btn-default-bg-color;
-    
-}
+.btn-default{ @extend %btn-default-bg-color; }
 
 .btn:hover{
     @extend %btn-hover;
 }
 
 .btn-outline{
-    background-color: #fff;
-    border: 1px solid $text-color !important;
-    color: $text-color !important;
-    box-shadow: none;
+    @extend %btn-outline;
 }
 
 .btn-big{
-    height: 3rem;
-    height: calc($button-height * 1.2 );
+    @extend %btn-big;
 }
 
 .btn-small{
-    height: 2rem;
-    height: calc($button-height * 0.8 );
-    padding: 0 0.75rem;
+    @extend %btn-small;
 }

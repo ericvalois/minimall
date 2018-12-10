@@ -41,8 +41,8 @@ function minimall_custom_styles(){
     /* Custom Style */
     :root{
         --color-primary: '.$main_color.';
-       --viewport-difference: calc(100vw - 460px);
-       --viewport-difference: calc(100vw - (460 * 1px));
+        --viewport-difference: calc(100vw - 460px);
+        --viewport-difference: calc(100vw - (460 * 1px));
      }
 
      html {
