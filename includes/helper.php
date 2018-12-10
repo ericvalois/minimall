@@ -87,21 +87,21 @@ function minimall_pagination($pages = '', $range = 2){
     if(1 != $pages)
     {
         echo '<nav class="pagination"><ul class="list-reset flex flex-wrap xxs-text caps">';
-        if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link(1).'">' .esc_html__("First","minimall"). '</a></li>';
-        if($paged > 1 && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link($paged - 1).'">' .esc_html__("Previus page","minimall"). '</a></li>';
+        if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link(1).'"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m18.41 16.59-4.59-4.59 4.59-4.59-1.41-1.41-6 6 6 6zm-12.41-10.59h2v12h-2z" fill="currentcolor"/></svg></a></li>';
+        if($paged > 1 && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link($paged - 1).'"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m15.41 7.41-1.41-1.41-6 6 6 6 1.41-1.41-4.58-4.59z" fill="currentcolor"/></svg></a></li>';
 
         for ($i=1; $i <= $pages; $i++)
         {
             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
             {
                 echo '<li>';
-                echo ($paged == $i)? '<a class="active-page btn btn-default btn-small" href="#">'.$i.'</a>':'<a href="'.get_pagenum_link($i).'"  class="btn btn-primary inactive btn-small">'.$i.'</a>';
+                echo ($paged == $i)? '<a class="active-page btn btn-primary btn-small" href="#">'.$i.'</a>':'<a href="'.get_pagenum_link($i).'"  class="btn btn-default inactive btn-small">'.$i.'</a>';
                 echo "</li>";
             }
         }
 
-        if ($paged < $pages && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link($paged + 1).'">' .esc_html__("Next page","minimall"). '</a></li>';  
-        if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<li class=""><a class="btn btn-default btn-small" href="'.get_pagenum_link($pages).'">' .esc_html__("Last","minimall"). '</a></li>';
+        if ($paged < $pages && $showitems < $pages) echo '<li><a class="btn btn-default btn-small" href="'.get_pagenum_link($paged + 1).'"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m10 6-1.41 1.41 4.58 4.59-4.58 4.59 1.41 1.41 6-6z" fill="currentcolor"/></svg></a></li>';  
+        if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<li class=""><a class="btn btn-default btn-small" href="'.get_pagenum_link($pages).'"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m5.59 7.41 4.59 4.59-4.59 4.59 1.41 1.41 6-6-6-6zm10.41-1.41h2v12h-2z" fill="currentcolor"/></svg></a></li>';
         echo "</ul></nav>\n";
     }
 }

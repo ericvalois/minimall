@@ -4,14 +4,14 @@
  */
 get_header(); ?>
 
-    <div id="site-content" <?php minimall_site_content_class(); ?>>
+    <div id="site-content" class="<?php echo minimall_get_full_width_template_class(); ?>">
         <div id="primary" class="content-area">
             <main id="main" class="site-main " role="main">
-                <header class="entry-header <?php if( get_theme_mod('edd_checkout_boxed','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ) { echo 'center'; }else{ echo 'left-separator'; } ?>">
+                <header class="entry-header px2 <?php if( get_theme_mod('edd_checkout_boxed','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ) { echo 'center'; }else{ echo 'left-separator'; } ?>">
                     <h1 class="entry-title mb0 lg-mb2 mt0"><?php single_term_title( __('Tag: ','minimall'), true ) ?></h1>
                 </header><!-- .entry-header -->
 
-                <div class="py2 edd_downloads_list mt2">
+                <div class="mt2 edd_downloads_list">
                 <?php
                     while ( have_posts() ) : the_post();
 

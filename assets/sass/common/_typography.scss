@@ -12,6 +12,7 @@ blockquote p::after { content: '\201d';
 /* Set border-box box sizing so borders and padding don't affect set dimensions */
 html {
   box-sizing: border-box;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 * {
   box-sizing: inherit;

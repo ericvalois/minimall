@@ -20,7 +20,7 @@ global $edd_download_shortcode_item_atts, $edd_download_shortcode_item_i;
 
 ?>
 
-<div <?php echo $schema; ?>class="mt3 col-12 sm-col-<?php echo esc_attr($tablet_products); ?> lg-col-<?php echo esc_attr($desktop_products); ?> mb3 <?php echo esc_attr( apply_filters( 'edd_download_class', 'px2', get_the_ID(), $edd_download_shortcode_item_atts, $edd_download_shortcode_item_i ) ); ?>" id="edd_download_<?php the_ID(); ?>">
+<div <?php echo $schema; ?>class="mt2 col-12 sm-col-<?php echo esc_attr($tablet_products); ?> lg-col-<?php echo esc_attr($desktop_products); ?> mb3 <?php echo esc_attr( apply_filters( 'edd_download_class', 'px2', get_the_ID(), $edd_download_shortcode_item_atts, $edd_download_shortcode_item_i ) ); ?>" id="edd_download_<?php the_ID(); ?>">
 
 	<div class="p0 m0 <?php echo esc_attr( apply_filters( 'edd_download_inner_class', 'edd_download_inner', get_the_ID(), $edd_download_shortcode_item_atts, $edd_download_shortcode_item_i ) ); ?>">
 

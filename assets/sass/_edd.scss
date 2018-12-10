@@ -131,7 +131,7 @@
 
 #edd-purchase-button{
     @extend .btn;
-    font-size: 120%;
+    font-size: 120% !important;
     @extend .btn-big;
 }
 
@@ -303,15 +303,18 @@
     text-align: right;
 }
 
+.edd_cart_item_name{
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
 .edd_cart_actions{ text-align: right; }
 .edd_cart_remove_item_btn{ color: red; }
 
-.edd_cart_item_name{
-    display: flex;
-    align-items: center;
+.edd_cart_item_image{ 
+    margin-right: 0.5rem;
+    float: left;
 }
-
-.edd_cart_item_image{ margin-right: 1rem; }
 
 // Add spaceing after checkout cart
 #edd_checkout_cart_form{ margin-bottom: 2rem; }
@@ -374,8 +377,6 @@ input[type=submit].edd-submit{
 
 @media (min-width: 815px) {
 
-
-
     .download-template .entry-content > span > div .alignwide{
         margin-left:    calc(25% - 25vw);
         margin-right:   calc(25% - 25vw);
@@ -383,3 +384,8 @@ input[type=submit].edd-submit{
         max-width:      1000%;
     }
 }
+
+/**
+* Fix tabs section width
+*/
+.download-tabs-section{ width: 100% !important; }

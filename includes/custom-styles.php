@@ -39,18 +39,10 @@ function minimall_custom_styles(){
 
     $minimall_custom_css = '
     /* Custom Style */
-    html {
-        font-size: 100%;
-        line-height: 1;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-    }
-
     :root{
         --color-primary: '.$main_color.';
-
-       --viewport-difference: calc(100vw - 460px);
-       --viewport-difference: calc(100vw - (460 * 1px));
+        --viewport-difference: calc(100vw - 460px);
+        --viewport-difference: calc(100vw - (460 * 1px));
      }
 
      html {
@@ -84,7 +76,8 @@ function minimall_custom_styles(){
     .current_page_item a,
     .btn-outline,
     .menu a:hover,
-    .social-network:hover{
+    .social-network:hover,
+    .has-primary-color{
         color: '. $main_color .' !important;
     }
     
@@ -92,7 +85,8 @@ function minimall_custom_styles(){
     .social-network:hover{ border-color: '. $main_color .'; }
 
     .btn.btn-primary,
-    #edd-purchase-button{
+    #edd-purchase-button,
+    .has-primary-background-color{
         background-color: '. $main_color .';
     }
 

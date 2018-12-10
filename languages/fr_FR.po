@@ -3,12 +3,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: TTFB\n"
 "POT-Creation-Date: 2018-02-14 11:03-0500\n"
-"PO-Revision-Date: 2018-02-14 11:27-0500\n"
+"PO-Revision-Date: 2018-07-11 09:32-0400\n"
 "Language-Team: Eric Valois <eric.v@bulledev.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -1962,11 +1962,11 @@ msgstr "%1$s"
 
 #: includes/helper.php:175
 msgid "First"
-msgstr "Prénom"
+msgstr "Première"
 
 #: includes/helper.php:176
 msgid "Previus page"
-msgstr "Page précédante"
+msgstr "Page précédente"
 
 #: includes/helper.php:188
 msgid "Next page"

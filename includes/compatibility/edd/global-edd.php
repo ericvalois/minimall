@@ -249,7 +249,7 @@ add_action("wp_footer", "minimall_edd_checkout_remove_menu");
 function minimall_edd_checkout_remove_menu(){
     if( get_theme_mod('edd_checkout_hide_menu','0') && ( function_exists('edd_is_checkout') && edd_is_checkout() ) ){
         echo '<style>';
-        echo '#site-navigation{ display: none }';
+        echo '#site-navigation,#main_nav_toggle{ display: none }';
         echo '</style>';
     }
 }
