@@ -1,6 +1,6 @@
 {
   "name": "minimall",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "devDependencies": {
     "connect": "^3.0.2",
     "connect-livereload": "^0.5.4",
